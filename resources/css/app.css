@@ -64,3 +64,10 @@ select:focus[data-flux-control] {
 /* \[:where(&)\]:size-4 {
     @apply size-4;
 } */
+
+/*
+//Codigo de prueba para ver si vite esta a la escucha
+body {
+    background-color: green !important;
+}*/
+
