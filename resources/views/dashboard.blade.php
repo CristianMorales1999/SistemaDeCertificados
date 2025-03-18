@@ -4,6 +4,10 @@
             <div class="relative aspect-video overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-700">
                 <x-placeholder-pattern class="absolute inset-0 size-full stroke-gray-900/20 dark:stroke-neutral-100/20" />
             </div>
+
+{{--            <div class="text-4xl font-bold text-azul-oscuro ">Your Text Here</div>
+                <div class="text-4xl font-bold text-accent-100 mt-[var(--margin-top-h1)]">Your Text Here</div>--}}
+
             <div class="relative aspect-video overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-700">
                 <x-placeholder-pattern class="absolute inset-0 size-full stroke-gray-900/20 dark:stroke-neutral-100/20" />
             </div>
