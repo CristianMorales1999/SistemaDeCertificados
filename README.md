@@ -23,8 +23,10 @@ Para ejecutar este proyecto, siga estos pasos:
 5.  Ejecute las migraciones de la base de datos:
 
     Para ejecutar las migraciones de la base de datos, ejecute el comando `php artisan migrate`.
+
 6. Actualizar base de datos y ingresar datos de usuario para login.
-   Debes ejecutar el siguiente comando `php artisan migrate:refresh --seed`
+
+    Debes ejecutar el siguiente comando `php artisan migrate:refresh --seed`
 
 8.  Inicie el servidor de desarrollo:
 
