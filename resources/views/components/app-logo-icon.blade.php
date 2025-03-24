@@ -1,1 +1,1 @@
-<object type="image/svg+xml" data="{{ asset('svg/logoDeSedipro.svg') }}" width="178" height="63" ></object>
+<object  type="image/svg+xml" data="{{ asset('svg/logoDeSedipro.svg') }}" width="178" height="63" ></object>
