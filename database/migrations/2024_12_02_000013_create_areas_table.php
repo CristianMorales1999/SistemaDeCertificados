@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('areas', function (Blueprint $table) {
             $table->id();
             $table->string('name', 100); // Crea la columna 'name' de tipo VARCHAR(100)
+            $table->string('abbreviation', 10)->nullable(); // Crea la columna 'abbreviation' de tipo VARCHAR(50) y permite valores nulos
             $table->timestamps();
 
             // Solo agregar índice si se va a buscar frecuentemente por el campo 'name'.
