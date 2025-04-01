@@ -4,12 +4,11 @@ use App\Http\Controllers\PersonController;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 
-//Route::get('/', function () {
-//    return view('welcome');
-//})->name('home');
-Route::get('/administrator/people',[PersonController::class,'index'])->name('people.index');
+Route::get('/', function () {
+    return view('welcome');
+})->name('home');
 
-Route::redirect('/', '/login', 301)->name('home');
+Route::get('/administrator/people',[PersonController::class,'index'])->name('people.index');
 
 // public
 Route::get('/validar-codigo', function () {
