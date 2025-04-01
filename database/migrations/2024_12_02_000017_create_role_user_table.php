@@ -28,6 +28,8 @@ return new class extends Migration
             $table->primary(['user_id', 'role_id']);
 
             $table->timestamps(); // Agregar los timestamps 'created_at' y 'updated_at'
+            $table->index('role_id');
+            $table->index('user_id');
         });
     }
 

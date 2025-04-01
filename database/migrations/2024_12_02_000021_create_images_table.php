@@ -24,10 +24,12 @@ return new class extends Migration
                   ->onUpdate('cascade'); // Define la acción ON UPDATE CASCADE
 
             $table->string('name',255)->nullable(); // Crea la columna 'name' como VARCHAR(255) y permite NULL
-            $table->string('url', 300); // Crea la columna 'url' como VARCHAR(300) y no permite NULL
+            $table->string('url', 300)->unique(); // Crea la columna 'url' como VARCHAR(300) y no permite NULL
             $table->timestamps(); // Crea las columnas 'created_at' y 'updated_at' como TIMESTAMP NULL
 
             // Agregar índices explícitos si las consultas se realizarán sobre estas columnas
+            $table->index('image_status_id');
+            $table->index('image_type_id');
             $table->index(['image_type_id', 'image_status_id']); // Mejor rendimiento en búsquedas combinadas
         });
     }
