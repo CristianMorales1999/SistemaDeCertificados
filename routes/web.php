@@ -11,6 +11,12 @@ Route::get('/administrator/people',[PersonController::class,'index'])->name('peo
 
 Route::redirect('/', '/login', 301)->name('home');
 
+// public
+Route::get('/validar-codigo', function () {
+    return view('certificados.validar-codigo');
+}) ->name('validar-codigo');
+
+
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
