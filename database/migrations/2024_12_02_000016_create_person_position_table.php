@@ -17,7 +17,10 @@ return new class extends Migration
                   ->constrained('positions')
                   ->cascadeOnUpdate()
                   ->cascadeOnDelete();
-            $table->boolean('is_active')->default(false);
+            $table->date('start_date')->nullable();
+            $table->date('end_date')->nullable();
+            $table->boolean('is_active')->default(true);
+            $table->timestamps();
 
             $table->primary(['person_id', 'position_id']);
             $table->index('person_id');

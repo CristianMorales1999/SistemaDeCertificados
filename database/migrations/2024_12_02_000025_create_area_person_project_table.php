@@ -11,7 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('area_person_outstanding_value', function (Blueprint $table) {
+        Schema::create('area_person_project', function (Blueprint $table) {
+            // Claves foráneas
             $table->foreignId('area_id');
             $table->foreignId('person_id');
             $table->foreign(['person_id', 'area_id'])
@@ -19,18 +20,14 @@ return new class extends Migration
                   ->on('area_person')
                   ->cascadeOnUpdate()
                   ->cascadeOnDelete();
-
-            $table->foreignId('outstanding_value_id')
-                  ->constrained('outstanding_values')
+            
+            $table->foreignId('project_id')
+                  ->constrained('projects')
                   ->cascadeOnUpdate()
                   ->cascadeOnDelete();
-
-            $table->date('date');
-            $table->timestamps();
-
-            $table->primary(['area_id', 'person_id', 'outstanding_value_id']);
-            $table->index(['person_id', 'area_id']);
-            $table->index('outstanding_value_id');
+            
+            // Llave primaria compuesta
+            $table->primary(['person_id', 'area_id', 'project_id']);
         });
     }
 
@@ -39,6 +36,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('area_person_outstanding_value');
+        Schema::dropIfExists('area_person_project');
     }
 };

@@ -10,10 +10,10 @@ return new class extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('area_id_dp');
-            $table->unsignedBigInteger('person_id_dp');
-            $table->unsignedBigInteger('area_id_codp')->nullable();
-            $table->unsignedBigInteger('person_id_codp')->nullable();
+            $table->foreignId('area_id_dp');
+            $table->foreignId('person_id_dp');
+            $table->foreignId('area_id_codp')->nullable();
+            $table->foreignId('person_id_codp')->nullable();
             $table->string('name', 300);
             $table->timestamps();
         

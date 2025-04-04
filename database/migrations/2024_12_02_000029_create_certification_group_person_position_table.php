@@ -10,8 +10,8 @@ return new class extends Migration
     {
         Schema::create('cert_group_person_position', function (Blueprint $table) {
             // Claves foráneas
-            $table->unsignedBigInteger('person_id');
-            $table->unsignedBigInteger('position_id');
+            $table->foreignId('person_id');
+            $table->foreignId('position_id');
             $table->foreign(['person_id', 'position_id'])
                   ->references(['person_id', 'position_id'])
                   ->on('person_position')

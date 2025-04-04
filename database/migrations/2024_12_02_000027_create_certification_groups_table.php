@@ -34,6 +34,11 @@ return new class extends Migration
                   ->constrained('workshops')
                   ->nullOnDelete()
                   ->cascadeOnUpdate();
+            $table->foreignId('training_id')
+                  ->nullable()
+                  ->constrained('trainings')
+                  ->nullOnDelete()
+                  ->cascadeOnUpdate();
             $table->string('name', 300);
             $table->text('description')->nullable();
             $table->date('start_date')->nullable();

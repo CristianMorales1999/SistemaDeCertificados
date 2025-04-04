@@ -10,9 +10,9 @@ return new class extends Migration
     {
         Schema::create('cert_text_type_cert_group', function (Blueprint $table) {
             // Claves primarias compuestas
-            $table->unsignedBigInteger('certificate_text_type_id');
-            $table->unsignedBigInteger('certification_group_id');
-            $table->unsignedBigInteger('font_configuration_id');
+            $table->foreignId('certificate_text_type_id');
+            $table->foreignId('certification_group_id');
+            $table->foreignId('font_configuration_id');
 
             $table->timestamps(); // created_at y updated_at
 

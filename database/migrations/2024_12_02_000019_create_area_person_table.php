@@ -27,8 +27,6 @@ return new class extends Migration
             $table->timestamps();
 
             $table->primary(['person_id', 'area_id']);
-            $table->index('area_id');
-            $table->index('person_id');
         });
     }
 
