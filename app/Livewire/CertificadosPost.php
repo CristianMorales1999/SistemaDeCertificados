@@ -15,12 +15,18 @@ class CertificadosPost extends Component
     public $search = '';
     public $editando = null;
     public $certificadoEditado = [];
+    public $currentPage = 1;
+    public $perPage = 10;
+    public $totalPages = 0;
+    public $showDeleteModal = false;
+    public $certificadoAEliminar = null;
 
     public function mount()
     {
         $datosController = new DatosController();
         $this->datosOriginales = $datosController->certificados;
-        $this->datos = $this->datosOriginales; // Inicialmente, la lista es igual a los originales
+        $this->totalPages = ceil(count($this->datosOriginales) / $this->perPage);
+        $this->filtrarDatos(); // Aplicar paginación desde el inicio
     }
 
     public function order($sort)
@@ -64,6 +70,22 @@ class CertificadosPost extends Component
         $this->certificadoEditado = [];
     }
 
+    public function nextPage()
+    {
+        if ($this->currentPage < $this->totalPages) {
+            $this->currentPage++;
+            $this->filtrarDatos();
+        }
+    }
+
+    public function previousPage()
+    {
+        if ($this->currentPage > 1) {
+            $this->currentPage--;
+            $this->filtrarDatos();
+        }
+    }
+
     public function filtrarDatos()
     {
         // Filtrar sobre `$datosOriginales` en lugar de `$datos`
@@ -80,12 +102,49 @@ class CertificadosPost extends Component
         // Aplicar ordenamiento
         $datosFiltrados = $datosFiltrados->sortBy($this->sort, SORT_REGULAR, $this->direction === 'desc');
 
-        $this->datos = $datosFiltrados->all();
+        // Aplicar paginación
+        $this->totalPages = ceil($datosFiltrados->count() / $this->perPage);
+        $this->datos = $datosFiltrados->forPage($this->currentPage, $this->perPage)->all();
     }
 
     public function updatedSearch()
     {
         $this->filtrarDatos(); // Se ejecuta cada vez que cambia `$search`
+    }
+
+    public function confirmarEliminacion($id)
+    {
+        $this->certificadoAEliminar = $id;
+        $this->showDeleteModal = true;
+    }
+
+    public function cancelarEliminacion()
+    {
+        $this->showDeleteModal = false;
+        $this->certificadoAEliminar = null;
+    }
+
+    public function eliminarCertificado()
+    {
+        if ($this->certificadoAEliminar) {
+            // Encontrar y eliminar el certificado de datosOriginales
+            $this->datosOriginales = array_filter($this->datosOriginales, function($certificado) {
+                return $certificado['id'] != $this->certificadoAEliminar;
+            });
+
+            // Recalcular el total de páginas y ajustar la página actual si es necesario
+            $this->totalPages = ceil(count($this->datosOriginales) / $this->perPage);
+            if ($this->currentPage > $this->totalPages && $this->totalPages > 0) {
+                $this->currentPage = $this->totalPages;
+            }
+
+            // Actualizar los datos mostrados
+            $this->filtrarDatos();
+            
+            // Cerrar el modal
+            $this->showDeleteModal = false;
+            $this->certificadoAEliminar = null;
+        }
     }
 
     public function render()

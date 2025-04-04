@@ -171,19 +171,20 @@
                                     <div class="flex items-center justify-center space-x-3">
                                         @if($editando === $certificado['id'])
                                             <button wire:click="guardarCertificado" 
-                                                    class="p-2 bg-green-500 rounded-lg hover:scale-110 transition-transform w-10 h-10 flex items-center justify-center">
+                                                    class="p-2 cursor-pointer bg-green-500 rounded-lg hover:scale-110 transition-transform w-10 h-10 flex items-center justify-center">
                                                 <img src="/imagenes/icons/save.svg" alt="Guardar" class="w-5 h-5">
                                             </button>
                                             <button disabled
-                                                    class="p-2 bg-red-500 opacity-50 cursor-not-allowed rounded-lg w-10 h-10 flex items-center justify-center">
+                                                    class="p-2 cursor-pointer bg-red-500 opacity-50 disabled:cursor-not-allowed rounded-lg w-10 h-10 flex items-center justify-center">
                                                 <img src="/imagenes/icons/borrar.svg" alt="Eliminar" class="w-5 h-5">
                                             </button>
                                         @else
                                             <button wire:click="editarCertificado({{ $certificado['id'] }})" 
-                                                    class="p-2 bg-blue-500 rounded-lg hover:scale-110 transition-transform w-10 h-10 flex items-center justify-center">
+                                                    class="p-2 cursor-pointer bg-blue-500 rounded-lg hover:scale-110 transition-transform w-10 h-10 flex items-center justify-center">
                                                 <img src="/imagenes/icons/editar.svg" alt="Editar" class="w-5 h-5">
                                             </button>
-                                            <button class="p-2 bg-red-500 rounded-lg hover:scale-110 transition-transform w-10 h-10 flex items-center justify-center">
+                                            <button wire:click="confirmarEliminacion({{ $certificado['id'] }})" 
+                                                    class="p-2 cursor-pointer bg-red-500 rounded-lg hover:scale-110 transition-transform w-10 h-10 flex items-center justify-center">
                                                 <img src="/imagenes/icons/borrar.svg" alt="Eliminar" class="w-5 h-5">
                                             </button>
                                         @endif
@@ -207,19 +208,23 @@
                 <div class="flex justify-between mt-5 gap-8">
                     <!-- TEXTO AGREGADO-->
                     <div class="text-sm text-black mt-6">
-                        Hola
+                        Página {{ $currentPage }} de {{ $totalPages }}
                     </div>
 
                     <!-- Botón Anterior -->
                     <button type="button"
-                        class="flex items-center px-6 py-2 border border-black text-black hover:bg-gray-100 cursor-not-allowed' }}">
+                        wire:click="previousPage"
+                        class="flex items-center cursor-pointer px-6 py-2 border border-black text-black hover:bg-gray-100 {{ $currentPage <= 1 ? 'opacity-50 disabled:cursor-not-allowed' : '' }}"
+                        {{ $currentPage <= 1 ? 'disabled' : '' }}>
                         <span class="mr-2">&lt;&lt;</span>
                         Anterior
                     </button>
 
                     <!-- Botón Siguiente -->
                     <button type="button"
-                        class="flex items-center px-6 py-2 border border-black text-black hover:bg-gray-100 cursor-not-allowed' }}">
+                        wire:click="nextPage"
+                        class="flex items-center cursor-pointer px-6 py-2 border border-black text-black hover:bg-gray-100 {{ $currentPage >= $totalPages ? 'opacity-50 disabled:cursor-not-allowed' : '' }}"
+                        {{ $currentPage >= $totalPages ? 'disabled' : '' }}>
                         <span class="ml-2">&gt;&gt;</span>
                         Siguiente
                     </button>
@@ -227,6 +232,26 @@
 
             </div>
         </div>
+
+        <!-- Modal de Confirmación de Eliminación -->
+        @if($showDeleteModal)
+            <div class="fixed inset-0 pl-60 bg-opacity-50 flex items-start justify-center z-50 pt-4">
+                <div class="bg-white p-6 rounded-lg shadow-xl max-w-md w-full mx-4">
+                    <h3 class="text-lg font-semibold mb-4">Confirmar Eliminación</h3>
+                    <p class="mb-6">¿Estás seguro de eliminar este certificado?</p>
+                    <div class="flex justify-end space-x-4">
+                        <button wire:click="cancelarEliminacion" 
+                                class="px-4 py-2 cursor-pointer bg-gray-300 text-gray-700 rounded hover:bg-gray-400 transition-colors">
+                            Cancelar
+                        </button>
+                        <button wire:click="eliminarCertificado" 
+                                class="px-4 py-2 cursor-pointer bg-red-400 text-white rounded hover:bg-red-600 transition-colors">
+                            Eliminar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        @endif
 
         <x-endin-redes/>
 
