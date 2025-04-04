@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use App\Http\Controllers\DatosController;
+use Livewire\WithPagination;
 
 class CertificadosPost extends Component
 {

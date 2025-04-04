@@ -1,6 +1,6 @@
 <div>
 
-<div class="flex items-center justify-between pb-4 px-10">
+        <div class="flex items-center justify-between pb-4 px-10">
             <h1 class="text-xs md:text-sm lg:text-lg xl:text-2xl">Certificados</h1>
         </div>
         
@@ -146,12 +146,26 @@
                                     @endif
                                 </td>
                                 <td class="px-6 py-4">
-                                    {{ $certificado['fecha_emision'] }}
+                                    @if($editando === $certificado['id'])
+                                        <input type="date" 
+                                               wire:model="certificadoEditado.fecha_emision" 
+                                               class="w-full border-gray-300 rounded-md shadow-sm">
+                                    @else
+                                        {{ $certificado['fecha_emision'] }}
+                                    @endif
                                 </td>
                                 <td class="px-6 py-4">
-                                    <span class="px-2 py-1 rounded-full text-sm {{ rand(0,1) ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800' }}">
-                                        {{ rand(0,1) ? 'Validado' : 'Creado' }}
-                                    </span>
+                                    @if($editando === $certificado['id'])
+                                        <select wire:model="certificadoEditado.estado" 
+                                                class="w-full border-gray-300 rounded-md shadow-sm">
+                                            <option value="Validado">Validado</option>
+                                            <option value="Creado">Creado</option>
+                                        </select>
+                                    @else
+                                        <span class="px-2 py-1 rounded-full text-sm {{ $certificado['estado'] === 'Validado' ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800' }}">
+                                            {{ $certificado['estado'] }}
+                                        </span>
+                                    @endif
                                 </td>
                                 <td class="px-6 py-4 text-center w-32">
                                     <div class="flex items-center justify-center space-x-3">
@@ -188,6 +202,29 @@
                     @endif
 
                 </div>
+
+                <!-- BOTONES DE PAGINACION -->
+                <div class="flex justify-between mt-5 gap-8">
+                    <!-- TEXTO AGREGADO-->
+                    <div class="text-sm text-black mt-6">
+                        Hola
+                    </div>
+
+                    <!-- Botón Anterior -->
+                    <button type="button"
+                        class="flex items-center px-6 py-2 border border-black text-black hover:bg-gray-100 cursor-not-allowed' }}">
+                        <span class="mr-2">&lt;&lt;</span>
+                        Anterior
+                    </button>
+
+                    <!-- Botón Siguiente -->
+                    <button type="button"
+                        class="flex items-center px-6 py-2 border border-black text-black hover:bg-gray-100 cursor-not-allowed' }}">
+                        <span class="ml-2">&gt;&gt;</span>
+                        Siguiente
+                    </button>
+                </div>
+
             </div>
         </div>
 

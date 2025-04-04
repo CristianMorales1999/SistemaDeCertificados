@@ -170,8 +170,7 @@
                     
                     <!-- SCRIPT PARA EL GRAFICO DE LINEAS-->
                     <script>
-                        // Asegurarse de que el DOM esté cargado
-                        document.addEventListener('DOMContentLoaded', function() {
+                        function initializeChart() {
                             const options = {
                                 series: [{
                                     name: "Ventas",
@@ -186,25 +185,52 @@
                                 }
                             };
 
-                            // Verificar si el elemento existe y si ApexCharts está definido
-                            if (document.getElementById("labels-chart") && typeof ApexCharts !== 'undefined') {
-                                const chart = new ApexCharts(document.getElementById("labels-chart"), options);
+                            const chartElement = document.getElementById("labels-chart");
+                            if (chartElement && typeof ApexCharts !== 'undefined') {
+                                const chart = new ApexCharts(chartElement, options);
                                 chart.render();
                             }
-                        });
+                        }
+
+                        // Esperar a que tanto el DOM como ApexCharts estén cargados
+                        if (document.readyState === 'loading') {
+                            document.addEventListener('DOMContentLoaded', function() {
+                                if (typeof ApexCharts !== 'undefined') {
+                                    initializeChart();
+                                } else {
+                                    // Si ApexCharts aún no está cargado, esperar a que se cargue
+                                    const checkApexCharts = setInterval(function() {
+                                        if (typeof ApexCharts !== 'undefined') {
+                                            initializeChart();
+                                            clearInterval(checkApexCharts);
+                                        }
+                                    }, 100);
+                                }
+                            });
+                        } else {
+                            // Si el DOM ya está cargado
+                            if (typeof ApexCharts !== 'undefined') {
+                                initializeChart();
+                            } else {
+                                const checkApexCharts = setInterval(function() {
+                                    if (typeof ApexCharts !== 'undefined') {
+                                        initializeChart();
+                                        clearInterval(checkApexCharts);
+                                    }
+                                }, 100);
+                            }
+                        }
                     </script>
                     <!-- FIN GRAFICO DE LINEAS-->
 
                 </div>  
                 
-                <div id="certificados" class="content-section hidden">
-                    
-                @livewire('certificados-post')
-
+                <div id="certificados" class="content-section hidden">  
+                    @livewire('certificados-post')
                 </div>
 
                 <div id="grupos" class="content-section hidden">
-                <h1>SECCION DE GRUPOS</h1>
+                    @livewire('grupos-post')
                 </div>
 
                 <div id="personas" class="content-section hidden">
