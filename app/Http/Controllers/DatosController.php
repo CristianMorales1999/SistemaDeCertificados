@@ -159,7 +159,8 @@ class DatosController extends Controller
                 'codigo' => $this->codigos[$i]['codigo'],
                 'titular' => $this->usuarios[$i]['nombre'] . ' ' . $this->usuarios[$i]['apellido'],
                 'grupo_certificacion' => $this->grupos_certificacion[$i]['nombre'],
-                'fecha_emision' => $this->fechas_emision[$i]['fecha']
+                'fecha_emision' => $this->fechas_emision[$i]['fecha'],
+                'estado' => rand(0,1) ? 'Creado' : 'Validado'
             ];
         }, range(0, 19));
     }
