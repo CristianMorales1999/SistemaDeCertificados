@@ -20,6 +20,11 @@ class CertificadosPost extends Component
     public $totalPages = 0;
     public $showDeleteModal = false;
     public $certificadoAEliminar = null;
+    public $showNotification = false;
+    public $notificationMessage = '';
+    public $selectedCertificados = [];
+    public $selectAll = false;
+    public $eliminacionmode = 'unico';
 
     public function mount()
     {
@@ -141,9 +146,78 @@ class CertificadosPost extends Component
             // Actualizar los datos mostrados
             $this->filtrarDatos();
             
-            // Cerrar el modal
+            // Mostrar notificación
+            $this->notificationMessage = 'El certificado ha sido eliminado correctamente';
+            $this->showNotification = true;
+
+            // Cerrar el modal de confirmación
             $this->showDeleteModal = false;
             $this->certificadoAEliminar = null;
+        }
+    }
+
+    public function cerrarNotificacion()
+    {
+        $this->showNotification = false;
+        $this->notificationMessage = '';
+    }
+
+    public function updatedSelectAll($value)
+    {
+        if ($value) {
+            $this->selectedCertificados = collect($this->datos)->pluck('id')->toArray();
+        } else {
+            $this->selectedCertificados = [];
+        }
+    }
+
+    public function updatedSelectedCertificados()
+    {
+        $this->selectAll = count($this->selectedCertificados) === count($this->datos);
+    }
+
+
+    public function eliminarshowmodal()
+    {
+        $this->selectedCertificados = $this->selectedCertificados;
+        $this->showDeleteModal = true;
+        $this->eliminacionmode = 'multiple';
+    }
+
+    public function canceleliminarshowmodal()
+    {
+        $this->selectedCertificados = null;
+        $this->showDeleteModal = false;
+    }
+
+
+
+    public function eliminarCertificadosSeleccionados()
+    {
+        if (count($this->selectedCertificados) >= 2) {
+            // Eliminar los certificados seleccionados
+            $this->datosOriginales = array_filter($this->datosOriginales, function($certificado) {
+                return !in_array($certificado['id'], $this->selectedCertificados);
+            });
+
+            // Recalcular el total de páginas y ajustar la página actual si es necesario
+            $this->totalPages = ceil(count($this->datosOriginales) / $this->perPage);
+            if ($this->currentPage > $this->totalPages && $this->totalPages > 0) {
+                $this->currentPage = $this->totalPages;
+            }
+
+            // Actualizar los datos mostrados
+            $this->filtrarDatos();
+
+            // Mostrar notificación
+            $this->notificationMessage = 'Los certificados han sido eliminados correctamente';
+            $this->showNotification = true;
+
+            // Limpiar selección
+            $this->selectedCertificados = [];
+            $this->selectAll = false;
+            $this->showDeleteModal = false;
+            $this->eliminacionmode = 'unico';
         }
     }
 

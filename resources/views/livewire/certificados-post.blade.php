@@ -30,9 +30,10 @@
 
                         <div class="flex items-center gap-4">
                             <button id="deleteMultiple" 
-                                    class="px-4 py-1.5 mb-4 flex items-center justify-center bg-white hover:bg-[#E7C9EE] text-[#9636AD] font-semibold rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 border-[#9636AD] border-2 disabled:opacity-50 disabled:cursor-not-allowed"
-                                    disabled>
-                                <img src="/imagenes/icons/supertrash.svg" alt="Search Icon" class="w-6 h-6 mr-2">
+                                    wire:click="eliminarshowmodal"
+                                    @if(count($selectedCertificados) < 2) disabled @endif
+                                    class="cursor-pointer px-4 py-1.5 mb-4 flex items-center justify-center bg-white hover:bg-[#E7C9EE] text-[#9636AD] font-semibold rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 border-[#9636AD] border-2 disabled:opacity-50 disabled:cursor-not-allowed">
+                                <img src="/imagenes/icons/supertrash.svg" alt="Trash Icon" class="w-6 h-6 mr-2">
                                 <span class="text-center text-xs lg:text-sm">Borrar</span>
                             </button>
 
@@ -57,8 +58,12 @@
                             <tr>
                                 <th scope="col" class="p-4">
                                     <div class="flex items-center">
-                                        <input id="checkbox-all-search" type="checkbox" class="w-4 h-4 text-blue-600 bg-[#F7FAFF] border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                        <label for="checkbox-all-search" class="sr-only">checkbox</label>
+                                        <!-- Checkbox para seleccionar todos -->
+                                        <input id="checkbox-all-search" 
+                                            type="checkbox" 
+                                            wire:model.live="selectAll"
+                                            class="w-4 h-4 text-blue-600 bg-[#F7FAFF] border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                        <label for="checkbox-all-search" class="sr-only">Seleccionar todos</label>
                                     </div>
                                 </th>
                                 <th>
@@ -111,8 +116,13 @@
                             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                                 <td class="w-4 p-4">
                                     <div class="flex items-center">
-                                        <input id="checkbox-table-search-{{ $certificado['id'] }}" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                                        <label for="checkbox-table-search-{{ $certificado['id'] }}" class="sr-only">checkbox</label>
+                                        <!-- Cada fila tiene su checkbox -->
+                                        <input id="checkbox-table-search-{{ $certificado['id'] }}" 
+                                            type="checkbox" 
+                                            wire:model.live="selectedCertificados"
+                                            value="{{ $certificado['id'] }}"
+                                            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                                        <label for="checkbox-table-search-{{ $certificado['id'] }}" class="sr-only">Seleccionar registro</label>
                                     </div>
                                 </td>
                                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
@@ -194,6 +204,7 @@
                             @endforeach
                         </tbody>
                     </table>
+
                     @else
                         <div class="rounded-lg text-lg ml-4 text-gray-700 bg-[#F8D7DA] dark:bg-gray-700 dark:text-gray-400">
                             <h1 class="px-3 py-3 text-[#991C24]">
@@ -233,15 +244,16 @@
             </div>
         </div>
 
-        <!-- Modal de Confirmación de Eliminación -->
+        <!-- Modal para Confirmación de Eliminación -->
         @if($showDeleteModal)
             <div class="fixed inset-0 pl-60 bg-opacity-50 flex items-start justify-center z-50 pt-4">
                 <div class="bg-white p-6 rounded-lg shadow-xl max-w-md w-full mx-4">
                     <h3 class="text-lg font-semibold mb-4">Confirmar Eliminación</h3>
+                    @if($eliminacionmode === 'unico')
                     <p class="mb-6">¿Estás seguro de eliminar este certificado?</p>
                     <div class="flex justify-end space-x-4">
                         <button wire:click="cancelarEliminacion" 
-                                class="px-4 py-2 cursor-pointer bg-gray-300 text-gray-700 rounded hover:bg-gray-400 transition-colors">
+                                class="px-4 py-2 cursor-pointer bg-gray-300 text-gray-800 rounded hover:bg-gray-400 transition-colors">
                             Cancelar
                         </button>
                         <button wire:click="eliminarCertificado" 
@@ -249,6 +261,56 @@
                             Eliminar
                         </button>
                     </div>
+                    @else
+                    <p class="mb-6">¿Estás seguro de eliminar estos certificados?</p>
+                    <div class="flex justify-end space-x-4">
+                        <button wire:click="canceleliminarshowmodal" 
+                                class="px-4 py-2 cursor-pointer bg-gray-300 text-gray-800 rounded hover:bg-gray-400 transition-colors">
+                            Cancelar
+                        </button>
+                        <button wire:click="eliminarCertificadosSeleccionados" 
+                                class="px-4 py-2 cursor-pointer bg-red-400 text-white rounded hover:bg-red-600 transition-colors">
+                            Eliminar
+                        </button>
+                    </div>
+                    @endif
+                </div>
+            </div>
+        @endif
+
+        <!-- Modal de mensaje eliminacion correcta-->
+        @if($showNotification)
+            <div
+                x-data="{
+                    visible: true,
+                    timeout: null,
+                    startTimer() {
+                        this.timeout = setTimeout(() => {
+                            this.visible = false;
+                            $wire.cerrarNotificacion();
+                        }, 1000); // 1 segundos
+                    },
+                    resetTimer() {
+                        clearTimeout(this.timeout);
+                        this.startTimer();
+                    }
+                }"
+                x-init="startTimer()"
+                x-show="visible"
+                x-transition
+                class="fixed inset-0 pl-60 bg-opacity-50 flex items-start justify-center z-50 pt-4"
+                @click.self="$wire.cerrarNotificacion()"
+            >
+                <div class="bg-white p-6 rounded-lg shadow-xl max-w-md w-full mx-4" @mouseenter="resetTimer" @click.stop>
+                    <div class="flex items-center justify-center mb-4">
+                        <div class="bg-green-100 p-3 rounded-full">
+                            <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold text-center text-gray-800 mb-2">¡Éxito!</h3>
+                    <p class="text-center text-gray-600">{{ $notificationMessage }}</p>
                 </div>
             </div>
         @endif
