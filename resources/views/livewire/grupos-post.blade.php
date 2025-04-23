@@ -1,6 +1,8 @@
 <div>
 
-  <x-section-title title="Grupos" />
+    <div class="flex items-center justify-between pb-4 px-10">
+        <h1 class="text-xs md:text-sm lg:text-lg xl:text-2xl">Grupos</h1>
+    </div>
 
   <div class="mx-10">
     <div class="bg-white p-4 rounded-lg shadow-lg">
@@ -9,7 +11,7 @@
         <!-- Filtro de tabla -->
         <div class="flex items-center gap-4">
           <div class="bg-white mb-4 p-2 rounded-lg shadow-lg">
-            <img src="{{asset('/imagenes/icons/Shearch Icon.svg')}}" alt="Search Icon" class="w-5 h-5">
+            <img src="/imagenes/icons/Shearch Icon.svg" alt="Search Icon" class="w-5 h-5">
           </div>
 
           <div class="relative mt-1 mb-5 flex-1">
@@ -30,20 +32,20 @@
 
           <div class="flex items-center gap-4">
             <button id="deleteMultiple"
-              class="px-4 py-1.5 mb-4 flex items-center justify-center bg-white hover:bg-[#E7C9EE] text-accent-300 font-semibold rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 border-accent-300 border-2 disabled:opacity-50 disabled:cursor-not-allowed"
+              class="px-4 py-1.5 mb-4 flex items-center justify-center bg-white hover:bg-[#E7C9EE] text-[#9636AD] font-semibold rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 border-[#9636AD] border-2 disabled:opacity-50 disabled:cursor-not-allowed"
               disabled>
-              <img src="{{asset('/imagenes/icons/supertrash.svg')}}" alt="Delete Icon" class="w-6 h-6 mr-2">
+              <img src="/imagenes/icons/supertrash.svg" alt="Search Icon" class="w-6 h-6 mr-2">
               <span class="text-center text-xs lg:text-sm">Borrar</span>
             </button>
 
             <a href="{{ route('login') }}"
-              class="px-4 py-1.5 mb-4 flex items-center justify-center bg-white hover:bg-[#E7C9EE] text-accent-300 font-semibold rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 border-accent-300 border-2">
-              <img src="{{asset('/imagenes/icons/plus.svg')}}" alt="Add Icon" class="w-4 h-4 mr-2">
+              class="px-4 py-1.5 mb-4 flex items-center justify-center bg-white hover:bg-[#E7C9EE] text-[#9636AD] font-semibold rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 border-[#9636AD] border-2">
+              <img src="/imagenes/icons/plus.svg" alt="Search Icon" class="w-4 h-4 mr-2">
               <span class="text-center text-xs lg:text-sm">Añadir registro</span>
             </a>
             <a href="{{ route('register') }}"
-              class="px-4 py-1.5 mb-4 flex items-center justify-center bg-accent-300 hover:bg-primary-300 font-semibold rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 border-accent-300 hover:border-primary-300 border-2">
-              <img src="{{asset('/imagenes/icons/upload.svg')}}" alt="Upload Icon" class="w-3.5 h-3.5 mr-2">
+              class="px-4 py-1.5 mb-4 flex items-center justify-center bg-[#9636AD] hover:bg-[#3454A1] font-semibold rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 border-[#9636AD] hover:border-[#3454A1] border-2">
+              <img src="/imagenes/icons/upload.svg" alt="Search Icon" class="w-3.5 h-3.5 mr-2">
               <span class="text-center text-xs text-white lg:text-sm">Cargar Archivo</span>
             </a>
           </div>
@@ -56,152 +58,91 @@
           <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
 
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-
-              <th scope="col whitespace-nowrap" class="p-4">
-                <div class="flex items-center relative">
-
-                  <input id="checkbox-all-search" type="checkbox"
-                    wire:model.live="selectAll"
-                    class="peer appearance-none w-5 h-5 border border-accent-300 rounded-sm hover:bg-accent-100 checked:bg-accent-300 checked:border-accent-300 focus:outline-none focus:shadow-md focus:shadow-accent-100" />
-
-                  <!-- Aspa visible solo si está checked -->
-                  <span
-                    class="pointer-events-none absolute left-[0.5px] top-0 w-5 h-5 flex items-center justify-center text-white text-sm font-bold hidden peer-checked:flex">
-                    <!-- SVG del aspa blanca -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                      <path d="M5 13l4 4L19 7" />
-                    </svg>
-                  </span>
-
-                  <label for="checkbox-all-search" class="sr-only">Seleccionar todos los elementos</label>
-                </div>
-
-              </th>
-              <th>
-                <div class="flex items-center">
-                  Id
-                  <div class="flex flex-col ml-3">
-                    <img src="{{ asset('icons/triangle.svg') }}" wire:click="order('id')"
-                      class="w-3 h-3 cursor-pointer {{ $sort === 'id' && $direction === 'asc' ? 'opacity-100' : 'opacity-40' }}"
-                      alt="Ascendente">
-                    <img src="{{ asset('icons/triangle-inverted.svg') }}" wire:click="order('id')"
-                      class="w-3 h-3 cursor-pointer {{ $sort === 'id' && $direction === 'desc' ? 'opacity-100' : 'opacity-40' }}"
-                      alt="Descendente">
+              <tr>
+                <th scope="col whitespace-nowrap" class="p-4">
+                  <div class="flex items-center">
+                    <input id="checkbox-all-search" type="checkbox" class="w-4 h-4 text-blue-600 bg-[#F7FAFF] border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="checkbox-all-search" class="sr-only">checkbox</label>
                   </div>
-                </div>
-              </th>
-              <th class="pl-6 whitespace-nowrap">
-                <div class="flex items-center">
-                  Nombre
-                  <div class="flex flex-col ml-3">
-                    <img src="{{ asset('icons/triangle.svg')}}" wire:click="order('nombre')"
-                      class="w-3 h-3 cursor-pointer {{ $sort === 'nombre' && $direction === 'asc' ? 'opacity-100' : 'opacity-40' }}"
-                      alt="Ascendente">
-                    <img src="{{ asset('icons/triangle-inverted.svg') }}" wire:click="order('nombre')"
-                      class="w-3 h-3 cursor-pointer {{ $sort === 'nombre' && $direction === 'desc' ? 'opacity-100' : 'opacity-40' }}"
-                      alt="Descendente">
+                </th>
+                <th>
+                  <div class="flex items-center">
+                    ID
+                    <div class="flex flex-col ml-3">
+                      <img src="{{ asset('icons/triangle.svg') }}" wire:click="order('id')"
+                        class="w-3 h-3 cursor-pointer {{ $sort === 'id' && $direction === 'asc' ? 'opacity-100' : 'opacity-40' }}"
+                        alt="Ascendente">
+                      <img src="{{ asset('icons/triangle-inverted.svg') }}" wire:click="order('id')"
+                        class="w-3 h-3 cursor-pointer {{ $sort === 'id' && $direction === 'desc' ? 'opacity-100' : 'opacity-40' }}"
+                        alt="Descendente">
+                    </div>
                   </div>
-                </div>
-              </th>
-              <th class="pl-6 whitespace-nowrap">
-                <div class="flex items-center">
-                  Tipo
-                  <div class="flex flex-col ml-3">
-                    <img src="{{ asset('icons/triangle.svg') }}" wire:click="order('tipo')"
-                      class="w-3 h-3 cursor-pointer {{ $sort === 'tipo' && $direction === 'asc' ? 'opacity-100' : 'opacity-40' }}"
-                      alt="Ascendente">
-                    <img src="{{ asset('icons/triangle-inverted.svg') }}" wire:click="order('tipo')"
-                      class="w-3 h-3 cursor-pointer {{ $sort === 'tipo' && $direction === 'desc' ? 'opacity-100' : 'opacity-40' }}"
-                      alt="Descendente">
+                </th>
+                <th class="pl-6 whitespace-nowrap">
+                  <div class="flex items-center">
+                    NOMBRE
+                    <div class="flex flex-col ml-3">
+                      <img src="{{ asset('icons/triangle.svg')}}" wire:click="order('nombre')"
+                        class="w-3 h-3 cursor-pointer }}"
+                        alt="Ascendente">
+                      <img src="{{ asset('icons/triangle-inverted.svg') }}" wire:click="order('nombre')"
+                        class="w-3 h-3 cursor-pointer "
+                        alt="Descendente">
+                    </div>
                   </div>
-                </div>
-              </th>
-              <th scope="col" class="px-6 py-3 whitespace-nowrap">Descripción</th>
-              <th scope="col" class="px-6 py-3 whitespace-nowrap">Fecha de inicio</th>
-              <th scope="col" class="px-6 py-3 whitespace-nowrap">Fecha de término</th>
-              <th scope="col" class="px-6 py-3 whitespace-nowrap ">Creador</th>
-              <th scope="col" class="px-6 py-3 whitespace-nowrap ">Generador</th>
-              <th scope="col" class="px-6 py-3 whitespace-nowrap ">Firmante 1</th>
-              <th scope="col" class="px-6 py-3 whitespace-nowrap ">Firmante 2</th>
-              <th scope="col" class="px-6 py-3 whitespace-nowrap ">Firmante 3</th>
-              <th scope="col" class="px-6 py-3 whitespace-nowrap ">Firmante 4</th>
-              <th scope="col" class="px-6 py-3 whitespace-nowrap ">Plantilla</th>
-              <th scope="col" class="px-6 py-3 whitespace-nowrap text-center">Acciones</th>
-
+                </th>
+                <th class="pl-6 whitespace-nowrap">
+                  <div class="flex items-center">
+                    TIPO
+                    <div class="flex flex-col ml-3">
+                      <img src="{{ asset('icons/triangle.svg') }}" wire:click="order('tipo')"
+                        class="w-3 h-3 cursor-pointer "
+                        alt="Ascendente">
+                      <img src="{{ asset('icons/triangle-inverted.svg') }}" wire:click="order('tipo')"
+                        class="w-3 h-3 cursor-pointer "
+                        alt="Descendente">
+                    </div>
+                  </div>
+                </th>
+                <th scope="col" class="px-6 py-3  whitespace-nowrap">DESCRIPCIÓN</th>
+                <th scope="col" class="px-6 py-3  whitespace-nowrap">FECHA DE INICIO</th>
+                <th scope="col" class="px-6 py-3  whitespace-nowrap">FECHA DE TÉRMINO</th>
+                <th scope="col" class="px-6 py-3  whitespace-nowrap ">CREADOR</th>
+                <th scope="col" class="px-6 py-3  whitespace-nowrap ">GENERADOR</th>
+                <th scope="col" class="px-6 py-3  whitespace-nowrap ">FIRMANTE 1</th>
+                <th scope="col" class="px-6 py-3  whitespace-nowrap ">FIRMANTE 2</th>
+                <th scope="col" class="px-6 py-3  whitespace-nowrap ">FIRMANTE 3</th>
+                <th scope="col" class="px-6 py-3  whitespace-nowrap ">FIRMANTE 4</th>
+                <th scope="col" class="px-6 py-3  whitespace-nowrap text-center">ACCIONES</th>
+              </tr>
             </thead>
 
             <tbody>
               @foreach($datosGrupos as $dato)
               <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
-
-                <td scope="col whitespace-nowrap" class="p-4">
-                  <div class="flex items-center relative">
-                    <!-- Checkbox oculto visualmente, pero funcional -->
-                    <input id="checkbox-table-search-{{ $dato['id'] }}" type="checkbox"
-                      wire:model.live="selectedGrupos"
-                      value="{{ $dato['id'] }}"
-                      class="peer appearance-none w-5 h-5 border border-accent-300 rounded-sm hover:bg-accent-100 checked:bg-accent-300 checked:border-accent-300 focus:outline-none focus:shadow-md focus:shadow-accent-100" />
-
-                    <!-- Aspa visible solo si está checked -->
-                    <span
-                      class="pointer-events-none absolute left-[0.5px] top-0 w-5 h-5 flex items-center justify-center text-white text-sm font-bold hidden peer-checked:flex">
-                      <!-- SVG del aspa blanca -->
-                      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M5 13l4 4L19 7" />
-                      </svg>
-                    </span>
-
-                    <label for="checkbox-table-search-{{ $dato['id'] }}" class="sr-only">Seleccionar registro</label>
+                <td class="w-4 p-4 whitespace-nowrap">
+                  <div class="flex items-center">
+                    <input id="checkbox-table-search-{{ $dato['id'] }}" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="checkbox-table-search-{{ $dato['id'] }}" class="sr-only">checkbox</label>
                   </div>
                 </td>
-
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
                   {{ $dato['id'] }}
                 </th>
                 <td class="px-6 py-4 whitespace-nowrap">
-                  @if($editando === $dato['id'])
-                  <input type="text"
-                    wire:model="grupoEditado.nombre"
-                    class="w-full border-gray-300 rounded-md shadow-sm">
-                  @else
                   {{ $dato['nombre'] }}
-                  @endif
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">
-                  @if($editando === $dato['id'])
-                  <input type="text"
-                    wire:model="grupoEditado.tipo"
-                    class="w-full border-gray-300 rounded-md shadow-sm">
-                  @else
                   {{ $dato['tipo'] }}
-                  @endif
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">
-                  @if($editando === $dato['id'])
-                  <input type="text"
-                    wire:model="grupoEditado.descripcion"
-                    class="w-full border-gray-300 rounded-md shadow-sm">
-                  @else
                   {{ $dato['descripcion'] }}
-                  @endif
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">
-                @if($editando === $dato['id'])
-                  <input type="text"
-                    wire:model="grupoEditado.fechainicio"
-                    class="w-full border-gray-300 rounded-md shadow-sm">
-                  @else
                   {{ $dato['fechainicio'] }}
-                  @endif
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">
-                @if($editando === $dato['id'])
-                  <input type="text"
-                    wire:model="grupoEditado.fechafin"
-                    class="w-full border-gray-300 rounded-md shadow-sm">
-                  @else
                   {{ $dato['fechafin'] }}
-                  @endif
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">
                   {{ $dato['creadorgrupo'] }}
@@ -209,7 +150,7 @@
                 <td class="px-6 py-4 whitespace-nowrap">
                   {{ $dato['generadorcertificado'] }}
                 </td>
-                <td class="px-6 py-4 whitespace-nowrap"> 
+                <td class="px-6 py-4 whitespace-nowrap">
                   {{ $dato['firmante1'] }}
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">
@@ -221,34 +162,14 @@
                 <td class="px-6 py-4 whitespace-nowrap">
                   {{ $dato['firmante4'] }}
                 </td>
-                <td class="px-6 py-4 whitespace-nowrap flex items-center justify-center">
-                  <a href="{{ $dato['plantilla'] }}" target="_blank" rel="noreferrer"
-                    class="p-2 bg-gray-500 rounded-lg hover:scale-110 transition-transform w-10 h-10 flex items-center justify-center">
-                    <img src="{{asset('imagenes/icons/eye.svg')}}" alt="view-icon" class="w-5 h-5">
-                  </a>
-
-                </td>
                 <td class="px-6 py-4 whitespace-nowrap text-center w-32">
                   <div class="flex items-center justify-center space-x-3">
-                    @if($editando === $dato['id'])
-                    <button wire:click="guardarGrupo"
-                      class="p-2 cursor-pointer bg-green-500 rounded-lg hover:scale-110 transition-transform w-10 h-10 flex items-center justify-center">
-                      <img src="{{asset('/imagenes/icons/save.svg')}}" alt="Guardar" class="w-5 h-5">
+                    <button class="p-2 bg-blue-500 rounded-lg hover:scale-110 transition-transform w-10 h-10 flex items-center justify-center">
+                      <img src="/imagenes/icons/editar.svg" alt="Editar" class="w-5 h-5">
                     </button>
-                    <button disabled
-                      class="p-2 cursor-pointer bg-red-500 opacity-50 disabled:cursor-not-allowed rounded-lg w-10 h-10 flex items-center justify-center">
-                      <img src="{{asset('/imagenes/icons/borrar.svg')}}" alt="Eliminar" class="w-5 h-5">
+                    <button class="p-2 bg-red-500 rounded-lg hover:scale-110 transition-transform w-10 h-10 flex items-center justify-center" data-certificado-id="{{ $dato['id'] }}">
+                      <img src="/imagenes/icons/borrar.svg" alt="Eliminar" class="w-5 h-5">
                     </button>
-                    @else
-                    <button wire:click="editarGrupo({{ $dato['id'] }})"
-                      class="p-2 cursor-pointer bg-blue-500 rounded-lg hover:scale-110 transition-transform w-10 h-10 flex items-center justify-center">
-                      <img src="{{asset('/imagenes/icons/editar.svg')}}" alt="Editar" class="w-5 h-5">
-                    </button>
-                    <button wire:click="confirmarEliminacion({{ $dato['id'] }})"
-                      class="p-2 cursor-pointer bg-red-500 rounded-lg hover:scale-110 transition-transform w-10 h-10 flex items-center justify-center">
-                      <img src="{{asset('/imagenes/icons/borrar.svg')}}" alt="Eliminar" class="w-5 h-5">
-                    </button>
-                    @endif
                   </div>
                 </td>
               </tr>
@@ -261,7 +182,7 @@
         @else
         <div class="rounded-lg text-lg ml-4 text-gray-700 bg-[#F8D7DA] dark:bg-gray-700 dark:text-gray-400">
           <h1 class="px-3 py-3 text-[#991C24] dark:text-gray-300">
-            No existe ningún registro.
+            No existe ningún registro
           </h1>
         </div>
         @endif
