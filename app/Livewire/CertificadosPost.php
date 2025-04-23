@@ -186,7 +186,6 @@ class CertificadosPost extends Component
 
     public function canceleliminarshowmodal()
     {
-        $this->selectedCertificados = null;
         $this->showDeleteModal = false;
     }
 

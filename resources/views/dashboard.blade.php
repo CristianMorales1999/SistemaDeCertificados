@@ -253,10 +253,7 @@
         </div>
 
         <!-- SCRIPT PARA MANEJAR EL DASHBARD -->
-        <script>
-        @vite('resources/js/admin.js')
-        </script>
-
+        @vite(['resources/js/admin.js'])
     </div> 
 
 <!-- FIN SECCIÓN INTERMEDIA -->
