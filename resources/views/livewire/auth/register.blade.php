@@ -36,7 +36,7 @@ new #[Layout('components.layouts.auth')] class extends Component {
 }; ?>
 
 <div class="flex flex-col gap-6">
-    <x-auth-header :title="__('Create an account')" :description="__('Enter your details below to create your account')" />
+    <x-auth-header :title="__('Crear cuenta')" :description="__('Enter your details below to create your account')" />
 
     <!-- Session Status -->
     <x-auth-session-status class="text-center" :status="session('status')" />
@@ -45,53 +45,62 @@ new #[Layout('components.layouts.auth')] class extends Component {
         <!-- Name -->
         <flux:input
             wire:model="name"
-            :label="__('Name')"
             type="text"
             required
             autofocus
             autocomplete="name"
-            :placeholder="__('Full name')"
+            :placeholder="__('Nombre completo')"
+            class="bg-[#EBF1FD]"
         />
+        @error('name')
+        <span class="text-red-500 text-sm">{{ $message }}</span>
+    @enderror
 
         <!-- Email Address -->
         <flux:input
             wire:model="email"
-            :label="__('Email address')"
             type="email"
             required
             autocomplete="email"
-            placeholder="email@example.com"
+            placeholder="Correo"
         />
+        @error('name')
+        <span class="text-red-500 text-sm">{{ $email }}</span>
+    @enderror
 
         <!-- Password -->
         <flux:input
             wire:model="password"
-            :label="__('Password')"
             type="password"
             required
             autocomplete="new-password"
-            :placeholder="__('Password')"
+            :placeholder="__('Contraseña')"
         />
+        @error('password')
+        <span class="text-red-500 text-sm">{{ $message }}</span>
+    @enderror
 
         <!-- Confirm Password -->
         <flux:input
             wire:model="password_confirmation"
-            :label="__('Confirm password')"
             type="password"
             required
             autocomplete="new-password"
-            :placeholder="__('Confirm password')"
+            :placeholder="__('Confirmar contraseña')"
         />
+        @error('password_confirmation')
+        <span class="text-red-500 text-sm">{{ $message }}</span>
+    @enderror
 
         <div class="flex items-center justify-end">
-            <flux:button type="submit" variant="primary" class="w-full">
-                {{ __('Create account') }}
-            </flux:button>
+            <button type="submit" class="w-full bg-[#9636AD] text-white h-[40px] border rounded-md shadow-md hover:bg-[#963678]">
+                {{ __('Crear cuenta') }}
+            </button>
         </div>
     </form>
 
     <div class="space-x-1 text-center text-sm text-zinc-600 dark:text-zinc-400">
-        {{ __('Already have an account?') }}
-        <flux:link :href="route('login')" wire:navigate>{{ __('Log in') }}</flux:link>
+        {{ __('Ya tienes una cuenta?') }}
+        <flux:link :href="route('login')" wire:navigate>{{ __('Iniciar Sesion') }}</flux:link>
     </div>
 </div>

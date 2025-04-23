@@ -13,14 +13,11 @@ return new class extends Migration
     {
         Schema::create('people', function (Blueprint $table) {
             $table->id();
-            $table->string('dni', 8)->nullable()->unique();
             $table->string('first_name', 150);
             $table->string('last_name', 150);
-            $table->string('personal_email')->nullable()->unique(); // Con longitud predeterminada de 255
-            $table->string('institutional_email')->nullable()->unique(); // Con longitud predeterminada de 255
-
-            $table->string('phone_number', 15)->nullable();
+            $table->string('email')->unique(); // Con longitud predeterminada de 255
             $table->enum('gender', ['masculino', 'femenino']); // Uso de enum para mayor claridad
+            $table->string('signature_image_url', 300)->nullable(); // URL de la imagen de firma
             $table->timestamps();
         });
     }
@@ -30,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('persons');
+        Schema::dropIfExists('people');
     }
 };

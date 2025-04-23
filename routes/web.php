@@ -1,11 +1,20 @@
 <?php
 
+use App\Http\Controllers\PersonController;
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
+
+Route::get('/administrator/people',[PersonController::class,'index'])->name('people.index');
+
+// public
+Route::get('/validar-codigo', function () {
+    return view('certificados.validar-codigo');
+}) ->name('validar-codigo');
+
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])

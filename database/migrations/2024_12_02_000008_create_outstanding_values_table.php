@@ -11,13 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('areas', function (Blueprint $table) {
+        Schema::create('outstanding_values', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 100); // Crea la columna 'name' de tipo VARCHAR(100)
+            $table->string('name',100);
             $table->timestamps();
-
-            // Solo agregar índice si se va a buscar frecuentemente por el campo 'name'.
-            $table->index('name');  // Índice opcional.
         });
     }
 
@@ -26,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('areas');
+        Schema::dropIfExists('outstanding_values');
     }
 };
