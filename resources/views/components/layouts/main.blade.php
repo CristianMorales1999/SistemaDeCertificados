@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <x-layouts.app.header />
     {{ $slot }}
     <div class="fixed bottom-8 right-8 z-50 flex items-center justify-center text-white w-fit">
         <x-validar-button />

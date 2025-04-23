@@ -4,7 +4,7 @@
 
 <?php
 
- $clases = 'bg-accent-300 text-white py-4 px-8 rounded-xl hover:bg-white hover:text-accent-300 border border-accent-300 cursor-pointer transition-all duration-300 transform';
+ $clases = 'bg-white text-accent-300 py-4 px-8 rounded-xl hover:bg-accent-300 hover:text-white hover:text-accent-300 border border-accent-300 cursor-pointer transition-all duration-300 transform';
 
  ?>
 
