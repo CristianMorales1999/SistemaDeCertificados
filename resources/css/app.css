@@ -6,6 +6,8 @@
 @source '../../vendor/livewire/flux-pro/stubs/**/*.blade.php';
 @source '../../vendor/livewire/flux/stubs/**/*.blade.php';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
@@ -88,6 +90,7 @@
     --color-light-blue-300: #54B8FF;
     --color-light-blue-400: #33AAFF;
     --color-light-blue-500: #0095FF;
+    --color-success: #43B75D;
 
     /* Font Sizes */
     --font-size-h1: 32px;

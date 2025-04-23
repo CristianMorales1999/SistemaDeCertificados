@@ -11,13 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('dates', function (Blueprint $table) {
+        Schema::create('certification_types', function (Blueprint $table) {
             $table->id();
-            $table->date('date');  // Crea el campo 'date' de tipo DATE
+            $table->string('name', 150); // Crea la columna 'name' de tipo VARCHAR(150)
+            $table->string('abbreviation', 4)->nullable()->unique(); // Crea la columna 'abbreviation' de tipo VARCHAR(50)
             $table->timestamps();
-
-            // Agregar un índice al campo 'date' para mejorar el rendimiento de las consultas que lo utilicen
-            $table->index('date');  // Esto crea un índice en la columna 'date'
         });
     }
 
@@ -26,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('dates');
+        Schema::dropIfExists('certification_types');
     }
 };
