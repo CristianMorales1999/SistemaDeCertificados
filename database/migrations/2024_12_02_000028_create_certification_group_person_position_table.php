@@ -25,6 +25,8 @@ return new class extends Migration
 
             // Llave primaria compuesta
             $table->primary(['person_id', 'position_id', 'certification_group_id']);
+            $table->index(['person_id', 'position_id']);  // Agregar un índice en 'person_id' y 'position_id' para mejorar las búsquedas
+            $table->index('certification_group_id');    // Agregar un índice en 'certification_group_id' para mejorar las búsquedas
         });
     }
 

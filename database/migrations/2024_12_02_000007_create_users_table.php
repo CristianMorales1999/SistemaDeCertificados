@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->boolean('is_active')->default(true);
-            $table->boolean('is_validated')->default(false);
             $table->string('profile_image_url',300)->nullable();
             $table->timestamps();
         });

@@ -11,10 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('image_statuses', function (Blueprint $table) {
+        Schema::create('font_styles', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 100);  // Crea el campo 'name' de tipo VARCHAR con un máximo de 100 caracteres
-            $table->timestamps();
+            $table->string('name', 50);
         });
     }
 
@@ -23,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('image_statuses');
+        Schema::dropIfExists('font_styles');
     }
 };

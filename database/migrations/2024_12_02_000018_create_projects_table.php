@@ -15,6 +15,9 @@ return new class extends Migration
             $table->foreignId('area_id_codp')->nullable();
             $table->foreignId('person_id_codp')->nullable();
             $table->string('name', 300);
+            $table->text('description')->nullable();
+            $table->date('start_date');
+            $table->date('end_date')->nullable();
             $table->timestamps();
         
             $table->foreign(['person_id_dp', 'area_id_dp'])

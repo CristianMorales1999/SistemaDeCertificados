@@ -29,19 +29,14 @@ return new class extends Migration
                   ->constrained('projects')
                   ->nullOnDelete()
                   ->cascadeOnUpdate();
-            $table->foreignId('workshop_id')
+            $table->foreignId('event_id')
                   ->nullable()
-                  ->constrained('workshops')
-                  ->nullOnDelete()
-                  ->cascadeOnUpdate();
-            $table->foreignId('training_id')
-                  ->nullable()
-                  ->constrained('trainings')
+                  ->constrained('events')
                   ->nullOnDelete()
                   ->cascadeOnUpdate();
             $table->string('name', 300);
             $table->text('description')->nullable();
-            $table->date('start_date')->nullable();
+            $table->date('start_date');
             $table->date('end_date')->nullable();
             $table->date('issue_date');
             $table->boolean('is_validated')->default(false);

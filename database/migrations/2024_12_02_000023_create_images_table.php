@@ -23,7 +23,7 @@ return new class extends Migration
                   ->onDelete('cascade') // Define la acción ON DELETE CASCADE
                   ->onUpdate('cascade'); // Define la acción ON UPDATE CASCADE
 
-            $table->string('name',255)->nullable(); // Crea la columna 'name' como VARCHAR(255) y permite NULL
+            $table->string('name',255); // Crea la columna 'name' como VARCHAR(255) y permite NULL
             $table->string('url', 300)->unique(); // Crea la columna 'url' como VARCHAR(300) y no permite NULL
             $table->timestamps(); // Crea las columnas 'created_at' y 'updated_at' como TIMESTAMP NULL
 

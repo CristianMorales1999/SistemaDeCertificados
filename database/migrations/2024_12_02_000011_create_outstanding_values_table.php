@@ -11,10 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('font_styles', function (Blueprint $table) {
+        Schema::create('outstanding_values', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 50);
-            $table->timestamps();
+            $table->string('name',100);
         });
     }
 
@@ -23,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('font_styles');
+        Schema::dropIfExists('outstanding_values');
     }
 };

@@ -34,6 +34,8 @@ return new class extends Migration
             // Índices adicionales
             $table->unique(['person_id', 'certification_group_id']); // Restricción de unicidad
             $table->index('code'); // Índice en el código del certificado
+            $table->index('certificate_status_id'); // Índice en el estado del certificado
+            
         });
     }
 

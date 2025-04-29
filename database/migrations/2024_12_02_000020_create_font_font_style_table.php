@@ -19,6 +19,8 @@ return new class extends Migration
                   ->cascadeOnDelete();
 
             $table->primary(['font_style_id', 'font_id']);
+            $table->index('font_style_id');  // Agregar un índice en 'font_style_id' para mejorar las búsquedas
+            $table->index('font_id');    // Agregar un índice en 'font_id' para mejorar las búsquedas
         });
     }
 

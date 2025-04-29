@@ -52,7 +52,7 @@
         </div>
 
         <!-- Menú para desktop (solo para usuarios no autenticados) -->
-        <div class="hidden w-2/4 md:flex justify-center">
+        <div class="w-3/4 flex items-center justify-end pr-10 md:pr-20 ml-[5%] relative">
             <a href="{{ route('register') }}" class="ml-1 mr-2 px-5 py-3 flex items-center justify-center bg-white hover:bg-[#E7C9EE] text-accent-300 font-semibold rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 border-accent-300 border-2 lg:ml-2">
                 <h1 class="flex items-center justify-center text-center text-xs text-accent-300 lg:text-xl lg:text-center">Crear Cuenta</h1>
             </a>

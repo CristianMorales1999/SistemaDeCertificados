@@ -28,6 +28,9 @@ return new class extends Migration
             
             // Llave primaria compuesta
             $table->primary(['person_id', 'area_id', 'project_id']);
+
+            $table->index(['person_id', 'area_id']);  // Agregar un índice en 'person_id' y 'area_id' para mejorar las búsquedas
+            $table->index('project_id');    // Agregar un índice en 'project_id' para mejorar las búsquedas
         });
     }
 

@@ -11,11 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        // Tipo: Titulo, Subtitulo, Nombre de persona , cargo, nombre de firma
-        Schema::create('certificate_text_types', function (Blueprint $table) {
+        Schema::create('image_types', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 100); // Crea la columna 'name' de tipo VARCHAR(100)
-            $table->timestamps();
+            $table->string('name', 255); // Crea la columna 'name' de tipo VARCHAR(255)
         });
     }
 
@@ -24,6 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('certificate_text_types');
+        Schema::dropIfExists('image_types');
     }
 };

@@ -14,10 +14,6 @@ return new class extends Migration
             $table->foreignId('certification_group_id');
             $table->foreignId('font_configuration_id');
 
-            $table->timestamps(); // created_at y updated_at
-
-            // Clave primaria compuesta
-            $table->primary(['certificate_text_type_id', 'certification_group_id']);
 
             // Claves foráneas
             $table->foreign('certificate_text_type_id')
@@ -32,11 +28,17 @@ return new class extends Migration
                   ->cascadeOnUpdate()
                   ->cascadeOnDelete();
 
+
             $table->foreign('font_configuration_id')
                   ->references('id')
                   ->on('font_configurations')
                   ->cascadeOnUpdate()
                   ->cascadeOnDelete();
+
+            // Clave primaria compuesta
+            $table->primary(['certificate_text_type_id', 'certification_group_id']);
+
+            $table->timestamps(); // created_at y updated_at
 
             // Índices adicionales
             $table->index('certificate_text_type_id');

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('certification_types', function (Blueprint $table) {
             $table->id();
             $table->string('name', 150); // Crea la columna 'name' de tipo VARCHAR(150)
-            $table->string('abbreviation', 4)->nullable()->unique(); // Crea la columna 'abbreviation' de tipo VARCHAR(50)
+            $table->string('abbreviation', 6)->nullable()->unique(); // Crea la columna 'abbreviation' de tipo VARCHAR(50)
             $table->timestamps();
         });
     }

@@ -26,6 +26,8 @@ return new class extends Migration
 
             // Definir la clave primaria compuesta para 'image_id' y 'certification_group_id'
             $table->primary(['image_id', 'certification_group_id']);
+            $table->index('image_id');  // Agregar un índice en 'image_id' para mejorar las búsquedas
+            $table->index('certification_group_id');  // Agregar un índice en 'certification_group_id' para mejorar las búsquedas
             
             $table->timestamps(); // 'created_at' y 'updated_at'
         });

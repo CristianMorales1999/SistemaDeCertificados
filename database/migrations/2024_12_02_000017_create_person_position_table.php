@@ -6,35 +6,30 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
-        Schema::create('area_person', function (Blueprint $table) {
-
+        Schema::create('person_position', function (Blueprint $table) {
             $table->foreignId('person_id')
                   ->constrained('people')
                   ->cascadeOnUpdate()
                   ->cascadeOnDelete();
-            $table->foreignId('area_id')
-                  ->constrained('areas')
+            $table->foreignId('position_id')
+                  ->constrained('positions')
                   ->cascadeOnUpdate()
                   ->cascadeOnDelete();
-            $table->date('start_date')->nullable();
+            $table->date('start_date');
             $table->date('end_date')->nullable();
             $table->boolean('is_active')->default(true);
             $table->timestamps();
 
-            $table->primary(['person_id', 'area_id']);
+            $table->primary(['person_id', 'position_id']);
+            $table->index('person_id');
+            $table->index('position_id');
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
-        Schema::dropIfExists('area_person');
+        Schema::dropIfExists('person_position');
     }
 };
