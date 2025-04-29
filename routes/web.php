@@ -16,6 +16,19 @@ Route::get('/validar-codigo', function () {
 }) ->name('validar-codigo');
 
 
+
+/* -----------------GENERACIÓN DE CERTIFICADOS--------------- */
+Route::get('/generacion-certificados', function () {
+    return view('generacion-certificados');
+}) ->name('generacion-certificados');
+/* -----------------CREACIÓN DE GRUPO--------------- */
+Route::get('/grupo-certificacion', function () {
+    return view('grupo-certificacion');
+}) ->name('grupo-certificacion');
+
+
+
+
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
