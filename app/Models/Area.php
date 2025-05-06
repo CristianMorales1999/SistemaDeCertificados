@@ -2,10 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 
 class Area extends Model
 {
@@ -25,29 +25,25 @@ class Area extends Model
      */
     protected $fillable = [
         'name',
+        'abbreviation',
     ];
 
-    /**
-     * Los atributos que deberían ser convertidos a tipos nativos.
-     *
-     * @var array
-     */
-    protected $casts = [
-        'created_at' => 'datetime',
-        'updated_at' => 'datetime',
-    ];
-
-
-    /**
-     * Relación muchos a muchos con el modelo Person.
-     *
-     * Incluye atributos adicionales desde la tabla pivot.
-     */
-    public function people():BelongsToMany
+    //Relación uno a muchos con AreaPerson
+    public function areaPerson(): HasMany
     {
-        return $this->belongsToMany(Person::class, 'area_person', 'area_id', 'person_id')
-                    ->withPivot(['start_date', 'end_date', 'is_active'])
-                    ->withTimestamps();
+        return $this->hasMany(AreaPerson::class, 'area_id', 'id');
+    }
+    //Relación indirecta con Person a través de AreaPerson
+    public function people():HasManyThrough
+    {
+        return $this->hasManyThrough(
+            Person::class,
+            AreaPerson::class,
+            'area_id', // Clave foránea en la tabla intermedia (area_person)
+            'id', // Clave primaria en la tabla de destino (people)
+            'id', // Clave primaria en la tabla de origen (areas)
+            'person_id' // Clave foránea en la tabla intermedia (area_person)
+        );
     }
 }
 

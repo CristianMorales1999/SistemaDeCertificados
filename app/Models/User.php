@@ -57,4 +57,22 @@ class User extends Authenticatable
             ->map(fn (string $name) => Str::of($name)->substr(0, 1))
             ->implode('');
     }
+
+    //Relación muchos a muchos con la tabla roles
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class, 'role_user', 'user_id', 'role_id')
+            ->withPivot('is_active')
+            ->withTimestamps();
+    }
+    //Relación uno a muchos con la tabla certification_groups
+    public function createdCertificationGroups()
+    {
+        return $this->hasMany(CertificationGroup::class, 'created_by_user_id');
+    }
+    //Relación uno a muchos con la tabla certification_groups
+    public function certifiedCertificationGroups()
+    {
+        return $this->hasMany(CertificationGroup::class, 'certified_by_user_id');
+    }
 }

@@ -5,11 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Thiagoprz\CompositeKey\HasCompositeKey;
 
 class AreaPerson extends Model
 {
-    use HasFactory;
+    use HasFactory, HasCompositeKey;
 
     /**
      * La tabla asociada con el modelo.
@@ -17,6 +19,9 @@ class AreaPerson extends Model
      * @var string
      */
     protected $table = 'area_person';
+    protected $primaryKey = ['person_id', 'area_id'];
+    public $timestamps = false;
+    public $incrementing = false; // Indica que la clave primaria no es autoincremental
 
     /**
      * Los atributos que se pueden asignar masivamente.
@@ -41,17 +46,35 @@ class AreaPerson extends Model
         'updated_at' => 'datetime',
     ];
 
-    //Relaciona de muchos a muchos el modelo AreaPerson con el modelo OutstandingValue, pero ten en cuenta que el modelo AreaPerson tiene una llave primaria compuesta (person_id, area_id), producto de la relacion de muchos a muchos de los modelos Area y People, por lo que la llave foranea en la tabla pivot area_person_outstanding_value es area_person_area_id y area_person_person_id por parte de la tabla area_person y por parte de la tabla outstanding_value es outstanding_value_id y los campos extra de la tabla pivot son date y los timestamps
-    public function outstandingValues(): BelongsToMany
+    //Relación muchos a uno con la Person
+    public function person(): BelongsTo
     {
-        return $this->belongsToMany(
-            OutstandingValue::class,
-            'area_person_outstanding_value',
-            'area_person_person_id',
-            'outstanding_value_id'
-        )
-        ->withPivot(['area_person_area_id', 'date'])
-        ->withTimestamps();
+        return $this->belongsTo(Person::class, 'person_id', 'id');
+    }
+    //Relación muchos a uno con la Area
+    public function area(): BelongsTo
+    {
+        return $this->belongsTo(Area::class, 'area_id', 'id');
+    }
+    //Relación uno a muchos con AreaPersonOutstandingValue
+    public function areaPersonOutstandingValues(): HasMany
+    {
+        return $this->hasMany(AreaPersonOutstandingValue::class, ['person_id', 'area_id'], ['person_id', 'area_id']);
+    }
+    //Relación uno a muchos con AreaPersonProject
+    public function areaPersonProjects(): HasMany
+    {
+        return $this->hasMany(AreaPersonProject::class, ['person_id', 'area_id'], ['person_id', 'area_id']);
+    }
+    //Relación uno a muchos con la Project(Projects as DP)
+    public function projectsAsDP():HasMany
+    {
+        return $this->hasMany(Project::class, ['person_id_dp', 'area_id_dp'], ['person_id', 'area_id']);
+    }
+    //Relación uno a muchos con la Project(Projects as CODP)
+    public function projectsAsCODP():HasMany
+    {
+        return $this->hasMany(Project::class, ['person_id_codp', 'area_id_codp'], ['person_id', 'area_id']);
     }
 }
 
