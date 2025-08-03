@@ -18,9 +18,9 @@ class PersonController extends Controller
         }])->get();
 
         //dd($people);
-          
-        
-        return view('administrator.people.index', compact('people'));
+
+
+        return view('admin.people.index', compact('people'));
     }
 
     /**

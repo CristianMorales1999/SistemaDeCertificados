@@ -8,9 +8,9 @@ use Livewire\Component;
 class GrupoCertificacion extends Component
 {
     public $showDropdownTiposCertificados = false;
-    public $searchTipoCertificado = '';  
+    public $searchTipoCertificado = '';
     public $tiposCertificados = [];
-    public $tipoCertificadoSeleccionado = null; 
+    public $tipoCertificadoSeleccionado = null;
 
     public $showModalNuevaPersona = false;
     public $showDropdownAreas = false;
@@ -99,7 +99,7 @@ class GrupoCertificacion extends Component
         // Ordenar datos
         $datos = $datos->sortBy($this->sort, SORT_REGULAR, $this->direction === 'desc');
 
-        return view('livewire.grupo-certificacion', [
+        return view('livewire.certificates.grupo-certificacion', [
             'datosGrupos' => $datos->all(),
         ]);
     }

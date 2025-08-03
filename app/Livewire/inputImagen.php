@@ -18,7 +18,7 @@ class inputImagen extends Component
 
     public function render()
     {
-        return view('livewire.input-imagen');
+        return view('livewire.ui.input-imagen');
     }
 
     public function save()

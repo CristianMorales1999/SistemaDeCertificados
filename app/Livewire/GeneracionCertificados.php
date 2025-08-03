@@ -56,7 +56,7 @@ class GeneracionCertificados extends Component
     {
         $this->tipoCertificadoSeleccionado = collect($this->tiposCertificados)->firstWhere('id', $id);
         $this->showDropdownTipoCertificado = false;
-        $this->grupoSeleccionado = null; // Limpiar grupo si cambia el tipo 
+        $this->grupoSeleccionado = null; // Limpiar grupo si cambia el tipo
         $this->searchGrupo = ''; // Reset buscador de grupo
     }
 
@@ -86,6 +86,6 @@ class GeneracionCertificados extends Component
     /* DEFAULT */
     public function render()
     {
-        return view('livewire.generacion-certificados');
+        return view('livewire.certificates.generacion-certificados');
     }
 }

@@ -145,7 +145,7 @@ class CertificadosPost extends Component
 
             // Actualizar los datos mostrados
             $this->filtrarDatos();
-            
+
             // Mostrar notificación
             $this->notificationMessage = 'El certificado ha sido eliminado correctamente';
             $this->showNotification = true;
@@ -222,6 +222,6 @@ class CertificadosPost extends Component
 
     public function render()
     {
-        return view('livewire.certificados-post', ['datos' => $this->datos]);
+        return view('livewire.admin.certificados-post', ['datos' => $this->datos]);
     }
 }

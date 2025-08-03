@@ -1,32 +1,18 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>Sistema generador de Certificados SEDIPRO</title>
-
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
-        
-    </head>
-    
-    <body>
-
-    <x-layouts.app>
+@section('content')
 
         <div class="min-h-screen flex flex-col">
 
         <!-- SECCIÓN PREINTERMEDIA -->
-        
+
         <div id="main-content" class="transition-all duration-300">
 
         <section class="bg-[#EBF1FD]">
-        
+
         <div class="pt-24">
         <h1 class="text-center font-bold mt-8 mb-8 md:text-2xl md:mx-8 lg:text-3xl lg:mx-8">GENERADOR DE CERTIFICADOS<h1>
-        <h1 class="text-center ml-4 mr-4 mb-4 md:text-2xl md:mx-8 lg:text-sm lg:mx-8">Carga tu plantilla, logo y firmas para poder generar y descargar tus diferentes tipos de <br> certificados para cierto grupo de personas.<h1>    
+        <h1 class="text-center ml-4 mr-4 mb-4 md:text-2xl md:mx-8 lg:text-sm lg:mx-8">Carga tu plantilla, logo y firmas para poder generar y descargar tus diferentes tipos de <br> certificados para cierto grupo de personas.<h1>
         </div>
         <!-- BOTONES -->
 
@@ -51,7 +37,7 @@
             </div>
         <!-- FIN IMAGEN EJEMPLO DE CERTIFICADO-->
 
-        </section>    
+        </section>
 
         <section>
             <h1 class="text-center pt-6 mt-10 ml-4 mr-4 mb-10 md:text-2xl md:mx-8 lg:text-sm lg:mx-8">Si aún no tienes una plantilla personalizada, puedes elegir una de nuestras plantillas prediseñadas.<h1>
@@ -78,7 +64,7 @@
 
         <section class="bg-[#EBF1FD]">
         <div class="pt-10 mt-5">
-        <div>    
+        <div>
 
         <!-- IMAGEN LOGO-->
             <!-- Imagen -->
@@ -117,18 +103,12 @@
         </div>
 
         <div class=" py-10 md:py-20">
-        <div>    
+        <div>
 
-        </section>   
+        </section>
 
         </div>
 
         <!-- FIN SECCIÓN INTERMEDIA -->
 
-    </x-layouts.app>
-
-    <x-layouts.app.footer/>
-
-    </body>
-
-</html>
+@endsection

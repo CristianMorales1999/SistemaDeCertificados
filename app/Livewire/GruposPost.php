@@ -87,7 +87,7 @@ class GruposPost extends Component
 
             // Actualizar los datos mostrados
             $this->filtrarDatos();
-            
+
             // Mostrar notificación
             $this->notificationMessage = 'El registro ha sido eliminado correctamente';
             $this->showNotification = true;
@@ -117,19 +117,19 @@ class GruposPost extends Component
         $this->datosGrupos = $data->grupos_certificacion;
         //dd($this->datosGrupos);
         $datos = collect($this->datosGrupos);
-        
+
         if (!empty($this->search)) {
             $datos = $datos->filter(function($item) {
                 return stripos($item['nombre'], $this->search) !== false ||
                        stripos($item['tipo'], $this->search) !== false;
             });
         }
-        
+
         // Ordenar los datos después del filtrado
         $datos = $datos->sortBy($this->sort, SORT_REGULAR, $this->direction === 'desc');
-        
+
         $this->datosGrupos = $datos->all();
-        
-        return view('livewire.grupos-post', compact('datos'));
+
+        return view('livewire.admin.grupos-post', compact('datos'));
     }
 }

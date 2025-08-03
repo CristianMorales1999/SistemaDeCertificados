@@ -70,7 +70,7 @@ new class extends Component {
 }; ?>
 
 <section class="w-full">
-    @include('partials.settings-heading')
+    @include('components.settings.heading')
 
     <x-settings.layout :heading="__('Profile')" :subheading="__('Update your name and email address')">
         <form wire:submit="updateProfileInformation" class="my-6 w-full space-y-6">
@@ -103,9 +103,9 @@ new class extends Component {
                     <flux:button variant="primary" type="submit" class="w-full">{{ __('Save') }}</flux:button>
                 </div>
 
-                <x-action-message class="me-3" on="profile-updated">
+                <x-ui.action-message class="me-3" on="profile-updated">
                     {{ __('Saved.') }}
-                </x-action-message>
+                </x-ui.action-message>
             </div>
         </form>
 

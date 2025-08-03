@@ -36,6 +36,6 @@ class ValidarCodigo extends Component
 
     public function render()
     {
-        return view('livewire.validar-codigo');
+        return view('livewire.certificates.validar-codigo');
     }
 }
