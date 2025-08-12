@@ -4,7 +4,7 @@
 
   <div class="mx-10">
     <div class="bg-white p-4 rounded-lg shadow-lg">
-      <div class="bg-[#F7FAFF] p-4 rounded-lg">
+      <div class="bg-primary-25 p-4 rounded-lg">
 
         <!-- Filtro de tabla -->
         <div class="flex items-center gap-4">
@@ -30,14 +30,14 @@
 
           <div class="flex items-center gap-4">
             <button id="deleteMultiple"
-              class="px-4 py-1.5 mb-4 flex items-center justify-center bg-white hover:bg-[#E7C9EE] text-accent-300 font-semibold rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 border-accent-300 border-2 disabled:opacity-50 disabled:cursor-not-allowed"
+              class="px-4 py-1.5 mb-4 flex items-center justify-center bg-white hover:bg-accent-50 text-accent-300 font-semibold rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 border-accent-300 border-2 disabled:opacity-50 disabled:cursor-not-allowed"
               disabled>
               <img src="{{asset('/imagenes/icons/supertrash.svg')}}" alt="Delete Icon" class="w-6 h-6 mr-2">
               <span class="text-center text-xs lg:text-sm">Borrar</span>
             </button>
 
             <a href="{{ route('login') }}"
-              class="px-4 py-1.5 mb-4 flex items-center justify-center bg-white hover:bg-[#E7C9EE] text-accent-300 font-semibold rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 border-accent-300 border-2">
+              class="px-4 py-1.5 mb-4 flex items-center justify-center bg-white hover:bg-accent-50 text-accent-300 font-semibold rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 border-accent-300 border-2">
               <img src="{{asset('/imagenes/icons/plus.svg')}}" alt="Add Icon" class="w-4 h-4 mr-2">
               <span class="text-center text-xs lg:text-sm">Añadir registro</span>
             </a>
@@ -259,8 +259,8 @@
         </div>
 
         @else
-        <div class="rounded-lg text-lg ml-4 text-gray-700 bg-[#F8D7DA] dark:bg-gray-700 dark:text-gray-400">
-          <h1 class="px-3 py-3 text-[#991C24] dark:text-gray-300">
+        <div class="rounded-lg text-lg ml-4 text-gray-700 bg-accent-50 dark:bg-gray-700 dark:text-gray-400">
+          <h1 class="px-3 py-3 text-red-200 dark:text-gray-300">
             No existe ningún registro.
           </h1>
         </div>
