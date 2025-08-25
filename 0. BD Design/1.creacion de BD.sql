@@ -80,6 +80,7 @@ CREATE TABLE personas (
   correo_personal VARCHAR(150) NOT NULL,
   correo_institucional VARCHAR(150) NULL,
   sexo ENUM('Masculino','Femenino') NOT NULL,
+  codigo VARCHAR(10) NULL,
   PRIMARY KEY(id),
   INDEX personas_FKIndex1(imagen_firma_id),
   UNIQUE INDEX personas_correo_personal_unique(correo_personal),
@@ -285,7 +286,8 @@ CREATE TABLE certificados (
 #_______________________TABLAS INTERMEDIAS PURAS_____________________
 #____________________________________________________________________
 #TABLA 23
-CREATE TABLE grupo_de_certificacion_seccion_de_informacion (
+CREATE TABLE configuraciones (
+  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
   seccion_de_informacion_id INTEGER UNSIGNED NOT NULL,
   grupo_de_certificacion_id INTEGER UNSIGNED NOT NULL,
   fuente_id INTEGER UNSIGNED NOT NULL,
@@ -295,10 +297,11 @@ CREATE TABLE grupo_de_certificacion_seccion_de_informacion (
   color_inicial VARCHAR(7) NOT NULL,
   color_medio VARCHAR(7) NULL,
   color_final VARCHAR(7) NULL,
-  PRIMARY KEY(seccion_de_informacion_id, grupo_de_certificacion_id),
-  INDEX grupo_de_certificacion_seccion_de_informacion_FKIndex1(grupo_de_certificacion_id),
-  INDEX grupo_de_certificacion_seccion_de_informacion_FKIndex2(seccion_de_informacion_id),
-  INDEX grupo_de_certificacion_seccion_de_informacion_FKIndex3(fuente_id)
+  PRIMARY KEY(id),
+  INDEX configuraciones_FKIndex1(seccion_de_informacion_id),
+  INDEX configuraciones_FKIndex2(fuente_id),
+  INDEX configuraciones_FKIndex3(grupo_de_certificacion_id),
+  UNIQUE INDEX configuraciones_seccion_id_grupo_id_unique(seccion_de_informacion_id, grupo_de_certificacion_id)
 );
 #TABLA 24
 CREATE TABLE user_rol (
