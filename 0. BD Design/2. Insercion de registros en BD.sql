@@ -402,7 +402,7 @@ INSERT INTO `area_persona` (`id`, `area_id`, `persona_id`, `fecha_inicio`, `fech
 #____________________________________________________________________________________________
 #____________________________ INSERTS DE GRUPOS DE CERTIFICACIÓN ____________________________
 #_____________________________ (tabla: grupos_de_certificacion) _____________________________
-INSERT INTO `grupos_de_certificacion` (`id`, `tipo_de_certificacion_id`, `imagen_plantilla_id`, `imagen_logo_sediprano_id`, `proyecto_id`, `evento_id`, `usario_creador_id`, `usuario_generador_id`, `nombre`, `descripcion`, `fecha_de_emision`, `fecha_de_generacion`, `estado`) 
+INSERT INTO `grupos_de_certificacion` (`id`, `tipo_de_certificacion_id`, `imagen_plantilla_id`, `imagen_logo_sediprano_id`, `proyecto_id`, `evento_id`, `usuario_creador_id`, `usuario_generador_id`, `nombre`, `descripcion`, `fecha_emision`, `fecha_generacion`, `estado`)
 VALUES (NULL, '1', NULL, NULL, NULL, NULL, '7', NULL, 'Egresados-2025', NULL, '2026-01-01', '2026-03-01', 'Pendiente');
 #____________________________________________________________________________________________
 

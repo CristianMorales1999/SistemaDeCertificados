@@ -37,7 +37,7 @@ return new class extends Migration
                 ->constrained('eventos')
                 ->cascadeOnUpdate()
                 ->nullOnDelete();
-            $table->foreignId('usario_creador_id')
+            $table->foreignId('usuario_creador_id')
                 ->constrained('users')
                 ->cascadeOnUpdate()
                 ->cascadeOnDelete();
@@ -48,8 +48,8 @@ return new class extends Migration
                 ->nullOnDelete();
             $table->string('nombre',255)->unique();
             $table->text('descripcion')->nullable();
-            $table->date('fecha_de_emision');
-            $table->date('fecha_de_generacion')->nullable();
+            $table->date('fecha_emision');
+            $table->date('fecha_generacion')->nullable();
             $table->enum('estado',[
                 'Pendiente',
                 'Validado',
