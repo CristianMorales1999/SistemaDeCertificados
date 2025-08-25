@@ -6,21 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Area extends Model
+class EntidadAliada extends Model
 {
     use HasFactory;
-
+    
     /**
      * La tabla asociada con el modelo.
      *
      * @var string
      */
-    protected $table = 'areas';
-
-    /**
-     * La clave primaria asociada a la tabla.
-     */
-    protected $primaryKey = 'id'; // Util cuando el nombre de la clave primaria no es 'id', ya que laravel asume que la clave primaria es 'id' por defecto
+    protected $table = 'entidades_aliadas';
 
     /**
      * Los atributos que se pueden asignar masivamente.
@@ -29,7 +24,7 @@ class Area extends Model
      */
     protected $fillable = [
         'nombre',
-        'abreviatura',
+        'cargo_de_representante'
     ];
 
     /**
@@ -42,15 +37,15 @@ class Area extends Model
         'updated_at' => 'datetime',
     ];
 
-    //Relación uno a muchos con AreaPersona
-    public function areaPersonas(): HasMany
+    //Relación uno a muchos con EntidadAliadaPersona
+    public function entidadAliadaPersonas() : HasMany
     {
-        return $this->hasMany(AreaPersona::class, 'area_id');
+        return $this->hasMany(EntidadAliadaPersona::class, 'entidad_aliada_id');
     }
+
     //Relación uno a muchos con Proyecto
-    public function proyectos(): HasMany
+    public function proyectos() : HasMany
     {
-        return $this->hasMany(Proyecto::class, 'area_id');
+        return $this->hasMany(Proyecto::class, 'entidad_aliada_id');
     }
 }
-
