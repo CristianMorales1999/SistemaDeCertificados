@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "../../vendor/livewire/flux/dist/flux.css";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @source "../views";
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
@@ -29,6 +30,7 @@
     --color-accent: var(--color-neutral-800);
     --color-accent-content: var(--color-neutral-800);
     --color-accent-foreground: var(--color-white);
+
 
     /*Colores de Sediprano*/
     --color-azul-oscuro: #292d66;
@@ -85,7 +87,8 @@
     --color-yellow-100: #ffc107;
     --color-yellow-200: #b78900;
     --color-green-100: #85e29a;
-    --color-green-300: #28a745;
+    --color-green-200: #28A745;
+    --color-green-300: #28A745;
     --color-light-blue-50: #e6f4ff;
     --color-light-blue-100: #b0deff;
     --color-light-blue-200: #8aceff;
@@ -113,7 +116,47 @@
     --margin-bottom-h2: 40px;
     --margin-top-default: 20px;
     --margin-bottom-default: 20px;
+
+    /* Headings */
+    --h1-Heading-32px-Bold: 32px/40px "Inter", sans-serif;
+    --h2-Title-28px-Bold: 28px/36px "Inter", sans-serif;
+    --h3-Subtitle-24px-Semibold: 24px/32px "Inter", sans-serif;
+    --h4-Subtitle-20px-Medium: 20px/28px "Inter", sans-serif;
+    --h5-Subtitle-18px-Regular: 18px/26px "Inter", sans-serif;
+    --h6-Subtitle-16px-Regular: 16px/24px "Inter", sans-serif;
+
+    /* Paragraphs & Text */
+    --Normaltext-14px-Regular: 14px/22px "Inter", sans-serif;
+    --Littletext-12px-Light: 12px/20px "Inter", sans-serif;
+    --Normaltext-16px-Regular: 16px/24px "Inter", sans-serif;
+    --Normaltext-18px-Medium: 18px/26px "Inter", sans-serif;
+    --Normaltext-18px-Semibold: 18px/28px "Inter", sans-serif;
+    --Normaltext-14px-Semibold: 14px/22px "Inter", sans-serif;
+    --Normaltext-16px-Semibold: 16px/24px "Inter", sans-serif;
+    --Normaltext-14px-Medium: 14px/22px "Inter", sans-serif;
+
 }
+
+@layer utilities {
+  /* Headings */
+  .h1-Heading-32px-Bold { font: var(--h1-Heading-32px-Bold); font-weight: 700; }
+  .h2-Title-28px-Bold { font: var(--h2-Title-28px-Bold); font-weight: 700; }
+  .h3-Subtitle-24px-Semibold { font: var(--h3-Subtitle-24px-Semibold); font-weight: 600; }
+  .h4-Subtitle-20px-Medium { font: var(--h4-Subtitle-20px-Medium); font-weight: 500; }
+  .h5-Subtitle-18px-Regular { font: var(--h5-Subtitle-18px-Regular); font-weight: 400; }
+  .h6-Subtitle-16px-Regular { font: var(--h6-Subtitle-16px-Regular); font-weight: 400; }
+
+  /* Paragraphs & Text */
+  .Normaltext-14px-Regular { font: var(--Normaltext-14px-Regular); font-weight: 400; }
+  .Littletext-12px-Light { font: var(--Littletext-12px-Light); font-weight: 300; }
+  .Normaltext-16px-Regular { font: var(--Normaltext-16px-Regular); font-weight: 400; }
+  .Normaltext-18px-Medium { font: var(--Normaltext-18px-Medium); font-weight: 500; }
+  .Normaltext-18px-Semibold { font: var(--Normaltext-18px-Semibold); font-weight: 600; }
+  .Normaltext-14px-Semibold { font: var(--Normaltext-14px-Semibold); font-weight: 600; }
+  .Normaltext-16px-Semibold { font: var(--Normaltext-16px-Semibold); font-weight: 600; }
+  .Normaltext-14px-Medium { font: var(--Normaltext-14px-Medium); font-weight: 500; }
+}
+
 
 @layer theme {
     .dark {

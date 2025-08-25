@@ -28,22 +28,24 @@ new #[Layout('layouts.auth')] class extends Component {
     <!-- Session Status -->
     <x-auth.session-status class="text-center" :status="session('status')" />
 
-    <form wire:submit="sendPasswordResetLink" class="flex flex-col gap-6">
+    <form wire:submit="sendPasswordResetLink" class="flex flex-col gap-6 text-neutral-800">
         <!-- Email Address -->
-        <flux:input
-            wire:model="email"
-            :label="__('Email Address')"
+        <input
             type="email"
+            wire:model="email"
             required
             autofocus
+            class="w-full h-[40px] border rounded-md shadow-md bg-primary-50 pl-3 text-md placeholder-neutral-800"
             placeholder="email@example.com"
         />
-
-        <flux:button variant="primary" type="submit" class="w-full">{{ __('Email password reset link') }}</flux:button>
+        <flux:button variant="primary" type="submit" class="w-full bg-accent-300 hover:bg-accent-400 hover:box-border hover:border-2 hover:border-accent-200 hover:shadow-md hover:shadow-accent-200">{{ __('Email password reset link') }}</flux:button>
     </form>
 
-    <div class="space-x-1 text-center text-sm text-zinc-400">
+    <div class="space-x-1 text-center text-sm text-zinc-800">
         {{ __('Or, return to') }}
-        <flux:link :href="route('login')" wire:navigate>{{ __('log in') }}</flux:link>
+        <a href="{{ route('login') }}" wire:navigate
+        class="inline-block text-primary-300 underline underline-offset-2 hover:scale-105 transition-transform duration-200">
+        {{ __('Log in') }}
+        </a>
     </div>
 </div>

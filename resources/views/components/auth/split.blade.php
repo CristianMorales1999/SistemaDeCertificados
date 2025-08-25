@@ -13,7 +13,6 @@
                     </span>
                     {{ config('app.name', 'Laravel') }}
                 </a>
-
                 @php
                     [$message, $author] = str(Illuminate\Foundation\Inspiring::quotes()->random())->explode('-');
                 @endphp
