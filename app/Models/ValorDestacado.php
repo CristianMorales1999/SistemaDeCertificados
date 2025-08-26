@@ -6,21 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Area extends Model
+class ValorDestacado extends Model
 {
     use HasFactory;
-
+    
     /**
      * La tabla asociada con el modelo.
      *
      * @var string
      */
-    protected $table = 'areas';
-
-    /**
-     * La clave primaria asociada a la tabla.
-     */
-    protected $primaryKey = 'id'; // Util cuando el nombre de la clave primaria no es 'id', ya que laravel asume que la clave primaria es 'id' por defecto
+    protected $table = 'valores_destacados';
 
     /**
      * Los atributos que se pueden asignar masivamente.
@@ -29,12 +24,11 @@ class Area extends Model
      */
     protected $fillable = [
         'nombre',
-        'abreviatura',
     ];
 
     /**
      * Los atributos que deberían ser convertidos a tipos nativos.
-     *
+     * 
      * @var array
      */
     protected $casts = [
@@ -42,15 +36,9 @@ class Area extends Model
         'updated_at' => 'datetime',
     ];
 
-    //Relación uno a muchos con AreaPersona
-    public function areaPersonas(): HasMany
+    //Relación uno a mucho con AreaPersonOutstandingValue
+    public function areaPersonaValorDestacados(): HasMany
     {
-        return $this->hasMany(AreaPersona::class, 'area_id');
-    }
-    //Relación uno a muchos con Proyecto
-    public function proyectos(): HasMany
-    {
-        return $this->hasMany(Proyecto::class, 'area_id');
+        return $this->hasMany(AreaPersonaValorDestacado::class, 'valor_destacado_id');
     }
 }
-

@@ -4,6 +4,9 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Str;
@@ -19,8 +22,11 @@ class User extends Authenticatable
      * @var list<string>
      */
     protected $fillable = [
+        'persona_id',
+        'imagen_perfil_id',
         'name',
         'email',
+        'estado',
         'password',
     ];
 
@@ -58,21 +64,34 @@ class User extends Authenticatable
             ->implode('');
     }
 
-    //Relación muchos a muchos con la tabla roles
-    public function roles()
+    //Relación muchos a muchos con Rol
+    public function roles(): BelongsToMany
     {
-        return $this->belongsToMany(Role::class, 'role_user', 'user_id', 'role_id')
+        return $this->belongsToMany(Rol::class, 'user_rol', 'user_id', 'role_id')
             ->withPivot('is_active')
             ->withTimestamps();
     }
-    //Relación uno a muchos con la tabla certification_groups
-    public function createdCertificationGroups()
+    //Relación uno a muchos con GrupoDeCertificacion (grupos de certificación creados por el usuario)
+    public function gruposDeCertificacionCreados(): HasMany
     {
-        return $this->hasMany(CertificationGroup::class, 'created_by_user_id');
+        return $this->hasMany(GrupoDeCertificacion::class, 'usuario_creador_id');
     }
-    //Relación uno a muchos con la tabla certification_groups
-    public function certifiedCertificationGroups()
+
+    //Relación uno a muchos con GrupoDeCertificacion (grupos de certificación generados por el usuario)
+    public function gruposDeCertificacionGenerados(): HasMany
     {
-        return $this->hasMany(CertificationGroup::class, 'certified_by_user_id');
+        return $this->hasMany(GrupoDeCertificacion::class, 'usuario_generador_id');
+    }
+
+    //Relacion uno a uno con Persona
+    public function persona(): BelongsTo
+    {
+        return $this->belongsTo(Persona::class, 'persona_id');//'persona_id' es la clave foránea en la tabla users
+    }
+    
+    //Relación uno a uno con Imagen (imagen de perfil)
+    public function imagenPerfil(): BelongsTo
+    {
+        return $this->belongsTo(Imagen::class, 'imagen_perfil_id');//'imagen_perfil_id' es la clave foránea en la tabla users
     }
 }

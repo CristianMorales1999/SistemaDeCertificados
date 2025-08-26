@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Person;
+use App\Models\AreaPersona;
+use App\Models\Persona;
 use Illuminate\Http\Request;
 
 class PersonController extends Controller
@@ -12,10 +13,10 @@ class PersonController extends Controller
      */
     public function index()
     {
-        //Quiero obtener una lista de personas con todos sus datos, pero tambien con sus areas activas
-        $people = Person::with(['areas' => function ($query) {
-            $query->where('is_active', true);
-        }])->get();
+        //Obtener de AreaPersona la persona y el area en que la persona se encuentra o encontraba en un momento dado
+        $personasDeAreas = AreaPersona::with(['persona', 'area'])
+            ->orderBy('created_at', 'asc')
+            ->get();
 
         //dd($people);
 
@@ -42,7 +43,7 @@ class PersonController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Person $person)
+    public function show(Persona $person)
     {
         //
     }
@@ -50,7 +51,7 @@ class PersonController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Person $person)
+    public function edit(Persona $person)
     {
         //
     }
@@ -58,7 +59,7 @@ class PersonController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Person $person)
+    public function update(Request $request, Persona $person)
     {
         //
     }
@@ -66,7 +67,7 @@ class PersonController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Person $person)
+    public function destroy(Persona $person)
     {
         //
     }
