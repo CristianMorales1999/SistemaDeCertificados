@@ -83,18 +83,18 @@ new #[Layout('layouts.auth')] class extends Component {
     <form wire:submit="login" class="flex flex-col gap-6">
         <!-- Email Address -->
         <div>
-            <input type="email" wire:model="email" class="w-full h-[40px] border rounded-md shadow-md bg-[#EBF1FD] pl-3 text-md" placeholder="Correo" />
+            <input type="email" wire:model="email" class="w-full h-[40px] border rounded-md shadow-md bg-primary-50  pl-3 text-md placeholder-neutral-800" placeholder="Correo" />
         </div>
         @error('email')
-        <span class="text-red-500 text-sm">{{ $message }}</span>
+        <span class="text-red-100 text-sm">{{ $message }}</span>
     @enderror
 
         <!-- Password -->
         <div>
-            <input type="password" wire:model="password" class="w-full h-[40px] border rounded-md shadow-md bg-[#EBF1FD] pl-3 text-md" placeholder="Contraseña" />
+            <input type="password" wire:model="password" class="w-full h-[40px] border rounded-md shadow-md bg-primary-50 pl-3 text-md placeholder-neutral-800" placeholder="Contraseña" />
         </div>
         @error('password')
-        <span class="text-red-500 text-sm">{{ $message }}</span>
+        <span class="text-red-100 text-sm">{{ $message }}</span>
     @enderror
 
         <!-- Contenedor de Recordarme y Olvidaste tu contraseña -->
@@ -102,24 +102,26 @@ new #[Layout('layouts.auth')] class extends Component {
             <flux:checkbox wire:model="remember" :label="__('Recordarme')" />
 
             @if (Route::has('password.request'))
-                <a class="text-sm text-[#3454A1]" href="{{route('password.request')}}" wire:navigate>
-                    {{ __('Olvidaste tu contraseña?') }}
+                <a href="{{route('password.request')}}" wire:navigate
+                class="text-sm text-primary-300 underline underline-offset-2 hover:scale-105 transition-transform duration-200">
+                {{ __('¿Olvidaste tu contraseña?') }}
                 </a>
             @endif
         </div>
 
         <div class="flex items-center justify-end">
-            <button  type="submit" class="w-full bg-[#9636AD] text-white h-[40px] border rounded-md shadow-md hover:bg-[#963678]">{{ __('Iniciar sesión') }}</button>
+            <button  type="submit" class="w-full bg-accent-300 text-white h-[40px] border rounded-md shadow-md hover:bg-accent-400 hover:box-border hover:border-2 hover:border-accent-200 hover:shadow-md hover:shadow-accent-200">{{ __('Iniciar sesión') }}</button>
         </div>
     </form>
 
     @if (Route::has('register'))
         <div class="space-x-1 text-center text-sm dark:text-zinc-400">
             {{ __('¿No tienes una cuenta?') }}
-            <a href="{{ route('register') }}" wire:navigate class="text-[#3454A1]">
-    {{ __('Regístrate') }}
-</a>
-
+            <a href="{{ route('register') }}" wire:navigate
+            class="inline-block text-primary-300 underline underline-offset-2 hover:scale-105 transition-transform duration-200">
+            {{ __('Regístrate') }}
+            </a>
         </div>
     @endif
+
 </div>
