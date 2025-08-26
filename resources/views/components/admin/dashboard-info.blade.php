@@ -4,45 +4,46 @@
   <!-- INFORMACION PARA DASHBOARD-->
   <div class="grid grid-cols-4 gap-6 pl-10 pr-20 ml-1 mr-3">
     <!-- Botón Usuarios -->
-    <div class="bg-white px-4 py-4 rounded-md shadow-md bg-transparent text-[#000000] flex items-center flex-1">
+    <div class="bg-white px-4 py-4 rounded-md shadow-md text-neutral-900 flex items-center flex-1">
       <div>
-        <h1 class="ml-3 mb-3 text-xs md:text-sm lg:text-sm text-[#636466]">Usuarios</h1>
-        <h1 class="ml-3 font-medium text-xs md:text-sm lg:text-lg">40,689</h1>
+        <p class="ml-3 mb-3 text-xs md:text-sm lg:text-sm text-neutral-700 font-semibold">Usuarios</p>
+        <p class="ml-3 font-bold text-xs md:text-sm lg:text-lg">40,689</p>
       </div>
-      <div class="bg-[#E5E4FF] p-4 py-4 rounded-lg ml-auto">
+      <div class="bg-[#E5E4FF] p-4 rounded-lg ml-auto">
         <img src="{{asset('/imagenes/icons/1.svg')}}" alt="Usuarios Icon" class="w-10 h-10">
       </div>
     </div>
 
     <!-- Botón Grupos -->
-    <div class="bg-white px-4 py-2 rounded-md shadow-md bg-transparent text-black flex items-center flex-1">
+    <div class="bg-white px-4 py-2 rounded-md shadow-md text-neutral-900 flex items-center flex-1">
       <div>
-        <h1 class="ml-3 mb-3 text-xs md:text-sm lg:text-sm text-[#636466]">Grupos</h1>
-        <h1 class="ml-3 font-medium text-xs md:text-sm lg:text-lg">10,293</h1>
+        <p class="ml-3 mb-3 text-xs md:text-sm lg:text-sm text-neutral-700 font-semibold">Grupos</p>
+        <p class="ml-3 font-bold text-xs md:text-sm lg:text-lg">10,293</p>
       </div>
-      <div class="bg-[#FFF3D6] p-4 py-4 rounded-lg ml-auto">
-        <img src="{{asset('/imagenes/icons/2.svg')}}" alt="Grupos Icon" class="w-10 h-10">
+      <div class="bg-[#FFF3D6] p-4 rounded-lg ml-auto">
+        <img src="{{ asset('/imagenes/icons/2.svg') }}" alt="Grupos Icon" class="w-10 h-10">
       </div>
     </div>
 
+
     <!-- Botón Certificados -->
-    <div class="bg-white px-4 py-2 rounded-md shadow-md bg-transparent text-black flex items-center flex-1">
+    <div class="bg-white px-4 py-2 rounded-md shadow-md text-neutral-900 flex items-center flex-1">
       <div>
-        <h1 class="ml-3 mb-3 text-xs md:text-sm lg:text-sm text-[#636466]">Certificados</h1>
-        <h1 class="ml-3 font-medium text-xs md:text-sm lg:text-lg">89,000</h1>
+        <p class="ml-3 mb-3 text-xs md:text-sm lg:text-sm text-neutral-700 font-semibold">Certificados</p>
+        <p class="ml-3 font-bold text-xs md:text-sm lg:text-lg">89,000</p>
       </div>
-      <div class="bg-[#D9F7E8] p-4 py-4 rounded-lg ml-auto">
+      <div class="bg-[#D9F7E8] p-4 rounded-lg ml-auto">
         <img src="{{asset('/imagenes/icons/3.svg')}}" alt="Certificados Icon" class="w-10 h-10">
       </div>
     </div>
 
     <!-- Botón Pendientes -->
-    <div class="bg-white px-4 py-2 rounded-md shadow-md bg-transparent text-black flex items-center flex-1">
+    <div class="bg-white px-4 py-2 rounded-md shadow-md text-neutral-900 flex items-center flex-1">
       <div>
-        <h1 class="ml-3 mb-3 text-xs md:text-sm lg:text-sm text-[#636466]">Pendientes</h1>
-        <h1 class="ml-3 font-medium text-xs md:text-sm lg:text-lg">2,040</h1>
+        <p class="ml-3 mb-3 text-xs md:text-sm lg:text-sm text-neutral-700 font-semibold">Pendientes</p>
+        <p class="ml-3 font-bold text-xs md:text-sm lg:text-lg">2,040</p>
       </div>
-      <div class="bg-[#FFDED1] p-4 py-4 rounded-lg ml-auto">
+      <div class="bg-[#FFDED1] p-4 rounded-lg ml-auto">
         <img src="{{asset('/imagenes/icons/4.svg')}}" alt="Pendientes Icon" class="w-10 h-10">
       </div>
     </div>
@@ -53,7 +54,7 @@
     <div class="w-full bg-white rounded-lg shadow-lg dark:bg-gray-800 p-5">
       <div class="flex justify-between pb-0">
         <div>
-          <h5 class="leading-none text-2xl font-bold text-gray-900 dark:text-white pb-2">Certificados</h5>
+          <h5 class="leading-none text-sm lg:text-lg font-semibold text-neutral-900 dark:text-white pb-2">Certificados</h5>
         </div>
       </div>
       <!-- Agregar el div para el gráfico con una altura específica -->

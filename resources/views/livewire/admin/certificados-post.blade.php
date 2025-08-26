@@ -30,13 +30,13 @@
             <button id="deleteMultiple"
               wire:click="eliminarshowmodal"
               @if(count($selectedCertificados) < 2) disabled @endif
-              class="cursor-pointer px-4 py-1.5 mb-4 flex items-center justify-center bg-white hover:bg-[#E7C9EE] text-accent-300 font-semibold rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 border-accent-300 border-2 disabled:opacity-50 disabled:cursor-not-allowed">
+              class="cursor-pointer px-4 py-1.5 mb-4 flex items-center justify-center bg-white hover:bg-accent-50 text-accent-300 font-semibold rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 border-accent-300 border-2 disabled:opacity-50 disabled:cursor-not-allowed">
               <img src="{{asset('/imagenes/icons/supertrash.svg')}}" alt="Trash Icon" class="w-6 h-6 mr-2">
               <span class="text-center text-xs lg:text-sm">Borrar</span>
             </button>
 
             <a href="{{ route('login') }}"
-              class="px-4 py-1.5 mb-4 flex items-center justify-center bg-white hover:bg-[#E7C9EE] text-accent-300 font-semibold rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 border-accent-300 border-2">
+              class="px-4 py-1.5 mb-4 flex items-center justify-center bg-white hover:bg-accent-50 text-accent-300 font-semibold rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 border-accent-300 border-2">
               <img src="{{asset('/imagenes/icons/plus.svg')}}" alt="Search Icon" class="w-4 h-4 mr-2">
               <span class="text-center text-xs lg:text-sm">Añadir registro</span>
             </a>
@@ -64,7 +64,7 @@
 
                   <!-- Aspa visible solo si está checked -->
                   <span
-                    class="pointer-events-none absolute left-[0.5px] top-0 w-5 h-5 flex items-center justify-center text-white text-sm font-bold hidden peer-checked:flex">
+                    class="pointer-events-none absolute left-[0.5px] top-0 w-5 h-5 items-center justify-center text-white text-sm font-bold hidden peer-checked:flex">
                     <!-- SVG del aspa blanca -->
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
                       <path d="M5 13l4 4L19 7" />
@@ -130,11 +130,10 @@
                     wire:model.live="selectedCertificados"
                     value="{{ $certificado['id'] }}"
 
-                    class="peer appearance-none w-5 h-5 border border-accent-300 rounded-sm hover:bg-accent-100 checked:bg-accent-300 checked:border-accent-300 focus:outline-none focus:shadow-md focus:shadow-accent-100 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-
+                    class="peer appearance-none w-5 h-5 border border-accent-300 rounded-sm hover:bg-accent-100 checked:bg-accent-300 checked:border-accent-300 focus:outline-none focus:shadow-md focus:shadow-accent-100 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800" />
                     <!-- Aspa visible solo si está checked -->
                     <span
-                      class="pointer-events-none absolute left-[0.5px] top-0 w-5 h-5 flex items-center justify-center text-white text-sm font-bold hidden peer-checked:flex">
+                      class="pointer-events-none absolute left-[0.5px] top-0 w-5 h-5 items-center justify-center text-white text-sm font-bold hidden peer-checked:flex">
                       <!-- SVG del aspa blanca -->
                       <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M5 13l4 4L19 7" />
@@ -225,8 +224,8 @@
         </table>
 
         @else
-        <div class="rounded-lg text-lg ml-4 text-gray-700 bg-[#F8D7DA] dark:bg-gray-700 dark:text-gray-400">
-          <h1 class="px-3 py-3 text-[#991C24]">
+        <div class="rounded-lg text-lg ml-4 text-neutral-800 bg-accent-50 dark:bg-gray-700 dark:text-gray-400">
+          <h1 class="px-3 py-3 text-red-200">
             No existe ningún certificado coincidente en la búsqueda
           </h1>
         </div>
@@ -237,14 +236,14 @@
       <!-- BOTONES DE PAGINACION -->
       <div class="flex justify-between mt-5 gap-8">
         <!-- TEXTO AGREGADO-->
-        <div class="text-sm text-black mt-6">
+        <div class="text-sm text-neutral-900 mt-6">
           Página {{ $currentPage }} de {{ $totalPages }}
         </div>
 
         <!-- Botón Anterior -->
         <button type="button"
           wire:click="previousPage"
-          class="flex items-center cursor-pointer px-6 py-2 border border-black text-black hover:bg-gray-100 {{ $currentPage <= 1 ? 'opacity-50 disabled:cursor-not-allowed' : '' }}"
+          class="flex items-center cursor-pointer px-6 py-2 border border-neutral-900 text-neutral-900 hover:bg-gray-100 {{ $currentPage <= 1 ? 'opacity-50 disabled:cursor-not-allowed' : '' }}"
           {{ $currentPage <= 1 ? 'disabled' : '' }}>
           <span class="mr-2">&lt;&lt;</span>
           Anterior
@@ -253,7 +252,7 @@
         <!-- Botón Siguiente -->
         <button type="button"
           wire:click="nextPage"
-          class="flex items-center cursor-pointer px-6 py-2 border border-black text-black hover:bg-gray-100 {{ $currentPage >= $totalPages ? 'opacity-50 disabled:cursor-not-allowed' : '' }}"
+          class="flex items-center cursor-pointer px-6 py-2 border border-neutral-900 text-neutral-900 hover:bg-gray-100 {{ $currentPage >= $totalPages ? 'opacity-50 disabled:cursor-not-allowed' : '' }}"
           {{ $currentPage >= $totalPages ? 'disabled' : '' }}>
           <span class="ml-2">&gt;&gt;</span>
           Siguiente
