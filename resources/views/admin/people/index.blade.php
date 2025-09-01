@@ -1,5 +1,6 @@
-{{--Usa el componente main layout--}}
-<x-layouts.main :title="__('Personas de áreas')" class="bg-primary-50 ">
+@extends('layouts.app')
+
+@section('content')
 <div class="bg-blue-200 overflow-hidden">
     <div class="w-full mx-auto sm:p-2 md:p-4 lg:p-8 xl:p-16">
         <!-- Titulo -->
@@ -104,4 +105,4 @@
         </div>
     </div>
 </div>
-</x-layouts.main>
+@endsection

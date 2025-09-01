@@ -10,6 +10,7 @@ CREATE TABLE areas (
   id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
   nombre VARCHAR(40) NOT NULL,
   abreviatura VARCHAR(10) NULL,
+  estado ENUM('Activa','Inactiva') NOT NULL DEFAULT 'Activa',
   PRIMARY KEY(id)
 );
 #TABLA O2

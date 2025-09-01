@@ -30,6 +30,7 @@ class Area extends Model
     protected $fillable = [
         'nombre',
         'abreviatura',
+        'estado',
     ];
 
     /**

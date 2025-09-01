@@ -15,6 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('nombre',40)->unique();
             $table->string('abreviatura',10)->nullable()->unique();
+            $table->enum('estado',[
+                'Activa',
+                'Inactiva'
+            ])->default('Activa');
             $table->timestamps();
 
             $table->index('nombre');

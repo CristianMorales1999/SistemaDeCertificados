@@ -18,10 +18,13 @@ class PersonController extends Controller
             ->orderBy('created_at', 'asc')
             ->get();
 
-        //dd($people);
+        //dd($personasDeAreas);
+        //dd($personasDeAreas->first()->getAttributes());
+        //dd($personasDeAreas->first()->persona->getAttributes());
+        //dd($personasDeAreas->first()->area->getAttributes());
 
 
-        return view('admin.people.index', compact('people'));
+        return view('admin.people.index', compact('personasDeAreas'));
     }
 
     /**
