@@ -152,7 +152,6 @@ CREATE TABLE proyectos (
   area_persona_cargo_id_codp INTEGER UNSIGNED NULL,
   imagen_logo_id INTEGER UNSIGNED NOT NULL,
   area_id INTEGER UNSIGNED NULL,
-  entidad_aliada_id INTEGER UNSIGNED NULL,
   nombre VARCHAR(150) NOT NULL,
   fecha_inicio DATE NOT NULL,
   fecha_fin DATE NULL,
@@ -160,8 +159,7 @@ CREATE TABLE proyectos (
   INDEX proyectos_FKIndex1(imagen_logo_id),
   INDEX proyectos_FKIndex2(area_persona_cargo_id_dp),
   INDEX proyectos_FKIndex3(area_persona_cargo_id_codp),
-  INDEX proyectos_FKIndex4(entidad_aliada_id),
-  INDEX proyectos_FKIndex5(area_id)
+  INDEX proyectos_FKIndex4(area_id)
 );
 #TABLA 15
 CREATE TABLE eventos (

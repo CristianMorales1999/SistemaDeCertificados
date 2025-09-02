@@ -42,10 +42,4 @@ class EntidadAliada extends Model
     {
         return $this->hasMany(EntidadAliadaPersona::class, 'entidad_aliada_id');
     }
-
-    //Relación uno a muchos con Proyecto
-    public function proyectos() : HasMany
-    {
-        return $this->hasMany(Proyecto::class, 'entidad_aliada_id');
-    }
 }

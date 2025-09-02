@@ -30,7 +30,6 @@ class Proyecto extends Model
         'area_persona_cargo_id_codp',
         'imagen_logo_id',
         'area_id',
-        'entidad_aliada_id',
         'nombre',
         'fecha_inicio',
         'fecha_fin'
@@ -96,12 +95,6 @@ class Proyecto extends Model
         return $this->belongsToMany(EntidadAliadaPersona::class, 'entidad_aliada_persona_proyecto', 'proyecto_id', 'entidad_aliada_persona_id')
             ->withPivot('rol')
             ->withTimestamps();
-    }
-
-    //Relación muchos a uno con EntidadAliada
-    public function entidadAliada(): BelongsTo
-    {
-        return $this->belongsTo(EntidadAliada::class, 'entidad_aliada_id');//'entidad_aliada_id' es la clave foránea en la tabla proyectos
     }
 
     //Relacion uno a uno con Imagen(imagen_logo_id)

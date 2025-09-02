@@ -32,12 +32,6 @@ return new class extends Migration
                 ->constrained('areas')
                 ->cascadeOnUpdate()
                 ->nullOnDelete();
-                
-            $table->foreignId('entidad_aliada_id')
-                ->nullable()
-                ->constrained('entidades_aliadas')
-                ->cascadeOnUpdate()
-                ->nullOnDelete();
             $table->string('nombre',150)->unique();
             $table->date('fecha_inicio');
             $table->date('fecha_fin')->nullable();
