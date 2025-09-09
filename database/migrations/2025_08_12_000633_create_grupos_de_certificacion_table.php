@@ -27,6 +27,11 @@ return new class extends Migration
                 ->constrained('imagenes')
                 ->cascadeOnUpdate()
                 ->nullOnDelete();
+            $table->foreignId('imagen_sello_id')
+                ->nullable()
+                ->constrained('imagenes')
+                ->cascadeOnUpdate()
+                ->nullOnDelete();
             $table->foreignId('proyecto_id')
                 ->nullable()
                 ->constrained('proyectos')

@@ -23,9 +23,9 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'persona_id',
-        'imagen_perfil_id',
         'name',
         'email',
+        'profile_picture',
         'estado',
         'password',
     ];
@@ -87,11 +87,5 @@ class User extends Authenticatable
     public function persona(): BelongsTo
     {
         return $this->belongsTo(Persona::class, 'persona_id');//'persona_id' es la clave foránea en la tabla users
-    }
-    
-    //Relación uno a uno con Imagen (imagen de perfil)
-    public function imagenPerfil(): BelongsTo
-    {
-        return $this->belongsTo(Imagen::class, 'imagen_perfil_id');//'imagen_perfil_id' es la clave foránea en la tabla users
     }
 }

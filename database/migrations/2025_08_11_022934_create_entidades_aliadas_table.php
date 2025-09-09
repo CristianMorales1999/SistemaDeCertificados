@@ -13,15 +13,16 @@ return new class extends Migration
     {
         Schema::create('entidades_aliadas', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('cargo_representante_id')
+                ->nullable()
+                ->constrained('cargos')
+                ->cascadeOnUpdate()
+                ->nullOnDelete();
             $table->string('nombre',255)->unique();
-            $table->enum('cargo_de_representante',[
-                'Presidente',
-                'Director',
-                'Jefe',
-                'Sponsor'
-            ])->default('Presidente');//nombre de atributo cambiado
+            $table->string('acronimo',15)->unique()->nullable();
             $table->timestamps();
             $table->index('nombre');
+            $table->index('acronimo');
         });
     }
 

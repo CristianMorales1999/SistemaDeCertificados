@@ -16,21 +16,17 @@ return new class extends Migration
             $table->string('nombre',255);
             $table->string('ruta',255)->unique();
             $table->enum('tipo',[
-                'Firma',
                 'Logo',
-                'Perfil',
                 'Plantilla',
                 'Sello'
             ]);
             $table->string('extension',10)->nullable();
             $table->enum('estado',[
-                'Pendiente',
-                'Validada',
-                'Rechazada',
-                'Lista',
+                'Activa',
+                'Inactiva',
                 'Archivada',
                 'Eliminada'
-            ])->default('Lista');
+            ])->default('Activa');
             $table->timestamps();
         });
     }

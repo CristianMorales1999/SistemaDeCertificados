@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class EntidadAliada extends Model
 {
@@ -24,7 +25,8 @@ class EntidadAliada extends Model
      */
     protected $fillable = [
         'nombre',
-        'cargo_de_representante'
+        'acronimo',
+        'cargo_representante_id'
     ];
 
     /**
@@ -41,5 +43,10 @@ class EntidadAliada extends Model
     public function entidadAliadaPersonas() : HasMany
     {
         return $this->hasMany(EntidadAliadaPersona::class, 'entidad_aliada_id');
+    }
+    //Relación muchos a uno con Cargo
+    public function cargoRepresentante(): BelongsTo
+    {
+        return $this->belongsTo(Cargo::class, 'cargo_representante_id');
     }
 }

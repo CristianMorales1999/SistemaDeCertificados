@@ -27,14 +27,9 @@ return new class extends Migration
                 ->constrained('personas')
                 ->cascadeOnUpdate()
                 ->nullOnDelete();
-            
-            $table->foreignId('imagen_perfil_id')
-                ->nullable()
-                ->constrained('imagenes')
-                ->cascadeOnUpdate()
-                ->nullOnDelete();
             $table->string('name');
             $table->string('email')->unique();
+            $table->string('profile_picture',300)->nullable(); // Ruta de la imagen de perfil
             $table->enum('estado', [
                 'Pendiente',
                 'Activo',//Validado

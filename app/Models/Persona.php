@@ -26,13 +26,13 @@ class Persona extends Model
      * @var array
      */
     protected $fillable = [
-        'imagen_firma_id',
         'nombres',
         'apellidos',
         'correo_personal',
         'correo_institucional',
         'sexo',
-        'codigo'
+        'codigo',
+        'imagen_firma'
     ];
 
     /**
@@ -61,12 +61,6 @@ class Persona extends Model
     public function entidadAliadaPersonas():HasMany
     {
         return $this->hasMany(EntidadAliadaPersona::class, 'persona_id');
-    }
-
-    // Relación uno a uno con Imagen
-    public function imagenFirma():BelongsTo
-    {
-        return $this->belongsTo(Imagen::class, 'imagen_firma_id');//'imagen_firma_id' es la clave foránea en la tabla personas
     }
 
     // Relación uno a uno con Usuario

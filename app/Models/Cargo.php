@@ -25,6 +25,8 @@ class Cargo extends Model
      */
     protected $fillable = [
         'nombre',
+        'nombre_femenino',
+        'cargo_interno'
     ];
 
     /**
@@ -41,5 +43,10 @@ class Cargo extends Model
     public function areaPersonaCargos(): HasMany
     {
         return $this->hasMany(AreaPersonaCargo::class, 'cargo_id');
+    }
+    //Relación uno a muchos con EntidadAliada
+    public function entidadesAliadas(): HasMany
+    {
+        return $this->hasMany(EntidadAliada::class, 'cargo_representante_id');
     }
 }

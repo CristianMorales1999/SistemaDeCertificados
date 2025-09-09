@@ -28,9 +28,9 @@ class Proyecto extends Model
     protected $fillable = [
         'area_persona_cargo_id_dp',
         'area_persona_cargo_id_codp',
-        'imagen_logo_id',
         'area_id',
         'nombre',
+        'imagen_logo',
         'fecha_inicio',
         'fecha_fin'
     ];
@@ -95,11 +95,5 @@ class Proyecto extends Model
         return $this->belongsToMany(EntidadAliadaPersona::class, 'entidad_aliada_persona_proyecto', 'proyecto_id', 'entidad_aliada_persona_id')
             ->withPivot('rol')
             ->withTimestamps();
-    }
-
-    //Relacion uno a uno con Imagen(imagen_logo_id)
-    public function imagenLogo(): BelongsTo
-    {
-        return $this->belongsTo(Imagen::class, 'imagen_logo_id');//'imagen_logo_id' es la clave foránea en la tabla proyectos
     }
 }

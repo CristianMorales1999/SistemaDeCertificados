@@ -53,21 +53,9 @@ class Imagen extends Model
         return $this->hasMany(GrupoDeCertificacion::class, 'imagen_logo_sediprano_id');
     }
 
-    //Relacion uno a uno con Usuario(imagen_perfil_id)
-    public function usuario(): HasOne
+    //Relacion uno a uno con GrupoDeCertificacion(imagen_sello_id)
+    public function grupoDeCertificacionSello(): HasOne
     {
-        return $this->hasOne(User::class, 'imagen_perfil_id');
-    }
-
-    //Relacion uno a uno con Proyecto(imagen_logo_id)
-    public function proyecto(): HasOne
-    {
-        return $this->hasOne(Proyecto::class, 'imagen_logo_id');
-    }
-
-    //Relacion uno a uno con Persona(imagen_firma_id)
-    public function persona(): HasOne
-    {
-        return $this->hasOne(Persona::class, 'imagen_firma_id');
+        return $this->hasOne(GrupoDeCertificacion::class, 'imagen_sello_id');
     }
 }

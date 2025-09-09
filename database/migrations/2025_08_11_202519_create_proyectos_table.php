@@ -22,10 +22,6 @@ return new class extends Migration
                 ->constrained('area_persona_cargo')
                 ->cascadeOnUpdate()
                 ->nullOnDelete();
-            $table->foreignId('imagen_logo_id')
-                ->constrained('imagenes')
-                ->cascadeOnUpdate()
-                ->casacadeOnDelete();
             //area_id en caso se realice un proyecto de un area en especifico
             $table->foreignId('area_id')
                 ->nullable()
@@ -33,6 +29,7 @@ return new class extends Migration
                 ->cascadeOnUpdate()
                 ->nullOnDelete();
             $table->string('nombre',150)->unique();
+            $table->string('imagen_logo',300)->nullable(); // Ruta de la imagen del logo del proyecto
             $table->date('fecha_inicio');
             $table->date('fecha_fin')->nullable();
             $table->timestamps();

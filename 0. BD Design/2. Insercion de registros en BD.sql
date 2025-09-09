@@ -133,7 +133,7 @@ INSERT INTO `personas` (`id`, `imagen_firma_id`, `nombres`, `apellidos`, `correo
 (NULL, NULL, 'Ana Nicoll', 'Segura Aredo', 'anseguraa@unitru.edu.pe', 'Femenino'),
 (NULL, NULL, 'Dulce Geraldine', 'Chavez Padilla', 't1051302521@unitru.edu.pe', 'Femenino'),
 (NULL, NULL, 'Elber Isaí', 'Pichén Zavaleta', 'pichenzavaleta@gmail.com', 'Masculino'),
-(NULL, NULL, 'Fernando', 'Sanchez Palacios', 't054000920@unitru.edu.pe', 'Masculino'),
+(NULL, NULL, 'Fernando Felipe', 'Sanchez Palacios', 't054000920@unitru.edu.pe', 'Masculino'),
 (NULL, NULL, 'Gerson Gabriel', 'Alfaro Tandaypan', 'gersonalfa20@gmail.com', 'Masculino'),
 (NULL, NULL, 'José Daniel', 'Avila Santillan', 'Josedanielsantiavila@gmail.com', 'Masculino'),
 (NULL, NULL, 'Juan Diego', 'Hernández Jáuregui', 'juanhjauregui15@gmail.com', 'Masculino'),

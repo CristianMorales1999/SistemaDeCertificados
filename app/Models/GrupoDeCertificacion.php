@@ -27,6 +27,7 @@ class GrupoDeCertificacion extends Model
         'tipo_de_certificacion_id',
         'imagen_plantilla_id',
         'imagen_logo_sediprano_id',
+        'imagen_sello_id',
         'proyecto_id',
         'evento_id',
         'usuario_creador_id',
@@ -94,6 +95,12 @@ class GrupoDeCertificacion extends Model
     public function imagenLogoSediprano(): BelongsTo
     {
         return $this->belongsTo(Imagen::class, 'imagen_logo_sediprano_id');
+    }
+
+    //Relación muchos a uno con Imagen (imagen_sello_id)
+    public function imagenSelloSedipro(): BelongsTo
+    {
+        return $this->belongsTo(Imagen::class, 'imagen_sello_id');
     }
 
     //Relación uno a muchos con Configuracion

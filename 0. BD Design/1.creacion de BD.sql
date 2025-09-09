@@ -17,14 +17,22 @@ CREATE TABLE areas (
 CREATE TABLE cargos (
   id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
   nombre VARCHAR(150) NOT NULL,
-  PRIMARY KEY(id)
+  nombre_femenino VARCHAR(150) NULL,
+  cargo_interno BOOLEAN NOT NULL DEFAULT TRUE,
+  PRIMARY KEY(id),
+  UNIQUE INDEX cargos_nombre_unique(nombre),
+  UNIQUE INDEX cargos_nombre_femenino_unique(nombre_femenino)
 );
 #TABLA O3
 CREATE TABLE entidades_aliadas (
   id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
   nombre VARCHAR(255) NOT NULL,
-  cargo_de_representante ENUM('Presidente','Director','Jefe','Sponsor') NULL DEFAULT 'Presidente',
-  PRIMARY KEY(id)
+  acronimo VARCHAR(15) NULL,
+  cargo_representante_id INTEGER UNSIGNED NULL,
+  PRIMARY KEY(id),
+  UNIQUE INDEX entidades_aliadas_nombre_unique(nombre),
+  UNIQUE INDEX entidades_aliadas_acronimo_unique(acronimo),
+  INDEX entidades_aliadas_FKIndex1(cargo_representante_id)
 );
 #TABLA O4
 CREATE TABLE fuentes (
@@ -37,8 +45,8 @@ CREATE TABLE imagenes (
   id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
   nombre VARCHAR(255) NULL,
   ruta VARCHAR(300) NOT NULL,
-  tipo ENUM('Firma','Logo','Perfil','Plantilla','Sello') NOT NULL,
-  estado ENUM('Pendiente','Validada','Rechazada','Lista','Archivada','Eliminada') NOT NULL DEFAULT 'Lista',
+  tipo ENUM('Logo','Plantilla','Sello') NOT NULL,
+  estado ENUM('Activa','Inactiva','Archivada','Eliminada') NOT NULL DEFAULT 'Activa',
   extension VARCHAR(10) NULL,
   PRIMARY KEY(id)
 );
@@ -75,15 +83,14 @@ CREATE TABLE valores_destacados (
 #TABLA 10
 CREATE TABLE personas (
   id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  imagen_firma_id INTEGER UNSIGNED NULL,
   nombres VARCHAR(150) NOT NULL,
   apellidos VARCHAR(150) NOT NULL,
-  correo_personal VARCHAR(150) NOT NULL,
+  correo_personal VARCHAR(150) NULL,
   correo_institucional VARCHAR(150) NULL,
   sexo ENUM('Masculino','Femenino') NOT NULL,
   codigo VARCHAR(10) NULL,
+  imagen_firma VARCHAR(300) NULL,
   PRIMARY KEY(id),
-  INDEX personas_FKIndex1(imagen_firma_id),
   UNIQUE INDEX personas_correo_personal_unique(correo_personal),
   UNIQUE INDEX personas_correo_institucional_unique(correo_institucional)
 );
@@ -91,9 +98,9 @@ CREATE TABLE personas (
 CREATE TABLE users (
   id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
   persona_id INTEGER UNSIGNED NOT NULL,
-  imagen_perfil_id INTEGER UNSIGNED NULL,
   name VARCHAR(255) NOT NULL,
   email VARCHAR(255) NOT NULL,
+  profile_picture VARCHAR(300) NULL,
   estado ENUM('Pendiente','Activo','Inactivo','Rechazado','Eliminado') NULL DEFAULT 'Pendiente',
   email_verified_at TIMESTAMP NULL,
   password VARCHAR(255) NOT NULL,
@@ -101,7 +108,6 @@ CREATE TABLE users (
   created_at TIMESTAMP NULL,
   updated_at TIMESTAMP NULL,
   PRIMARY KEY(id),
-  INDEX users_FKIndex1(imagen_perfil_id),
   INDEX users_FKIndex2(persona_id),
   UNIQUE INDEX users_email_unique(email)
 );
@@ -150,13 +156,12 @@ CREATE TABLE proyectos (
   id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
   area_persona_cargo_id_dp INTEGER UNSIGNED NOT NULL,
   area_persona_cargo_id_codp INTEGER UNSIGNED NULL,
-  imagen_logo_id INTEGER UNSIGNED NOT NULL,
   area_id INTEGER UNSIGNED NULL,
   nombre VARCHAR(150) NOT NULL,
+  imagen_logo VARCHAR(300) NOT NULL,
   fecha_inicio DATE NOT NULL,
   fecha_fin DATE NULL,
   PRIMARY KEY(id),
-  INDEX proyectos_FKIndex1(imagen_logo_id),
   INDEX proyectos_FKIndex2(area_persona_cargo_id_dp),
   INDEX proyectos_FKIndex3(area_persona_cargo_id_codp),
   INDEX proyectos_FKIndex4(area_id)
@@ -248,6 +253,7 @@ CREATE TABLE grupos_de_certificacion (
   tipo_de_certificacion_id INTEGER UNSIGNED NOT NULL,
   imagen_plantilla_id INTEGER UNSIGNED NULL,
   imagen_logo_sediprano_id INTEGER UNSIGNED NULL,
+  imagen_sello_id INTEGER UNSIGNED NULL,
   proyecto_id INTEGER UNSIGNED NULL,
   evento_id INTEGER UNSIGNED NULL,
   usuario_creador_id INTEGER UNSIGNED NULL,
@@ -264,7 +270,8 @@ CREATE TABLE grupos_de_certificacion (
   INDEX grupos_de_certificacion_FKIndex4(proyecto_id),
   INDEX grupos_de_certificacion_FKIndex5(evento_id),
   INDEX grupos_de_certificacion_FKIndex6(imagen_plantilla_id),
-  INDEX grupos_de_certificacion_FKIndex7(imagen_logo_sediprano_id)
+  INDEX grupos_de_certificacion_FKIndex7(imagen_logo_sediprano_id),
+  INDEX grupos_de_certificacion_FKIndex8(imagen_sello_id)
 );
 #TABLA 22
 CREATE TABLE certificados (
