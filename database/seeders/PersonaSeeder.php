@@ -673,7 +673,9 @@ class PersonaSeeder extends Seeder
             ],
 
             //Ingresó en CONVOCATORIA 2022-I (Total : 8 personas)
-                //Aqui ingresó Marina Lizeth Gonzales Actual Direct de GTH-2025
+
+            //Aqui ingresó MARINA LIZETH GONZALES TORRES <t1510600121@unitru.edu.pe>
+                //- Directora de GTH-2025
             [
                 'nombres' => 'Santiago Alonso',
                 'apellidos' => 'Morales Flores',
@@ -763,16 +765,8 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'D7C17',
                 'imagen_firma' => NULL,
             ],
-            [
-                //Ingresó a GTH el 13 De Junio 2023
-                'nombres' => 'Romina Alejandra',
-                'apellidos' => 'Seclen Cespedes',
-                'correo_personal' => 'rominaalejandraseclen@gmail.com',
-                'correo_institucional' => 't1052500521@unitru.edu.pe',
-                'sexo' => 'Femenino',
-                'codigo' => 'R1S3',
-                'imagen_firma' => NULL,
-            ],
+            //Aqui ingresó ROMINA ALEJANDRA SECLEN CESPEDES <t1052500521@unitru.edu.pe>
+                //- Vicepresidenta SEDIPRO-2024
             [
                 //Ingresó a GTH el 13 De Junio 2023
                 'nombres' => 'Fernando Felipe',
