@@ -70,7 +70,8 @@ class CargoSeeder extends Seeder
                 'cargo_interno' => false
             ],
             [
-                'nombre' => 'Sponsor SEDIPRO UNT',
+                'nombre' => 'Patrocinador',//Sponsor Sedipro UNT
+                'nombre_femenino' => 'Patrocinadora',
                 'cargo_interno' => false
             ]
         ];

@@ -15,6 +15,12 @@ class EntidadAliadaSeeder extends Seeder
     public function run(): void
     {
         $entidadesAliadas = [
+            //Sponsor SEDIPRO UNT(Patronicador)
+            [
+                'nombre' => 'Sección Estudiantil de Dirección de Proyectos UNT',
+                'acronimo' => 'SEDIPRO UNT',
+                'cargo_representante' => 'Patrocinador'
+            ],
             //Volunariado UNT
             [
                 'nombre' => 'Voluntariado UNT',  

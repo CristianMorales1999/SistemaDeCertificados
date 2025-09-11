@@ -15,6 +15,19 @@ class PersonaSeeder extends Seeder
     {
         $personas = [
             /********************************************
+              ********** SPONSOR SEDIPRO UNT ************
+              ******************************************* */
+              [
+                //SPONSOR SEDIPRO UNT (Patrocinador)
+                'nombres' => 'Luis Alberto',
+                'apellidos' => 'Julca Verastegui',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'ljulcav@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'L1J23',
+                'imagen_firma' => 'fotos_firmas/Luis Alberto Julca Verastegui.png'
+            ],
+            /********************************************
               *************** DIRECTIVA 2025 ************
               ******************************************* */
             [
@@ -1317,8 +1330,6 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
            
-            
-
         ];
 
         foreach ($personas as $persona) {
