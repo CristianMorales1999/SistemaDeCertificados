@@ -37,7 +37,7 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 'speredal@unitru.edu.pe',
                 'sexo' => 'Femenino',
                 'codigo' => 'S23P12',
-                'imagen_firma' => 'fotos_firmas/Silvana Valeria Pereda Llave.jpg',
+                'imagen_firma' => 'fotos_firmas/Silvana Valeria Pereda Llave.png',
             ],
             [
                 //DIRECTORA DE GTH-2025
@@ -48,7 +48,7 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 't1510600121@unitru.edu.pe',
                 'sexo' => 'Femenino',
                 'codigo' => 'M12G21',
-                'imagen_firma' => 'fotos_firmas/Marina Lizeth Gonzales Torres.jpg',
+                'imagen_firma' => 'fotos_firmas/Marina Lizeth Gonzales Torres.png',
             ],
             [
                 //DIRECTOR DE LTK&FNZ-2025
@@ -59,7 +59,7 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 't1010100421@unitru.edu.pe',
                 'sexo' => 'Masculino',
                 'codigo' => 'D10R20',
-                'imagen_firma' => 'fotos_firmas/Diego Jesús Rodríguez Sabana.jpg',
+                'imagen_firma' => 'fotos_firmas/Diego Jesús Rodríguez Sabana.png',
             ],
             [
                 //DIRECTOR DE MKT-2025
@@ -70,7 +70,7 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 't1024000721@unitru.edu.pe',
                 'sexo' => 'Masculino',
                 'codigo' => 'A9A',
-                'imagen_firma' => 'fotos_firmas/Ángel Iparraguirre Aguilar.jpg',
+                'imagen_firma' => 'fotos_firmas/Ángel Iparraguirre Aguilar.png',
             ],
             [
                 //DIRECTORA DE PMO-2025
@@ -81,7 +81,7 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 'mfherrerace@unitru.edu.pe',
                 'sexo' => 'Femenino',
                 'codigo' => 'M6D12C8C',
-                'imagen_firma' => 'fotos_firmas/María Fernanda de la Caridad Herrera Cerquín.jpg',
+                'imagen_firma' => 'fotos_firmas/María Fernanda de la Caridad Herrera Cerquín.png',
             ],
             [
                 //DIRECTOR DE TI-2025
@@ -107,7 +107,7 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 't010100820@unitru.edu.pe',
                 'sexo' => 'Femenino',
                 'codigo' => 'C20G21',
-                'imagen_firma' => 'fotos_firmas/Cinthya Soledad Gil Toribio.jpg',
+                'imagen_firma' => 'fotos_firmas/Cinthya Soledad Gil Toribio.png',
             ],
             [
                 //VICEPRESIDENTA-2024
@@ -118,7 +118,7 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 't1052500521@unitru.edu.pe',
                 'sexo' => 'Femenino',
                 'codigo' => 'R1S3',
-                'imagen_firma' => 'fotos_firmas/Romina Alejandra Seclen Cespedes.jpg',
+                'imagen_firma' => 'fotos_firmas/Romina Alejandra Seclen Cespedes.png',
             ],
             [
                 //DIRECTORA DE GTH-2024
@@ -129,7 +129,7 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 't020101420@unitru.edu.pe',
                 'sexo' => 'Femenino',
                 'codigo' => 'B10R19',
-                'imagen_firma' => 'fotos_firmas/Bricelly Jazmin Ruiz Rodriguez.jpg',
+                'imagen_firma' => 'fotos_firmas/Bricelly Jazmin Ruiz Rodriguez.png',
             ],
             [
                 //DIRECTOR DE LTK&FNZ-2024
@@ -140,7 +140,7 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 't1512400421@unitru.edu.pe',
                 'sexo' => 'Masculino',
                 'codigo' => 'S5F19',
-                'imagen_firma' => 'fotos_firmas/Sebastian Emanuel Facundo Reyes.jpg',
+                'imagen_firma' => 'fotos_firmas/Sebastian Emanuel Facundo Reyes.png',
             ],
             [
                 //DIRECTORA DE MKT-2024
@@ -151,7 +151,7 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 't1510100321@unitru.edu.pe',
                 'sexo' => 'Femenino',
                 'codigo' => 'Z1V27',
-                'imagen_firma' => 'fotos_firmas/Zulema Adeli Valverde Zavaleta.jpg',
+                'imagen_firma' => 'fotos_firmas/Zulema Adeli Valverde Zavaleta.png',
             ],
             [
                 //DIRECTORA DE PMO-2024
@@ -162,7 +162,7 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 't510100520@unitru.edu.pe',
                 'sexo' => 'Femenino',
                 'codigo' => 'I20V16',
-                'imagen_firma' => 'fotos_firmas/Ivanna Sofia Vela Ocampo.jpg',
+                'imagen_firma' => 'fotos_firmas/Ivanna Sofia Vela Ocampo.png',
             ],
             //DIRECTOR DE TI-2024
                 //Aqui estuvo CHRISTIAN ANTHONY MORALES ESQUIVEL <chmoralese@unitru.edu.pe>
@@ -1126,6 +1126,17 @@ class PersonaSeeder extends Seeder
                 'sexo' => 'Masculino',
                 'codigo' => 'J10C21',
                 'imagen_firma' => NULL,
+            ],
+            [
+                //Ingresó a MKT el 13 De Junio 2023
+                //Egresó el 17 de marzo de 2025
+                'nombres' => 'Lesly Fiorella',
+                'apellidos' => 'Perez Rodriguez',
+                'correo_personal' => 'perezrodriguezlesly791@gmail.com',
+                'correo_institucional' => 't028100120@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'L6P19',
+                'imagen_firma' => 'fotos_firmas/Lesly Fiorella Perez Rodriguez.png',
             ],
             [
                 'nombres' => 'Lorena Midalís',
