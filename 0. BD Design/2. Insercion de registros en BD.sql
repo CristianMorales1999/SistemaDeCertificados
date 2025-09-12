@@ -232,28 +232,15 @@ VALUES (NULL, '1', '8', 'Lucía de Fátima Amaya Cáceda', 't1051300621@unitru.e
 #____________________________________________________________________________________________
 #_________________________ INSERTS DE PERSONAS A AREAS DE SEDIPRO UNT _______________________
 #__________________________________ (tabla: area_persona) ____________________________________
-INSERT INTO `area_persona` (`id`, `area_id`, `persona_id`, `fecha_inicio`, `fecha_fin`, `estado_inicial`, `estado_final`, `created_at`, `updated_at`) VALUES 
-#Lucia de Fátima Amaya Cáceda
-(NULL, '4', '1', '2024-06-01', '2025-03-19', 'Miembro activo', 'Cargo en Directiva', NULL, NULL), #Periodo inicial en PMO
-(NULL, '4', '1', '2025-03-19', NULL, 'Cargo en Directiva', NULL, NULL, NULL),#Periodo actual en Directiva
-#Silvana Valeria Pereda Llave
-(NULL, '1', '2', '2024-06-01', '2025-03-19', 'Miembro activo', 'Cargo en Directiva', NULL, NULL), #Periodo inicial en GTH
-(NULL, '1', '2', '2025-03-19', NULL, 'Cargo en Directiva', NULL, NULL, NULL),#Periodo actual en Directiva
-#Marina Lizeth Gonzales Torres
-(NULL, '1', '3', '2022-05-10', '2025-03-19', 'Miembro activo', 'Cargo en Directiva', NULL, NULL), #Periodo inicial en GTH
-(NULL, '1', '3', '2025-03-19', NULL, 'Cargo en Directiva', NULL, NULL, NULL),#Periodo actual en Directiva
-#Diego Jesús Rodríguez Sabana
-(NULL, '2', '4', '2024-06-01', '2025-03-19', 'Miembro activo', 'Cargo en Directiva', NULL, NULL), #Periodo inicial en LTK & FNZ
-(NULL, '2', '4', '2025-03-19', NULL, 'Cargo en Directiva', NULL, NULL, NULL),#Periodo actual en Directiva
-#Ángel Iparraguirre Aguilar
-(NULL, '3', '5', '2023-06-13', '2025-03-19', 'Miembro activo', 'Cargo en Directiva', NULL, NULL), #Periodo inicial en MKT
-(NULL, '3', '5', '2025-03-19', NULL, 'Cargo en Directiva', NULL, NULL, NULL),#Periodo actual en Directiva
-#María Fernanda de la Caridad Herrera Cerquín
-(NULL, '4', '6', '2023-06-13', '2025-03-19', 'Miembro activo', 'Cargo en Directiva', NULL, NULL), #Periodo inicial en PMO
-(NULL, '4', '6', '2025-03-19', NULL, 'Cargo en Directiva', NULL, NULL, NULL),#Periodo actual en Directiva
-#Christian Anthony Morales Esquivel
-(NULL, '4', '7', '2023-06-13', '2024-04-20', 'Miembro activo', 'Cargo en Directiva', NULL, NULL), #Periodo inicial en TI
-(NULL, '4', '7', '2024-04-20', NULL, 'Cargo en Directiva', NULL, NULL, NULL),#Periodo actual en Directiva
+INSERT INTO `area_persona` (`id`, `area_id`, `persona_id`, `fecha_inicio`, `fecha_fin`, `estado`, `created_at`, `updated_at`) VALUES 
+
+(NULL, '4', '1', '2024-06-01', NULL, 'Cargo en Directiva', NULL, NULL), #Lucia de Fátima Amaya Cáceda-PMO
+(NULL, '1', '2', '2024-06-01', NULL, 'Cargo en Directiva', NULL, NULL), #Silvana Valeria Pereda Llave-GTH
+(NULL, '1', '3', '2022-05-10', NULL, 'Cargo en Directiva', NULL, NULL), #Marina Lizeth Gonzales Torres-GTH
+(NULL, '2', '4', '2024-06-01', NULL, 'Cargo en Directiva', NULL, NULL), #Diego Jesús Rodríguez Sabana-LTK&FNZ
+(NULL, '3', '5', '2023-06-13', NULL, 'Cargo en Directiva', NULL, NULL), ##Ángel Iparraguirre Aguilar-MKT
+(NULL, '4', '6', '2023-06-13', NULL, 'Cargo en Directiva', NULL, NULL), #María Fernanda de la Caridad Herrera Cerquín-PMO
+(NULL, '4', '7', '2023-06-13', NULL, 'Cargo en Directiva', NULL, NULL), #Christian Anthony Morales Esquivel-TI
 
 #GTH(8-28)
 (NULL, '1', '8', '2023-06-13', NULL, 'Miembro activo',NULL, NULL, NULL),#Alisson Milagros Pretell Canchas

@@ -23,7 +23,7 @@ return new class extends Migration
                 ->cascadeOnDelete();
             $table->date('fecha_inicio');
             $table->date('fecha_fin')->nullable();
-            $table->enum('estado_inicial',[
+            $table->enum('estado',[
                 'Miembro activo',
                 'Cambio de área',
                 'Cargo en Directiva',
@@ -31,14 +31,6 @@ return new class extends Migration
                 'Retiro por bajo rendimiento',
                 'Egresado',
             ])->default('Miembro activo');
-            $table->enum('estado_final', [
-                'Miembro activo',
-                'Cambio de área',
-                'Cargo en Directiva',
-                'Retiro voluntario',
-                'Retiro por bajo rendimiento',
-                'Egresado',
-            ])->nullable()->default(null);
             $table->timestamps();
             // Índices para optimizar consultas
             $table->index('area_id');

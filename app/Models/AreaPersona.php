@@ -29,8 +29,7 @@ class AreaPersona extends Model
         'persona_id',
         'fecha_inicio',
         'fecha_fin',
-        'estado_inicial',
-        'estado_final'
+        'estado',
     ];
 
     /**

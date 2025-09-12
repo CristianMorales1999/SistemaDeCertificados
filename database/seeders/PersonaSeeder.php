@@ -193,7 +193,7 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 't534000120@unitru.edu.pe',
                 'sexo' => 'Femenino',
                 'codigo' => 'M1C3',
-                'imagen_firma' => 'fotos_firmas/Micaela Anthoaneth Cardenas Contreras.jpg',
+                'imagen_firma' => 'fotos_firmas/Micaela Anthoaneth Cardenas Contreras.png',
             ],
             [
                 //VICEPRESIDENTA-2023
@@ -204,7 +204,7 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 't050101120@unitru.edu.pe',
                 'sexo' => 'Femenino',
                 'codigo' => 'A23R19',
-                'imagen_firma' => 'fotos_firmas/Alejandra Verenisse Ruiz Rodriguez.jpg',
+                'imagen_firma' => 'fotos_firmas/Alejandra Verenisse Ruiz Rodriguez.png',
             ],
             [
                 //DIRECTORA DE GTH-2023
