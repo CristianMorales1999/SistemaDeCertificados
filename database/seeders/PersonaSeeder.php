@@ -1329,7 +1329,24 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'S19G',
                 'imagen_firma' => NULL,
             ],
-           
+            
+
+            /********************************************
+              *********** ENDIDADES ALIADAS *************
+              ******************************************* */
+            //ENTIDAD ALIADA 2: Voluntariado UNT
+            
+            [
+                'nombres' => 'Mauricio Jesus',
+                'apellidos' => 'Meléndez Sánchez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1061900121@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'M10M20',
+                'imagen_firma' => NULL,
+            ],
+
+            //ENTIDAD ALIADA 3: SEDIPRO
         ];
 
         foreach ($personas as $persona) {
