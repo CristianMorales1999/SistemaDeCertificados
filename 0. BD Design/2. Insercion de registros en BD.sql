@@ -218,7 +218,7 @@ INSERT INTO `personas` (`id`, `imagen_firma_id`, `nombres`, `apellidos`, `correo
 #____________________________________________________________________________________________
 #______________________ INSERTS DE USUARIOS DEL SISTEMA DE CERTIFICADOS _____________________
 #____________________________________ (tabla: users) _____________________________________
-INSERT INTO `users` (`id`, `persona_id`, `imagen_perfil_id`, `name`, `email`,`estado`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) 
+INSERT INTO `users` (`id`, `persona_id`, `imagen_perfil_id`, `name`, `email`,`status`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) 
 VALUES (NULL, '1', '8', 'Lucía de Fátima Amaya Cáceda', 't1051300621@unitru.edu.pe', 'Pendiente', NULL, '$2y$12$PwbxqOXisFXP1xYPgHKY0OZy7i7ZzgSTMRv4q.gB9goXyJ1EHhjNO', NULL, '2025-08-09 21:05:15', NULL), 
 (NULL, '2', '9', 'Silvana Valeria Pereda Llave', 'speredal@unitru.edu.pe', 'Pendiente', NULL, '$2y$12$yvXB/ZMJ.e4fDflha8TMsOTVQ9GWaK3/APVwqCfaJaiGa5fnZlWgG', NULL, '2025-08-09 21:05:15', NULL), 
 (NULL, '3', '10', 'Marina Lizeth Gonzales Torres', 't1510600121@unitru.edu.pe', 'Pendiente', NULL, '$2y$12$UK/8w53a3tgN.S465Ty4ZenU/Fyoo7RVyhXjZKG9vRHKLpOBi9Bnm', NULL, '2025-08-09 21:10:02', NULL), 

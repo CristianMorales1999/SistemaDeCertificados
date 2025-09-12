@@ -1304,7 +1304,7 @@ class PersonaSeeder extends Seeder
             ],
             [
                 'nombres' => 'Paúl Jamir',
-                'apellidos' => 'Larazo Solano',
+                'apellidos' => 'Lazaro Solano',
                 'correo_personal' => 'paulazarsol00@gmail.com',
                 'correo_institucional' => 't052700520@unitru.edu.pe',
                 'sexo' => 'Masculino',

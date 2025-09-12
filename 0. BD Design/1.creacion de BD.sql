@@ -101,7 +101,7 @@ CREATE TABLE users (
   name VARCHAR(255) NOT NULL,
   email VARCHAR(255) NOT NULL,
   profile_picture VARCHAR(300) NULL,
-  estado ENUM('Pendiente','Activo','Inactivo','Rechazado','Eliminado') NULL DEFAULT 'Pendiente',
+  status ENUM('Pendiente','Activo','Inactivo','Rechazado','Eliminado') NULL DEFAULT 'Pendiente',
   email_verified_at TIMESTAMP NULL,
   password VARCHAR(255) NOT NULL,
   remember_token VARCHAR(100) NULL,
