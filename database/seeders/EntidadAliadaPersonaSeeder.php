@@ -15,14 +15,14 @@ class EntidadAliadaPersonaSeeder extends Seeder
      */
     public function run(): void
     {
-        /***
+        /**
          * Estados posibles para personas en entidades aliadas:
          * .
                 'Activo',
                 'Inactivo',
                 'Retirado',
          */
-        /***
+        /**
          * Roles posibles para personas en entidades aliadas:
          * .
                 'Representante',
@@ -30,12 +30,13 @@ class EntidadAliadaPersonaSeeder extends Seeder
          */
 
         $personasEnEntidadesAliadas = [
-            /********************************
-              *********** VUNT *************
-              ******************************* */
+            /*********************
+              **** VUNT **********
+              ********************
+            */
             //Irving Luis Herrera Llovera
             [
-                'entidad_aliada' => 'VUNT', 
+                'entidad_aliada' => 'VUNT',
                 'correo_persona' => '',
                 'fecha_inicio' => '01-01-2024',
                 'fecha_fin' => NULL,
@@ -43,7 +44,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'estado' =>'Activo',
             ],
             [
-                'entidad_aliada' => '', 
+                'entidad_aliada' => '',
                 'correo_persona' => '',
                 'fecha_inicio' => '01-01-2024',
                 'fecha_fin' => NULL,

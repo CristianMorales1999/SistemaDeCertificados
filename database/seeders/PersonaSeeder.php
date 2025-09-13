@@ -54,7 +54,7 @@ class PersonaSeeder extends Seeder
             ],
             [
                 //DIRECTORA DE GTH-2025
-                //Ingresó a GTH el 10 De Mayo 2022 
+                //Ingresó a GTH el 10 De Mayo 2022
                 'nombres' => 'Marina Lizeth',
                 'apellidos' => 'Gonzales Torres',
                 'correo_personal' => 'marinalizethgonzalestorres@gmail.com',
@@ -300,7 +300,7 @@ class PersonaSeeder extends Seeder
             [
                 //DIRECTOR DE PMO-2022
                 //Ingresó a MKT el 03 de Septiembre 2019
-                //Se cambió a PMO a finales de 2020 
+                //Se cambió a PMO a finales de 2020
                 'nombres' => 'Hans',
                 'apellidos' => 'Cubeños Montoya',
                 'correo_personal' => 'hanscubenos@gmail.com',
@@ -487,7 +487,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
 
-            //Aqui ingresó MELVA NOEMI CARRANZA RODRIGUEZ 
+            //Aqui ingresó MELVA NOEMI CARRANZA RODRIGUEZ
                 //- Directora de GTH-2020
                 //- Presidenta de SEDIPRO-2021
             [
@@ -530,7 +530,7 @@ class PersonaSeeder extends Seeder
             //Aqui ingresó WILLIAN ALEXANDER PAREDES ROJAS <waparedesr@unitru.edu.pe> a GTH
                 //- Nuevo miembro de MKT en 2021
                 //- Director de MKT-2023
-    
+
             [
                 //Ingresó a GTH el 08 de Noviembre 2020
                 'nombres' => 'Esmeralda Marianela',
@@ -581,7 +581,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'H17R8',
                 'imagen_firma' => NULL,
             ],
-            
+
             //INGRESO EN CONVOCATORIA 2021-I (Total : 11 personas)
             [
                 //Ingresó a GTH el 20 de Noviembre 2021
@@ -676,6 +676,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a GTH el 20 de Noviembre 2021
                 'nombres' => 'Elber Isaí',
                 'apellidos' => 'Pichén Zavaleta',
                 'correo_personal' => 'pichenzavaleta@gmail.com',
@@ -719,7 +720,7 @@ class PersonaSeeder extends Seeder
 
             //Aqui ingresó BRICELLY JAZMIN RUIZ RODRIGUEZ <t020101420@unitru.edu.pe>
                 //- Directora de GTH-2024
-            
+
             [
                 'nombres' => 'Brayan Micael',
                 'apellidos' => 'Linares Oyos',
@@ -813,6 +814,7 @@ class PersonaSeeder extends Seeder
 
 
             [
+                //Ingresó a GTH el 10 De Diciembre 2024
                 'nombres' => 'Ana Nicoll',
                 'apellidos' => 'Segura Aredo',
                 'correo_personal' => 'anaseguraaredo@gmail.com',
@@ -822,6 +824,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a GTH el 10 De Diciembre 2024
                 'nombres' => 'Gerson Gabriel',
                 'apellidos' => 'Alfaro Tandaypan',
                 'correo_personal' => 'gersonalfa20@gmail.com',
@@ -831,6 +834,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a GTH el 01 De Junio 2024
                 'nombres' => 'José Daniel',
                 'apellidos' => 'Avila Santillan',
                 'correo_personal' => 'Josedanielsantiavila@gmail.com',
@@ -849,6 +853,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a GTH el 01 De Junio 2024
                 'nombres' => 'Lisseth Adelaida',
                 'apellidos' => 'Chávez Rosales',
                 'correo_personal' => 'Chavezadelaida25@gmail.com',
@@ -858,6 +863,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a GTH el 01 De Junio 2024
                 'nombres' => 'Mariann Estefany',
                 'apellidos' => 'Fernández Leyva',
                 'correo_personal' => 'maryferley.2004@gmail.com',
@@ -867,6 +873,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a GTH el 01 De Junio 2024
                 'nombres' => 'Michael Junior',
                 'apellidos' => 'García García',
                 'correo_personal' => NULL,
@@ -876,6 +883,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a GTH el 01 De Junio 2024
                 'nombres' => 'Nashaly Nicolle',
                 'apellidos' => 'Alama Terrones',
                 'correo_personal' => 'nashalyalamaterrones@gmail.com',
@@ -885,6 +893,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a GTH el 01 De Junio 2024
                 'nombres' => 'Renzo Georkael',
                 'apellidos' => 'Carrasco Lalangui',
                 'correo_personal' => 'renzocarrascola02@gmail.com',//Duda
@@ -894,6 +903,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a GTH el 10 De Diciembre 2024
                 'nombres' => 'Corina Marilu',
                 'apellidos' => 'Sanchez Delgado',
                 'correo_personal' => NULL,
@@ -903,6 +913,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a GTH el 10 De Diciembre 2025
                 'nombres' => 'Andrweeu Daniel',
                 'apellidos' => 'Urtecho Avila',
                 'correo_personal' => 'aurtechoa@gmail.com',
@@ -912,6 +923,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a GTH el 2 De Mayo 2025
                 'nombres' => 'Anderson Alexander',
                 'apellidos' => 'Saavedra Nolasco',
                 'correo_personal' => NULL,
@@ -921,6 +933,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a GTH el 2 De Mayo 2025
                 'nombres' => 'Luis Enrique',
                 'apellidos' => 'Montoya Aguirre',
                 'correo_personal' => NULL,
@@ -930,6 +943,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a GTH el 2 De Mayo 2025
                 'nombres' => 'Cristhian Luis David',
                 'apellidos' => 'Sánchez Obeso',
                 'correo_personal' => NULL,
@@ -939,6 +953,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a GTH el 2 De Mayo 2025
                 'nombres' => 'Joaquin Adriano',
                 'apellidos' => 'Bocanegra Peláez',
                 'correo_personal' => NULL,
@@ -948,6 +963,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a GTH el 2 De Mayo 2025
                 'nombres' => 'Emilly Nicoll',
                 'apellidos' => 'Zavaleta Chigne',
                 'correo_personal' => NULL,
@@ -957,6 +973,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a GTH el 2 De Mayo 2025
                 'nombres' => 'Eleanor Marycielo',
                 'apellidos' => 'Roca Mendoza',
                 'correo_personal' => NULL,
@@ -966,6 +983,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a GTH el 2 De Mayo 2025
                 'nombres' => 'Valeria Angelie',
                 'apellidos' => 'Valderrama Muñoz',
                 'correo_personal' => NULL,
@@ -1225,7 +1243,7 @@ class PersonaSeeder extends Seeder
             ],
             //Aqui ingresó ZULEMA ADELI VALVERDE ZAVALETA <t1510100321@unitru.edu.pe>
                 //- Directora de MKT-2024
-            
+
             /*
             //ÁREA DE PMO - 15
             [
@@ -1246,7 +1264,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => '',
                 'imagen_firma' => NULL,
             ],*/
-            
+
             //ÁREA DE TI - 10
             [
                 'nombres' => 'Elder Eli',
@@ -1330,12 +1348,10 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             
-
             /********************************************
               *********** ENDIDADES ALIADAS *************
               ******************************************* */
             //ENTIDAD ALIADA 2: Voluntariado UNT
-            
             [
                 'nombres' => 'Mauricio Jesus',
                 'apellidos' => 'Meléndez Sánchez',
@@ -1345,13 +1361,30 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'M10M20',
                 'imagen_firma' => NULL,
             ],
-
+            [
+                'nombres' => 'Jesús Manuel',
+                'apellidos' => 'Andrade Loyola',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1510601721@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'J13A12',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Paola Fernanda',
+                'apellidos' => 'Desposorio Sanchez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'pdesposorio@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'P6D20',
+                'imagen_firma' => NULL,
+            ],
             //ENTIDAD ALIADA 3: SEDIPRO
         ];
 
         foreach ($personas as $persona) {
             Persona::create($persona);
         }
-        
+
     }
 }
