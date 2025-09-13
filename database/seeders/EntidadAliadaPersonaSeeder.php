@@ -4,6 +4,9 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\EntidadAliada;
+use App\Models\Persona;
+use App\Models\EntidadAliadaPersona;
 
 class EntidadAliadaPersonaSeeder extends Seeder
 {
@@ -12,14 +15,14 @@ class EntidadAliadaPersonaSeeder extends Seeder
      */
     public function run(): void
     {
-        /*
+        /**
          * Estados posibles para personas en entidades aliadas:
          * .
                 'Activo',
                 'Inactivo',
                 'Retirado',
          */
-        /*
+        /**
          * Roles posibles para personas en entidades aliadas:
          * .
                 'Representante',
@@ -27,9 +30,10 @@ class EntidadAliadaPersonaSeeder extends Seeder
          */
 
         $personasEnEntidadesAliadas = [
-            /*******************
-              **** VUNT ******
-            ******************** */
+            /*********************
+              **** VUNT **********
+              ********************
+            */
             //Irving Luis Herrera Llovera
             [
                 'entidad_aliada' => 'VUNT',
@@ -48,5 +52,12 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'estado' =>'Activo',
             ],
         ];
+        foreach ($personasEnEntidadesAliadas as $personaEnEntidadAliada) {
+            $personaEnEntidadAliada['entidad_aliada_id'] = EntidadAliada::where('acronimo', $personaEnEntidadAliada['entidad_aliada'])->first()->id;
+            $personaEnEntidadAliada['persona_id'] = Persona::where('correo_institucional', $personaEnEntidadAliada['correo_persona'])->first()->id;
+            unset($personaEnEntidadAliada['entidad_aliada']);
+            unset($personaEnEntidadAliada['correo_persona']);
+            EntidadAliadaPersona::create($personaEnEntidadAliada);
+        }
     }
 }

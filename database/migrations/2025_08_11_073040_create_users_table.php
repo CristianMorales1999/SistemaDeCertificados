@@ -30,7 +30,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('profile_picture',300)->nullable(); // Ruta de la imagen de perfil
-            $table->enum('estado', [
+            $table->enum('status', [
                 'Pendiente',
                 'Activo',//Validado
                 'Inactivo',

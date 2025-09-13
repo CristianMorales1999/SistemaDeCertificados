@@ -26,7 +26,7 @@ class User extends Authenticatable
         'name',
         'email',
         'profile_picture',
-        'estado',
+        'status',
         'password',
     ];
 
@@ -68,7 +68,6 @@ class User extends Authenticatable
     public function roles(): BelongsToMany
     {
         return $this->belongsToMany(Rol::class, 'user_rol', 'user_id', 'role_id')
-            ->withPivot('is_active')
             ->withTimestamps();
     }
     //Relación uno a muchos con GrupoDeCertificacion (grupos de certificación creados por el usuario)
