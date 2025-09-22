@@ -1294,8 +1294,9 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             
-            //ÁREA DE MKT - 15
+            //ÁREA DE MKT - 22
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 02 de Mayo de 2025
                 'nombres' => 'Adriana Gabriela',
                 'apellidos' => 'Castillo Ochoa',
@@ -1306,6 +1307,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 10 de Mayo de 2022
                 'nombres' => 'Anderson Abat',
                 'apellidos' => 'Otiniano Morales',
@@ -1316,6 +1318,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 02 de Mayo de 2025
                 'nombres' => 'Angelo Salvattore',
                 'apellidos' => 'Chavarry Bustamante',
@@ -1326,6 +1329,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 01 de Junio de 2024
                 'nombres' => 'Angie Tatiana',
                 'apellidos' => 'Recuenco Tapia',
@@ -1336,6 +1340,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 10 de Diciembre de 2024
                 'nombres' => 'Belinda Maricielo',
                 'apellidos' => 'Arroyo Esquivel',
@@ -1346,6 +1351,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 02 de Mayo de 2025
                 'nombres' => 'Cesar Junior',
                 'apellidos' => 'Quito Cruz',
@@ -1356,6 +1362,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 01 de Junio de 2024
                 'nombres' => 'Cielo Valentina',
                 'apellidos' => 'Abanto Rojas',
@@ -1366,6 +1373,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 10 de Diciembre de 2024
                 'nombres' => 'Diego Jesús',
                 'apellidos' => 'Ullilén Chávez',
@@ -1376,6 +1384,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 01 de Junio de 2024
                 'nombres' => 'Emelyn Yasmin',
                 'apellidos' => 'Aguirre Valverde',
@@ -1386,6 +1395,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 10 de Mayo de 2022
                 'nombres' => 'Ghenary Tais',
                 'apellidos' => 'Esquivel Davila',
@@ -1396,6 +1406,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 01 de Junio de 2024
                 'nombres' => 'Jakori Nayeli',
                 'apellidos' => 'Hoyos Terrones',
@@ -1406,6 +1417,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 01 de Junio de 2024
                 'nombres' => 'Jordyna Del Carmen',
                 'apellidos' => 'Robles Solorzano',
@@ -1416,6 +1428,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 02 de Mayo de 2025
                 'nombres' => 'Juan José',
                 'apellidos' => 'Chávez Tenorio',
@@ -1437,6 +1450,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => 'fotos_firmas/Lesly Fiorella Perez Rodriguez.png',
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 02 de Mayo de 2025
                 'nombres' => 'Lorena Midalís',
                 'apellidos' => 'Primo Bueno',
@@ -1447,6 +1461,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 10 de Diciembre de 2024
                 'nombres' => 'Luis Angel',
                 'apellidos' => 'Lecca Cortez',
@@ -1457,6 +1472,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 02 de Mayo de 2025
                 'nombres' => 'Malena Shecid',
                 'apellidos' => 'Huamán Arana',
@@ -1467,6 +1483,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 13 de Junio de 2023
                 'nombres' => 'Maria Fernanda',
                 'apellidos' => 'Cárdenas Hidalgo',
@@ -1477,6 +1494,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 02 de Mayo de 2025
                 'nombres' => 'Melissa del Rosario',
                 'apellidos' => 'Muñoz Uriarte',
@@ -1487,6 +1505,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 02 de Mayo de 2025
                 'nombres' => 'Milene Xiomara',
                 'apellidos' => 'Delgado Silva',
@@ -1497,6 +1516,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 13 de Junio de 2023
                 'nombres' => 'Stefany Isabel',
                 'apellidos' => 'Gutierrez Vega',
@@ -1507,6 +1527,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 01 de Junio de 2024
                 'nombres' => 'Yojhania Taitt',
                 'apellidos' => 'Gonzales Contreras',
@@ -1517,28 +1538,156 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             //Aqui ingresó ZULEMA ADELI VALVERDE ZAVALETA <t1510100321@unitru.edu.pe>
+                //MIEMBRO ACTIVO 2025-I
                 //- Directora de MKT-2024
 
-            /*
-            //ÁREA DE PMO - 15
+            //ÁREA DE PMO - 14
+            //Aqui ingresó IVANNA SOFIA VELA OCAMPO <t510100520@unitru.edu.pe>
+                //Ingresó a PMO el 20 de Noviembre de 2021
+                //- Directora de PMO-2024
             [
-                'nombres' => '',
-                'apellidos' => '',
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a PMO el 13 de Junio de 2023
+                'nombres' => 'Aaron Kaleb',
+                'apellidos' => 'Arteaga Rodriguez',
                 'correo_personal' => NULL,
-                'correo_institucional' => '',
-                'sexo' => '',
-                'codigo' => '',
+                'correo_institucional' => 't1452700121@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'A11A19',
                 'imagen_firma' => NULL,
             ],
             [
-                'nombres' => '',
-                'apellidos' => '',
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a PMO el 13 de Junio de 2023
+                'nombres' => 'Jeoselyn Maribel',
+                'apellidos' => 'Espejo Rodriguez',
                 'correo_personal' => NULL,
-                'correo_institucional' => '',
-                'sexo' => '',
-                'codigo' => '',
+                'correo_institucional' => 'jespejor@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'J13E19',
                 'imagen_firma' => NULL,
-            ],*/
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a PMO el 13 de Junio de 2023
+                'nombres' => 'Maria Celine',
+                'apellidos' => 'Huaman Martinez',
+                'correo_personal' => 'celineehm51@gmail.com',
+                'correo_institucional' => 'mhuamanm@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'M3H13',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a PMO el 01 de Junio de 2024
+                'nombres' => 'Abel Maximiliano',
+                'apellidos' => 'Pereda Cabanillas',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'amperedaca@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'A13P3',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a PMO el 01 de Junio de 2024
+                'nombres' => 'Angela Xiomara',
+                'apellidos' => 'Loayza Gutierrez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'axloayzag@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'A25L7',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a PMO el 01 de Junio de 2024
+                'nombres' => 'Dalery Nicoll',
+                'apellidos' => 'Alayo Sifuentes',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'dnalayosi@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'D14AS',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a PMO el 10 de Diciembre de 2024
+                'nombres' => 'Daniel Angel',
+                'apellidos' => 'Sanchez Cabrera',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'dasanchezca@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'D1S3',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a PMO el 01 de Junio de 2024
+                'nombres' => 'Diego Alejandro',
+                'apellidos' => 'Mostacero Lecca',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1020100121@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'D1M12',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a PMO el 01 de Junio de 2024
+                'nombres' => 'Diego Alonso',
+                'apellidos' => 'Gutierrez Vasquez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'dgutierrezva@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'D1G23',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a PMO el 01 de Junio de 2024
+                'nombres' => 'Ruben Dario',
+                'apellidos' => 'Alcantara Toribio',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1051300821@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'R4A21',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a PMO el 02 de Mayo de 2025 
+                'nombres' => 'Ariana',
+                'apellidos' => 'Morales Ipanaqué',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'amoralesi@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'A13I',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a PMO el 02 de Mayo de 2025 
+                'nombres' => 'Rodrigo Alexander',
+                'apellidos' => 'Quispe Cortijo',
+                'correo_personal' => 'rodrigocortijo122333@gmail.com',//Duda
+                'correo_institucional' => 'raquispeco@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'R1Q3',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a PMO el 02 de Mayo de 2025 
+                'nombres' => 'Sebastian Javier',
+                'apellidos' => 'Vásquez Estrada',
+                'correo_personal' => 'sebastianvasquezestrada2007@gmail.com',
+                'correo_institucional' => 'sjvasqueze@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'S10V5',
+                'imagen_firma' => NULL,
+            ],
 
             //ÁREA DE TI - 10
             [

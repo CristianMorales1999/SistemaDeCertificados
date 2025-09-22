@@ -35,7 +35,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
               ********************
             */
             //Irving Luis Herrera Llovera
-            [
+            /*[
                 'entidad_aliada' => 'VUNT',
                 'correo_persona' => '',
                 'fecha_inicio' => '01-01-2024',
@@ -43,6 +43,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'rol' =>'',
                 'estado' =>'Activo',
             ],
+            
             [
                 'entidad_aliada' => '',
                 'correo_persona' => '',
@@ -50,7 +51,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'fecha_fin' => NULL,
                 'rol' =>'',
                 'estado' =>'Activo',
-            ],
+            ],*/
         ];
         foreach ($personasEnEntidadesAliadas as $personaEnEntidadAliada) {
             $personaEnEntidadAliada['entidad_aliada_id'] = EntidadAliada::where('acronimo', $personaEnEntidadAliada['entidad_aliada'])->first()->id;
