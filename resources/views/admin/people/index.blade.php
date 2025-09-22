@@ -53,8 +53,7 @@
                                     <th scope="col" class="px-6 py-3">Área</th>
                                     <th scope="col" class="px-6 py-3">Fecha inicial</th>
                                     <th scope="col" class="px-6 py-3">Fecha final</th>
-                                    <th scope="col" class="px-6 py-3">Estado inicial</th>
-                                    <th scope="col" class="px-6 py-3">Estado final</th>
+                                    <th scope="col" class="px-6 py-3">Estado</th>
                                     <th scope="col" class="px-6 py-3">Acciones</th>
                                 </tr>
                             </thead>
@@ -70,8 +69,7 @@
                                     <td class="px-6 py-4">{{ $personaDeArea->area->nombre ?? 'Sin área asignada' }}</td>
                                     <td class="px-6 py-4">{{ $personaDeArea->fecha_inicio }}</td>
                                     <td class="px-6 py-4">{{ $personaDeArea->fecha_fin ?? 'Sin fecha final' }}</td>
-                                    <td class="px-6 py-4">{{ $personaDeArea->estado_inicial }}</td>
-                                    <td class="px-6 py-4">{{ $personaDeArea->estado_final ?? 'Sin estado final' }}</td>
+                                    <td class="px-6 py-4">{{ $personaDeArea->estado ?? 'Sin estado final' }}</td>
                                     <td class="px-6 py-4 flex gap-2">
                                         <a href="{{ route('people.index', $personaDeArea->id) }}" 
                                            class="px-3 py-1 bg-blue-500 text-white rounded hover:bg-blue-600 transition">
