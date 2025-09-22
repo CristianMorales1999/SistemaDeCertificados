@@ -1848,6 +1848,15 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'P6D20',
                 'imagen_firma' => NULL,
             ],
+            [
+                'nombres' => 'Katya Gabriela',
+                'apellidos' => 'Florian Rogel',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'kflorian@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'K7F19',
+                'imagen_firma' => NULL,
+            ],
             //ENTIDAD ALIADA 3: SEDIPRO
         ];
 
