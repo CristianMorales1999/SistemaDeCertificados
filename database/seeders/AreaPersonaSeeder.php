@@ -26,12 +26,14 @@ class AreaPersonaSeeder extends Seeder
             'Egresado',
          */
         $personasEnAreas = [
-            // DIRECTIVA 2025
+            /********************************************
+              *************** DIRECTIVA 2025 ************
+              ******************************************* */
             [
                 //PRESIDENTA 2025
                 'area' => 'PMO',
                 'correo_persona' => 't1051300621@unitru.edu.pe',//lucia Amaya
-                'fecha_inicio' => '2024-06-01',
+                'fecha_inicio' => '2024-06-01',//Ingresó a PMO el 01 de Junio de 2024
                 'fecha_fin' => NULL,
                 'estado' =>'Cargo en Directiva',
             ],
@@ -39,7 +41,7 @@ class AreaPersonaSeeder extends Seeder
                 //VICEPRESIDENTA
                 'area' => 'GTH',
                 'correo_persona' => 'speredal@unitru.edu.pe',//Silvana Pereda
-                'fecha_inicio' => '2024-06-01',
+                'fecha_inicio' => '2024-06-01',//Ingresó a GTH el 01 de Junio de 2024
                 'fecha_fin' => NULL,
                 'estado' =>'Cargo en Directiva',
             ],
@@ -47,7 +49,7 @@ class AreaPersonaSeeder extends Seeder
                 //DIRECTOR(A) GTH
                 'area' => 'GTH',
                 'correo_persona' => 't1510600121@unitru.edu.pe',//Marina Gonzales
-                'fecha_inicio' => '2022-05-10',
+                'fecha_inicio' => '2022-05-10',//Ingresó a GTH el 10 De Mayo 2022
                 'fecha_fin' => NULL,
                 'estado' =>'Cargo en Directiva',
             ],
@@ -55,7 +57,7 @@ class AreaPersonaSeeder extends Seeder
                 //DIRECTOR(A) LTK&FNZ
                 'area' => 'LTK & FNZ',
                 'correo_persona' => 't1010100421@unitru.edu.pe',//Diego Rodriguez
-                'fecha_inicio' => '2024-06-01',
+                'fecha_inicio' => '2024-06-01',//Ingresó a LTK&FNZ el 01 de Junio de 2024
                 'fecha_fin' => NULL,
                 'estado' =>'Cargo en Directiva',
             ],
@@ -63,7 +65,7 @@ class AreaPersonaSeeder extends Seeder
                 //DIRECTOR(A) MKT
                 'area' => 'MKT',
                 'correo_persona' => 't1024000721@unitru.edu.pe',//Angel Iparraguirre
-                'fecha_inicio' => '2023-06-13',
+                'fecha_inicio' => '2023-06-13',//Ingresó a MKT el 13 de Junio de 2023
                 'fecha_fin' => NULL,
                 'estado' =>'Cargo en Directiva',
             ],
@@ -71,7 +73,7 @@ class AreaPersonaSeeder extends Seeder
                 //DIRECTOR(A) PMO
                 'area' => 'PMO',
                 'correo_persona' => 'mfherrerace@unitru.edu.pe',//Mafer Herrera
-                'fecha_inicio' => '2023-06-13',
+                'fecha_inicio' => '2023-06-13',//Ingresó a PMO el 13 de Junio de 2023
                 'fecha_fin' => NULL,
                 'estado' =>'Cargo en Directiva',
             ],
@@ -79,19 +81,74 @@ class AreaPersonaSeeder extends Seeder
                 //DIRECTOR(A) TI
                 'area' => 'TI',
                 'correo_persona' => 'chmoralese@unitru.edu.pe',//Cristian Morales
-                'fecha_inicio' => '2023-06-13',
-                'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
+                'fecha_inicio' => '2023-06-13',//Ingresó a TI el 13 de Junio de 2023
+                'fecha_fin' =>NULL,
                 'estado' =>'Cargo en Directiva',
             ],
+            /********************************************
+              *************** DIRECTIVA 2024 ************
+              ******************************************* */
+              [
+                //PRESIDENTA 2025
+                'area' => 'PMO',
+                'correo_persona' => 't010100820@unitru.edu.pe',//Cinthya Gil
+                'fecha_inicio' => '2022-05-10',//Ingresó a PMO el 10 de Mayo de 2022
+                'fecha_fin' => '2025-03-17',//Egresó de PMO el 17 de Marzo 2025
+                'estado' =>'Egresado',
+            ],
+            [
+                //VICEPRESIDENTA
+                'area' => 'GTH',
+                'correo_persona' => 't1052500521@unitru.edu.pe',//Romina Seclen
+                'fecha_inicio' => '2023-06-13',//Ingresó a GTH el 13 de Junio de 2023
+                'fecha_fin' => '2025-08-03',//Se retiró de GTH el 03 de Agosto de 2025
+                'estado' =>'Retiro voluntario',
+            ],
+            [
+                //DIRECTOR(A) GTH
+                'area' => 'GTH',
+                'correo_persona' => 't020101420@unitru.edu.pe',//Bricelly Ruiz
+                'fecha_inicio' => '2022-05-10',//Ingresó a GTH el 10 de Mayo de 2022
+                'fecha_fin' => '2025-03-17',//Egresó de GTH el 17 de Marzo 2025
+                'estado' =>'Egresado',
+            ],
+            [
+                //DIRECTOR(A) LTK&FNZ
+                'area' => 'LTK & FNZ',
+                'correo_persona' => 't1512400421@unitru.edu.pe',//Sebastian Facundo
+                'fecha_inicio' => '2022-12-20',//Ingresó a LTK&FNZ el 20 de Diciembre 2022
+                'fecha_fin' => NULL,
+                'estado' =>'Miembro activo',
+            ],
+            [
+                //DIRECTOR(A) MKT
+                'area' => 'MKT',
+                'correo_persona' => 't1510100321@unitru.edu.pe',//Adeli Valverde
+                'fecha_inicio' => '2022-12-20',//Ingresó a MKT el 20 de Diciembre 2022
+                'fecha_fin' => NULL,
+                'estado' =>'Miembro activo',
+            ],
+            [
+                //DIRECTOR(A) PMO
+                'area' => 'PMO',
+                'correo_persona' => 't510100520@unitru.edu.pe',//Ivanna Vela
+                'fecha_inicio' => '2021-11-20',//Ingresó a PMO el 20 de Noviembre 2021
+                'fecha_fin' => NULL,
+                'estado' =>'Miembro activo',
+            ],
+                //DIRECTOR(A) TI
+                //Aqui estuvo CHRISTIAN ANTHONY MORALES ESQUIVEL <chmoralese@unitru.edu.pe>
+                    //- Director de TI-2025
 
-            // GTH
-
+            /********************************************
+              ****************** GTH ********************
+              ******************************************* */
             // GTH MIEMBROS ACTIVOS EN 2025
             [
                 //Cristhian Luis David Sánchez Obeso
                 'area' => 'GTH',
                 'correo_persona' => 'clsanchezo@unitru.edu.pe',
-                'fecha_inicio' => '2025-06-02',
+                'fecha_inicio' => '2025-05-02',//Ingresó a GTH el 2 De Mayo 2025
                 'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
                 'estado' =>'Miembro activo',
             ],
@@ -99,7 +156,7 @@ class AreaPersonaSeeder extends Seeder
                 //Emilly Nicoll Zavaleta Chigne
                 'area' => 'GTH',
                 'correo_persona' => 'enzavaletac@unitru.edu.pe',
-                'fecha_inicio' => '2025-06-02',
+                'fecha_inicio' => '2025-05-02',//Ingresó a GTH el 2 De Mayo 2025
                 'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
                 'estado' =>'Miembro activo',
             ],
@@ -107,7 +164,7 @@ class AreaPersonaSeeder extends Seeder
                 //Anderson Alexander Saavedra Nolasco
                 'area' => 'GTH',
                 'correo_persona' => 'aasaavedrano@unitru.edu.pe',
-                'fecha_inicio' => '2025-06-02',
+                'fecha_inicio' => '2025-05-02',//Ingresó a GTH el 02 De Mayo 2025
                 'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
                 'estado' =>'Miembro activo',
             ],
@@ -115,7 +172,7 @@ class AreaPersonaSeeder extends Seeder
                 //Joaquin Adriano Bocanegra Peláez
                 'area' => 'GTH',
                 'correo_persona' => 'jabocanegrap@unitru.edu.pe',
-                'fecha_inicio' => '2025-06-02',
+                'fecha_inicio' => '2025-05-02',//Ingresó a GTH el 2 De Mayo 2025
                 'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
                 'estado' =>'Miembro activo',
             ],
@@ -123,7 +180,7 @@ class AreaPersonaSeeder extends Seeder
                 //Luis Enrique Montoya Aguirre
                 'area' => 'GTH',
                 'correo_persona' => 'lemontoyaa@unitru.edu.pe',
-                'fecha_inicio' => '2025-06-02',
+                'fecha_inicio' => '2025-05-02',//Ingresó a GTH el 2 De Mayo 2025
                 'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
                 'estado' =>'Miembro activo',
             ],
@@ -131,7 +188,7 @@ class AreaPersonaSeeder extends Seeder
                 //Eleanor Marycielo Roca Mendoza
                 'area' => 'GTH',
                 'correo_persona' => 'emrocam@unitru.edu.pe',
-                'fecha_inicio' => '2025-06-02',
+                'fecha_inicio' => '2025-05-02',//Ingresó a GTH el 2 De Mayo 2025
                 'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
                 'estado' =>'Miembro activo',
             ],
@@ -139,7 +196,7 @@ class AreaPersonaSeeder extends Seeder
                 //Valeria Angelie Valderrama Muñoz
                 'area' => 'GTH',
                 'correo_persona' => 'vavalderramam@unitru.edu.pe',
-                'fecha_inicio' => '2025-06-02',
+                'fecha_inicio' => '2025-05-02',//Ingresó a GTH el 2 De Mayo 2025
                 'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
                 'estado' =>'Miembro activo',
             ],
@@ -147,7 +204,7 @@ class AreaPersonaSeeder extends Seeder
                 //Andrweeu Daniel Urtecho Avila
                 'area' => 'GTH',
                 'correo_persona' => 'aurtechoa@unitru.edu.pe',
-                'fecha_inicio' => '2024-12-10',
+                'fecha_inicio' => '2024-12-10',//Ingresó a GTH el 10 De Diciembre 2025
                 'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
                 'estado' =>'Miembro activo',
             ],
@@ -155,23 +212,19 @@ class AreaPersonaSeeder extends Seeder
                 //VCorina Marilu Sanchez Delgado
                 'area' => 'GTH',
                 'correo_persona' => 'Csanchezd@unitru.edu.pe',
-                'fecha_inicio' => '2024-12-10',
+                'fecha_inicio' => '2024-12-10',//Ingresó a GTH el 10 De Diciembre 2024
                 'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
                 'estado' =>'Miembro activo',
             ],
-            [
-                //Romina Alejandra Seclen Cespedes
-                'area' => 'GTH',
-                'correo_persona' => 't1052500521@unitru.edu.pe',
-                'fecha_inicio' => '2023-06-13',
-                'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
-                'estado' =>'Miembro activo',
-            ],
+                //Aqui ingreso ROMINA ALEJANDRA SECLEN CESPEDES <t1052500521@unitru.edu.pe>
+                    //Ingresó a GTH el 13 de Junio de 2023
+                    //Se retiró de GTH el 03 de Agosto de 2025
+                    //- VicePresidenta SEDIPRO UNT-2024
             [
                 //Renzo Georkael Carrasco Lalangui
                 'area' => 'GTH',
                 'correo_persona' => 'rgcarrascol@unitru.edu.pe',
-                'fecha_inicio' => '2024-06-01',
+                'fecha_inicio' => '2024-06-01',//Ingresó a GTH el 01 De Junio 2024
                 'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
                 'estado' =>'Miembro activo',
             ],
@@ -179,7 +232,7 @@ class AreaPersonaSeeder extends Seeder
                 //Nashaly Nicolle Alama Terrones
                 'area' => 'GTH',
                 'correo_persona' => 'nalama@unitru.edu.pe',
-                'fecha_inicio' => '2024-06-01',
+                'fecha_inicio' => '2024-06-01',//Ingresó a GTH el 01 De Junio 2024
                 'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
                 'estado' =>'Miembro activo',
             ],
@@ -187,7 +240,7 @@ class AreaPersonaSeeder extends Seeder
                 //Michael Junior García García
                 'area' => 'GTH',
                 'correo_persona' => 't1051300421@unitru.edu.pe',
-                'fecha_inicio' => '2024-06-01',
+                'fecha_inicio' => '2024-06-01',//Ingresó a GTH el 01 De Junio 2024
                 'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
                 'estado' =>'Miembro activo',
             ],
@@ -195,7 +248,7 @@ class AreaPersonaSeeder extends Seeder
                 //Mariann Estefany Fernández Leyva
                 'area' => 'GTH',
                 'correo_persona' => 't1050102021@unitru.edu.pe',
-                'fecha_inicio' => '2024-06-01',
+                'fecha_inicio' => '2024-06-01',//Ingresó a GTH el 01 De Junio 2024
                 'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
                 'estado' =>'Miembro activo',
             ],
@@ -203,7 +256,7 @@ class AreaPersonaSeeder extends Seeder
                 //Lisseth Adelaida Chávez Rosales
                 'area' => 'GTH',
                 'correo_persona' => 'lichavezr@unitru.edu.pe',
-                'fecha_inicio' => '2024-06-01',
+                'fecha_inicio' => '2024-06-01',//Ingresó a GTH el 01 De Junio 2024
                 'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
                 'estado' =>'Miembro activo',
             ],
@@ -211,7 +264,7 @@ class AreaPersonaSeeder extends Seeder
                 //José Daniel Avila Santillan
                 'area' => 'GTH',
                 'correo_persona' => 'jdavilas@unitru.edu.pe',
-                'fecha_inicio' => '2024-06-01',
+                'fecha_inicio' => '2024-06-01',//Ingresó a GTH el 01 De Junio 2024
                 'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
                 'estado' =>'Miembro activo',
             ],
@@ -219,15 +272,15 @@ class AreaPersonaSeeder extends Seeder
                 //Gerson Gabriel Alfaro Tandaypan
                 'area' => 'GTH',
                 'correo_persona' => 't1051500121@unitru.edu.pe',
-                'fecha_inicio' => '2024-12-10',
-                'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
-                'estado' =>'Miembro activo',
+                'fecha_inicio' => '2024-12-10',//Ingresó a GTH el 10 De Diciembre 2024
+                'fecha_fin' =>'2025-06-17',//Se le retiró de GTH por bajo rendimiento el 17 de Junio de 2025
+                'estado' =>'Retiro por bajo rendimiento',
             ],
             [
                 //Dulce Geraldine Chavez Padilla
                 'area' => 'GTH',
                 'correo_persona' => 't1051302521@unitru.edu.pe',
-                'fecha_inicio' => '2023-06-13',
+                'fecha_inicio' => '2023-06-13',//Ingresó a GTH el 13 De Junio 2023
                 'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
                 'estado' =>'Miembro activo',
             ],
@@ -235,7 +288,7 @@ class AreaPersonaSeeder extends Seeder
                 //Ana Nicoll Segura Aredo
                 'area' => 'GTH',
                 'correo_persona' => 'anseguraa@unitru.edu.pe',
-                'fecha_inicio' => '2024-12-10',
+                'fecha_inicio' => '2024-12-10',//Ingresó a GTH el 10 De Diciembre 2024
                 'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
                 'estado' =>'Miembro activo',
             ],
@@ -243,7 +296,7 @@ class AreaPersonaSeeder extends Seeder
                 //Alisson Milagros Pretell Canchas
                 'area' => 'GTH',
                 'correo_persona' => 't050601920@unitru.edu.pe',
-                'fecha_inicio' => '2023-06-13',
+                'fecha_inicio' => '2023-06-13',//Ingresó a GTH el 13 De Junio 2023
                 'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
                 'estado' =>'Miembro activo',
             ],
@@ -251,7 +304,7 @@ class AreaPersonaSeeder extends Seeder
                 //Elber Isaí Pichén Zavaleta
                 'area' => 'GTH',
                 'correo_persona' => 't1024000121@unitru.edu.pe',
-                'fecha_inicio' => '2021-11-20',
+                'fecha_inicio' => '2021-11-20',//Ingresó a GTH el 20 de Noviembre 2021
                 'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
                 'estado' =>'Miembro activo',
             ],
