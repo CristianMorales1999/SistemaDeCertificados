@@ -114,6 +114,7 @@ class PersonaSeeder extends Seeder
             [
                 //PRESIDENTA-2024
                 //Ingresó a PMO el 10 de Mayo de 2022
+                //Egresó de PMO el 17 de Marzo 2025
                 'nombres' => 'Cinthya Soledad',
                 'apellidos' => 'Gil Toribio',
                 'correo_personal' => 'cinthyagiltoribio7@gmail.com',
@@ -125,6 +126,7 @@ class PersonaSeeder extends Seeder
             [
                 //VICEPRESIDENTA-2024
                 //Ingresó a GTH el 13 de Junio de 2023
+                //Se retiró de GTH el 03 de Agosto de 2025
                 'nombres' => 'Romina Alejandra',
                 'apellidos' => 'Seclen Cespedes',
                 'correo_personal' => 'rominaalejandraseclen@gmail.com',
@@ -136,6 +138,7 @@ class PersonaSeeder extends Seeder
             [
                 //DIRECTORA DE GTH-2024
                 //Ingresó a GTH el 10 de Mayo de 2022
+                //Egresó de GTH el 17 de Marzo 2025
                 'nombres' => 'Bricelly Jazmin',
                 'apellidos' => 'Ruiz Rodriguez',
                 'correo_personal' => 'bricelly2001@gmail.com',
@@ -186,7 +189,9 @@ class PersonaSeeder extends Seeder
               ******************************************* */
             [
                 //PRESIDENTA-2023
-                //Ingresó a PMO el 8 de Noviembre de 2020(Es lo más seguro, aunque no aparece en el post de bienvenida)
+                //Ingresó a MKT el 09 de Junio de 2020(Segun: https://drive.google.com/file/d/1CxcZRJBxSGDuZcJybGfkLPjsV-xyJjIJ/view?usp=sharing)
+                //Se cambió a PMO el 8 de Noviembre de 2020(Esta fecha es del ingreso de los nuevos y es referencial)
+                //Egresó de PMO el 17 de Marzo 2025
                 'nombres' => 'Micaela Anthoaneth',
                 'apellidos' => 'Cardenas Contreras',
                 'correo_personal' => 'micantho1105@gmail.com',
@@ -198,6 +203,7 @@ class PersonaSeeder extends Seeder
             [
                 //VICEPRESIDENTA-2023
                 //Ingresó a GTH el 8 de Noviembre de 2020(Es lo más seguro, aunque no aparece en el post de bienvenida)
+                //No hay registro de si egresó o se retiró acabando el 2023.
                 'nombres' => 'Alejandra Verenisse',
                 'apellidos' => 'Ruiz Rodriguez',
                 'correo_personal' => 'aleruizrodriguez.14@gmail.com',
@@ -209,6 +215,7 @@ class PersonaSeeder extends Seeder
             [
                 //DIRECTORA DE GTH-2023
                 //Ingresó a GTH el 20 de Noviembre 2021
+                //Se retiró de GTH el 02 de Marzo de 2024
                 'nombres' => 'Yessenia Jackelyne',
                 'apellidos' => 'Angulo Urbina',
                 'correo_personal' => 'jangulourbina09@gmail.com',
@@ -221,6 +228,7 @@ class PersonaSeeder extends Seeder
                 //DIRECTOR DE LTK&FNZ-2023
                 //Ingresó a MKT el 08 de Noviembre 2020
                 //Se cambió a LTK en 2021
+                //Egresó de LTK&FNZ el 08 de Marzo 2024
                 'nombres' => 'Edwin Jardel',
                 'apellidos' => 'Zelada Vasquez',
                 'correo_personal' => 'edwin.jardel.2000@gmail.com',
@@ -233,6 +241,7 @@ class PersonaSeeder extends Seeder
                 //DIRECTOR DE MKT-2023
                 //Ingresó a GTH el 08 de Noviembre 2020
                 //Se cambió a MKT en 2021
+                //Egresó de MKT el 08 de Marzo 2024
                 'nombres' => 'Willian Alexander',
                 'apellidos' => 'Paredes Rojas',
                 'correo_personal' => 'paredeswar23@gmail.com',
@@ -245,6 +254,7 @@ class PersonaSeeder extends Seeder
                 //DIRECTOR DE PMO-2023
                 //Ingresó a MKT el 08 de Noviembre 2020
                 //Se cambió a PMO a finales del 2021
+                //No hay registro de si egresó o se retiró
                 'nombres' => 'Edwin Jeyson',
                 'apellidos' => 'Valencia Gaona',
                 'correo_personal' => 'jeyvalencia2019@gmail.com',
@@ -261,6 +271,7 @@ class PersonaSeeder extends Seeder
                 //PRESIDENTA-2022
                 //Ingresó a MKT el 03 de Septiembre 2019
                 //Se cambió a PMO a finales de 2020 (Esto lo asumo ya que puede que se haya cambiado en 2021)
+                //Egresó de PMO el 21 de Marzo 2023
                 'nombres' => 'Angie Evelin',
                 'apellidos' => 'Cabrera Garcia',
                 'correo_personal' => 'angie0717cab@gmail.com',
@@ -278,6 +289,7 @@ class PersonaSeeder extends Seeder
             [
                 //DIRECTOR DE LTK&FNZ-2022
                 //Ingresó a LTK&FNZ el 8 de Noviembre de 2020
+                //Egresó de LTK&FNZ el 21 de Marzo 2023
                 'nombres' => 'Danjhel Noe',
                 'apellidos' => 'Villanueva Valera',
                 'correo_personal' => 'dvillanuevavalera@gmail.com',
@@ -288,7 +300,8 @@ class PersonaSeeder extends Seeder
             ],
             [
                 //DIRECTOR DE MKT-2022
-                //Ingresó a MKT el D de M de Y
+                //Ingresó a MKT el 08 de Noviembre de 2020
+                //Egresó de MKT el 08 de Marzo 2024
                 'nombres' => 'Elian Carlos',
                 'apellidos' => 'Pinedo Gomez',
                 'correo_personal' => 'elian.16.ecpg@gmail.com',
@@ -301,6 +314,7 @@ class PersonaSeeder extends Seeder
                 //DIRECTOR DE PMO-2022
                 //Ingresó a MKT el 03 de Septiembre 2019
                 //Se cambió a PMO a finales de 2020
+                //Egresó de PMO el 21 de Marzo 2023
                 'nombres' => 'Hans',
                 'apellidos' => 'Cubeños Montoya',
                 'correo_personal' => 'hanscubenos@gmail.com',
@@ -316,6 +330,7 @@ class PersonaSeeder extends Seeder
             [
                 //PRESIDENTA-2021
                 //Ingresó a GTH el 03 de Septiembre 2019
+                //Egresó el 03 de Abril de 2022
                 'nombres' => 'Melva Noemi',
                 'apellidos' => 'Carranza Rodriguez',
                 'correo_personal' => 'noemi.02.carranza@gmail.com',
@@ -327,6 +342,7 @@ class PersonaSeeder extends Seeder
             [
                 //VICEPRESIDENTA-2021
                 //Ingresó a GTH el 03 de Septiembre 2019
+                //No hay registro de si egresó o si se retiró
                 'nombres' => 'Lucciana Kathiuzka',
                 'apellidos' => 'Hurtado Soledad',
                 'correo_personal' => 'Luccianahs@gmail.com',
@@ -338,6 +354,7 @@ class PersonaSeeder extends Seeder
             [
                 //DIRECTOR DE GTH-2021
                 //Ingresó a GTH el 03 de Septiembre 2019
+                //No hay registro de si egresó o si se retiró
                 'nombres' => 'José Armando',
                 'apellidos' => 'Vasquez Lopez',
                 'correo_personal' => NULL,
@@ -349,6 +366,7 @@ class PersonaSeeder extends Seeder
             [
                 //DIRECTORA DE LTK&FNZ-2021
                 //Ingresó a LTK&FNZ el D de M de Y
+                //Egresó el 03 de Abril de 2022
                 'nombres' => 'Jemina Rebeca',
                 'apellidos' => 'Barboza Vilchez',
                 'correo_personal' => NULL,
@@ -360,6 +378,7 @@ class PersonaSeeder extends Seeder
             [
                 //DIRECTOR DE MKT-2021
                 //Ingresó a MKT el D de M de Y
+                //No hay registro de si egresó o si se retiró
                 'nombres' => 'Bagner Mallher',
                 'apellidos' => 'Guzman Gonzales',
                 'correo_personal' => 'bagnerguzmangonzales@gmail.com',
@@ -370,7 +389,9 @@ class PersonaSeeder extends Seeder
             ],
             [
                 //DIRECTOR DE PMO-2021
-                //Ingresó a PMO el D de M de Y
+                //Ingresó a GTH el 29 de Octubre de 2018
+                //Se cambió a PMO el D de M de Y
+                //Egresó el 03 de Abril de 2022
                 'nombres' => 'Pablo César',
                 'apellidos' => 'Vasquez Narvaez',
                 'correo_personal' => 'Pablocesa25@gmail.com',
@@ -385,7 +406,8 @@ class PersonaSeeder extends Seeder
               ******************************************* */
               [
                 //PRESIDENTA-2020
-                //Ingresó a A el D de M de Y
+                //Ingresó a LTK&FNZ el 11 de Agosto de 2017
+                //No hay registro de si egresó o si se retiró
                 'nombres' => 'Stephanie Catherine',
                 'apellidos' => 'Figueroa Olivares',
                 'correo_personal' => NULL,
@@ -397,6 +419,7 @@ class PersonaSeeder extends Seeder
             [
                 //VICEPRESIDENTA-2020
                 //Ingresó a A el D de M de Y
+                //Egresó el 03 de Abril de 2022
                 'nombres' => 'Jesabel del Carmen',
                 'apellidos' => 'Crespin Chavez',
                 'correo_personal' => 'jesabeldelcarmen@gmail.com',
@@ -411,6 +434,7 @@ class PersonaSeeder extends Seeder
             [
                 //DIRECTOR DE LTK&FNZ-2020
                 //Ingresó a LTK&FNZ el D de M de Y
+                //Egresó el 03 de Abril de 2022
                 'nombres' => 'Diego Martín',
                 'apellidos' => 'Moreno Vargas',
                 'correo_personal' => 'diegomoreno4a@gmail.com',
@@ -421,7 +445,8 @@ class PersonaSeeder extends Seeder
             ],
             [
                 //DIRECTOR DE MKT-2020
-                //Ingresó a MKT el D de M de Y
+                //Ingresó a MKT el 29 de Octubre de 2018
+                //Egresó el 03 de Abril de 2022
                 'nombres' => 'Rogger Manuel',
                 'apellidos' => 'Mejía Zuñiga',
                 'correo_personal' => 'roggermejia2000@gmail.com',
@@ -432,7 +457,9 @@ class PersonaSeeder extends Seeder
             ],
             [
                 //DIRECTOR DE PMO-2020
-                //Ingresó a PMO el D de M de Y
+                //Ingresó a MKT el 14 de Octubre de 2016
+                //Se cambió a PMO el D de M de Y
+                //No hay registro de si egresó o si se retiró
                 'nombres' => 'Mauricio Sebastian',
                 'apellidos' => 'Bedón Oliva',
                 'correo_personal' => NULL,
@@ -468,6 +495,7 @@ class PersonaSeeder extends Seeder
             ],
             [
                 //Ingresó a GTH el 03 de Septiembre 2019
+                //Egresó el 03 de Abril de 2022
                 'nombres' => 'Angela Mariel',
                 'apellidos' => 'Pereda Morales',
                 'correo_personal' => NULL,
@@ -563,6 +591,7 @@ class PersonaSeeder extends Seeder
             ],
             [
                 //Ingresó a GTH el 08 de Noviembre 2020
+                //Egresó el 03 de Abril de 2022
                 'nombres' => 'Kevin Alexander',
                 'apellidos' => 'Meregildo Garcia',
                 'correo_personal' => NULL,
@@ -676,6 +705,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 20 de Noviembre 2021
                 'nombres' => 'Elber Isaí',
                 'apellidos' => 'Pichén Zavaleta',
@@ -760,6 +790,7 @@ class PersonaSeeder extends Seeder
 
             //Ingresó en CONVOCATORIA 2023-I (Total : 6 personas)
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 13 De Junio 2023
                 'nombres' => 'Alisson Milagros',
                 'apellidos' => 'Pretell Canchas',
@@ -770,6 +801,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 13 De Junio 2023
                 'nombres' => 'Dulce Geraldine',
                 'apellidos' => 'Chavez Padilla',
@@ -814,6 +846,7 @@ class PersonaSeeder extends Seeder
 
 
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 10 De Diciembre 2024
                 'nombres' => 'Ana Nicoll',
                 'apellidos' => 'Segura Aredo',
@@ -825,6 +858,7 @@ class PersonaSeeder extends Seeder
             ],
             [
                 //Ingresó a GTH el 10 De Diciembre 2024
+                //Se le retiró de GTH por bajo rendimiento el 17 de Junio de 2025
                 'nombres' => 'Gerson Gabriel',
                 'apellidos' => 'Alfaro Tandaypan',
                 'correo_personal' => 'gersonalfa20@gmail.com',
@@ -834,6 +868,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 01 De Junio 2024
                 'nombres' => 'José Daniel',
                 'apellidos' => 'Avila Santillan',
@@ -853,6 +888,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 01 De Junio 2024
                 'nombres' => 'Lisseth Adelaida',
                 'apellidos' => 'Chávez Rosales',
@@ -863,6 +899,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 01 De Junio 2024
                 'nombres' => 'Mariann Estefany',
                 'apellidos' => 'Fernández Leyva',
@@ -873,6 +910,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 01 De Junio 2024
                 'nombres' => 'Michael Junior',
                 'apellidos' => 'García García',
@@ -883,6 +921,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 01 De Junio 2024
                 'nombres' => 'Nashaly Nicolle',
                 'apellidos' => 'Alama Terrones',
@@ -893,6 +932,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 01 De Junio 2024
                 'nombres' => 'Renzo Georkael',
                 'apellidos' => 'Carrasco Lalangui',
@@ -903,6 +943,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 10 De Diciembre 2024
                 'nombres' => 'Corina Marilu',
                 'apellidos' => 'Sanchez Delgado',
@@ -923,6 +964,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 2 De Mayo 2025
                 'nombres' => 'Anderson Alexander',
                 'apellidos' => 'Saavedra Nolasco',
@@ -933,6 +975,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 2 De Mayo 2025
                 'nombres' => 'Luis Enrique',
                 'apellidos' => 'Montoya Aguirre',
@@ -943,6 +986,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 2 De Mayo 2025
                 'nombres' => 'Cristhian Luis David',
                 'apellidos' => 'Sánchez Obeso',
@@ -953,6 +997,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 2 De Mayo 2025
                 'nombres' => 'Joaquin Adriano',
                 'apellidos' => 'Bocanegra Peláez',
@@ -963,6 +1008,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 2 De Mayo 2025
                 'nombres' => 'Emilly Nicoll',
                 'apellidos' => 'Zavaleta Chigne',
@@ -973,6 +1019,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 2 De Mayo 2025
                 'nombres' => 'Eleanor Marycielo',
                 'apellidos' => 'Roca Mendoza',
@@ -983,6 +1030,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 2 De Mayo 2025
                 'nombres' => 'Valeria Angelie',
                 'apellidos' => 'Valderrama Muñoz',
@@ -1020,28 +1068,235 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
 
-            //ÁREA DE LTK&FNZ - 20
-            /*[
-                'nombres' => '',
-                'apellidos' => '',
+            //ÁREA DE LTK&FNZ - 21
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a MKT el 20 De Noviembre 2021
+                //Se cambió a LTK&FNZ el 03 de Mayo 2023
+                'nombres' => 'Jhosmel Anderson',
+                'apellidos' => 'Vigo Cepeda',
+                'correo_personal' => 'jhosmelvigoc4@gmail.com',
+                'correo_institucional' => 't1511601421@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'J1V3',
+                'imagen_firma' => NULL,//Falta firma por ser DP
+            ],
+            //Aqui ingresó SEBASTIAN EMANUEL FACUNDO REYES <t1512400421@unitru.edu.pe> 
+                //Ingresó a LTK&FNZ el 20 de Diciembre de 2022(Convo-Extraordinaria)
+                //- Director de LTK&FNZ-2024
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a LTK&FNZ el 13 De Junio 2023
+                'nombres' => 'Kevin Gamaliel',
+                'apellidos' => 'Rodríguez Alfaro',
                 'correo_personal' => NULL,
-                'correo_institucional' => '',
-                'sexo' => '',
-                'codigo' => '',
+                'correo_institucional' => 't1510101021@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'K7R1',
                 'imagen_firma' => NULL,
             ],
             [
-                'nombres' => '',
-                'apellidos' => '',
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a LTK&FNZ el 01 De Junio 2024
+                'nombres' => 'Grecia Alexandra',
+                'apellidos' => 'Paredes Cachique',
                 'correo_personal' => NULL,
-                'correo_institucional' => '',
-                'sexo' => '',
-                'codigo' => '',
+                'correo_institucional' => 'gaparedesca@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'G1P3',
                 'imagen_firma' => NULL,
             ],
-            */
+            [
+                //Ingresó a MKT el 01 De Junio 2024
+                //Se le retiró de LTK&FNZ por bajo rendimiento el 15 de Julio de 2025
+                'nombres' => 'Jimmy Andersonn',
+                'apellidos' => 'Cáceda Olivera',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'jcacedao@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'J1C16',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a LTK&FNZ el 01 De Junio 2024 
+                'nombres' => 'Maria Fernanda',
+                'apellidos' => 'Pretell Leon',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1010700721@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'M6P12',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a LTK&FNZ el 01 De Junio 2024 
+                'nombres' => 'Mixie Arleni',
+                'apellidos' => 'Gil Zapata',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'magilza@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'M1G27',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a LTK&FNZ el 01 De Junio 2024 
+                'nombres' => 'Nestor Rafael',
+                'apellidos' => 'Placencia De la Cruz',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'nrplasenciade@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'N19P4L3',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a LTK&FNZ el 01 De Junio 2024
+                'nombres' => 'Tatiana Yuleisy',
+                'apellidos' => 'Aliaga Pretell',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'taliaga@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'T26A17',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a LTK&FNZ el 10 De Diciembre 2024
+                'nombres' => 'Christian Rodrigo',
+                'apellidos' => 'Valverde Caspito',
+                'correo_personal' => 'christiancvalverdecaspito@gmail.com',
+                'correo_institucional' => 'crvalverdeca@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'C19V3',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a LTK&FNZ el 10 De Diciembre 2024
+                'nombres' => 'Eddie Alessandro',
+                'apellidos' => 'Jiménez Vilchez',
+                'correo_personal' => 'eddiealessandro20@gmail.com',
+                'correo_institucional' => 'ejimenezv@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'E1J23',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a LTK&FNZ el 10 De Diciembre 2024
+                'nombres' => 'Fabián Nicolas',
+                'apellidos' => 'Paredes Calderón',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'fnparedesca@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'F14P3',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a LTK&FNZ el 10 De Diciembre 2024
+                'nombres' => 'Kiara Marife',
+                'apellidos' => 'Rodriguez Sifuentes',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'krodriguezsi@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'K13R20',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a LTK&FNZ el 10 De Diciembre 2024
+                'nombres' => 'Luis Angel',
+                'apellidos' => 'Laureano Escobedo',
+                'correo_personal' => 'luislaureanoescobedo@gmail.com',
+                'correo_institucional' => 't1511300521@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'L1L5',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a LTK&FNZ el 02 De Mayo 2025
+                'nombres' => 'Cristhian Imanol',
+                'apellidos' => 'Campos Castro',
+                'correo_personal' => 'Cristhianimanol@hotmail.com',//Hotmail 
+                'correo_institucional' => 'cicamposc@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'C9C3',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a LTK&FNZ el 02 De Mayo 2025
+                'nombres' => 'Dalia Irina',
+                'apellidos' => 'Garcia De la Cruz',
+                'correo_personal' => 'daliagarciadelacruz@gmail.com',
+                'correo_institucional' => 'digarciad@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'D9G4L3',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a LTK&FNZ el 02 De Mayo 2025
+                'nombres' => 'Diego Andree',
+                'apellidos' => 'Garro Taboada',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'dgarro@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'D1G21',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a LTK&FNZ el 02 De Mayo 2025
+                'nombres' => 'Fabiana Belen',
+                'apellidos' => 'Sosa Parra',
+                'correo_personal' => 'fabianasosaparra@gmail.com',
+                'correo_institucional' => 'fsosap@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'F2S17',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a LTK&FNZ el 02 De Mayo 2025 
+                'nombres' => 'Nory Ann Marie',
+                'apellidos' => 'Touzet Meneses',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'ntouzet@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'N1M21M',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a LTK&FNZ el 02 De Mayo 2025
+                'nombres' => 'Priscila Crystal',
+                'apellidos' => 'Villegas Dominguez',
+                'correo_personal' => 'Priscilavillegas.13@gmail.com',
+                'correo_institucional' => 'pcvillegasdo@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'P3V4',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a LTK&FNZ el 02 De Mayo 2025
+                'nombres' => 'Yamelyn Leslie',
+                'apellidos' => 'Rios Tandaypan',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'yriost@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'Y12R21',
+                'imagen_firma' => NULL,
+            ],
+            
             //ÁREA DE MKT - 15
             [
+                //Ingresó a MKT el 02 de Mayo de 2025
                 'nombres' => 'Adriana Gabriela',
                 'apellidos' => 'Castillo Ochoa',
                 'correo_personal' => NULL,
@@ -1051,6 +1306,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a MKT el 10 de Mayo de 2022
                 'nombres' => 'Anderson Abat',
                 'apellidos' => 'Otiniano Morales',
                 'correo_personal' => 'anderson.otiniano.avanz@gmail.com',
@@ -1060,6 +1316,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a MKT el 02 de Mayo de 2025
                 'nombres' => 'Angelo Salvattore',
                 'apellidos' => 'Chavarry Bustamante',
                 'correo_personal' => 'angelochavarry03@gmail.com',
@@ -1069,6 +1326,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a MKT el 01 de Junio de 2024
                 'nombres' => 'Angie Tatiana',
                 'apellidos' => 'Recuenco Tapia',
                 'correo_personal' => NULL,
@@ -1078,6 +1336,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a MKT el 10 de Diciembre de 2024
                 'nombres' => 'Belinda Maricielo',
                 'apellidos' => 'Arroyo Esquivel',
                 'correo_personal' => NULL,
@@ -1087,6 +1346,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a MKT el 02 de Mayo de 2025
                 'nombres' => 'Cesar Junior',
                 'apellidos' => 'Quito Cruz',
                 'correo_personal' => NULL,
@@ -1096,6 +1356,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a MKT el 01 de Junio de 2024
                 'nombres' => 'Cielo Valentina',
                 'apellidos' => 'Abanto Rojas',
                 'correo_personal' => NULL,
@@ -1105,6 +1366,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a MKT el 10 de Diciembre de 2024
                 'nombres' => 'Diego Jesús',
                 'apellidos' => 'Ullilén Chávez',
                 'correo_personal' => 'diegoullilen250503@gmail.com',
@@ -1114,6 +1376,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a MKT el 01 de Junio de 2024
                 'nombres' => 'Emelyn Yasmin',
                 'apellidos' => 'Aguirre Valverde',
                 'correo_personal' => NULL,
@@ -1123,6 +1386,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a MKT el 10 de Mayo de 2022
                 'nombres' => 'Ghenary Tais',
                 'apellidos' => 'Esquivel Davila',
                 'correo_personal' => NULL,
@@ -1132,6 +1396,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a MKT el 01 de Junio de 2024
                 'nombres' => 'Jakori Nayeli',
                 'apellidos' => 'Hoyos Terrones',
                 'correo_personal' => NULL,
@@ -1141,6 +1406,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a MKT el 01 de Junio de 2024
                 'nombres' => 'Jordyna Del Carmen',
                 'apellidos' => 'Robles Solorzano',
                 'correo_personal' => NULL,
@@ -1150,6 +1416,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a MKT el 02 de Mayo de 2025
                 'nombres' => 'Juan José',
                 'apellidos' => 'Chávez Tenorio',
                 'correo_personal' => NULL,
@@ -1170,6 +1437,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => 'fotos_firmas/Lesly Fiorella Perez Rodriguez.png',
             ],
             [
+                //Ingresó a MKT el 02 de Mayo de 2025
                 'nombres' => 'Lorena Midalís',
                 'apellidos' => 'Primo Bueno',
                 'correo_personal' => NULL,
@@ -1179,6 +1447,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a MKT el 10 de Diciembre de 2024
                 'nombres' => 'Luis Angel',
                 'apellidos' => 'Lecca Cortez',
                 'correo_personal' => NULL,
@@ -1188,6 +1457,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a MKT el 02 de Mayo de 2025
                 'nombres' => 'Malena Shecid',
                 'apellidos' => 'Huamán Arana',
                 'correo_personal' => NULL,
@@ -1197,6 +1467,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a MKT el 13 de Junio de 2023
                 'nombres' => 'Maria Fernanda',
                 'apellidos' => 'Cárdenas Hidalgo',
                 'correo_personal' => NULL,
@@ -1206,6 +1477,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a MKT el 02 de Mayo de 2025
                 'nombres' => 'Melissa del Rosario',
                 'apellidos' => 'Muñoz Uriarte',
                 'correo_personal' => NULL,
@@ -1215,6 +1487,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a MKT el 02 de Mayo de 2025
                 'nombres' => 'Milene Xiomara',
                 'apellidos' => 'Delgado Silva',
                 'correo_personal' => NULL,
@@ -1224,6 +1497,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a MKT el 13 de Junio de 2023
                 'nombres' => 'Stefany Isabel',
                 'apellidos' => 'Gutierrez Vega',
                 'correo_personal' => NULL,
@@ -1233,6 +1507,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a MKT el 01 de Junio de 2024
                 'nombres' => 'Yojhania Taitt',
                 'apellidos' => 'Gonzales Contreras',
                 'correo_personal' => NULL,
@@ -1267,6 +1542,7 @@ class PersonaSeeder extends Seeder
 
             //ÁREA DE TI - 10
             [
+                //Ingresó a TI el 02 de Mayo de 2025
                 'nombres' => 'Elder Eli',
                 'apellidos' => 'De la Cruz Calderón',
                 'correo_personal' => 'pereedc.3002@gmail.com',
@@ -1276,6 +1552,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a TI el 02 de Mayo de 2025
                 'nombres' => 'Jhoanny Jheimilyn Xiomara',
                 'apellidos' => 'Vargas Ramos',
                 'correo_personal' => 'vargasramosjhoanny@gmail.com',
@@ -1285,6 +1562,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a TI el 10 de Diciembre de 2024
                 'nombres' => 'Luis Angel',
                 'apellidos' => 'Morales Lino',
                 'correo_personal' => 'luno2402@gmail.com',
@@ -1294,6 +1572,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a TI el 10 de Diciembre de 2024
                 'nombres' => 'Marco Camilo',
                 'apellidos' => 'Toledo Campos',
                 'correo_personal' => 'martold.1210@gmail.com',
@@ -1303,6 +1582,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a TI el 10 de Diciembre de 2024
                 'nombres' => 'Mirella Esteffany',
                 'apellidos' => 'Gamboa Valderrama',
                 'correo_personal' => NULL,
@@ -1312,6 +1592,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a TI el 02 de Mayo de 2025
                 'nombres' => 'Pablo César',
                 'apellidos' => 'Sánchez Cabrera',
                 'correo_personal' => NULL,
@@ -1321,6 +1602,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a TI el 10 de Diciembre de 2024
                 'nombres' => 'Paúl Jamir',
                 'apellidos' => 'Lazaro Solano',
                 'correo_personal' => 'paulazarsol00@gmail.com',
@@ -1330,6 +1612,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a TI el 02 de Mayo de 2025
                 'nombres' => 'Renato Alexander',
                 'apellidos' => 'Martinez Aguilar',
                 'correo_personal' => NULL,
@@ -1339,6 +1622,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a TI el 10 de Diciembre de 2024
                 'nombres' => 'Sadhu',
                 'apellidos' => 'Rojas García',
                 'correo_personal' => 'sadhurojasgarcia@gmail.com',
@@ -1346,6 +1630,42 @@ class PersonaSeeder extends Seeder
                 'sexo' => 'Masculino',
                 'codigo' => 'S19G',
                 'imagen_firma' => NULL,
+            ],
+            [
+                //Ingresó a TI el 02 de Mayo de 2025
+                //Se retiró de TI el 22 de Agosto de 2025
+                'nombres' => 'Zaleth Valentina',
+                'apellidos' => 'Rivas Calderón',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'zvrivasca@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'Z23R3',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //Ingresó a MKT el 20 de Noviembre de 2021
+                //Se cambió a TI el 17 de Marzo de 2023
+                //Egresó en TI el 17 de marzo de 2025
+                'nombres' => 'Rommel Eduardo',
+                'apellidos' => 'Ulco Chavarria',
+                'correo_personal' => 'ulkrmmlo@gmail.com',
+                'correo_institucional' => 'rulco@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'R5U3',
+                'imagen_firma' => 'fotos_firmas/Rommel Eduardo Ulco Chavarria.jpg',
+            ],
+            [
+                //Ingresó a LTK&FNZ el 20 de Noviembre de 2021
+                //Se cambió a PMO el 10 de Mayo de 2022(Referencia Fecha de convo), fué +- 2 meses.
+                //Ingresó a TI el 25 de Abril de 2023
+                //Se retiró de TI el 08 de Junio de 2024
+                'nombres' => 'Jorge Luis',
+                'apellidos' => 'Vargas Baltodano',
+                'correo_personal' => 'jorge.baltodano.21.10@gmail.com',
+                'correo_institucional' => 't012700120@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'J12V23',
+                'imagen_firma' => 'fotos_firmas/Jorge Luis Vargas Baltodano.jpg',
             ],
             
             /********************************************

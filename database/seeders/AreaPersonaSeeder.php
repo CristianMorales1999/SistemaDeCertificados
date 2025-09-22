@@ -17,13 +17,13 @@ class AreaPersonaSeeder extends Seeder
     {
         /***
          * Estados posibles para personas en áreas:
-         * .
-                'Miembro activo',
-                'Cambio de área',
-                'Cargo en Directiva',
-                'Retiro voluntario',
-                'Retiro por bajo rendimiento',
-                'Egresado',
+         * 
+            'Miembro activo',
+            'Cambio de área',
+            'Cargo en Directiva',
+            'Retiro voluntario',
+            'Retiro por bajo rendimiento',
+            'Egresado',
          */
         $personasEnAreas = [
             // DIRECTIVA 2025

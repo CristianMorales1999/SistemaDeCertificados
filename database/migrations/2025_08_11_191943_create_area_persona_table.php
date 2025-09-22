@@ -35,6 +35,8 @@ return new class extends Migration
             // Índices para optimizar consultas
             $table->index('area_id');
             $table->index('persona_id');
+            //Indice para evitar duplicados
+            $table->unique(['area_id', 'persona_id'], 'area_persona_area_id_persona_id_unique');
         });
     }
 
