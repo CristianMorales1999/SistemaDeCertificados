@@ -17,13 +17,23 @@
         <!-- BOTONES -->
 
         <div class="p-4 rounded-lg flex items-center justify-center ">
-                <a class="ml-1 mr-2 px-5 py-3 flex items-center justify-center bg-[#9636AD] bg-[#9636AD] hover:bg-[#3454A1] font-semibold rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 border-[#9636AD] hover:border-[#3454A1] border-2 lg:ml-2">
+                <a href="{{ route('generacion-certificados') }}" class="ml-1 mr-2 px-5 py-3 flex items-center justify-center bg-[#9636AD] bg-[#9636AD] hover:bg-[#3454A1] font-semibold rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 border-[#9636AD] hover:border-[#3454A1] border-2 lg:ml-2">
                     <h1 class="flex items-center justify-center text-center text-xs text-white lg:text-xl lg:text-center ">Generar certificados</h1>
                 </a>
-                <a class="ml-1 mr-2 px-5 py-3 flex items-center justify-center bg-white hover:bg-[#E7C9EE] text-[#9636AD] font-semibold rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 border-[#9636AD] border-2 lg:ml-2">
+                <a href="{{ route('validar-codigo') }}" class="ml-1 mr-2 px-5 py-3 flex items-center justify-center bg-white hover:bg-[#E7C9EE] text-[#9636AD] font-semibold rounded-lg shadow-md transition-all duration-200 transform hover:scale-105 border-[#9636AD] border-2 lg:ml-2">
                     <h1 class="flex items-center justify-center text-center text-xs text-[#9636AD] lg:text-xl lg:text-center">Validar certificados</h1>
                 </a>
         </div>
+
+        <!-- Enlaces adicionales de administración -->
+        {{-- <div class="p-4 rounded-lg flex items-center justify-center gap-4">
+            <a href="{{ route('proyectos.index') }}" class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg shadow-sm transition-colors">
+                Gestión de Proyectos
+            </a>
+            <a href="{{ route('people.index') }}" class="px-4 py-2 bg-green-600 hover:bg-green-700 text-white font-medium rounded-lg shadow-sm transition-colors">
+                Administrar Personas
+            </a>
+        </div> --}}
 
 
         <!-- FIN BOTONES -->

@@ -39,7 +39,7 @@ class DatabaseSeeder extends Seeder
             EventoSeeder::class,
             AreaPersonaProyectoSeeder::class,
             AreaPersonaValorDestacadoSeeder::class,
-            EntidadAliadaPersonaSeeder::class,
+            // EntidadAliadaPersonaSeeder::class, // Comentado temporalmente por datos incompletos
             EventoPersonaSeeder::class,
             EntidadAliadaPersonaProyectoSeeder::class,
             GrupoDeCertificacionSeeder::class,

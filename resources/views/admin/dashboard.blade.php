@@ -24,9 +24,7 @@
               <div class="flex-1">
 
                 <div id="dashboard" class="content-section">
-
                   @include('components.admin.dashboard-info')
-
                 </div>
 
                 <div id="certificados" class="content-section hidden">
