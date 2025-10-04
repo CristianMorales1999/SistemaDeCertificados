@@ -23,6 +23,7 @@ class CertificadoSeeder extends Seeder
      */
     public function run(): void
     {
+        /*
         // Verificar que existan grupos de certificación
         $grupos = GrupoDeCertificacion::with('proyecto.areaPersonas.persona')->get();
 
@@ -93,5 +94,6 @@ class CertificadoSeeder extends Seeder
             $cantidadCertificados = $grupo->certificados()->count();
             $this->command->info("• {$grupo->nombre}: {$cantidadCertificados} certificados");
         }
+        */
     }
 }

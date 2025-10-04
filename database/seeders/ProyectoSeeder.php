@@ -22,6 +22,7 @@ class ProyectoSeeder extends Seeder
      */
     public function run(): void
     {
+        /*
         // Obtener datos base necesarios
         $primeraArea = Area::first();
         $primerAreaPersonaCargo = AreaPersonaCargo::first();
@@ -105,5 +106,6 @@ class ProyectoSeeder extends Seeder
 
         $this->command->info('✅ Se crearon 3 proyectos de prueba con personas asociadas');
         $this->command->warn('⚠️  RECUERDA: Este es un seeder provisional. Reemplaza con datos reales.');
+        */
     }
 }

@@ -17,6 +17,7 @@ class AreaPersonaCargoSeeder extends Seeder
      */
     public function run(): void
     {
+        /*
         $areaPersona = AreaPersona::first();
         $cargo = Cargo::first();
 
@@ -37,5 +38,6 @@ class AreaPersonaCargoSeeder extends Seeder
         ]);
 
         $this->command->info('✅ Creado cargo de área temporal para pruebas');
+        */
     }
 }

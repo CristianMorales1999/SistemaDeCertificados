@@ -14,13 +14,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-//        User::factory()->create([
-//            'name' => 'Test User',
-//            'email' => 'test@example.com',
-//        ]);
-
         $this -> call([
             AreaSeeder::class,
             CargoSeeder::class,
@@ -39,7 +32,7 @@ class DatabaseSeeder extends Seeder
             EventoSeeder::class,
             AreaPersonaProyectoSeeder::class,
             AreaPersonaValorDestacadoSeeder::class,
-            // EntidadAliadaPersonaSeeder::class, // Comentado temporalmente por datos incompletos
+            EntidadAliadaPersonaSeeder::class,
             EventoPersonaSeeder::class,
             EntidadAliadaPersonaProyectoSeeder::class,
             GrupoDeCertificacionSeeder::class,

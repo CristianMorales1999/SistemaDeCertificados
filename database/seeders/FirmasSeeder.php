@@ -14,6 +14,7 @@ class FirmasSeeder extends Seeder
      */
     public function run(): void
     {
+        /*
         // Obtener todos los archivos de firmas del directorio
         $firmasPath = storage_path('app/public/fotos_firmas');
 
@@ -54,5 +55,6 @@ class FirmasSeeder extends Seeder
 
         $this->command->info("✅ Se crearon {$firmasCreadas} firmas en la base de datos.");
         $this->command->info("📊 Total de firmas ahora: " . Imagen::where('tipo', 'Firma')->count());
+        */
     }
 }

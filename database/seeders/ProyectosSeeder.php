@@ -16,6 +16,7 @@ class ProyectosSeeder extends Seeder
      */
     public function run(): void
     {
+        /*
         // Obtener áreas y cargos existentes
         $areaPersonaCargos = AreaPersonaCargo::all();
         $areas = Area::all();
@@ -96,5 +97,6 @@ class ProyectosSeeder extends Seeder
         }
 
         $this->command->info('Se completó el seeding de proyectos de prueba.');
+        */
     }
 }

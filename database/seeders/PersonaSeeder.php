@@ -15,9 +15,9 @@ class PersonaSeeder extends Seeder
     {
         $personas = [
             /********************************************
-              ********** SPONSOR SEDIPRO UNT ************
-              ******************************************* */
-              [
+             ********** SPONSOR SEDIPRO UNT ************
+             ******************************************* */
+            [
                 //SPONSOR SEDIPRO UNT (Patrocinador)
                 'nombres' => 'Luis Alberto',
                 'apellidos' => 'Julca Verastegui',
@@ -28,8 +28,8 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => 'fotos_firmas/Luis Alberto Julca Verastegui.png'
             ],
             /********************************************
-              *************** DIRECTIVA 2025 ************
-              ******************************************* */
+             *************** DIRECTIVA 2025 ************
+             ******************************************* */
             [
                 //PRESIDENTA-2025
                 //Ingresó a PMO el 01 de Junio de 2024
@@ -109,8 +109,8 @@ class PersonaSeeder extends Seeder
             ],
 
             /********************************************
-              *************** DIRECTIVA 2024 ************
-              ******************************************* */
+             *************** DIRECTIVA 2024 ************
+             ******************************************* */
             [
                 //PRESIDENTA-2024
                 //Ingresó a PMO el 10 de Mayo de 2022
@@ -181,12 +181,12 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => 'fotos_firmas/Ivanna Sofia Vela Ocampo.png',
             ],
             //DIRECTOR DE TI-2024
-                //Aqui estuvo CHRISTIAN ANTHONY MORALES ESQUIVEL <chmoralese@unitru.edu.pe>
-                    //- Director de TI-2025
+            //Aqui estuvo CHRISTIAN ANTHONY MORALES ESQUIVEL <chmoralese@unitru.edu.pe>
+            //- Director de TI-2025
 
             /********************************************
-              *************** DIRECTIVA 2023 ************
-              ******************************************* */
+             *************** DIRECTIVA 2023 ************
+             ******************************************* */
             [
                 //PRESIDENTA-2023
                 //Ingresó a MKT el 09 de Junio de 2020(Segun: https://drive.google.com/file/d/1CxcZRJBxSGDuZcJybGfkLPjsV-xyJjIJ/view?usp=sharing)
@@ -265,8 +265,8 @@ class PersonaSeeder extends Seeder
             ],
 
             /********************************************
-              *************** DIRECTIVA 2022 ************
-              ******************************************* */
+             *************** DIRECTIVA 2022 ************
+             ******************************************* */
             [
                 //PRESIDENTA-2022
                 //Ingresó a MKT el 03 de Septiembre 2019
@@ -281,11 +281,11 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => 'fotos_firmas/Angie Evelin Cabrera Garcia.jpg',
             ],
             //VICEPRESIDENTA-2022
-                //Aqui estuvo MICAELA ANTHOANETH CARDENAS CONTRERAS <t534000120@unitru.edu.pe>
-                    //- Presidenta SEDIPRO-2023
+            //Aqui estuvo MICAELA ANTHOANETH CARDENAS CONTRERAS <t534000120@unitru.edu.pe>
+            //- Presidenta SEDIPRO-2023
             //DIRECTORA DE GTH-2022
-                //Aqui estuvo ALEJANDRA VERENISSE RUIZ RODRIGUEZ <t050101120@unitru.edu.pe>
-                    //- Vicepresidenta SEDIPRO-2023
+            //Aqui estuvo ALEJANDRA VERENISSE RUIZ RODRIGUEZ <t050101120@unitru.edu.pe>
+            //- Vicepresidenta SEDIPRO-2023
             [
                 //DIRECTOR DE LTK&FNZ-2022
                 //Ingresó a LTK&FNZ el 8 de Noviembre de 2020
@@ -325,8 +325,8 @@ class PersonaSeeder extends Seeder
             ],
 
             /********************************************
-              *************** DIRECTIVA 2021 ************
-              ******************************************* */
+             *************** DIRECTIVA 2021 ************
+             ******************************************* */
             [
                 //PRESIDENTA-2021
                 //Ingresó a GTH el 03 de Septiembre 2019
@@ -402,9 +402,9 @@ class PersonaSeeder extends Seeder
             ],
 
             /********************************************
-              *************** DIRECTIVA 2020 ************
-              ******************************************* */
-              [
+             *************** DIRECTIVA 2020 ************
+             ******************************************* */
+            [
                 //PRESIDENTA-2020
                 //Ingresó a LTK&FNZ el 11 de Agosto de 2017
                 //No hay registro de si egresó o si se retiró
@@ -429,8 +429,8 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => 'fotos_firmas/Jesabel del Carmen Crespin Chavez.jpg',
             ],
             //DIRECTORA DE GTH-2020
-                //Aqui estuvo MELVA NOEMI CARRANZA RODRIGUEZ:
-                    //- Presidenta Sedipro-2021
+            //Aqui estuvo MELVA NOEMI CARRANZA RODRIGUEZ:
+            //- Presidenta Sedipro-2021
             [
                 //DIRECTOR DE LTK&FNZ-2020
                 //Ingresó a LTK&FNZ el D de M de Y
@@ -470,8 +470,8 @@ class PersonaSeeder extends Seeder
             ],
 
             /********************************************
-              *************** ÁREA DE GTH ***************
-              ******************************************* */
+             *************** ÁREA DE GTH ***************
+             ******************************************* */
             //INGRESO EN CONVOCATORIA 2019-I (Total : 9 personas)
             [
                 //Ingresó a GTH el 03 de Septiembre 2019
@@ -516,8 +516,8 @@ class PersonaSeeder extends Seeder
             ],
 
             //Aqui ingresó MELVA NOEMI CARRANZA RODRIGUEZ
-                //- Directora de GTH-2020
-                //- Presidenta de SEDIPRO-2021
+            //- Directora de GTH-2020
+            //- Presidenta de SEDIPRO-2021
             [
                 //Ingresó a GTH el 03 de Septiembre 2019
                 'nombres' => 'Azucena Lisseth',
@@ -539,9 +539,9 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             //Aqui ingresó JOSE ARMANDO VASQUEZ LOPEZ <jvasquezl@unitru.edu.pe>
-                //- Director de GTH-2021
+            //- Director de GTH-2021
             //Aqui ingresó LUCCIANA KATHIUZKA HURTADO SOLEDAD <lhurtados@unitru.edu.pe>
-                //- Vicepresidenta de SEDIPRO-2021
+            //- Vicepresidenta de SEDIPRO-2021
 
             //INGRESO EN CONVOCATORIA 2020-I (Total : 7 personas)
             [
@@ -556,8 +556,8 @@ class PersonaSeeder extends Seeder
             ],
 
             //Aqui ingresó WILLIAN ALEXANDER PAREDES ROJAS <waparedesr@unitru.edu.pe> a GTH
-                //- Nuevo miembro de MKT en 2021
-                //- Director de MKT-2023
+            //- Nuevo miembro de MKT en 2021
+            //- Director de MKT-2023
 
             [
                 //Ingresó a GTH el 08 de Noviembre 2020
@@ -623,7 +623,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             //Aqui ingresó YESSENIA JACKELYNE ANGULO URBINA <t510601520@unitru.edu.pe>
-                //- Directora de GTH-2023
+            //- Directora de GTH-2023
             [
                 //Ingresó a GTH el 20 de Noviembre 2021
                 'nombres' => 'Carlos Alberto',
@@ -719,7 +719,7 @@ class PersonaSeeder extends Seeder
             //Ingresó en CONVOCATORIA 2022-I (Total : 8 personas)
 
             //Aqui ingresó MARINA LIZETH GONZALES TORRES <t1510600121@unitru.edu.pe>
-                //- Directora de GTH-2025
+            //- Directora de GTH-2025
             [
                 'nombres' => 'Santiago Alonso',
                 'apellidos' => 'Morales Flores',
@@ -749,7 +749,7 @@ class PersonaSeeder extends Seeder
             ],
 
             //Aqui ingresó BRICELLY JAZMIN RUIZ RODRIGUEZ <t020101420@unitru.edu.pe>
-                //- Directora de GTH-2024
+            //- Directora de GTH-2024
 
             [
                 'nombres' => 'Brayan Micael',
@@ -812,7 +812,7 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             //Aqui ingresó ROMINA ALEJANDRA SECLEN CESPEDES <t1052500521@unitru.edu.pe>
-                //- Vicepresidenta SEDIPRO-2024
+            //- Vicepresidenta SEDIPRO-2024
             [
                 //Ingresó a GTH el 13 De Junio 2023
                 'nombres' => 'Fernando Felipe',
@@ -936,7 +936,7 @@ class PersonaSeeder extends Seeder
                 //Ingresó a GTH el 01 De Junio 2024
                 'nombres' => 'Renzo Georkael',
                 'apellidos' => 'Carrasco Lalangui',
-                'correo_personal' => 'renzocarrascola02@gmail.com',//Duda
+                'correo_personal' => 'renzocarrascola02@gmail.com', //Duda
                 'correo_institucional' => 'rgcarrascol@unitru.edu.pe',
                 'sexo' => 'Masculino',
                 'codigo' => 'R7C12',
@@ -1079,11 +1079,11 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 't1511601421@unitru.edu.pe',
                 'sexo' => 'Masculino',
                 'codigo' => 'J1V3',
-                'imagen_firma' => NULL,//Falta firma por ser DP
+                'imagen_firma' => NULL, //Falta firma por ser DP
             ],
             //Aqui ingresó SEBASTIAN EMANUEL FACUNDO REYES <t1512400421@unitru.edu.pe> 
-                //Ingresó a LTK&FNZ el 20 de Diciembre de 2022(Convo-Extraordinaria)
-                //- Director de LTK&FNZ-2024
+            //Ingresó a LTK&FNZ el 20 de Diciembre de 2022(Convo-Extraordinaria)
+            //- Director de LTK&FNZ-2024
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a LTK&FNZ el 13 De Junio 2023
@@ -1221,7 +1221,7 @@ class PersonaSeeder extends Seeder
                 //Ingresó a LTK&FNZ el 02 De Mayo 2025
                 'nombres' => 'Cristhian Imanol',
                 'apellidos' => 'Campos Castro',
-                'correo_personal' => 'Cristhianimanol@hotmail.com',//Hotmail 
+                'correo_personal' => 'Cristhianimanol@hotmail.com', //Hotmail 
                 'correo_institucional' => 'cicamposc@unitru.edu.pe',
                 'sexo' => 'Masculino',
                 'codigo' => 'C9C3',
@@ -1293,7 +1293,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'Y12R21',
                 'imagen_firma' => NULL,
             ],
-            
+
             //ÁREA DE MKT - 22
             [
                 //MIEMBRO ACTIVO 2025-I
@@ -1538,13 +1538,13 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             //Aqui ingresó ZULEMA ADELI VALVERDE ZAVALETA <t1510100321@unitru.edu.pe>
-                //MIEMBRO ACTIVO 2025-I
-                //- Directora de MKT-2024
+            //MIEMBRO ACTIVO 2025-I
+            //- Directora de MKT-2024
 
             //ÁREA DE PMO - 14
             //Aqui ingresó IVANNA SOFIA VELA OCAMPO <t510100520@unitru.edu.pe>
-                //Ingresó a PMO el 20 de Noviembre de 2021
-                //- Directora de PMO-2024
+            //Ingresó a PMO el 20 de Noviembre de 2021
+            //- Directora de PMO-2024
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a PMO el 13 de Junio de 2023
@@ -1671,7 +1671,7 @@ class PersonaSeeder extends Seeder
                 //Ingresó a PMO el 02 de Mayo de 2025 
                 'nombres' => 'Rodrigo Alexander',
                 'apellidos' => 'Quispe Cortijo',
-                'correo_personal' => 'rodrigocortijo122333@gmail.com',//Duda
+                'correo_personal' => 'rodrigocortijo122333@gmail.com', //Duda
                 'correo_institucional' => 'raquispeco@unitru.edu.pe',
                 'sexo' => 'Masculino',
                 'codigo' => 'R1Q3',
@@ -1816,10 +1816,10 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'J12V23',
                 'imagen_firma' => 'fotos_firmas/Jorge Luis Vargas Baltodano.jpg',
             ],
-            
+
             /********************************************
-              *********** ENDIDADES ALIADAS *************
-              ******************************************* */
+             *********** ENDIDADES ALIADAS *************
+             ******************************************* */
             //ENTIDAD ALIADA 2: Voluntariado UNT
             [
                 'nombres' => 'Mauricio Jesus',
@@ -1844,7 +1844,7 @@ class PersonaSeeder extends Seeder
                 'apellidos' => 'Desposorio Sanchez',
                 'correo_personal' => NULL,
                 'correo_institucional' => 'pdesposorio@unitru.edu.pe',
-                'sexo' => 'Masculino',
+                'sexo' => 'Femenino',
                 'codigo' => 'P6D20',
                 'imagen_firma' => NULL,
             ],
@@ -1857,12 +1857,308 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'K7F19',
                 'imagen_firma' => NULL,
             ],
+            [
+                'nombres' => 'Diego Arturo',
+                'apellidos' => 'Ruiz Villanueva',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'daruizvi@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'D1R23',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Milenka Jasmin Lucero',
+                'apellidos' => 'Villanueva Arrambide',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'mjvillanuevaa@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'M10L23A',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Alberto Raul',
+                'apellidos' => 'Velasquez Miñano',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't053500820@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'A19V13',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Nardia Beatriz',
+                'apellidos' => 'Valladoli Vega',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'nbvalladolive@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'N2V23',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Liz Valeria',
+                'apellidos' => 'Chaiguaque Vera',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'lchaiguaque@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'L23C23',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Jimena Nayeli',
+                'apellidos' => 'Tello Nieves',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'jtellon@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'J14T14',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Cristhian Ernesto',
+                'apellidos' => 'Vega Orbegoso',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'cvegao@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'C5V16',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Anayhely Dayana',
+                'apellidos' => 'Medina Vasquez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'admedinav@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'A4M23',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Susy Solange',
+                'apellidos' => 'Guanilo Gil',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'ssguanilog@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'A4M23',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Junior Jesus',
+                'apellidos' => 'Lopez Lopez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1051401721@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'J10L12',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Mayra Danitza',
+                'apellidos' => 'Eustaquio Ruiz',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'mdeustaquioru@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'M4E19',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'William Eduardo',
+                'apellidos' => 'Cueva Gomez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'wecuevag@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'W5C7',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Damaris Alexandra',
+                'apellidos' => 'Arce Alave',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1050602621@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'D1A1',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Jumer Erick',
+                'apellidos' => 'Martel Ugalde',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'jemartelu@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'J5M22',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Doris Ysabel',
+                'apellidos' => 'Muñoz Leyva',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'dymunozl@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'D26M12',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'David Calet',
+                'apellidos' => 'Aguilar Chávez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'daguilarc@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'D3A3',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Sandra Ysabel',
+                'apellidos' => 'Sachun Quispe',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'sysachunqu@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'S26S18',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Carlos Emiliano',
+                'apellidos' => 'Livias Otiniano',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'celiviasot@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'C5L16',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Jorge Darío',
+                'apellidos' => 'Salas Martínez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'jdsalasma@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'J4S13',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Leonardo Matthews',
+                'apellidos' => 'Rojas Davalos',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1511900821@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'L13R4',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Luceli Ani',
+                'apellidos' => 'Reyes Rodriguez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'lreyesro@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'L1R19',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Lesly Yamileth',
+                'apellidos' => 'Tantalean Arteaga',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'ltantaleana@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'L26T1',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Christopher Jesus Enrique',
+                'apellidos' => 'Cardenas Contreras',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1050702921@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'C10E3C',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Damaris Lucero',
+                'apellidos' => 'Celis Castro',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'dcelis@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'D12C3',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Adabella Yerena',
+                'apellidos' => 'Romero Portilla',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'ayromeropo@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'A26R17',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Nicolas Dante',
+                'apellidos' => 'Mendez Lozano',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'ndmendezl@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'N4M12',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Eros Althair',
+                'apellidos' => 'Crisologo Zavaleta',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'ecrisologoz@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'E1C27',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Neyser Yampier',
+                'apellidos' => 'Cumpa Inoñan',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'ncumpa@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'N26C9',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Clarita Mariliz',
+                'apellidos' => 'Salazar Corcuera',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'cmsalazarc@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'C13S3',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Anderson Joel',
+                'apellidos' => 'Orbegoso Olivares',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1511301421@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'A10O16',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Nidia Helen',
+                'apellidos' => 'Neyra Perez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1050601821@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'N8N17',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Marcia Fernanda',
+                'apellidos' => 'Flores Llamoga',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'mfloresll@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'M6F12',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Luis Fernando',
+                'apellidos' => 'Cabrera Huaman',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'lcabrerah@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'L6C8',
+                'imagen_firma' => NULL,
+            ],
             //ENTIDAD ALIADA 3: SEDIPRO
         ];
 
         foreach ($personas as $persona) {
             Persona::create($persona);
         }
-
     }
 }

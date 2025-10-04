@@ -22,6 +22,7 @@ class GrupoDeCertificacionSeeder extends Seeder
      */
     public function run(): void
     {
+        /*
         // Verificar que existan los datos necesarios
         $proyectos = Proyecto::all();
         $tiposCertificacion = TipoDeCertificacion::all();
@@ -82,5 +83,6 @@ class GrupoDeCertificacionSeeder extends Seeder
 
         $this->command->info('✅ Se crearon grupos de certificación asociados a los proyectos de prueba');
         $this->command->warn('⚠️  RECUERDA: Este es un seeder provisional. Reemplaza con datos reales.');
+        */
     }
 }
