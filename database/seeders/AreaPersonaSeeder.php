@@ -316,7 +316,102 @@ class AreaPersonaSeeder extends Seeder
             //PMO
 
             //TI
-
+            [
+                //Elder Eli De la Cruz Calderón
+                'area' => 'TI',
+                'correo_persona' => 'edelacruzca@unitru.edu.pe',
+                'fecha_inicio' => '2025-05-02',//Ingresó a TI el 02 de Mayo de 2025
+                'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
+                'estado' =>'Miembro activo',
+            ],
+            [
+                //Jhoanny Jheimilyn Xiomara Vargas Ramos
+                'area' => 'TI',
+                'correo_persona' => 'jjvargasr@unitru.edu.pe',
+                'fecha_inicio' => '2025-05-02',//Ingresó a TI el 02 de Mayo de 2025
+                'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
+                'estado' =>'Miembro activo',
+            ],
+            [
+                //Luis Angel Morales Lino
+                'area' => 'TI',
+                'correo_persona' => 't012700620@unitru.edu.pe',
+                'fecha_inicio' => '2024-12-10',//Ingresó a TI el 10 de Diciembre de 2024
+                'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
+                'estado' =>'Miembro activo',
+            ],
+            [
+                //Marco Camilo Toledo Campos
+                'area' => 'TI',
+                'correo_persona' => 't022700720@unitru.edu.pe',
+                'fecha_inicio' => '2024-12-10',//Ingresó a TI el 10 de Diciembre de 2024
+                'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
+                'estado' =>'Miembro activo',
+            ],
+            [
+                //Mirella Esteffany Gamboa Valderrama
+                'area' => 'TI',
+                'correo_persona' => 'mgamboav@unitru.edu.pe',
+                'fecha_inicio' => '2024-12-10',//Ingresó a TI el 10 de Diciembre de 2024
+                'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
+                'estado' =>'Miembro activo',
+            ],
+            [
+                //Pablo César Sánchez Cabrera
+                'area' => 'TI',
+                'correo_persona' => 'psanchezca@unitru.edu.pe',
+                'fecha_inicio' => '2025-05-02',//Ingresó a TI el 02 de Mayo de 2025
+                'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
+                'estado' =>'Miembro activo',
+            ],
+            [
+                //Paúl Jamir Lazaro Solano
+                'area' => 'TI',
+                'correo_persona' => 't052700520@unitru.edu.pe',
+                'fecha_inicio' => '2024-12-10',//Ingresó a TI el 10 de Diciembre de 2024
+                'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
+                'estado' =>'Miembro activo',
+            ],
+            [
+                //Renato Alexander Martinez Aguilar
+                'area' => 'TI',
+                'correo_persona' => 'ramartinezag@unitru.edu.pe',
+                'fecha_inicio' => '2025-05-02',//Ingresó a TI el 02 de Mayo de 2025
+                'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
+                'estado' =>'Miembro activo',
+            ],
+            [
+                //Sadhú Rojas García
+                'area' => 'TI',
+                'correo_persona' => 't012701020@unitru.edu.pe',
+                'fecha_inicio' => '2024-12-10',//Ingresó a TI el 10 de Diciembre de 2024
+                'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
+                'estado' =>'Miembro activo',
+            ],
+            [
+                //Zaleth Valentina Rivas Calderón
+                'area' => 'TI',
+                'correo_persona' => 'zvrivasca@unitru.edu.pe',
+                'fecha_inicio' => '2025-05-02',//Ingresó a TI el 02 de Mayo de 2025
+                'fecha_fin' =>'2025-08-22',//Se retiró de TI el 22 de Agosto de 2025
+                'estado' =>'Retiro voluntario',
+            ],
+            [
+                //Rommel Eduardo Ulco Chavarria
+                'area' => 'TI',
+                'correo_persona' => 'rulco@unitru.edu.pe',
+                'fecha_inicio' => '2023-03-17',//Se cambió a TI el 17 de Marzo de 2023
+                'fecha_fin' =>'2025-03-17',//Egresó en TI el 17 de marzo de 2025
+                'estado' =>'Egresado',
+            ],
+            [
+                //Jorge Luis Vargas Baltodano
+                'area' => 'TI',
+                'correo_persona' => 't012700120@unitru.edu.pe',
+                'fecha_inicio' => '2023-04-25',//Se cambió a TI el 25 de Abril de 2023
+                'fecha_fin' =>'2024-06-08',//Se retiró de TI el 08 de Junio de 2024
+                'estado' =>'Retiro voluntario',
+            ],
         ];
 
         foreach ($personasEnAreas as $personaEnArea) {

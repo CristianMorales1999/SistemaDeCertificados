@@ -948,7 +948,7 @@ class PersonaSeeder extends Seeder
                 'nombres' => 'Corina Marilu',
                 'apellidos' => 'Sanchez Delgado',
                 'correo_personal' => NULL,
-                'correo_institucional' => 'Csanchezd@unitru.edu.pe',
+                'correo_institucional' => 'csanchezd@unitru.edu.pe',
                 'sexo' => 'Femenino',
                 'codigo' => 'C13S4',
                 'imagen_firma' => NULL,
@@ -1080,6 +1080,17 @@ class PersonaSeeder extends Seeder
                 'sexo' => 'Masculino',
                 'codigo' => 'J1V3',
                 'imagen_firma' => NULL, //Falta firma por ser DP
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a LTK&FNZ el 20 De Diciembre 2022 (Convo-Extraordinaria)
+                'nombres' => 'Fernanda Milagros',
+                'apellidos' => 'Rojas Rodriguez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1510101721@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'F13R19',
+                'imagen_firma' => NULL,
             ],
             //Aqui ingresó SEBASTIAN EMANUEL FACUNDO REYES <t1512400421@unitru.edu.pe> 
             //Ingresó a LTK&FNZ el 20 de Diciembre de 2022(Convo-Extraordinaria)
@@ -1472,6 +1483,17 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a MKT el 01 de Junio de 2024
+                //Se retiró de MKT el 16 de Agosto de 2025
+                'nombres' => 'Maite',
+                'apellidos' => 'Palacios Asto',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'mpalaciosas@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'M17A',
+                'imagen_firma' => NULL,
+            ],
+            [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 02 de Mayo de 2025
                 'nombres' => 'Malena Shecid',
@@ -1576,7 +1598,7 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 'mhuamanm@unitru.edu.pe',
                 'sexo' => 'Femenino',
                 'codigo' => 'M3H13',
-                'imagen_firma' => NULL,
+                'imagen_firma' => "fotos_firmas/María Celine Huamán Martínez.jpg",//Representante de Centro de Estudiantes de Ingeniería Metalúrgica
             ],
             [
                 //MIEMBRO ACTIVO 2025-I
@@ -1820,9 +1842,19 @@ class PersonaSeeder extends Seeder
             /********************************************
              *********** ENDIDADES ALIADAS *************
              ******************************************* */
-            //ENTIDAD ALIADA 2: Voluntariado UNT
+            //ENTIDADES ALIADAS : Voluntariado UNT
             [
-                'nombres' => 'Mauricio Jesus',
+                //Representante
+                'nombres' => 'Irving Luis',
+                'apellidos' => 'Herrera Llovera',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'ilherrerall@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'I12H12',
+                'imagen_firma' => 'fotos_firmas/Irving Luis Herrera Llovera.jpg',
+            ],
+            [
+                'nombres' => 'Mauricio Jesús',
                 'apellidos' => 'Meléndez Sánchez',
                 'correo_personal' => NULL,
                 'correo_institucional' => 't1061900121@unitru.edu.pe',
@@ -2154,7 +2186,996 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'L6C8',
                 'imagen_firma' => NULL,
             ],
-            //ENTIDAD ALIADA 3: SEDIPRO
+
+            //ENTIDADES ALIADAS: CENTRO ESTUDIANTILES
+            //CENTRO ESTUDIANTIL 1: CESADM(Centro de Estudiantes de Administración)
+            [
+                //Representante
+                'nombres' => 'Jheferson Jhoel',
+                'apellidos' => 'Cubas Fuentes',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't010100220@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'J10C6',
+                'imagen_firma' => "fotos_firmas/Jheferson Jhoel Cubas Fuentes.jpg",
+            ],
+            [
+                'nombres' => 'María Eugenia',
+                'apellidos' => 'Del Río Becerra',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1020101721@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'M5D19B',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Valery Yanina',
+                'apellidos' => 'Cedron Arroyo',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'vycedronar@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'V26C1',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Marilia Lizbeth',
+                'apellidos' => 'Juarez Lopez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'mljuarezlo@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'M12J12',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Ana Cecilia',
+                'apellidos' => 'Rios García',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'acriosga@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'A3R7',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Lesly Judith',
+                'apellidos' => 'Mejia Rodriguez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1020100721@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'L10M19',
+                'imagen_firma' => NULL,
+            ],
+            //CENTRO ESTUDIANTIL 2: CEAU(Centro de Estudiantes de Arquitectura y Urbanismo)
+            [
+                //Representante
+                'nombres' => 'Víctor José',
+                'apellidos' => 'Pajares Abanto',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't514100120@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'V10P1',
+                'imagen_firma' => "fotos_firmas/Víctor José Pajares Abanto.jpg",
+            ],
+            [
+                'nombres' => 'Bryan Jhoel',
+                'apellidos' => 'Tomás Custodio',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'bjtomasc@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'B10T3',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Carlos',
+                'apellidos' => 'Bardales Orduña',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'cbardales@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'B10T3',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Daniel Eduardo',
+                'apellidos' => 'Alvarez Abanto',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'ealvarez@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'D5A1',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Karol Lisbeth',
+                'apellidos' => 'Vera Sánchez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't524100120@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'K12V20',
+                'imagen_firma' => NULL,
+            ],
+            //CENTRO ESTUDIANTIL 3: CEMYP(Centro de Estudiantes de Microbiología y Parasitología)
+            [
+                //Representante
+                'nombres' => 'Gustavo Alberto',
+                'apellidos' => 'Reyes Alfaro',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1051901721@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'G1R1',
+                'imagen_firma' => "fotos_firmas/Gustavo Alberto Reyes Alfaro.jpg",
+            ],
+            [
+                'nombres' => 'Magnibeth Yesenia',
+                'apellidos' => 'Rabanal Chiroque',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'mrabanalc@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'M26R3',
+                'imagen_firma' => NULL,
+            ],
+            //Aqui va MAURICIO JESUS MELENDEZ SANCHEZ <t1061900121@unitru.edu.pe>
+                //- MIEMBRO VOLUNTARIADO UNT
+
+
+            //CENTRO ESTUDIANTIL 4: CEIAM(Centro de estudiantes de Ingeniería Ambiental)
+
+                //Aqui va ABEL MAXIMILIANO PEREDA CABANILLAS <amperedaca@unitru.edu.pe>
+                    //- MIEMBRO ACTIVO DE PMO 2025-I
+                    //Ingresó a PMO el 01 de Junio de 2024
+                
+                //Aqui va NASHALY NICOLLE ALAMA TERRONES <nalama@unitru.edu.pe>
+                    //Representante de CEIAM
+                    //- MIEMBRO ACTIVO DE GTH 2025-I
+                    //Ingresó a GTH el 01 De Junio 2024
+            [
+                'nombres' => 'Trasy Yadhira',
+                'apellidos' => 'Solis Medina',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'tysolisme@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'T26S13',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Rosa Naghely',
+                'apellidos' => 'Alipio Gonzales',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'ralipio@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'A14A7',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Cristian Alejandro',
+                'apellidos' => 'De La Cruz Herrera',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'cdelacruzh@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'C1D12C8',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Flavia Angelica',
+                'apellidos' => 'Villegas Villar',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'favillegasvi@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'F1V23',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Valeria Alejandra',
+                'apellidos' => 'Ramos Hernandez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'varamoshe@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'V1R8',
+                'imagen_firma' => NULL,
+            ],
+            //CENTRO ESTUDIANTIL 5: CEICI(Centro de Estudiantes de Ingeniería Civil)
+            [
+                //Representante
+                'nombres' => 'Leonardo Eugenio',
+                'apellidos' => 'Díaz Gutierrez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't054001220@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'L5D7',
+                'imagen_firma' => "fotos_firmas/Leonardo Eugenio Díaz Gutierrez.jpg",
+            ],
+            [
+                'nombres' => 'Yorvan',
+                'apellidos' => 'Bustamante Giron',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't514000120@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'Y2B7',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Carlos Eduardo',
+                'apellidos' => 'Terán Revilla',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'ceteranre@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'C5T19',
+                'imagen_firma' => NULL,
+            ],
+            //CENTRO ESTUDIANTIL 6: CEIMAT(Centro de Estudiantes de Ingeniería de Materiales)
+            [
+                'nombres' => 'Evelyn',
+                'apellidos' => 'Mollo Villanueva',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't053500420@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'E13V',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //Representante
+                'nombres' => 'Erika Ciklary',
+                'apellidos' => 'De La Cruz Barrueto',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1053500721@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'E3D12C2',
+                'imagen_firma' => "fotos_firmas/Erika Ciklary De La Cruz Barrueto.jpg",
+            ],
+            [
+                'nombres' => 'Bryam',
+                'apellidos' => 'Montañez Correa',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't513500620@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'B13C',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Emerson Josue',
+                'apellidos' => 'Ruiz Polo',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'ejruizp@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'E10R17',
+                'imagen_firma' => NULL,
+            ],
+            //CENTRO ESTUDIANTIL 7: (Centro de Estudiantes de Fisica)/(Física de la UNT)
+            [
+                //Representante
+                'nombres' => 'Jose Franco',
+                'apellidos' => 'Rengifo Cabrera',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'jfrengifoca@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'J6R3',
+                'imagen_firma' => "fotos_firmas/Jose Franco Rengifo Cabrera.jpg",
+            ],
+            [
+                'nombres' => 'Emanuel',
+                'apellidos' => 'Santa Cruz Casiano',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1511200221@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'E20C3',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Andrew Carlos',
+                'apellidos' => 'Abal Mendoza',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'aabal@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'A3A13',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Pedro Alberto',
+                'apellidos' => 'Abanto Muñoz',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'peabanto@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'P1A13',
+                'imagen_firma' => NULL,
+            ],
+            //CENTRO ESTUDIANTIL 8: Centro de Estudiantes de Ingeniería Industrial
+            [
+                'nombres' => 'Samuel Esteban',
+                'apellidos' => 'Yovera Cueva',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1521300121@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'S5Y3',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //Representante
+                'nombres' => 'José Manuel',
+                'apellidos' => 'Marin Espinoza',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1051300921@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'J13M5',
+                'imagen_firma' => "fotos_firmas/José Manuel Marin Espinoza.jpg",
+            ],
+            [
+                'nombres' => 'Juan Pablo',
+                'apellidos' => 'Miranda Varas',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'jpmirandava@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'J17M23',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Moisés David',
+                'apellidos' => 'Huamán Torres',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't011300620@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'M4H21',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Christy Marisol',
+                'apellidos' => 'Zeferino Zavaleta',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'cmzeferinoza@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'C13Z27',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Cristhian Daniel',
+                'apellidos' => 'Liza Marroquin',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't021300520@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'C4L13',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Sofia Georgette',
+                'apellidos' => 'Amaya Caceda',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1011300821@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'S7A3',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Mauricio Sebastian',
+                'apellidos' => 'Rosas Alvarez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'msrosasa@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'M20R1',
+                'imagen_firma' => NULL,
+            ],
+            //CENTRO ESTUDIANTIL 9: CEM(Centro de Estudiantes de Medicina)
+            [
+                'nombres' => 'Luis Fernando',
+                'apellidos' => 'Romero Nolasco',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1021801421@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'L6R14',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Miguel Angel',
+                'apellidos' => 'Zavaleta Ríos',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1053702220@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'M1Z19',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //Representante
+                'nombres' => 'Victor Eduardo',
+                'apellidos' => 'Vera Delgado',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'vverad@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'V5V4',
+                'imagen_firma' => "fotos_firmas/Victor Eduardo Vera Delgado.jpg",
+            ],
+            //CENTRO ESTUDIANTIL 10: Centro de Estudiantes de Trabajo Social
+            [
+                //Representante
+                'nombres' => 'Yadira Estefani',
+                'apellidos' => 'Floreano Caballero',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1052500221@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'Y5F3',
+                'imagen_firma' => "fotos_firmas/Yadira Estefani Floreano Caballero.jpg",
+            ],
+            [
+                'nombres' => 'Alexia Nirvana',
+                'apellidos' => 'Espinola Mendez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1012500321@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'A14E13',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Mileny Arely',
+                'apellidos' => 'Lázaro Salvador',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'malazarosa@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'M1L20',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Cristina Alexandra',
+                'apellidos' => 'Narvaez Ortiz',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'cnarvaezo@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'C1N16',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Deysi Esther',
+                'apellidos' => 'Bobadilla Valderrama',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1052500121@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'D5B23',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Carlita Blezy',
+                'apellidos' => 'Maiquen Crisanto',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'cmaiquen@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'C2M3',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Ana Cecilia',
+                'apellidos' => 'Ruiz Dias',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'aruizd@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'A3R4',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Sandra Patricia',
+                'apellidos' => 'Valderrama Mercedes',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'spvalderramam@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'S17V13',
+                'imagen_firma' => NULL,
+            ],
+
+            //CENTRO ESTUDIANTIL 11: Centro de Estudiantes de Ingeniería Metalúrgica
+
+                //Aqui va MARIA CELINE HUAMAN MARTINEZ <mhuamanm@unitru.edu.pe>
+                    //Representante de Centro de Estudiantes de Ingeniería Metalúrgica
+                    //MIEMBRO ACTIVO 2025-I
+                    //Ingresó a PMO el 13 de Junio de 2023
+            [
+                'nombres' => 'Oliver Frank',
+                'apellidos' => 'Tirado Alfaro',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'otirado@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'O6T1',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Elva Briguith',
+                'apellidos' => 'Caballero Zamalloa',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'ecaballeroz@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'E2C27',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Cristhian Andres',
+                'apellidos' => 'García Rodriguez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'cgarciaro@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'C1G19',
+                'imagen_firma' => NULL,
+            ],
+            //CENTRO ESTUDIANTIL 12: CETUR(Centro de Estudiantes de Turismo)
+            [
+                //Representante
+                'nombres' => 'Sebastián Gabriel',
+                'apellidos' => 'Narváez Velásquez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'sgnarvaezv@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'S7N23',
+                'imagen_firma' => "fotos_firmas/Sebastián Gabriel Narváez Velásquez.jpg",
+            ],
+            //CENTRO ESTUDIANTIL 13: CEIQ(Centro de Estudiantes de Ingeniería Química)
+            [
+                'nombres' => 'José Benjamin',
+                'apellidos' => 'Tamariz Mimbela',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'jbtamarizmi@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'J2T13',
+                'imagen_firma' => NULL,
+            ],
+            //Aqui va JORGE DARIO SALAS MARTINEZ <jdsalasma@unitru.edu.pe>
+                //- MIEMBRO VOLUNTARIADO UNT
+            [
+                'nombres' => 'Adamaris Gibely',
+                'apellidos' => 'Blas Calderonz',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'agblasca@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'A7B3',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Ibeth Akenmy',
+                'apellidos' => 'Loje Polo',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'iloje@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'I1L17',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Keiko Marianella',
+                'apellidos' => 'Infante Palacios',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'kinfante@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'K13I17',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //Representante
+                'nombres' => 'Andrea Ines',
+                'apellidos' => 'Jimenez Rodriguez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'ajimenezr@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'A9J19',
+                'imagen_firma' => "fotos_firmas/Andrea Ines Jimenez Rodriguez.jpg",
+            ],
+            [
+                'nombres' => 'Erick Humberto',
+                'apellidos' => 'Yovera Hernández',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'ehyoverah@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'E8Y8',
+                'imagen_firma' => NULL,
+            ],
+            //CENTRO ESTUDIANTIL 14: Centro de Estudiantes de Ingeniería Mecatrónica
+            [
+                //Representante
+                'nombres' => 'Sergio Anderson',
+                'apellidos' => 'Gil Gonzalez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't023600420@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'S1G7',
+                'imagen_firma' => "fotos_firmas/Sergio Anderson Gil Gonzalez.jpg",
+            ],
+            [
+                'nombres' => 'Fernando Miguel',
+                'apellidos' => 'Aurazo Alvarado',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't533600520@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'F13A1',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Karl Alejandro',
+                'apellidos' => 'Espinoza León',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't513600520@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'K1E12',
+                'imagen_firma' => NULL,
+            ],
+            //CENTRO ESTUDIANTIL 15: Centro de Estudiantes de Estomatología
+            [
+                //Representante
+                'nombres' => 'Jose Edwin',
+                'apellidos' => 'Cruz Gallo',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'jecruzg@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'J5C7',
+                'imagen_firma' => "fotos_firmas/Jose Edwin Cruz Gallo.jpg",
+            ],
+            [
+                'nombres' => 'Daniela Dariana',
+                'apellidos' => 'Avila Padilla',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'davilap@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'D4A17',
+                'imagen_firma' => NULL,
+            ],
+
+            //ENTIDADES ALIADAS: CENTRO FEDERADOS
+            //CENTRO FEDERADO 1: Centro Federado De Ciencia Política
+            [
+                // Representante
+                'nombres' => 'Melany Jasmin',
+                'apellidos' => 'Cabrera García',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1513900521@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'M10C7',
+                'imagen_firma' => 'fotos_firmas/Melany Jasmin Cabrera Garcia.jpg',
+            ],
+            [
+                // Miembro
+                'nombres' => 'Néstor Abelardo',
+                'apellidos' => 'Gutiérrez León',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'nagutierrezl@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'N1G12',
+                'imagen_firma' => NULL,
+            ],
+            [
+                // Miembro
+                'nombres' => 'Juan José',
+                'apellidos' => 'Vasquez Mendoza',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1053901321@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'J10V13',
+                'imagen_firma' => NULL,
+            ],
+            [
+                // Miembro
+                'nombres' => 'Carlos Yemeri Aron',
+                'apellidos' => 'Herrera Alayo',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'cherreraa@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'C26A8A',
+                'imagen_firma' => NULL,
+            ],
+            [
+                // Miembro
+                'nombres' => 'Luciano Alberto',
+                'apellidos' => 'Chuquihuara Tirado',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1023900521@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'L1C21',
+                'imagen_firma' => NULL,
+            ],
+            [
+                // Miembro
+                'nombres' => 'Cesia Yomira',
+                'apellidos' => 'Torres León',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'ctorresl@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'C26T12',
+                'imagen_firma' => NULL,
+            ], 
+            [
+                // Miembro
+                'nombres' => 'Leticia Mariana',
+                'apellidos' => 'Miranda Pérez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'lmirandap@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'L13M17',
+                'imagen_firma' => NULL,
+            ],
+            [
+                // Miembro
+                'nombres' => 'Jorge Jonatan',
+                'apellidos' => 'Campos Rodriguez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1053900221@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'J10C19',
+                'imagen_firma' => NULL,
+            ],
+            //CENTRO FEDERADO 2: Centro Federado De Economía
+            [
+                // Miembro
+                'nombres' => 'Bruno Jeanpier',
+                'apellidos' => 'Garay Rojas',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'bgarayr@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'B10G19',
+                'imagen_firma' => NULL,
+            ],
+            //Aqui va MARIA FERNANDA PRETELL LEÓN<t1010700721@unitru.edu.pe>
+                //- MIEMBRO ACTIVO 2025-I
+                //- Ingresó a LTK&FNZ el 01 De Junio 2024
+            [
+                // Miembro
+                'nombres' => 'Roxana Luzbeth',
+                'apellidos' => 'Alfaro Vasquez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'rlalfarova@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'R12A23',
+                'imagen_firma' => NULL,
+            ],
+            [
+                // Representante
+                'nombres' => 'Frandux Lee',
+                'apellidos' => 'Manayay Cieza',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1050702421@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'F12M3',
+                'imagen_firma' => 'fotos_firmas/Frandux Lee Manayay Cieza.jpg',
+            ],
+            [
+                // Miembro
+                'nombres' => 'Jeiser Maycol',
+                'apellidos' => 'Jugo Evangelista',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'jmjugoev@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'J13J5',
+                'imagen_firma' => NULL,
+            ],
+            //CENTRO FEDERADO 3: Centro Federado De Ingeniería Agroindustrial
+            [
+                // Representante
+                'nombres' => 'Fabricio',
+                'apellidos' => 'Uceda Garcia',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'fuceda@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'F22G',
+                'imagen_firma' => 'fotos_firmas/Fabricio Uceda Garcia.jpg',
+            ],
+            [
+                // Miembro
+                'nombres' => 'Cielo Carolina',
+                'apellidos' => 'Vigo Flores',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'ccvigof@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'C3V6',
+                'imagen_firma' => NULL,
+            ],
+            [
+                // Miembro
+                'nombres' => 'Nayely',
+                'apellidos' => 'Vasquez Villarreal',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'nvasquezvi@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'N23V',
+                'imagen_firma' => NULL,
+            ],
+            //CENTRO FEDERADO 4: Centro Federado De Derecho 
+            [
+                // Representante
+                'nombres' => 'Jeremy Rorievans',
+                'apellidos' => 'Valverde Tolentino',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'jvalverdet@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'J19V21',
+                'imagen_firma' => 'fotos_firmas/Jeremy Rorievans Valverde Tolentino.jpg',
+            ],
+            [
+                // Miembro
+                'nombres' => 'Leydi Diana',
+                'apellidos' => 'Cuba Barrantes',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'ldcubaba@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'L4C2',
+                'imagen_firma' => NULL,
+            ],
+            [
+                // Miembro
+                'nombres' => 'Flor Andrea',
+                'apellidos' => 'Cáceda Rumay',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'facacedaru@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'F1C18',
+                'imagen_firma' => NULL,
+            ],
+            [
+                // Miembro
+                'nombres' => 'Ana Lucia',
+                'apellidos' => 'Ulloa Ruiz',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'alulloar@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'A12U18',
+                'imagen_firma' => NULL,
+            ],
+            [
+                // Miembro
+                'nombres' => 'Leydi Laurita',
+                'apellidos' => 'Miñano Corro',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'lminanoco@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'L12M3',
+                'imagen_firma' => NULL,
+            ],
+            [
+                // Miembro
+                'nombres' => 'Geraldo Samir',
+                'apellidos' => 'Bravo Lucano',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'gsbravolu@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'G20B12',
+                'imagen_firma' => NULL,
+            ],
+            [
+                // Miembro
+                'nombres' => 'Paolo Mariano',
+                'apellidos' => 'Vallejo Fernandez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'pmvallejof@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'P13V6',
+                'imagen_firma' => NULL,
+            ],
+            [
+                // Miembro
+                'nombres' => 'Nataly Mayte',
+                'apellidos' => 'Sánchez Gil',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'nmsanchezg@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'N13S7',
+                'imagen_firma' => NULL,
+            ],
+            [
+                // Miembro
+                'nombres' => 'Milagros',
+                'apellidos' => 'Contreras Valdez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'mcontrerasv@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'M3V',
+                'imagen_firma' => NULL,
+            ],
+            [
+                // Miembro
+                'nombres' => 'Anyelin',
+                'apellidos' => 'Casas Junquera',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'acasasj@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'A3J',
+                'imagen_firma' => NULL,
+            ],
+            //CENTRO FEDERADO 5: Centro Federado De Ingeniería Agrícola
+            [
+                // Representante
+                'nombres' => 'Virginia Jhoana',
+                'apellidos' => 'Abanto Castillo',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't042300220@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'V10A3',
+                'imagen_firma' => 'fotos_firmas/Virginia Jhoana Abanto Castillo.jpg',
+            ],
+            [
+                // Miembro
+                'nombres' => 'Vilma Alexandra',
+                'apellidos' => 'Minchola Chavez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'vminchola@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'V1M3',
+                'imagen_firma' => NULL,
+            ],
+            [
+                // Miembro
+                'nombres' => 'Pedro Willy',
+                'apellidos' => 'Vasquez Solis Benavides',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'pvasquezs@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'P24V20B',
+                'imagen_firma' => NULL,
+            ],
+            //CENTRO FEDERADO 6: Centro Federado De Ingeniería Mecánica
+            [
+                // Representante
+                'nombres' => 'Jairo Arturo',
+                'apellidos' => 'Olivera Ramos',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'jaoliverar@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'J1O19',
+                'imagen_firma' => 'fotos_firmas/Jairo Arturo Olivera Ramos.jpg',
+            ],
+            [
+                // Miembro
+                'nombres' => 'Erick Jesus',
+                'apellidos' => 'Salvador Lizarraga',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'ejsalvadorl@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'E10S12',
+                'imagen_firma' => NULL,
+            ],
+            [
+                // Miembro
+                'nombres' => 'Akihito Bryan',
+                'apellidos' => 'Barrueto Ipushima',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'abbarruetoi@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'A2B9',
+                'imagen_firma' => NULL,
+            ],
+            //CENTRO FEDERADO 7: Centro Federado De Enfermería
+            [
+                // Representante
+                'nombres' => 'Anny Nayeli Yireh',
+                'apellidos' => 'Sánchez Vásquez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'asanchezva@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'A14Y20V',
+                'imagen_firma' => 'fotos_firmas/Anny Nayeli Yireh Sánchez Vásquez.jpg',
+            ],
+            [
+                // Miembro
+                'nombres' => 'Erika Elizabeth',
+                'apellidos' => 'Ruiz Vera',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1050900621@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'E5R23',
+                'imagen_firma' => NULL,
+            ],
+            [
+                // Miembro
+                'nombres' => 'Jordy David',
+                'apellidos' => 'Rodriguez Rubio',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1510900121@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'J4R19',
+                'imagen_firma' => NULL,
+            ],
+            [
+                // Miembro
+                'nombres' => 'Norma Elizabeth',
+                'apellidos' => 'León Tongombol',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'neleonto@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'N5L21',
+                'imagen_firma' => NULL,
+            ],
+            [
+                // Miembro
+                'nombres' => 'Nicol Stefanny',
+                'apellidos' => 'Ruiz Benites',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'nsruizbe@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'N20R2',
+                'imagen_firma' => NULL,
+            ],
         ];
 
         foreach ($personas as $persona) {

@@ -67,7 +67,7 @@ class User extends Authenticatable
     //Relación muchos a muchos con Rol
     public function roles(): BelongsToMany
     {
-        return $this->belongsToMany(Rol::class, 'user_rol', 'user_id', 'role_id')
+        return $this->belongsToMany(Rol::class, 'user_rol', 'user_id', 'rol_id')
             ->withTimestamps();
     }
     //Relación uno a muchos con GrupoDeCertificacion (grupos de certificación creados por el usuario)
