@@ -106,6 +106,13 @@ class UserSeeder extends Seeder
                 'password' =>  Hash::make('71293533'),
             ],
             [
+                'name' => 'Gerson Alfaro',
+                'email' => 't1051500121@unitru.edu.pe',//Gerson Alfaro
+                'profile_picture' =>'fotos_perfiles/Gerson Gabriel Alfaro Tandaypan.jpg',
+                'status' => 'Eliminado',
+                'password' =>  Hash::make('73479500'),
+            ],
+            [
                 'name' => 'José Avila',
                 'email' => 'jdavilas@unitru.edu.pe',//José Avila
                 'profile_picture' =>'fotos_perfiles/José Daniel Avila Santillan.jpg',
