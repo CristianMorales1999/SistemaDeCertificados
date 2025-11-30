@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nombres',150);
             $table->string('apellidos',150);
-            $table->string('codigo',10)->nullable();// Alternado de letra y número con la primera letra de cada nombre y apellido, donde las posiciones pares son letras y las impares son números, y donde el número corresponde a la posición del carácter en el alfabeto (A=1, B=2, ..., Ñ=15, ..., Y=26, Z=27).
+            $table->string('codigo',20)->nullable();// Alternado de letra y número con la primera letra de cada nombre y apellido, donde las posiciones pares son letras y las impares son números, y donde el número corresponde a la posición del carácter en el alfabeto (A=1, B=2, ..., Ñ=15, ..., Y=26, Z=27).
             $table->string('correo_personal',150)->nullable()->unique();
             $table->string('correo_institucional',150)->nullable()->unique();
             $table->enum('sexo',[

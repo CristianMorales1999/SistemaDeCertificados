@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="yes" ?>
 <DBMODEL Version="4.0">
 <SETTINGS>
-<GLOBALSETTINGS ModelName="db_sistema_generador_de_certificados_sediprano" IDModel="0" IDVersion="0" VersionStr="1.0.0.0" Comments="" UseVersionHistroy="1" AutoIncVersion="1" DatabaseType="MySQL" ZoomFac="38.00" XPos="0" YPos="0" DefaultDataType="5" DefaultTablePrefix="0" DefSaveDBConn="" DefSyncDBConn="" DefQueryDBConn="" Printer="" HPageCount="4.0" PageAspectRatio="1.440892512336408" PageOrientation="1" PageFormat="A4 (210x297 mm, 8.26x11.7 inches)" SelectedPages="" UsePositionGrid="0" PositionGridX="20" PositionGridY="20" TableNameInRefs="1" DefaultTableType="0" ActivateRefDefForNewRelations="1" FKPrefix="" FKPostfix="" CreateFKRefDefIndex="1" DBQuoteCharacter="`" CreateSQLforLinkedObjects="0" DefModelFont="Tahoma" CanvasWidth="4096" CanvasHeight="2842" />
+<GLOBALSETTINGS ModelName="db_sistema_generador_de_certificados_sediprano" IDModel="0" IDVersion="0" VersionStr="1.0.0.0" Comments="" UseVersionHistroy="1" AutoIncVersion="1" DatabaseType="MySQL" ZoomFac="43.00" XPos="0" YPos="0" DefaultDataType="5" DefaultTablePrefix="0" DefSaveDBConn="" DefSyncDBConn="" DefQueryDBConn="" Printer="" HPageCount="4.0" PageAspectRatio="1.440892512336408" PageOrientation="1" PageFormat="A4 (210x297 mm, 8.26x11.7 inches)" SelectedPages="" UsePositionGrid="0" PositionGridX="20" PositionGridY="20" TableNameInRefs="1" DefaultTableType="0" ActivateRefDefForNewRelations="1" FKPrefix="" FKPostfix="" CreateFKRefDefIndex="1" DBQuoteCharacter="`" CreateSQLforLinkedObjects="0" DefModelFont="Tahoma" CanvasWidth="4096" CanvasHeight="2842" />
 <DATATYPEGROUPS>
 <DATATYPEGROUP Name="Numeric Types" Icon="1" />
 <DATATYPEGROUP Name="Date and Time Types" Icon="2" />
@@ -330,7 +330,7 @@
 </INDEX>
 </INDICES>
 </TABLE>
-<TABLE ID="2020" Tablename="secciones_de_informacion" PrevTableName="Table_03" XPos="203" YPos="1595" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="4" >
+<TABLE ID="2020" Tablename="secciones_de_informacion" PrevTableName="Table_03" XPos="202" YPos="1584" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="4" >
 <COLUMNS>
 <COLUMN ID="2022" ColName="id" PrevColName="" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
 <OPTIONSELECTED>
@@ -339,6 +339,11 @@
 </OPTIONSELECTED>
 </COLUMN>
 <COLUMN ID="2024" ColName="nombre" PrevColName="name" Pos="1" idDatatype="20" DatatypeParams="(100)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<OPTIONSELECTED>
+<OPTIONSELECT Value="0" />
+</OPTIONSELECTED>
+</COLUMN>
+<COLUMN ID="2724" ColName="descripcion" PrevColName="" Pos="2" idDatatype="20" DatatypeParams="(255)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
 <OPTIONSELECTED>
 <OPTIONSELECT Value="0" />
 </OPTIONSELECTED>
@@ -384,7 +389,7 @@
 <OPTIONSELECT Value="0" />
 </OPTIONSELECTED>
 </COLUMN>
-<COLUMN ID="2455" ColName="estado" PrevColName="" Pos="10" idDatatype="31" DatatypeParams="(\aPendiente\a,\aActivo\a,\aInactivo\a,\aRechazado\a,\aEliminado\a)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="\aPendiente\a" Comments="">
+<COLUMN ID="2455" ColName="status_" PrevColName="estado" Pos="10" idDatatype="31" DatatypeParams="(\aPendiente\a,\aActivo\a,\aInactivo\a,\aRechazado\a,\aEliminado\a)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="\aPendiente\a" Comments="">
 <OPTIONSELECTED>
 </OPTIONSELECTED>
 </COLUMN>
@@ -529,7 +534,7 @@
 <OPTIONSELECTED>
 </OPTIONSELECTED>
 </COLUMN>
-<COLUMN ID="2505" ColName="codigo" PrevColName="" Pos="6" idDatatype="20" DatatypeParams="(10)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<COLUMN ID="2505" ColName="codigo" PrevColName="" Pos="6" idDatatype="20" DatatypeParams="(20)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
 <OPTIONSELECTED>
 <OPTIONSELECT Value="0" />
 </OPTIONSELECTED>
@@ -608,18 +613,6 @@
 <OPTIONSELECT Value="0" />
 </OPTIONSELECTED>
 </COLUMN>
-<COLUMN ID="2234" ColName="area_persona_cargo_id_dp" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
-<OPTIONSELECTED>
-<OPTIONSELECT Value="1" />
-<OPTIONSELECT Value="0" />
-</OPTIONSELECTED>
-</COLUMN>
-<COLUMN ID="2238" ColName="area_persona_cargo_id_codp" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
-<OPTIONSELECTED>
-<OPTIONSELECT Value="1" />
-<OPTIONSELECT Value="0" />
-</OPTIONSELECTED>
-</COLUMN>
 <COLUMN ID="2594" ColName="area_id" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
 <OPTIONSELECTED>
 <OPTIONSELECT Value="1" />
@@ -647,30 +640,18 @@
 </COLUMNS>
 <RELATIONS_START>
 <RELATION_START ID="2169" />
-<RELATION_START ID="2250" />
 <RELATION_START ID="2297" />
 <RELATION_START ID="2536" />
 <RELATION_START ID="2599" />
+<RELATION_START ID="2715" />
 </RELATIONS_START>
 <RELATIONS_END>
-<RELATION_END ID="2231" />
-<RELATION_END ID="2235" />
 <RELATION_END ID="2591" />
 </RELATIONS_END>
 <INDICES>
 <INDEX ID="2073" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
 <INDEXCOLUMNS>
 <INDEXCOLUMN idColumn="2072" LengthParam="0" />
-</INDEXCOLUMNS>
-</INDEX>
-<INDEX ID="2233" IndexName="proyectos_FKIndex2" IndexKind="1" FKRefDef_Obj_id="2231">
-<INDEXCOLUMNS>
-<INDEXCOLUMN idColumn="2234" LengthParam="0" />
-</INDEXCOLUMNS>
-</INDEX>
-<INDEX ID="2237" IndexName="proyectos_FKIndex3" IndexKind="1" FKRefDef_Obj_id="2235">
-<INDEXCOLUMNS>
-<INDEXCOLUMN idColumn="2238" LengthParam="0" />
 </INDEXCOLUMNS>
 </INDEX>
 <INDEX ID="2593" IndexName="proyectos_FKIndex5" IndexKind="1" FKRefDef_Obj_id="2591">
@@ -1014,7 +995,7 @@
 </INDEX>
 </INDICES>
 </TABLE>
-<TABLE ID="2174" Tablename="area_persona" PrevTableName="Table_16" XPos="1430" YPos="528" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="23" >
+<TABLE ID="2174" Tablename="area_persona" PrevTableName="Table_16" XPos="1430" YPos="537" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="23" >
 <COLUMNS>
 <COLUMN ID="2176" ColName="id" PrevColName="" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
 <OPTIONSELECTED>
@@ -1042,11 +1023,7 @@
 <OPTIONSELECTED>
 </OPTIONSELECTED>
 </COLUMN>
-<COLUMN ID="2187" ColName="estado_inicial" PrevColName="estado" Pos="3" idDatatype="31" DatatypeParams="(\aMiembro activo\a,\aCambio de \225rea\a,\aRetiro voluntario\a,\aRetiro por bajo rendimiento\a,\aEgresado\a)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="\aMiembro activo\a" Comments="">
-<OPTIONSELECTED>
-</OPTIONSELECTED>
-</COLUMN>
-<COLUMN ID="2549" ColName="estado_final" PrevColName="" Pos="6" idDatatype="31" DatatypeParams="(\aMiembro activo\a,\aCambio de \225rea\a,\aRetiro voluntario\a,\aRetiro por bajo rendimiento\a,\aEgresado\a)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<COLUMN ID="2187" ColName="estado" PrevColName="" Pos="3" idDatatype="31" DatatypeParams="(\aMiembro activo\a,\aCambio de \225rea\a,\aRetiro voluntario\a,\aRetiro por bajo rendimiento\a,\aEgresado\a)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="0" DefaultValue="\aMiembro activo\a" Comments="">
 <OPTIONSELECTED>
 </OPTIONSELECTED>
 </COLUMN>
@@ -1086,7 +1063,7 @@
 </INDEX>
 </INDICES>
 </TABLE>
-<TABLE ID="2216" Tablename="area_persona_cargo" PrevTableName="Table_18" XPos="1886" YPos="479" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="26" >
+<TABLE ID="2216" Tablename="area_persona_cargo" PrevTableName="Table_18" XPos="1885" YPos="489" TableType="0" TablePrefix="0" nmTable="0" Temporary="0" UseStandardInserts="0" StandardInserts="\n" TableOptions="DelayKeyTblUpdates=0\nPackKeys=0\nRowChecksum=0\nRowFormat=0\nUseRaid=0\nRaidType=0\n" Comments="" Collapsed="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="26" >
 <COLUMNS>
 <COLUMN ID="2218" ColName="id" PrevColName="" Pos="0" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="1" NotNull="1" AutoInc="1" IsForeignKey="0" DefaultValue="" Comments="">
 <OPTIONSELECTED>
@@ -1106,7 +1083,7 @@
 <OPTIONSELECT Value="0" />
 </OPTIONSELECTED>
 </COLUMN>
-<COLUMN ID="2253" ColName="proyecto_coordinado_id" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
+<COLUMN ID="2718" ColName="proyecto_id" PrevColName="" Pos="1" idDatatype="5" DatatypeParams="" Width="-1" Prec="-1" PrimaryKey="0" NotNull="1" AutoInc="0" IsForeignKey="1" DefaultValue="" Comments="">
 <OPTIONSELECTED>
 <OPTIONSELECT Value="1" />
 <OPTIONSELECT Value="0" />
@@ -1120,23 +1097,15 @@
 <OPTIONSELECTED>
 </OPTIONSELECTED>
 </COLUMN>
-<COLUMN ID="2222" ColName="estado_inicial" PrevColName="estado" Pos="3" idDatatype="31" DatatypeParams="(\aCargo activo\a,\aCambio de cargo\a,\aRetiro voluntario de cargo\a,\aRetiro de cargo por bajo rendimiento\a,\aCargo finalizado\a)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="\aCargo activo\a" Comments="">
-<OPTIONSELECTED>
-</OPTIONSELECTED>
-</COLUMN>
-<COLUMN ID="2561" ColName="estado_final" PrevColName="" Pos="8" idDatatype="31" DatatypeParams="(\aCargo activo\a,\aCambio de cargo\a,\aRetiro voluntario de cargo\a,\aRetiro de cargo por bajo rendimiento\a,\aCargo finalizado\a)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="" Comments="">
+<COLUMN ID="2222" ColName="estado" PrevColName="" Pos="3" idDatatype="31" DatatypeParams="(\aCargo activo\a,\aCambio de cargo\a,\aRetiro voluntario de cargo\a,\aRetiro de cargo por bajo rendimiento\a,\aCargo finalizado\a)" Width="-1" Prec="-1" PrimaryKey="0" NotNull="0" AutoInc="0" IsForeignKey="0" DefaultValue="\aCargo activo\a" Comments="">
 <OPTIONSELECTED>
 </OPTIONSELECTED>
 </COLUMN>
 </COLUMNS>
-<RELATIONS_START>
-<RELATION_START ID="2231" />
-<RELATION_START ID="2235" />
-</RELATIONS_START>
 <RELATIONS_END>
 <RELATION_END ID="2224" />
 <RELATION_END ID="2227" />
-<RELATION_END ID="2250" />
+<RELATION_END ID="2715" />
 </RELATIONS_END>
 <INDICES>
 <INDEX ID="2219" IndexName="PRIMARY" IndexKind="0" FKRefDef_Obj_id="-1">
@@ -1154,9 +1123,9 @@
 <INDEXCOLUMN idColumn="2230" LengthParam="0" />
 </INDEXCOLUMNS>
 </INDEX>
-<INDEX ID="2252" IndexName="area_persona_cargo_FKIndex4" IndexKind="1" FKRefDef_Obj_id="2250">
+<INDEX ID="2717" IndexName="area_persona_cargo_FKIndex3" IndexKind="1" FKRefDef_Obj_id="2715">
 <INDEXCOLUMNS>
-<INDEXCOLUMN idColumn="2253" LengthParam="0" />
+<INDEXCOLUMN idColumn="2718" LengthParam="0" />
 </INDEXCOLUMNS>
 </INDEX>
 </INDICES>
@@ -1563,9 +1532,6 @@
 <RELATION ID="2202" RelationName="esta_integrada_por" Kind="2" SrcTable="2044" DestTable="2174" FKFields="id=area_id\n" FKFieldsComments="\n" relDirection="1" MidOffset="-18" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=1\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="2204" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="25" />
 <RELATION ID="2224" RelationName="desempena_como" Kind="2" SrcTable="2174" DestTable="2216" FKFields="id=area_persona_id\n" FKFieldsComments="\n" relDirection="2" MidOffset="4" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=1\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="2226" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="27" />
 <RELATION ID="2227" RelationName="es_desempenado_por" Kind="2" SrcTable="2065" DestTable="2216" FKFields="id=cargo_id\n" FKFieldsComments="\n" relDirection="3" MidOffset="8" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="-2" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=1\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="2229" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="28" />
-<RELATION ID="2231" RelationName="dirige_un" Kind="5" SrcTable="2216" DestTable="2070" FKFields="id=area_persona_cargo_id_dp\n" FKFieldsComments="\n" relDirection="2" MidOffset="-197" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=1\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="2233" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="29" />
-<RELATION ID="2235" RelationName="codirige_un" Kind="5" SrcTable="2216" DestTable="2070" FKFields="id=area_persona_cargo_id_codp\n" FKFieldsComments="\n" relDirection="2" MidOffset="18" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="-2" CaptionOffsetY="-2" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=2\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="2237" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="30" />
-<RELATION ID="2250" RelationName="es_coordinado_por" Kind="2" SrcTable="2070" DestTable="2216" FKFields="id=proyecto_coordinado_id\n" FKFieldsComments="\n" relDirection="4" MidOffset="-108" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="5" CaptionOffsetY="-7" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=2\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="2252" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="32" />
 <RELATION ID="2265" RelationName="tiene_participacion_de" Kind="1" SrcTable="2097" DestTable="2264" FKFields="id=evento_id\n" FKFieldsComments="\n" relDirection="1" MidOffset="10" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="2" CaptionOffsetY="1" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=1\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="2268" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="35" />
 <RELATION ID="2266" RelationName="participa_en" Kind="1" SrcTable="2054" DestTable="2264" FKFields="id=persona_id\n" FKFieldsComments="\n" relDirection="2" MidOffset="18" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="6" CaptionOffsetY="-1" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=1\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="2270" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="36" />
 <RELATION ID="2296" RelationName="es_participe_en" Kind="1" SrcTable="2174" DestTable="2295" FKFields="id=area_persona_id\n" FKFieldsComments="\n" relDirection="2" MidOffset="7" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=1\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="2299" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="41" />
@@ -1591,6 +1557,7 @@
 <RELATION ID="2650" RelationName="esta_compuesto_por" Kind="2" SrcTable="2112" DestTable="2613" FKFields="id=grupo_de_certificacion_id\n" FKFieldsComments="\n" relDirection="4" MidOffset="0" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=1\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="2652" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="64" />
 <RELATION ID="2665" RelationName="es_utilizado_en" Kind="2" SrcTable="2065" DestTable="2105" FKFields="id=cargo_representante_id\n" FKFieldsComments="\n" relDirection="4" MidOffset="-6" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=2\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="2667" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="63" />
 <RELATION ID="2706" RelationName="es_sello_en" Kind="2" SrcTable="1999" DestTable="2112" FKFields="id=imagen_sello_id\n" FKFieldsComments="\n" relDirection="4" MidOffset="41" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=2\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="2708" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="61" />
+<RELATION ID="2715" RelationName="esta_asociado_a" Kind="2" SrcTable="2070" DestTable="2216" FKFields="id=proyecto_id\n" FKFieldsComments="\n" relDirection="4" MidOffset="-131" OptionalStart="0" OptionalEnd="0" CaptionOffsetX="0" CaptionOffsetY="0" StartIntervalOffsetX="0" StartIntervalOffsetY="0" EndIntervalOffsetX="0" EndIntervalOffsetY="0" CreateRefDef="1" Invisible="0" RefDef="Matching=0\nOnDelete=1\nOnUpdate=1\n" Comments="" FKRefDefIndex_Obj_id="2717" Splitted="0" IsLinkedObject="0" IDLinkedModel="-1" Obj_id_Linked="-1" OrderPos="59" />
 </RELATIONS>
 <NOTES>
 </NOTES>

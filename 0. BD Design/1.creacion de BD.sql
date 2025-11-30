@@ -26,9 +26,9 @@ CREATE TABLE cargos (
 #TABLA O3
 CREATE TABLE entidades_aliadas (
   id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  cargo_representante_id INTEGER UNSIGNED NULL,
   nombre VARCHAR(255) NOT NULL,
   acronimo VARCHAR(15) NULL,
-  cargo_representante_id INTEGER UNSIGNED NULL,
   PRIMARY KEY(id),
   UNIQUE INDEX entidades_aliadas_nombre_unique(nombre),
   UNIQUE INDEX entidades_aliadas_acronimo_unique(acronimo),
@@ -61,6 +61,7 @@ CREATE TABLE roles (
 CREATE TABLE secciones_de_informacion (
   id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
   nombre VARCHAR(100) NOT NULL,
+  descripcion VARCHAR(255) NULL,
   PRIMARY KEY(id)
 );
 #TABLA O8
@@ -85,10 +86,10 @@ CREATE TABLE personas (
   id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
   nombres VARCHAR(150) NOT NULL,
   apellidos VARCHAR(150) NOT NULL,
-  correo_personal VARCHAR(150) NULL,
+  correo_personal VARCHAR(150) NOT NULL,
   correo_institucional VARCHAR(150) NULL,
   sexo ENUM('Masculino','Femenino') NOT NULL,
-  codigo VARCHAR(10) NULL,
+  codigo VARCHAR(20) NULL,
   imagen_firma VARCHAR(300) NULL,
   PRIMARY KEY(id),
   UNIQUE INDEX personas_correo_personal_unique(correo_personal),
@@ -130,41 +131,46 @@ CREATE TABLE area_persona (
   INDEX area_persona_FKIndex1(persona_id),
   INDEX area_persona_FKIndex2(area_id)
 );
-#TABLA 13
-CREATE TABLE area_persona_cargo (
-  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  area_persona_id INTEGER UNSIGNED NOT NULL,
-  cargo_id INTEGER UNSIGNED NOT NULL,
-  proyecto_coordinado_id INTEGER UNSIGNED NULL,
-  fecha_inicio DATE NULL,
-  fecha_fin DATE NULL,
-  estado_inicial ENUM('Cargo activo','Cambio de cargo','Retiro voluntario de cargo' ,'Retiro de cargo por bajo rendimiento' , 'Cargo finalizado') NOT NULL DEFAULT 'Cargo activo',
-  estado_final ENUM('Cargo activo','Cambio de cargo','Retiro voluntario de cargo' ,'Retiro de cargo por bajo rendimiento' , 'Cargo finalizado') NULL DEFAULT NULL,
-  PRIMARY KEY(id),
-  INDEX area_persona_cargo_FKIndex1(area_persona_id),
-  INDEX area_persona_cargo_FKIndex2(cargo_id),
-  INDEX area_persona_cargo_FKIndex4(proyecto_coordinado_id)
-);
 #____________________________________________________________________
 
 #____________________________________________________________________
 #________________TABLAS CON REFERENCIA A OTRAS TABLAS________________
 #____________________________________________________________________
-#TABLA 14 (area_id en caso se realice un proyecto interno de un área)
+#TABLA 13 (area_id en caso se realice un proyecto interno de un área)
 CREATE TABLE proyectos (
   id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
-  area_persona_cargo_id_dp INTEGER UNSIGNED NOT NULL,
-  area_persona_cargo_id_codp INTEGER UNSIGNED NULL,
   area_id INTEGER UNSIGNED NULL,
   nombre VARCHAR(150) NOT NULL,
   imagen_logo VARCHAR(300) NOT NULL,
   fecha_inicio DATE NOT NULL,
   fecha_fin DATE NULL,
   PRIMARY KEY(id),
-  INDEX proyectos_FKIndex2(area_persona_cargo_id_dp),
-  INDEX proyectos_FKIndex3(area_persona_cargo_id_codp),
-  INDEX proyectos_FKIndex4(area_id)
+  INDEX proyectos_FKIndex5(area_id)
 );
+#____________________________________________________________________
+
+#____________________________________________________________________
+#_____________________TABLAS INTERMEDIAS(CON ID)_____________________
+#____________________________________________________________________
+#TABLA 14
+CREATE TABLE area_persona_cargo (
+  id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  area_persona_id INTEGER UNSIGNED NOT NULL,
+  cargo_id INTEGER UNSIGNED NOT NULL,
+  proyecto_id INTEGER UNSIGNED NOT NULL,
+  fecha_inicio DATE NULL,
+  fecha_fin DATE NULL,
+  estado ENUM('Cargo activo','Cambio de cargo','Retiro voluntario de cargo','Retiro de cargo por bajo rendimiento','Cargo finalizado') NOT NULL DEFAULT 'Cargo activo',
+  PRIMARY KEY(id),
+  INDEX area_persona_cargo_FKIndex1(area_persona_id),
+  INDEX area_persona_cargo_FKIndex2(cargo_id),
+  INDEX area_persona_cargo_FKIndex3(proyecto_id)
+);
+#____________________________________________________________________
+
+#____________________________________________________________________
+#________________TABLAS CON REFERENCIA A OTRAS TABLAS________________
+#____________________________________________________________________
 #TABLA 15
 CREATE TABLE eventos (
   id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -252,8 +258,8 @@ CREATE TABLE grupos_de_certificacion (
   tipo_de_certificacion_id INTEGER UNSIGNED NOT NULL,
   imagen_plantilla_id INTEGER UNSIGNED NULL,
   imagen_logo_sediprano_id INTEGER UNSIGNED NULL,
-  imagen_sello_id INTEGER UNSIGNED NULL,
   proyecto_id INTEGER UNSIGNED NULL,
+  imagen_sello_id INTEGER UNSIGNED NULL,
   evento_id INTEGER UNSIGNED NULL,
   usuario_creador_id INTEGER UNSIGNED NULL,
   usuario_generador_id INTEGER UNSIGNED NULL,
@@ -266,8 +272,8 @@ CREATE TABLE grupos_de_certificacion (
   INDEX grupos_de_certificacion_FKIndex1(tipo_de_certificacion_id),
   INDEX grupos_de_certificacion_FKIndex2(usuario_creador_id),
   INDEX grupos_de_certificacion_FKIndex3(usuario_generador_id),
-  INDEX grupos_de_certificacion_FKIndex4(proyecto_id),
-  INDEX grupos_de_certificacion_FKIndex5(evento_id),
+  INDEX grupos_de_certificacion_FKIndex4(evento_id),
+  INDEX grupos_de_certificacion_FKIndex5(proyecto_id),
   INDEX grupos_de_certificacion_FKIndex6(imagen_plantilla_id),
   INDEX grupos_de_certificacion_FKIndex7(imagen_logo_sediprano_id),
   INDEX grupos_de_certificacion_FKIndex8(imagen_sello_id)
@@ -279,7 +285,7 @@ CREATE TABLE certificados (
   grupo_de_certificacion_id INTEGER UNSIGNED NOT NULL,
   codigo VARCHAR(100) NULL,
   ruta_qr VARCHAR(255) NULL,
-  estado ENUM('Pendiente','Validado','Rechazado','Generado','Anulado') NOT NULL DEFAULT 'Validado',
+  estado ENUM('Pendiente','Validado','Generado','Anulado','Rechazado') NOT NULL DEFAULT 'Validado',
   PRIMARY KEY(id),
   INDEX certificados_FKIndex1(persona_id),
   INDEX certificados_FKIndex2(grupo_de_certificacion_id),

@@ -26,8 +26,6 @@ class Proyecto extends Model
      * @var array
      */
     protected $fillable = [
-        'area_persona_cargo_id_dp',
-        'area_persona_cargo_id_codp',
         'area_id',
         'nombre',
         'imagen_logo',
@@ -63,22 +61,10 @@ class Proyecto extends Model
         return $this->hasMany(GrupoDeCertificacion::class, 'proyecto_id');
     }
 
-    //Relación uno a uno con AreaPersonaCargo
-    public function areaPersonCargoDP(): BelongsTo
+    //Relación uno a muchos con AreaPersonaCargo(proyecto_id)
+    public function areaPersonaCargos(): HasMany
     {
-        return $this->belongsTo(AreaPersonaCargo::class,'area_persona_cargo_id_dp');//'area_persona_cargo_id_dp' es la clave foránea en la tabla proyectos
-    }
-
-    //Relación uno a uno con AreaPersonaCargo
-    public function areaPersonCargoCODP(): BelongsTo
-    {
-        return $this->belongsTo(AreaPersonaCargo::class,'area_persona_cargo_id_codp');//'area_persona_cargo_id_codp' es la clave foránea en la tabla proyectos
-    }
-
-    //Relación uno a muchos con AreaPersonaCargo(proyecto_coordinado_id)
-    public function areaPersonaCargoCoordinadores(): HasMany
-    {
-        return $this->hasMany(AreaPersonaCargo::class, 'proyecto_coordinado_id');// 'proyecto_coordinado_id' es la clave foránea en la tabla area_persona_cargo
+        return $this->hasMany(AreaPersonaCargo::class, 'proyecto_id');// 'proyecto_id' es la clave foránea en la tabla area_persona_cargo
     }
 
     //Relación muchos a muchos con AreaPersona

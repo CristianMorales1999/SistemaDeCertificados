@@ -13,15 +13,6 @@ return new class extends Migration
     {
         Schema::create('proyectos', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('area_persona_cargo_id_dp')
-                ->constrained('area_persona_cargo')
-                ->cascadeOnUpdate()
-                ->cascadeOnDelete();
-            $table->foreignId('area_persona_cargo_id_codp')
-                ->nullable()
-                ->constrained('area_persona_cargo')
-                ->cascadeOnUpdate()
-                ->nullOnDelete();
             //area_id en caso se realice un proyecto de un area en especifico
             $table->foreignId('area_id')
                 ->nullable()
