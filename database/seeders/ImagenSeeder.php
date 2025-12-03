@@ -31,24 +31,6 @@ class ImagenSeeder extends Seeder
                 'tipo' => 'Logo',
                 'extension' => '.png',
             ],
-            [
-                'nombre' => 'Proyecto Renacer',
-                'ruta' => 'fotos_logos/RENACER.png',
-                'tipo' => 'Logo',
-                'extension' => '.png',
-            ],
-            [
-                'nombre' => 'Proyecto Webinars 1°',
-                'ruta' => 'fotos_logos/WEBINARS PRIMERA EDICIÓN.png',
-                'tipo' => 'Logo',
-                'extension' => '.png',
-            ],
-            [
-                'nombre' => 'Proyecto SediTalks',
-                'ruta' => 'fotos_logos/SEDITALKS.png',
-                'tipo' => 'Logo',
-                'extension' => '.png',
-            ],
 
             /*********************************
              ****** FOTOS DE PLANTILLAS ******
