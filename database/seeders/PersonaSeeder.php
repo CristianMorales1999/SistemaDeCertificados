@@ -1068,7 +1068,10 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
 
-            //ÁREA DE LTK&FNZ - 21
+            /********************************************
+             *************** ÁREA DE LTK&FNZ ************
+             ******************************************* */
+            //Total de miembros activos en LTK&FNZ - 21
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 20 De Noviembre 2021
@@ -1305,7 +1308,10 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
 
-            //ÁREA DE MKT - 22
+            /*******************************************
+             *************** ÁREA DE MKT ***************
+             ******************************************* */
+            //Total de miembros activos en MKT - 22
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 02 de Mayo de 2025
@@ -1563,10 +1569,20 @@ class PersonaSeeder extends Seeder
             //MIEMBRO ACTIVO 2025-I
             //- Directora de MKT-2024
 
-            //ÁREA DE PMO - 14
-            //Aqui ingresó IVANNA SOFIA VELA OCAMPO <t510100520@unitru.edu.pe>
-            //Ingresó a PMO el 20 de Noviembre de 2021
-            //- Directora de PMO-2024
+            /*******************************************
+             *************** ÁREA DE PMO ***************
+             ******************************************* */
+            //Total de miembros activos en PMO - 14
+
+            //CONVOCATORIA 2021(20-11-2021)
+            /**
+                Ivanna Sofia Vela Ocampo
+                    //Aqui ingresó IVANNA SOFIA VELA OCAMPO <t510100520@unitru.edu.pe>
+                    //Ingresó a PMO el 20 de Noviembre de 2021
+                    //- Directora de PMO-2024
+            **/
+
+            //CONVOCATORIA 2023(13-06-2023)
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a PMO el 13 de Junio de 2023
@@ -1577,6 +1593,28 @@ class PersonaSeeder extends Seeder
                 'sexo' => 'Masculino',
                 'codigo' => 'A11A19',
                 'imagen_firma' => NULL,
+            ],
+            [
+                //Ingresó a PMO el 13 de Junio de 2023
+                //Egresó el 17 de marzo de 2025
+                'nombres' => 'David Caleb',
+                'apellidos' => 'Céspedes Esquivel',
+                'correo_personal' => 'dacacees@gmail.com',
+                'correo_institucional' => 't511301120@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'D3C5',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //Ingresó a PMO el 13 de Junio de 2023
+                //Egresó el 17 de marzo de 2025
+                'nombres' => 'Giancarlo José',
+                'apellidos' => 'Benavides Rodríguez',
+                'correo_personal' => 'gian07benarodri@gmail.com',
+                'correo_institucional' => 't450100220@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'G10B19',
+                'imagen_firma' => "fotos_firmas/Giancarlo Jose Benavides Rodriguez.png",
             ],
             [
                 //MIEMBRO ACTIVO 2025-I
@@ -1600,6 +1638,25 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'M3H13',
                 'imagen_firma' => "fotos_firmas/María Celine Huamán Martínez.jpg",//Representante de Centro de Estudiantes de Ingeniería Metalúrgica
             ],
+            /**
+                María Fernanda de la Caridad Herrera Cerquín
+                    //Aqui ingresó María Fernanda de la Caridad Herrera Cerquín <mfherrerace@unitru.edu.pe>
+                    //Ingresó a PMO el 13 de Junio de 2023
+                    //- Directora de PMO-2025
+            **/
+            [
+                //Ingresó a PMO el 13 de Junio de 2023
+                //Egresó el 17 de marzo de 2025
+                'nombres' => 'Renato Martin',
+                'apellidos' => 'Nuñez Ortiz',
+                'correo_personal' => 'Nunezortizrenato@gmail.com',
+                'correo_institucional' => 'rnunezo@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'R13N16',
+                'imagen_firma' => "fotos_firmas/Renato Martin Nunez Ortiz.png",
+            ],
+
+            //CONVOCATORIA 2024(01-06-2024)
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a PMO el 01 de Junio de 2024
@@ -1610,6 +1667,17 @@ class PersonaSeeder extends Seeder
                 'sexo' => 'Masculino',
                 'codigo' => 'A13P3',
                 'imagen_firma' => NULL,
+            ],
+            [
+                //Ingresó a PMO el 01 de Junio de 2024
+                //Se retiró voluntariamente el 07 de marzo de 2025
+                'nombres' => 'Alexandra Brighit',
+                'apellidos' => 'Velarde Escobar',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'avelarde@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'A2V5',
+                'imagen_firma' => "fotos_firmas/Alexandra Brighit Valverde Escobar.png",
             ],
             [
                 //MIEMBRO ACTIVO 2025-I
@@ -1677,6 +1745,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'R4A21',
                 'imagen_firma' => NULL,
             ],
+            //CONVOCATORIA 2025(02-05-2025)
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a PMO el 02 de Mayo de 2025 
@@ -1711,27 +1780,49 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
 
-            //ÁREA DE TI - 10
+            /******************************************
+             *************** ÁREA DE TI ***************
+             ****************************************** */
+            //Total de miembros activos en TI - 10
+
+            //Creación del área de TI (17-03-2023)
             [
-                //Ingresó a TI el 02 de Mayo de 2025
-                'nombres' => 'Elder Eli',
-                'apellidos' => 'De la Cruz Calderón',
-                'correo_personal' => 'pereedc.3002@gmail.com',
-                'correo_institucional' => 'edelacruzca@unitru.edu.pe',
-                'sexo' => 'Masculino',
-                'codigo' => 'E5D12C3',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //Ingresó a TI el 02 de Mayo de 2025
-                'nombres' => 'Jhoanny Jheimilyn Xiomara',
-                'apellidos' => 'Vargas Ramos',
-                'correo_personal' => 'vargasramosjhoanny@gmail.com',
-                'correo_institucional' => 'jjvargasr@unitru.edu.pe',
+                //Se cambió a TI el 17 de Marzo de 2023
+                //Se retiró voluntariamente el 07 de Marzo de 2025
+                'nombres' => 'Anahy Estrella',
+                'apellidos' => 'Cruz Ulloa',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't053300720@unitru.edu.pe',
                 'sexo' => 'Femenino',
-                'codigo' => 'J10X23R',
-                'imagen_firma' => NULL,
+                'codigo' => 'A5C22',
+                'imagen_firma' => 'fotos_firmas/Anahy Estrella Cruz Ulloa.png',
             ],
+            [
+                //Ingresó a MKT el 20 de Noviembre de 2021
+                //Se cambió a TI el 17 de Marzo de 2023
+                //Egresó en TI el 17 de marzo de 2025
+                'nombres' => 'Rommel Eduardo',
+                'apellidos' => 'Ulco Chavarria',
+                'correo_personal' => 'ulkrmmlo@gmail.com',
+                'correo_institucional' => 'rulco@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'R5U3',
+                'imagen_firma' => 'fotos_firmas/Rommel Eduardo Ulco Chavarria.jpg',
+            ],
+            [
+                //Ingresó a LTK&FNZ el 20 de Noviembre de 2021
+                //Se cambió a PMO el 10 de Mayo de 2022(Referencia Fecha de convo), fué +- 2 meses.
+                //Ingresó a TI el 17 de Marzo de 2023(Fecha que ya no va: 25 de Abril de 2023)
+                //Se retiró de TI el 08 de Junio de 2024
+                'nombres' => 'Jorge Luis',
+                'apellidos' => 'Vargas Baltodano',
+                'correo_personal' => 'jorge.baltodano.21.10@gmail.com',
+                'correo_institucional' => 't012700120@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'J12V23',
+                'imagen_firma' => 'fotos_firmas/Jorge Luis Vargas Baltodano.jpg',
+            ],
+            //CONVOCATORIA 2024(10-12-2024)
             [
                 //Ingresó a TI el 10 de Diciembre de 2024
                 'nombres' => 'Luis Angel',
@@ -1763,16 +1854,6 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
-                //Ingresó a TI el 02 de Mayo de 2025
-                'nombres' => 'Pablo César',
-                'apellidos' => 'Sánchez Cabrera',
-                'correo_personal' => NULL,
-                'correo_institucional' => 'psanchezca@unitru.edu.pe',
-                'sexo' => 'Masculino',
-                'codigo' => 'P3S3',
-                'imagen_firma' => NULL,
-            ],
-            [
                 //Ingresó a TI el 10 de Diciembre de 2024
                 'nombres' => 'Paúl Jamir',
                 'apellidos' => 'Lazaro Solano',
@@ -1780,6 +1861,48 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 't052700520@unitru.edu.pe',
                 'sexo' => 'Masculino',
                 'codigo' => 'P10L20',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //Ingresó a TI el 10 de Diciembre de 2024
+                'nombres' => 'Sadhu',
+                'apellidos' => 'Rojas García',
+                'correo_personal' => 'sadhurojasgarcia@gmail.com',
+                'correo_institucional' => 't012701020@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'S19G',
+                'imagen_firma' => NULL,
+            ],
+
+            //CONVOCATORIA 2025(02-05-2025)
+            [
+                //Ingresó a TI el 02 de Mayo de 2025
+                'nombres' => 'Elder Eli',
+                'apellidos' => 'De la Cruz Calderón',
+                'correo_personal' => 'pereedc.3002@gmail.com',
+                'correo_institucional' => 'edelacruzca@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'E5D12C3',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //Ingresó a TI el 02 de Mayo de 2025
+                'nombres' => 'Jhoanny Jheimilyn Xiomara',
+                'apellidos' => 'Vargas Ramos',
+                'correo_personal' => 'vargasramosjhoanny@gmail.com',
+                'correo_institucional' => 'jjvargasr@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'J10X23R',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //Ingresó a TI el 02 de Mayo de 2025
+                'nombres' => 'Pablo César',
+                'apellidos' => 'Sánchez Cabrera',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'psanchezca@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'P3S3',
                 'imagen_firma' => NULL,
             ],
             [
@@ -1793,16 +1916,6 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
-                //Ingresó a TI el 10 de Diciembre de 2024
-                'nombres' => 'Sadhu',
-                'apellidos' => 'Rojas García',
-                'correo_personal' => 'sadhurojasgarcia@gmail.com',
-                'correo_institucional' => 't012701020@unitru.edu.pe',
-                'sexo' => 'Masculino',
-                'codigo' => 'S19G',
-                'imagen_firma' => NULL,
-            ],
-            [
                 //Ingresó a TI el 02 de Mayo de 2025
                 //Se retiró de TI el 22 de Agosto de 2025
                 'nombres' => 'Zaleth Valentina',
@@ -1812,31 +1925,6 @@ class PersonaSeeder extends Seeder
                 'sexo' => 'Femenino',
                 'codigo' => 'Z23R3',
                 'imagen_firma' => NULL,
-            ],
-            [
-                //Ingresó a MKT el 20 de Noviembre de 2021
-                //Se cambió a TI el 17 de Marzo de 2023
-                //Egresó en TI el 17 de marzo de 2025
-                'nombres' => 'Rommel Eduardo',
-                'apellidos' => 'Ulco Chavarria',
-                'correo_personal' => 'ulkrmmlo@gmail.com',
-                'correo_institucional' => 'rulco@unitru.edu.pe',
-                'sexo' => 'Masculino',
-                'codigo' => 'R5U3',
-                'imagen_firma' => 'fotos_firmas/Rommel Eduardo Ulco Chavarria.jpg',
-            ],
-            [
-                //Ingresó a LTK&FNZ el 20 de Noviembre de 2021
-                //Se cambió a PMO el 10 de Mayo de 2022(Referencia Fecha de convo), fué +- 2 meses.
-                //Ingresó a TI el 25 de Abril de 2023
-                //Se retiró de TI el 08 de Junio de 2024
-                'nombres' => 'Jorge Luis',
-                'apellidos' => 'Vargas Baltodano',
-                'correo_personal' => 'jorge.baltodano.21.10@gmail.com',
-                'correo_institucional' => 't012700120@unitru.edu.pe',
-                'sexo' => 'Masculino',
-                'codigo' => 'J12V23',
-                'imagen_firma' => 'fotos_firmas/Jorge Luis Vargas Baltodano.jpg',
             ],
 
             /********************************************
