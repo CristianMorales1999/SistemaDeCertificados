@@ -138,7 +138,7 @@ class ProyectoSeeder extends Seeder
               /******************************************************
                 ***** PROYECTO : CONCURSO DE MARKETING 2024 *********
                 *****************************************************/
-              /* - DP: José Calle Gutierrez  */
+              /* - DP: José Efrain Calle Gutierrez  */
               [
                 'area' => 'MKT',
                 'nombre' => 'CONCURSO DE MARKETING 2024',
@@ -153,7 +153,7 @@ class ProyectoSeeder extends Seeder
               /*************************************
                 ****** PROYECTO : SediTalks ********
                 *************************************/
-              /* - DP: Daniel Sanchez  */
+              /* - DP: Daniel Angel Sanchez Cabrera  */
               [
                 'area' => NULL,
                 'nombre' => 'SEDITALKS',
@@ -164,7 +164,7 @@ class ProyectoSeeder extends Seeder
               /*************************************
                 ****** PROYECTO : SediPatitas ********
                 *************************************/
-              /* - DP: Celine Huaman  */
+              /* - DP: Maria Celine Huaman Martinez  */
               [
                 'area' => NULL,
                 'nombre' => 'SediPatitas',
@@ -175,7 +175,7 @@ class ProyectoSeeder extends Seeder
               /*************************************
                 ****** PROYECTO : Amigos de la Tecnología ********
                 *************************************/
-              /* - DP: Darely Nicoll  */
+              /* - DP: Dalery Nicoll Alayo Sifuentes  */
               [
                 'area' => NULL,
                 'nombre' => 'Amigos de la Tecnología',
@@ -198,7 +198,7 @@ class ProyectoSeeder extends Seeder
               /**************************************************
                 ****** PROYECTO : Gestión de Proyectos 360 ******
                 *************************************************/
-              /* - DP: José Avila Santillan  */
+              /* - DP: José Daniel Avila Santillan  */
               [
                 'area' => NULL,
                 'nombre' => 'Gestión de Proyectos 360',
@@ -209,7 +209,7 @@ class ProyectoSeeder extends Seeder
               /**************************************************
                 ****** PROYECTO : CHEQUEATE UNT ******
                 *************************************************/
-              /* - DP: Nashaly Alama Torres  */
+              /* - DP: Nashaly Nicolle Alama Terrones  */
               [
                 'area' => NULL,
                 'nombre' => 'CHEQUEATE UNT',

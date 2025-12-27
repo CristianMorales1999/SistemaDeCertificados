@@ -27,11 +27,14 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'L1J23',
                 'imagen_firma' => 'fotos_firmas/Luis Alberto Julca Verastegui.png'
             ],
-            /********************************************
-             *************** DIRECTIVA 2025 ************
-             ******************************************* */
+            /****************************************************
+             ****************** DIRECTIVA 2025 ******************
+             ************** Inicio: 19 de Marzo 2025 ************
+             *************** Fin: ________________ **************
+             ****************************************************/
             [
                 //PRESIDENTA-2025
+                //- MIEMBRO ACTIVO DE SEDIPRO 2025-I
                 //Ingresó a PMO el 01 de Junio de 2024
                 'nombres' => 'Lucía de Fátima',
                 'apellidos' => 'Amaya Cáceda',
@@ -39,10 +42,11 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 't1051300621@unitru.edu.pe',
                 'sexo' => 'Femenino',
                 'codigo' => 'L4F1C',
-                'imagen_firma' => 'fotos_firmas/Lucía de Fátima Amaya Cáceda.png'
+                'imagen_firma' => 'fotos_firmas/Lucia de Fatima Amaya Caceda.png'
             ],
             [
                 //VICEPRESIDENTA-2025
+                //- MIEMBRO ACTIVO DE SEDIPRO 2025-I
                 //Ingresó a GTH el 01 de Junio de 2024
                 'nombres' => 'Silvana Valeria',
                 'apellidos' => 'Pereda Llave',
@@ -53,7 +57,8 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => 'fotos_firmas/Silvana Valeria Pereda Llave.png',
             ],
             [
-                //DIRECTORA DE GTH-2025
+                //DIRECTORA DE GTH-2025 
+                //- MIEMBRO ACTIVO DE SEDIPRO 2025-I
                 //Ingresó a GTH el 10 De Mayo 2022
                 'nombres' => 'Marina Lizeth',
                 'apellidos' => 'Gonzales Torres',
@@ -65,6 +70,7 @@ class PersonaSeeder extends Seeder
             ],
             [
                 //DIRECTOR DE LTK&FNZ-2025
+                //- MIEMBRO ACTIVO DE SEDIPRO 2025-I
                 //Ingresó a LTK&FNZ el 01 de Junio de 2024
                 'nombres' => 'Diego Jesús',
                 'apellidos' => 'Rodríguez Sabana',
@@ -72,10 +78,11 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 't1010100421@unitru.edu.pe',
                 'sexo' => 'Masculino',
                 'codigo' => 'D10R20',
-                'imagen_firma' => 'fotos_firmas/Diego Jesús Rodríguez Sabana.png',
+                'imagen_firma' => 'fotos_firmas/Diego Jesus Rodriguez Sabana.png',
             ],
             [
                 //DIRECTOR DE MKT-2025
+                //- MIEMBRO ACTIVO DE SEDIPRO 2025-I
                 //Ingresó a MKT el 13 de Junio de 2023
                 'nombres' => 'Ángel',
                 'apellidos' => 'Iparraguirre Aguilar',
@@ -83,10 +90,11 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 't1024000721@unitru.edu.pe',
                 'sexo' => 'Masculino',
                 'codigo' => 'A9A',
-                'imagen_firma' => 'fotos_firmas/Ángel Iparraguirre Aguilar.png',
+                'imagen_firma' => 'fotos_firmas/Angel Iparraguirre Aguilar.png',
             ],
             [
                 //DIRECTORA DE PMO-2025
+                //- MIEMBRO ACTIVO DE SEDIPRO 2025-I
                 //Ingresó a PMO el 13 de Junio de 2023
                 'nombres' => 'María Fernanda de la Caridad',
                 'apellidos' => 'Herrera Cerquín',
@@ -94,10 +102,11 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 'mfherrerace@unitru.edu.pe',
                 'sexo' => 'Femenino',
                 'codigo' => 'M6D12C8C',
-                'imagen_firma' => 'fotos_firmas/María Fernanda de la Caridad Herrera Cerquín.png',
+                'imagen_firma' => 'fotos_firmas/Maria Fernanda de la Caridad Herrera Cerquin.png',
             ],
             [
                 //DIRECTOR DE TI-2025
+                //- MIEMBRO ACTIVO DE SEDIPRO 2025-I
                 //Ingresó a TI el 13 de Junio de 2023
                 'nombres' => 'Christian Anthony',
                 'apellidos' => 'Morales Esquivel',
@@ -105,12 +114,14 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 'chmoralese@unitru.edu.pe',
                 'sexo' => 'Masculino',
                 'codigo' => 'C1M5',
-                'imagen_firma' => 'fotos_firmas/Cristian Anthony Morales Esquivel.png',
+                'imagen_firma' => 'fotos_firmas/Christian Anthony Morales Esquivel.png',
             ],
 
-            /********************************************
-             *************** DIRECTIVA 2024 ************
-             ******************************************* */
+            /****************************************************
+             ****************** DIRECTIVA 2024 ******************
+             ************** Inicio: 20 de Abril 2024 ************
+             *************** Fin: 18 de Marzo 2025 **************
+             ****************************************************/
             [
                 //PRESIDENTA-2024
                 //Ingresó a PMO el 10 de Mayo de 2022
@@ -126,7 +137,7 @@ class PersonaSeeder extends Seeder
             [
                 //VICEPRESIDENTA-2024
                 //Ingresó a GTH el 13 de Junio de 2023
-                //Se retiró de GTH el 03 de Agosto de 2025
+                //Se retiró voluntariamente de GTH el 19 de Noviembre de 2025
                 'nombres' => 'Romina Alejandra',
                 'apellidos' => 'Seclen Cespedes',
                 'correo_personal' => 'rominaalejandraseclen@gmail.com',
@@ -149,6 +160,7 @@ class PersonaSeeder extends Seeder
             ],
             [
                 //DIRECTOR DE LTK&FNZ-2024
+                //- MIEMBRO ACTIVO DE LTK&FNZ 2025-I
                 //Ingresó a LTK&FNZ el 20 de Diciembre de 2022(Convo-Extraordinaria)
                 'nombres' => 'Sebastian Emanuel',
                 'apellidos' => 'Facundo Reyes',
@@ -160,6 +172,7 @@ class PersonaSeeder extends Seeder
             ],
             [
                 //DIRECTORA DE MKT-2024
+                //- MIEMBRO ACTIVO DE MKT 2025-I
                 //Ingresó a MKT el 20 de Diciembre de 2022(Convo-Extraordinaria)
                 'nombres' => 'Zulema Adeli',
                 'apellidos' => 'Valverde Zavaleta',
@@ -171,6 +184,7 @@ class PersonaSeeder extends Seeder
             ],
             [
                 //DIRECTORA DE PMO-2024
+                //- MIEMBRO ACTIVO DE PMO 2025-I
                 //Ingresó a PMO el 20 de Noviembre de 2021
                 'nombres' => 'Ivanna Sofia',
                 'apellidos' => 'Vela Ocampo',
@@ -180,13 +194,19 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'I20V16',
                 'imagen_firma' => 'fotos_firmas/Ivanna Sofia Vela Ocampo.png',
             ],
-            //DIRECTOR DE TI-2024
-            //Aqui estuvo CHRISTIAN ANTHONY MORALES ESQUIVEL <chmoralese@unitru.edu.pe>
-            //- Director de TI-2025
+            //DIRECTOR DE TI-2025
+            /**
+                Christian Anthony Morales Esquivel
+                    //Aqui asumió el cargo CHRISTIAN ANTHONY MORALES ESQUIVEL <chmoralese@unitru.edu.pe>
+                    //Ingresó a TI el 13 de Junio de 2023
+                    //- Director de TI-2024
+            **/
 
-            /********************************************
-             *************** DIRECTIVA 2023 ************
-             ******************************************* */
+            /****************************************************
+             ****************** DIRECTIVA 2023 ******************
+             ************** Inicio: 31 de Marzo 2023 ************
+             *************** Fin: 19 de Abril 2024 **************
+             ****************************************************/
             [
                 //PRESIDENTA-2023
                 //Ingresó a MKT el 09 de Junio de 2020(Segun: https://drive.google.com/file/d/1CxcZRJBxSGDuZcJybGfkLPjsV-xyJjIJ/view?usp=sharing)
@@ -203,7 +223,7 @@ class PersonaSeeder extends Seeder
             [
                 //VICEPRESIDENTA-2023
                 //Ingresó a GTH el 8 de Noviembre de 2020(Es lo más seguro, aunque no aparece en el post de bienvenida)
-                //No hay registro de si egresó o se retiró acabando el 2023.
+                //Se retiró voluntariamente de GTH el 07 de Marzo de 2024
                 'nombres' => 'Alejandra Verenisse',
                 'apellidos' => 'Ruiz Rodriguez',
                 'correo_personal' => 'aleruizrodriguez.14@gmail.com',
@@ -215,14 +235,14 @@ class PersonaSeeder extends Seeder
             [
                 //DIRECTORA DE GTH-2023
                 //Ingresó a GTH el 20 de Noviembre 2021
-                //Se retiró de GTH el 02 de Marzo de 2024
+                //Se retiró voluntariamente de GTH el 02 de Marzo de 2024
                 'nombres' => 'Yessenia Jackelyne',
                 'apellidos' => 'Angulo Urbina',
                 'correo_personal' => 'jangulourbina09@gmail.com',
                 'correo_institucional' => 't510601520@unitru.edu.pe',
                 'sexo' => 'Femenino',
                 'codigo' => 'Y10A22',
-                'imagen_firma' => 'fotos_firmas/Yessenia Jackelyne Angulo Urbina.jpg',
+                'imagen_firma' => 'fotos_firmas/Yessenia Jackelyne Angulo Urbina.png',
             ],
             [
                 //DIRECTOR DE LTK&FNZ-2023
@@ -235,7 +255,7 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 'ejzeladav@unitru.edu.pe',
                 'sexo' => 'Masculino',
                 'codigo' => 'E10Z23',
-                'imagen_firma' => 'fotos_firmas/Edwin Jardel Zelada Vasquez.jpg',
+                'imagen_firma' => 'fotos_firmas/Edwin Jardel Zelada Vasquez.png',
             ],
             [
                 //DIRECTOR DE MKT-2023
@@ -248,25 +268,33 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 'waparedesr@unitru.edu.pe',
                 'sexo' => 'Masculino',
                 'codigo' => 'W1P19',
-                'imagen_firma' => 'fotos_firmas/Willian Alexander Paredes Rojas.jpg',
+                'imagen_firma' => 'fotos_firmas/Willian Alexander Paredes Rojas.png',
             ],
             [
                 //DIRECTOR DE PMO-2023
                 //Ingresó a MKT el 08 de Noviembre 2020
                 //Se cambió a PMO a finales del 2021
-                //No hay registro de si egresó o se retiró
+                //Se retiró voluntariamente de SEDIPRO el 04 de Diciembre de 2023
                 'nombres' => 'Edwin Jeyson',
                 'apellidos' => 'Valencia Gaona',
                 'correo_personal' => 'jeyvalencia2019@gmail.com',
                 'correo_institucional' => 'evalencia@unitru.edu.pe',
                 'sexo' => 'Masculino',
                 'codigo' => 'E10V7',
-                'imagen_firma' => 'fotos_firmas/Edwin Jeyson Valencia Gaona.jpg',
+                'imagen_firma' => 'fotos_firmas/Edwin Jeyson Valencia Gaona.png',
             ],
+            /**
+                DIRECTORA DE PMO-2023
+                Ivanna Sofia Vela Ocampo
+                    //Aqui asumió IVANNA SOFIA VELA OCAMPO <t510100520@unitru.edu.pe> a partir del 04 de Diciembre de 2023
+                    //- Directora de PMO-2024
+            **/
 
-            /********************************************
-             *************** DIRECTIVA 2022 ************
-             ******************************************* */
+            /****************************************************
+             ****************** DIRECTIVA 2022 ******************
+             ************** Inicio: 29 de Marzo 2022 ************
+             *************** Fin: 30 de Marzo 2023 **************
+             ****************************************************/
             [
                 //PRESIDENTA-2022
                 //Ingresó a MKT el 03 de Septiembre 2019
@@ -278,14 +306,20 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 'aecabrerag@unitru.edu.pe',
                 'sexo' => 'Femenino',
                 'codigo' => 'A5C7',
-                'imagen_firma' => 'fotos_firmas/Angie Evelin Cabrera Garcia.jpg',
+                'imagen_firma' => 'fotos_firmas/Angie Evelin Cabrera Garcia.png',
             ],
-            //VICEPRESIDENTA-2022
-            //Aqui estuvo MICAELA ANTHOANETH CARDENAS CONTRERAS <t534000120@unitru.edu.pe>
-            //- Presidenta SEDIPRO-2023
-            //DIRECTORA DE GTH-2022
-            //Aqui estuvo ALEJANDRA VERENISSE RUIZ RODRIGUEZ <t050101120@unitru.edu.pe>
-            //- Vicepresidenta SEDIPRO-2023
+            /**
+                VICEPRESIDENTA-2022
+                Micaela Anthoaneth Cardenas Contreras
+                    //Aqui estuvo MICAELA ANTHOANETH CARDENAS CONTRERAS <t534000120@unitru.edu.pe>
+                    //- Presidenta SEDIPRO-2023
+            **/
+            /**
+                DIRECTORA DE GTH-2022
+                Alejandra Verenisse Ruiz Rodriguez
+                    //Aqui estuvo ALEJANDRA VERENISSE RUIZ RODRIGUEZ <t050101120@unitru.edu.pe>
+                    //- Vicepresidenta SEDIPRO-2023
+            **/
             [
                 //DIRECTOR DE LTK&FNZ-2022
                 //Ingresó a LTK&FNZ el 8 de Noviembre de 2020
@@ -296,7 +330,7 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 'dnvillanuevav@unitru.edu.pe',
                 'sexo' => 'Masculino',
                 'codigo' => 'D14V23',
-                'imagen_firma' => 'fotos_firmas/Danjhel Noe Villanueva Valera.jpg',
+                'imagen_firma' => 'fotos_firmas/Danjhel Noe Villanueva Valera.png',
             ],
             [
                 //DIRECTOR DE MKT-2022
@@ -308,7 +342,7 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 'epinedog@unitru.edu.pe',
                 'sexo' => 'Masculino',
                 'codigo' => 'E3P7',
-                'imagen_firma' => 'fotos_firmas/Elian Carlos Pinedo Gomez.jpg',
+                'imagen_firma' => 'fotos_firmas/Elian Carlos Pinedo Gomez.png',
             ],
             [
                 //DIRECTOR DE PMO-2022
@@ -321,12 +355,14 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 'hcubenos@unitru.edu.pe',
                 'sexo' => 'Masculino',
                 'codigo' => 'H3M',
-                'imagen_firma' => 'fotos_firmas/Hans Cubeños Montoya.jpg',
+                'imagen_firma' => 'fotos_firmas/Hans Cubeños Montoya.png',
             ],
 
-            /********************************************
-             *************** DIRECTIVA 2021 ************
-             ******************************************* */
+            /****************************************************
+             ****************** DIRECTIVA 2021 ******************
+             ************ Inicio: 21 de Febrero 2021 ************
+             *************** Fin: 28 de Marzo 2022 **************
+             ****************************************************/
             [
                 //PRESIDENTA-2021
                 //Ingresó a GTH el 03 de Septiembre 2019
@@ -337,35 +373,36 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 'mcarranzar@unitru.edu.pe',
                 'sexo' => 'Femenino',
                 'codigo' => 'M14C19',
-                'imagen_firma' => 'fotos_firmas/Melva Noemi Carranza Rodriguez.jpg',
+                'imagen_firma' => 'fotos_firmas/Melva Noemi Carranza Rodriguez.png',
             ],
             [
                 //VICEPRESIDENTA-2021
                 //Ingresó a GTH el 03 de Septiembre 2019
-                //No hay registro de si egresó o si se retiró
+                //No hay registro de si egresó o si se retiró, así que asumo que cumplió con su cargo en la directiva hasta el 29 de Marzo 2022 y también asumiré que se retiró voluntariamente el 03 de Abril de 2022
                 'nombres' => 'Lucciana Kathiuzka',
                 'apellidos' => 'Hurtado Soledad',
                 'correo_personal' => 'Luccianahs@gmail.com',
                 'correo_institucional' => 'lhurtados@unitru.edu.pe',
                 'sexo' => 'Femenino',
                 'codigo' => 'L11H20',
-                'imagen_firma' => 'fotos_firmas/Lucciana Kathiuzka Hurtado Soledad.jpg',
+                'imagen_firma' => 'fotos_firmas/Lucciana Kathiuzka Hurtado Soledad.png',
             ],
             [
                 //DIRECTOR DE GTH-2021
                 //Ingresó a GTH el 03 de Septiembre 2019
                 //No hay registro de si egresó o si se retiró
+                // Según redes sociales, permaneció activo el 21 de Julio de 2022, así que asumiré que se retiró voluntariamente el 22 de Julio de 2022
                 'nombres' => 'José Armando',
                 'apellidos' => 'Vasquez Lopez',
                 'correo_personal' => NULL,
                 'correo_institucional' => 'jvasquezl@unitru.edu.pe',
                 'sexo' => 'Masculino',
                 'codigo' => 'J1V12',
-                'imagen_firma' => 'fotos_firmas/José Armando Vasquez Lopez.jpg',
+                'imagen_firma' => 'fotos_firmas/Jose Armando Vasquez Lopez.png',
             ],
             [
                 //DIRECTORA DE LTK&FNZ-2021
-                //Ingresó a LTK&FNZ el D de M de Y
+                //Ingresó a LTK&FNZ el 08 de Noviembre de 2020
                 //Egresó el 03 de Abril de 2022
                 'nombres' => 'Jemina Rebeca',
                 'apellidos' => 'Barboza Vilchez',
@@ -373,24 +410,24 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 'jbarboza@unitru.edu.pe',
                 'sexo' => 'Femenino',
                 'codigo' => 'J19B23',
-                'imagen_firma' => 'fotos_firmas/Jemina Rebeca Barboza Vilchez.jpg',
+                'imagen_firma' => 'fotos_firmas/Jemina Rebeca Barboza Vilchez.png',
             ],
             [
                 //DIRECTOR DE MKT-2021
-                //Ingresó a MKT el D de M de Y
-                //No hay registro de si egresó o si se retiró
+                //Ingresó a MKT el 08 de Noviembre de 2020
+                // Según redes sociales, permaneció activo el 25 de Julio de 2022, así que asumiré que se retiró voluntariamente el 26 de Julio de 2022
                 'nombres' => 'Bagner Mallher',
                 'apellidos' => 'Guzman Gonzales',
                 'correo_personal' => 'bagnerguzmangonzales@gmail.com',
                 'correo_institucional' => 'bguzman@unitru.edu.pe',
                 'sexo' => 'Masculino',
                 'codigo' => 'B13G7',
-                'imagen_firma' => 'fotos_firmas/Bagner Mallher Guzman Gonzales.jpg',
+                'imagen_firma' => 'fotos_firmas/Bagner Mallher Guzman Gonzales.png',
             ],
             [
                 //DIRECTOR DE PMO-2021
                 //Ingresó a GTH el 29 de Octubre de 2018
-                //Se cambió a PMO el D de M de Y
+                //No hay registro de cuando SE CAMBIÓ A PMO, así que asumiré que se cambió al inicio de la directiva 2019 (20 de Febrero de 2019)
                 //Egresó el 03 de Abril de 2022
                 'nombres' => 'Pablo César',
                 'apellidos' => 'Vasquez Narvaez',
@@ -398,12 +435,14 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 'pvasquez@unitru.edu.pe',
                 'sexo' => 'Masculino',
                 'codigo' => 'P3V14',
-                'imagen_firma' => 'fotos_firmas/Pablo César Vasquez Narvaez.jpg',
+                'imagen_firma' => 'fotos_firmas/Pablo Cesar Vasquez Narvaez.png',
             ],
 
-            /********************************************
-             *************** DIRECTIVA 2020 ************
-             ******************************************* */
+            /****************************************************
+             ****************** DIRECTIVA 2020 ******************
+             ************* Inicio: 22 de Junio 2020 *************
+             ************** Fin: 20 de Febrero 2021 *************
+             ****************************************************/
             [
                 //PRESIDENTA-2020
                 //Ingresó a LTK&FNZ el 11 de Agosto de 2017
@@ -414,7 +453,7 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 'sfigueroao@unitru.edu.pe',
                 'sexo' => 'Femenino',
                 'codigo' => 'S3F16',
-                'imagen_firma' => 'fotos_firmas/Stephanie Catherine Figueroa Olivares.jpg',
+                'imagen_firma' => 'fotos_firmas/Stephanie Catherine Figueroa Olivares.png',
             ],
             [
                 //VICEPRESIDENTA-2020
@@ -426,11 +465,14 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 'jcrespinc@unitru.edu.pe',
                 'sexo' => 'Femenino',
                 'codigo' => 'J4C3C',
-                'imagen_firma' => 'fotos_firmas/Jesabel del Carmen Crespin Chavez.jpg',
+                'imagen_firma' => 'fotos_firmas/Jesabel del Carmen Crespin Chavez.png',
             ],
-            //DIRECTORA DE GTH-2020
-            //Aqui estuvo MELVA NOEMI CARRANZA RODRIGUEZ:
-            //- Presidenta Sedipro-2021
+            /**
+                DIRECTORA DE GTH-2020
+                Melva Noemi Carranza Rodriguez
+                    //Aqui estuvo MELVA NOEMI CARRANZA RODRIGUEZ<noemi.02.carranza@gmail.com>
+                    //- Presidenta Sedipro-2021
+            **/
             [
                 //DIRECTOR DE LTK&FNZ-2020
                 //Ingresó a LTK&FNZ el D de M de Y
@@ -441,7 +483,7 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 'dmorenoa@unitru.edu.pe',
                 'sexo' => 'Masculino',
                 'codigo' => 'D13M23',
-                'imagen_firma' => 'fotos_firmas/Diego Martín Moreno Vargas.jpg',
+                'imagen_firma' => 'fotos_firmas/Diego Martin Moreno Vargas.png',
             ],
             [
                 //DIRECTOR DE MKT-2020
@@ -453,7 +495,7 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 'rmejiaz@unitru.edu.pe',
                 'sexo' => 'Masculino',
                 'codigo' => 'R13M27',
-                'imagen_firma' => 'fotos_firmas/Rogger Manuel Mejía Zuñiga.jpg',
+                'imagen_firma' => 'fotos_firmas/Rogger Manuel Mejia Zuñiga.png',
             ],
             [
                 //DIRECTOR DE PMO-2020
@@ -466,152 +508,425 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 'mbedono@unitru.edu.pe',
                 'sexo' => 'Masculino',
                 'codigo' => 'M20B16',
-                'imagen_firma' => 'fotos_firmas/Mauricio Sebastian Bedón Oliva.jpg',
+                'imagen_firma' => 'fotos_firmas/Mauricio Sebastian Bedon Oliva.png',
             ],
 
-            /********************************************
-             *************** ÁREA DE GTH ***************
-             ******************************************* */
-            //INGRESO EN CONVOCATORIA 2019-I (Total : 9 personas)
+            /****************************************************
+             ******************** ÁREA DE GTH *******************
+             **************** Miembros activos: 19 **************
+             ****************************************************/
+            //CONVOCATORIA 2025(02-05-2025) (Total : 7 personas)
             [
-                //Ingresó a GTH el 03 de Septiembre 2019
-                'nombres' => 'Fiorella Alexandra',
-                'apellidos' => 'Alfaro Aguilar',
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a GTH el 2 De Mayo 2025
+                'nombres' => 'Anderson Alexander',
+                'apellidos' => 'Saavedra Nolasco',
                 'correo_personal' => NULL,
-                'correo_institucional' => 'falfaro@unitru.edu.pe',
-                'sexo' => 'Femenino',
-                'codigo' => 'F1A1',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //Ingresó a GTH el 03 de Septiembre 2019
-                'nombres' => 'Leydi Estefani',
-                'apellidos' => 'Cueva Zavaleta',
-                'correo_personal' => NULL,
-                'correo_institucional' => 'lcuevaz@unitru.edu.pe',
-                'sexo' => 'Femenino',
-                'codigo' => 'L5C27',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //Ingresó a GTH el 03 de Septiembre 2019
-                //Egresó el 03 de Abril de 2022
-                'nombres' => 'Angela Mariel',
-                'apellidos' => 'Pereda Morales',
-                'correo_personal' => NULL,
-                'correo_institucional' => 'aperedaa@unitru.edu.pe',
-                'sexo' => 'Femenino',
-                'codigo' => 'A13P13',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //Ingresó a GTH el 03 de Septiembre 2019
-                'nombres' => 'Fiorella Rocio',
-                'apellidos' => 'Reyes Cruz',
-                'correo_personal' => NULL,
-                'correo_institucional' => 'freyesc@unitru.edu.pe',
-                'sexo' => 'Femenino',
-                'codigo' => 'F19R3',
-                'imagen_firma' => NULL,
-            ],
-
-            //Aqui ingresó MELVA NOEMI CARRANZA RODRIGUEZ
-            //- Directora de GTH-2020
-            //- Presidenta de SEDIPRO-2021
-            [
-                //Ingresó a GTH el 03 de Septiembre 2019
-                'nombres' => 'Azucena Lisseth',
-                'apellidos' => 'Dominguez Vargas',
-                'correo_personal' => NULL,
-                'correo_institucional' => 'aldominguezv@unitru.edu.pe',
-                'sexo' => 'Femenino',
-                'codigo' => 'A12D23',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //Ingresó a GTH el 03 de Septiembre 2019
-                'nombres' => 'Angelica Alicia',
-                'apellidos' => 'Campuzano Guevara',
-                'correo_personal' => NULL,
-                'correo_institucional' => 'acampuzanoa@unitru.edu.pe',
-                'sexo' => 'Femenino',
-                'codigo' => 'A1C7',
-                'imagen_firma' => NULL,
-            ],
-            //Aqui ingresó JOSE ARMANDO VASQUEZ LOPEZ <jvasquezl@unitru.edu.pe>
-            //- Director de GTH-2021
-            //Aqui ingresó LUCCIANA KATHIUZKA HURTADO SOLEDAD <lhurtados@unitru.edu.pe>
-            //- Vicepresidenta de SEDIPRO-2021
-
-            //INGRESO EN CONVOCATORIA 2020-I (Total : 7 personas)
-            [
-                //Ingresó a GTH el 08 de Noviembre 2020
-                'nombres' => 'Jesús David',
-                'apellidos' => 'Nuñez Arteaga',
-                'correo_personal' => NULL,
-                'correo_institucional' => 'jdnuneza@unitru.edu.pe',
+                'correo_institucional' => 'aasaavedrano@unitru.edu.pe',
                 'sexo' => 'Masculino',
-                'codigo' => 'J4N1',
+                'codigo' => 'A1S14',
                 'imagen_firma' => NULL,
             ],
-
-            //Aqui ingresó WILLIAN ALEXANDER PAREDES ROJAS <waparedesr@unitru.edu.pe> a GTH
-            //- Nuevo miembro de MKT en 2021
-            //- Director de MKT-2023
-
             [
-                //Ingresó a GTH el 08 de Noviembre 2020
-                'nombres' => 'Esmeralda Marianela',
-                'apellidos' => 'Valverde Moreno',
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a GTH el 2 De Mayo 2025
+                'nombres' => 'Luis Enrique',
+                'apellidos' => 'Montoya Aguirre',
                 'correo_personal' => NULL,
-                'correo_institucional' => 'evalverdem@unitru.edu.pe',
+                'correo_institucional' => 'lemontoyaa@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'L5M1',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a GTH el 2 De Mayo 2025
+                'nombres' => 'Cristhian Luis David',
+                'apellidos' => 'Sánchez Obeso',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'clsanchezo@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'C12D20O',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a GTH el 2 De Mayo 2025
+                'nombres' => 'Joaquin Adriano',
+                'apellidos' => 'Bocanegra Peláez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'jabocanegrap@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'J1B17',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a GTH el 2 De Mayo 2025
+                'nombres' => 'Emilly Nicoll',
+                'apellidos' => 'Zavaleta Chigne',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'enzavaletac@unitru.edu.pe',
                 'sexo' => 'Femenino',
-                'codigo' => 'E13V13',
+                'codigo' => 'F14Z3',
                 'imagen_firma' => NULL,
             ],
             [
-                //Ingresó a GTH el 08 de Noviembre 2020
-                'nombres' => 'Edgar Enrique',
-                'apellidos' => 'Grijalba Atavios',
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a GTH el 2 De Mayo 2025
+                'nombres' => 'Eleanor Marycielo',
+                'apellidos' => 'Roca Mendoza',
                 'correo_personal' => NULL,
-                'correo_institucional' => 'egrijalbaa@unitru.edu.pe',
-                'sexo' => 'Masculino',
-                'codigo' => 'E5G1',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //Ingresó a GTH el 08 de Noviembre 2020
-                'nombres' => 'Alexis Angel Raúl',
-                'apellidos' => 'Carrera Condo',
-                'correo_personal' => NULL,
-                'correo_institucional' => 'acarrerac@unitru.edu.pe',
-                'sexo' => 'Masculino',
-                'codigo' => 'A1R3C',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //Ingresó a GTH el 08 de Noviembre 2020
-                //Egresó el 03 de Abril de 2022
-                'nombres' => 'Kevin Alexander',
-                'apellidos' => 'Meregildo Garcia',
-                'correo_personal' => NULL,
-                'correo_institucional' => 'kmeregildo@unitru.edu.pe',
-                'sexo' => 'Masculino',
-                'codigo' => 'K1M7',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //Ingresó a GTH el 08 de Noviembre 2020
-                'nombres' => 'Hilda Patricia',
-                'apellidos' => 'Rodriguez Horna',
-                'correo_personal' => NULL,
-                'correo_institucional' => 'hrodriguezh@unitru.edu.pe',
+                'correo_institucional' => 'emrocam@unitru.edu.pe',
                 'sexo' => 'Femenino',
-                'codigo' => 'H17R8',
+                'codigo' => 'E13R13',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a GTH el 2 De Mayo 2025
+                'nombres' => 'Valeria Angelie',
+                'apellidos' => 'Valderrama Muñoz',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'vavalderramam@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'V1V13',
                 'imagen_firma' => NULL,
             ],
 
-            //INGRESO EN CONVOCATORIA 2021-I (Total : 11 personas)
+            //CONVOCATORIA EXTRAORDINARIA 2024(10-12-2024) (Total : 5 personas)
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a GTH el 10 De Diciembre 2024
+                'nombres' => 'Ana Nicoll',
+                'apellidos' => 'Segura Aredo',
+                'correo_personal' => 'anaseguraaredo@gmail.com',
+                'correo_institucional' => 'anseguraa@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'A14S1',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //Ingresó a GTH el 10 De Diciembre 2024
+                //Se le retiró de GTH por bajo rendimiento el 17 de Junio de 2025
+                'nombres' => 'Gerson Gabriel',
+                'apellidos' => 'Alfaro Tandaypan',
+                'correo_personal' => 'gersonalfa20@gmail.com',
+                'correo_institucional' => 't1051500121@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'G7A21',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //Ingresó a GTH el 10 De Diciembre 2024
+                'nombres' => 'Juan Diego',
+                'apellidos' => 'Hernández Jáuregui',
+                'correo_personal' => 'juanhjauregui15@gmail.com',
+                'correo_institucional' => 't1041500221@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'J4H10',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a GTH el 10 De Diciembre 2024
+                'nombres' => 'Corina Marilu',
+                'apellidos' => 'Sanchez Delgado',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'csanchezd@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'C13S4',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //Ingresó a GTH el 10 De Diciembre 2024
+                'nombres' => 'Andrweeu Daniel',
+                'apellidos' => 'Urtecho Avila',
+                'correo_personal' => 'aurtechoa@gmail.com',
+                'correo_institucional' => 'aurtechoa@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'A4U1',
+                'imagen_firma' => NULL,
+            ],
+
+            //CONVOCATORIA 2024(01-06-2024) (Total : 9 personas)
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a GTH el 01 De Junio 2024
+                'nombres' => 'José Daniel',
+                'apellidos' => 'Avila Santillan',
+                'correo_personal' => 'Josedanielsantiavila@gmail.com',
+                'correo_institucional' => 'jdavilas@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'J4A20',
+                'imagen_firma' => 'fotos_firmas/Jose Daniel Avila Santillan.png',
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a GTH el 01 De Junio 2024
+                'nombres' => 'Lisseth Adelaida',
+                'apellidos' => 'Chávez Rosales',
+                'correo_personal' => 'Chavezadelaida25@gmail.com',
+                'correo_institucional' => 'lichavezr@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'L1C19',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a GTH el 01 De Junio 2024
+                'nombres' => 'Mariann Estefany',
+                'apellidos' => 'Fernández Leyva',
+                'correo_personal' => 'maryferley.2004@gmail.com',
+                'correo_institucional' => 't1050102021@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'M5F12',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a GTH el 01 De Junio 2024
+                'nombres' => 'Michael Junior',
+                'apellidos' => 'García García',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1051300421@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'M10G7',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a GTH el 01 De Junio 2024
+                'nombres' => 'Nashaly Nicolle',
+                'apellidos' => 'Alama Terrones',
+                'correo_personal' => 'nashalyalamaterrones@gmail.com',
+                'correo_institucional' => 'nalama@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'N14A21',
+                'imagen_firma' => 'fotos_firmas/Nashaly Nicolle Alama Terrones.png',
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a GTH el 01 De Junio 2024
+                'nombres' => 'Renzo Georkael',
+                'apellidos' => 'Carrasco Lalangui',
+                'correo_personal' => 'renzocarrascola02@gmail.com', //Duda
+                'correo_institucional' => 'rgcarrascol@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'R7C12',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //Ingresó a GTH el 01 De Junio 2024
+                'nombres' => 'Rodrigo Marcial',
+                'apellidos' => 'Gamboa Gonzáles',
+                'correo_personal' => 'rodrigogg0812@gmail.com',
+                'correo_institucional' => 'rmgamboag@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'R13G7',
+                'imagen_firma' => NULL,
+            ],
+            /**
+                Silvana Valeria Pereda Llave
+                    //Aqui ingresó SILVANA VALERIA PEREDA LLAVE <speredal@unitru.edu.pe>
+                    //Ingresó a GTH el 01 de Junio de 2024
+                    //- Vicepresidenta SEDIPRO-2024
+            **/
+            [
+                //Ingresó a GTH el 01 De Junio 2024
+                'nombres' => 'Yrma Lucero',
+                'apellidos' => 'Carruitero Aspiros',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'ycarruitero@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'Y12C1',
+                'imagen_firma' => NULL,
+            ],
+
+            //CONVOCATORIA 2023-I (13-06-2023) (Total : 6 personas)
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a GTH el 13 De Junio 2023
+                'nombres' => 'Alisson Milagros',
+                'apellidos' => 'Pretell Canchas',
+                'correo_personal' => 'pretellalisson@gmail.com',
+                'correo_institucional' => 't050601920@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'A13P3',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a GTH el 13 De Junio 2023
+                'nombres' => 'Dulce Geraldine',
+                'apellidos' => 'Chavez Padilla',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1051302521@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'D7C17',
+                'imagen_firma' => NULL,
+            ],
+            /**
+                Romina Alejandra Seclen Cespedes
+                    //Aqui ingresó ROMINA ALEJANDRA SECLEN CESPEDES <t1052500521@unitru.edu.pe>
+                    //Ingresó a GTH el 13 De Junio 2023
+                    //- Vicepresidenta SEDIPRO-2024
+            **/
+            [
+                //Ingresó a GTH el 13 De Junio 2023
+                'nombres' => 'Fernando Felipe',
+                'apellidos' => 'Sanchez Palacios',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't054000920@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'F6S17',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //Ingresó a GTH el 13 De Junio 2023
+                'nombres' => 'Luz Karina',
+                'apellidos' => 'Angulo Urbina',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'lkangulour@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'L11A22',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //Ingresó a GTH el 13 De Junio 2023
+                'nombres' => 'Santos Maria',
+                'apellidos' => 'Juarez Cruz',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'sjuarez@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'S13J3',
+                'imagen_firma' => NULL,
+            ],
+
+            //CONVOCATORIA EXTRAORDINARIA 2022(20-12-2022) (Total : 4 personas)
+            [
+                //Ingresó a GTH el 20 De Diciembre 2022
+                //Se retiró de GTH el 07 de Marzo de 2024
+                'nombres' => 'Angela Valentina',
+                'apellidos' => 'Castro Esquivel',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't020600820@unitru.edu.pe ',
+                'sexo' => 'Femenino',
+                'codigo' => 'A23C5',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //Ingresó a GTH el 20 De Diciembre 2022
+                //Se retiró de GTH por bajo rendimiento el 06 de Octubre de 2023
+                'nombres' => 'Fernando Javier',
+                'apellidos' => 'Paredes Juarez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1051501221@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'F10P10',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //Ingresó a GTH el 20 De Diciembre 2022
+                //Se retiró voluntariamente de GTH el 03 de Enero de 2024
+                'nombres' => 'Roger Alfredo',
+                'apellidos' => 'Morante Escajadillo',
+                'correo_personal' => 'rogermoresc@gmail.com',
+                'correo_institucional' => 'rmorante@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'R1M5',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //Ingresó a GTH el 20 De Diciembre 2022
+                //Se retiró de GTH a finales del 2024
+                'nombres' => 'Yuliana Zarai',
+                'apellidos' => 'Cuadra Rodriguez',
+                'correo_personal' => 'Zaraicuadra18@gmail.com',
+                'correo_institucional' => 't1020100521@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'Y27C19',
+                'imagen_firma' => NULL,
+            ],
+
+            //CONVOCATORIA 2022-I (10-05-2022) (Total : 8 personas)
+            /**
+                Marina Lizeth Gonzales Torres
+                    //Aqui ingresó MARINA LIZETH GONZALES TORRES <t1510600121@unitru.edu.pe>
+                    //Ingresó a GTH el 10 de Mayo 2022
+                    //- Directora de GTH-2025
+            **/ 
+            [
+                'nombres' => 'Santiago Alonso',
+                'apellidos' => 'Morales Flores',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't010601720@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'S1M6',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Eduardo David',
+                'apellidos' => 'Risco Rios',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't514000420@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'E4R19',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Aitana Sofía',
+                'apellidos' => 'Requejo Valle',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't050100720@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'A20R23',
+                'imagen_firma' => 'fotos_firmas/Aitana Sofia Requejo Valle.png',
+            ],
+            /**
+                Bricey Jazmin Ruiz Rodriguez
+                    //Aqui ingresó BRICELLY JAZMIN RUIZ RODRIGUEZ <t020101420@unitru.edu.pe>
+                    //Ingresó a GTH el 10 de Mayo 2022
+                    //- Directora de GTH-2024
+            **/
+            [
+                'nombres' => 'Brayan Micael',
+                'apellidos' => 'Linares Oyos',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'blinares@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'B13L16',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Miguel Segundo',
+                'apellidos' => 'Cabrera Morales',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't020100320@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'M20C13',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Ariana Esther',
+                'apellidos' => 'Navarro Zavaleta',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1510602021@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'A5N27',
+                'imagen_firma' => NULL,
+            ],
+            [
+                'nombres' => 'Crhistian Fernando',
+                'apellidos' => 'Hilario Salvador',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'chilario@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'C6H20',
+                'imagen_firma' => NULL,
+            ],
+
+            //CONVOCATORIA 2021-I (20-11-2021) (Total : 11 personas)
             [
                 //Ingresó a GTH el 20 de Noviembre 2021
                 'nombres' => 'Beatriz Nancy',
@@ -622,8 +937,12 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'B14B12',
                 'imagen_firma' => NULL,
             ],
-            //Aqui ingresó YESSENIA JACKELYNE ANGULO URBINA <t510601520@unitru.edu.pe>
-            //- Directora de GTH-2023
+            /**
+                Yessenia Jackelyne Angulo Urbina
+                    //Aqui ingresó YESSENIA JACKELYNE ANGULO URBINA <t510601520@unitru.edu.pe>
+                    //Ingresó a GTH el 20 de Noviembre 2021
+                    //- Directora de GTH-2023
+            **/
             [
                 //Ingresó a GTH el 20 de Noviembre 2021
                 'nombres' => 'Carlos Alberto',
@@ -716,520 +1035,165 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
 
-            //Ingresó en CONVOCATORIA 2022-I (Total : 8 personas)
-
-            //Aqui ingresó MARINA LIZETH GONZALES TORRES <t1510600121@unitru.edu.pe>
-            //- Directora de GTH-2025
+            //CONVOCATORIA 2020-I (08-11-2020) (Total : 7 personas)
             [
-                'nombres' => 'Santiago Alonso',
-                'apellidos' => 'Morales Flores',
+                //Ingresó a GTH el 08 de Noviembre 2020
+                'nombres' => 'Jesús David',
+                'apellidos' => 'Nuñez Arteaga',
                 'correo_personal' => NULL,
-                'correo_institucional' => 't010601720@unitru.edu.pe',
+                'correo_institucional' => 'jdnuneza@unitru.edu.pe',
                 'sexo' => 'Masculino',
-                'codigo' => 'S1M6',
+                'codigo' => 'J4N1',
+                'imagen_firma' => NULL,
+            ],
+            /**
+                Willian Alexander Paredes Rojas
+                    //Aqui ingresó WILLIAN ALEXANDER PAREDES ROJAS <waparedesr@unitru.edu.pe>
+                    //Ingresó a GTH el 08 de Noviembre 2020
+                    //Se cambió a MKT en 2021
+                    //- Director de MKT-2023
+                    //Egresó de MKT el 08 de Marzo 2024
+            **/
+            [
+                //Ingresó a GTH el 08 de Noviembre 2020
+                'nombres' => 'Esmeralda Marianela',
+                'apellidos' => 'Valverde Moreno',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'evalverdem@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'E13V13',
                 'imagen_firma' => NULL,
             ],
             [
-                'nombres' => 'Eduardo David',
-                'apellidos' => 'Risco Rios',
+                //Ingresó a GTH el 08 de Noviembre 2020
+                'nombres' => 'Edgar Enrique',
+                'apellidos' => 'Grijalba Atavios',
                 'correo_personal' => NULL,
-                'correo_institucional' => 't514000420@unitru.edu.pe',
+                'correo_institucional' => 'egrijalbaa@unitru.edu.pe',
                 'sexo' => 'Masculino',
-                'codigo' => 'E4R19',
+                'codigo' => 'E5G1',
                 'imagen_firma' => NULL,
             ],
             [
-                'nombres' => 'Aitana Sofia',
-                'apellidos' => 'Requejo Valle',
+                //Ingresó a GTH el 08 de Noviembre 2020
+                'nombres' => 'Alexis Angel Raúl',
+                'apellidos' => 'Carrera Condo',
                 'correo_personal' => NULL,
-                'correo_institucional' => 't050100720@unitru.edu.pe',
-                'sexo' => 'Femenino',
-                'codigo' => 'A20R23',
-                'imagen_firma' => NULL,
-            ],
-
-            //Aqui ingresó BRICELLY JAZMIN RUIZ RODRIGUEZ <t020101420@unitru.edu.pe>
-            //- Directora de GTH-2024
-
-            [
-                'nombres' => 'Brayan Micael',
-                'apellidos' => 'Linares Oyos',
-                'correo_personal' => NULL,
-                'correo_institucional' => 'blinares@unitru.edu.pe',
+                'correo_institucional' => 'acarrerac@unitru.edu.pe',
                 'sexo' => 'Masculino',
-                'codigo' => 'B13L16',
+                'codigo' => 'A1R3C',
                 'imagen_firma' => NULL,
             ],
             [
-                'nombres' => 'Miguel Segundo',
-                'apellidos' => 'Cabrera Morales',
+                //Ingresó a GTH el 08 de Noviembre 2020
+                //Egresó el 03 de Abril de 2022
+                'nombres' => 'Kevin Alexander',
+                'apellidos' => 'Meregildo Garcia',
                 'correo_personal' => NULL,
-                'correo_institucional' => 't020100320@unitru.edu.pe',
+                'correo_institucional' => 'kmeregildo@unitru.edu.pe',
                 'sexo' => 'Masculino',
-                'codigo' => 'M20C13',
+                'codigo' => 'K1M7',
                 'imagen_firma' => NULL,
             ],
             [
-                'nombres' => 'Ariana Esther',
-                'apellidos' => 'Navarro Zavaleta',
+                //Ingresó a GTH el 08 de Noviembre 2020
+                'nombres' => 'Hilda Patricia',
+                'apellidos' => 'Rodriguez Horna',
                 'correo_personal' => NULL,
-                'correo_institucional' => 't1510602021@unitru.edu.pe',
+                'correo_institucional' => 'hrodriguezh@unitru.edu.pe',
                 'sexo' => 'Femenino',
-                'codigo' => 'A5N27',
-                'imagen_firma' => NULL,
-            ],
-            [
-                'nombres' => 'Crhistian Fernando',
-                'apellidos' => 'Hilario Salvador',
-                'correo_personal' => NULL,
-                'correo_institucional' => 'chilario@unitru.edu.pe',
-                'sexo' => 'Masculino',
-                'codigo' => 'C6H20',
-                'imagen_firma' => NULL,
-            ],
-
-            //Ingresó en CONVOCATORIA 2023-I (Total : 6 personas)
-            [
-                //MIEMBRO ACTIVO 2025-I
-                //Ingresó a GTH el 13 De Junio 2023
-                'nombres' => 'Alisson Milagros',
-                'apellidos' => 'Pretell Canchas',
-                'correo_personal' => 'pretellalisson@gmail.com',
-                'correo_institucional' => 't050601920@unitru.edu.pe',
-                'sexo' => 'Femenino',
-                'codigo' => 'A13P3',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //MIEMBRO ACTIVO 2025-I
-                //Ingresó a GTH el 13 De Junio 2023
-                'nombres' => 'Dulce Geraldine',
-                'apellidos' => 'Chavez Padilla',
-                'correo_personal' => NULL,
-                'correo_institucional' => 't1051302521@unitru.edu.pe',
-                'sexo' => 'Femenino',
-                'codigo' => 'D7C17',
-                'imagen_firma' => NULL,
-            ],
-            //Aqui ingresó ROMINA ALEJANDRA SECLEN CESPEDES <t1052500521@unitru.edu.pe>
-            //- Vicepresidenta SEDIPRO-2024
-            [
-                //Ingresó a GTH el 13 De Junio 2023
-                'nombres' => 'Fernando Felipe',
-                'apellidos' => 'Sanchez Palacios',
-                'correo_personal' => NULL,
-                'correo_institucional' => 't054000920@unitru.edu.pe',
-                'sexo' => 'Masculino',
-                'codigo' => 'F6S17',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //Ingresó a GTH el 13 De Junio 2023
-                'nombres' => 'Luz Karina',
-                'apellidos' => 'Angulo Urbina',
-                'correo_personal' => NULL,
-                'correo_institucional' => 'lkangulour@unitru.edu.pe',
-                'sexo' => 'Femenino',
-                'codigo' => 'L11A22',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //Ingresó a GTH el 13 De Junio 2023
-                'nombres' => 'Santos Maria',
-                'apellidos' => 'Juarez Cruz',
-                'correo_personal' => NULL,
-                'correo_institucional' => 'sjuarez@unitru.edu.pe',
-                'sexo' => 'Femenino',
-                'codigo' => 'S13J3',
+                'codigo' => 'H17R8',
                 'imagen_firma' => NULL,
             ],
 
+            //CONVOCATORIA 2019-I (03-09-2019) (Total : 9 personas)
+            [
+                //Ingresó a GTH el 03 de Septiembre 2019
+                'nombres' => 'Fiorella Alexandra',
+                'apellidos' => 'Alfaro Aguilar',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'falfaro@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'F1A1',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //Ingresó a GTH el 03 de Septiembre 2019
+                'nombres' => 'Leydi Estefani',
+                'apellidos' => 'Cueva Zavaleta',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'lcuevaz@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'L5C27',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //Ingresó a GTH el 03 de Septiembre 2019
+                //Egresó el 03 de Abril de 2022
+                'nombres' => 'Angela Mariel',
+                'apellidos' => 'Pereda Morales',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'aperedaa@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'A13P13',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //Ingresó a GTH el 03 de Septiembre 2019
+                'nombres' => 'Fiorella Rocio',
+                'apellidos' => 'Reyes Cruz',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'freyesc@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'F19R3',
+                'imagen_firma' => NULL,
+            ],
+            /**
+                Melva Noemi Carranza Rodriguez
+                    //Aqui ingresó MELVA NOEMI CARRANZA RODRIGUEZ <noemi.02.carranza@gmail.com>
+                    //Ingresó a GTH el 03 de Septiembre 2019
+                    //- Directora de GTH-2020
+                    //- Presidenta de SEDIPRO-2021
+                    //Egresó de GTH el 03 de Abril de 2022
+            **/
+            [
+                //Ingresó a GTH el 03 de Septiembre 2019
+                'nombres' => 'Azucena Lisseth',
+                'apellidos' => 'Dominguez Vargas',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'aldominguezv@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'A12D23',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //Ingresó a GTH el 03 de Septiembre 2019
+                'nombres' => 'Angelica Alicia',
+                'apellidos' => 'Campuzano Guevara',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'acampuzanoa@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'A1C7',
+                'imagen_firma' => NULL,
+            ],
+            /**
+                José Armando Vasquez Lopez
+                    //Aqui ingresó JOSE ARMANDO VASQUEZ LOPEZ <jvasquezl@unitru.edu.pe>
+                    //Ingresó a GTH el 03 de Septiembre 2019
+                    //- Director de GTH-2021
+            **/
+            /**
+                Lucciana Kathiuzka Hurtado Soledad
+                    //Aqui ingresó LUCCIANA KATHIUZKA HURTADO SOLEDAD <lhurtados@unitru.edu.pe>
+                    //Ingresó a GTH el 03 de Septiembre 2019
+                    //- Vicepresidenta de SEDIPRO-2021
+            **/
 
-            [
-                //MIEMBRO ACTIVO 2025-I
-                //Ingresó a GTH el 10 De Diciembre 2024
-                'nombres' => 'Ana Nicoll',
-                'apellidos' => 'Segura Aredo',
-                'correo_personal' => 'anaseguraaredo@gmail.com',
-                'correo_institucional' => 'anseguraa@unitru.edu.pe',
-                'sexo' => 'Femenino',
-                'codigo' => 'A14S1',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //Ingresó a GTH el 10 De Diciembre 2024
-                //Se le retiró de GTH por bajo rendimiento el 17 de Junio de 2025
-                'nombres' => 'Gerson Gabriel',
-                'apellidos' => 'Alfaro Tandaypan',
-                'correo_personal' => 'gersonalfa20@gmail.com',
-                'correo_institucional' => 't1051500121@unitru.edu.pe',
-                'sexo' => 'Masculino',
-                'codigo' => 'G7A21',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //MIEMBRO ACTIVO 2025-I
-                //Ingresó a GTH el 01 De Junio 2024
-                'nombres' => 'José Daniel',
-                'apellidos' => 'Avila Santillan',
-                'correo_personal' => 'Josedanielsantiavila@gmail.com',
-                'correo_institucional' => 'jdavilas@unitru.edu.pe',
-                'sexo' => 'Masculino',
-                'codigo' => 'J4A20',
-                'imagen_firma' => NULL,
-            ],
-            [
-                'nombres' => 'Juan Diego',
-                'apellidos' => 'Hernández Jáuregui',
-                'correo_personal' => 'juanhjauregui15@gmail.com',
-                'correo_institucional' => 't1041500221@unitru.edu.pe',
-                'sexo' => 'Masculino',
-                'codigo' => 'J4H10',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //MIEMBRO ACTIVO 2025-I
-                //Ingresó a GTH el 01 De Junio 2024
-                'nombres' => 'Lisseth Adelaida',
-                'apellidos' => 'Chávez Rosales',
-                'correo_personal' => 'Chavezadelaida25@gmail.com',
-                'correo_institucional' => 'lichavezr@unitru.edu.pe',
-                'sexo' => 'Femenino',
-                'codigo' => 'L1C19',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //MIEMBRO ACTIVO 2025-I
-                //Ingresó a GTH el 01 De Junio 2024
-                'nombres' => 'Mariann Estefany',
-                'apellidos' => 'Fernández Leyva',
-                'correo_personal' => 'maryferley.2004@gmail.com',
-                'correo_institucional' => 't1050102021@unitru.edu.pe',
-                'sexo' => 'Femenino',
-                'codigo' => 'M5F12',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //MIEMBRO ACTIVO 2025-I
-                //Ingresó a GTH el 01 De Junio 2024
-                'nombres' => 'Michael Junior',
-                'apellidos' => 'García García',
-                'correo_personal' => NULL,
-                'correo_institucional' => 't1051300421@unitru.edu.pe',
-                'sexo' => 'Masculino',
-                'codigo' => 'M10G7',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //MIEMBRO ACTIVO 2025-I
-                //Ingresó a GTH el 01 De Junio 2024
-                'nombres' => 'Nashaly Nicolle',
-                'apellidos' => 'Alama Terrones',
-                'correo_personal' => 'nashalyalamaterrones@gmail.com',
-                'correo_institucional' => 'nalama@unitru.edu.pe',
-                'sexo' => 'Femenino',
-                'codigo' => 'N14A21',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //MIEMBRO ACTIVO 2025-I
-                //Ingresó a GTH el 01 De Junio 2024
-                'nombres' => 'Renzo Georkael',
-                'apellidos' => 'Carrasco Lalangui',
-                'correo_personal' => 'renzocarrascola02@gmail.com', //Duda
-                'correo_institucional' => 'rgcarrascol@unitru.edu.pe',
-                'sexo' => 'Masculino',
-                'codigo' => 'R7C12',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //MIEMBRO ACTIVO 2025-I
-                //Ingresó a GTH el 10 De Diciembre 2024
-                'nombres' => 'Corina Marilu',
-                'apellidos' => 'Sanchez Delgado',
-                'correo_personal' => NULL,
-                'correo_institucional' => 'csanchezd@unitru.edu.pe',
-                'sexo' => 'Femenino',
-                'codigo' => 'C13S4',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //Ingresó a GTH el 10 De Diciembre 2025
-                'nombres' => 'Andrweeu Daniel',
-                'apellidos' => 'Urtecho Avila',
-                'correo_personal' => 'aurtechoa@gmail.com',
-                'correo_institucional' => 'aurtechoa@unitru.edu.pe',
-                'sexo' => 'Masculino',
-                'codigo' => 'A4U1',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //MIEMBRO ACTIVO 2025-I
-                //Ingresó a GTH el 2 De Mayo 2025
-                'nombres' => 'Anderson Alexander',
-                'apellidos' => 'Saavedra Nolasco',
-                'correo_personal' => NULL,
-                'correo_institucional' => 'aasaavedrano@unitru.edu.pe',
-                'sexo' => 'Masculino',
-                'codigo' => 'A1S14',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //MIEMBRO ACTIVO 2025-I
-                //Ingresó a GTH el 2 De Mayo 2025
-                'nombres' => 'Luis Enrique',
-                'apellidos' => 'Montoya Aguirre',
-                'correo_personal' => NULL,
-                'correo_institucional' => 'lemontoyaa@unitru.edu.pe',
-                'sexo' => 'Masculino',
-                'codigo' => 'L5M1',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //MIEMBRO ACTIVO 2025-I
-                //Ingresó a GTH el 2 De Mayo 2025
-                'nombres' => 'Cristhian Luis David',
-                'apellidos' => 'Sánchez Obeso',
-                'correo_personal' => NULL,
-                'correo_institucional' => 'clsanchezo@unitru.edu.pe',
-                'sexo' => 'Masculino',
-                'codigo' => 'C12D20O',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //MIEMBRO ACTIVO 2025-I
-                //Ingresó a GTH el 2 De Mayo 2025
-                'nombres' => 'Joaquin Adriano',
-                'apellidos' => 'Bocanegra Peláez',
-                'correo_personal' => NULL,
-                'correo_institucional' => 'jabocanegrap@unitru.edu.pe',
-                'sexo' => 'Masculino',
-                'codigo' => 'J1B17',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //MIEMBRO ACTIVO 2025-I
-                //Ingresó a GTH el 2 De Mayo 2025
-                'nombres' => 'Emilly Nicoll',
-                'apellidos' => 'Zavaleta Chigne',
-                'correo_personal' => NULL,
-                'correo_institucional' => 'enzavaletac@unitru.edu.pe',
-                'sexo' => 'Femenino',
-                'codigo' => 'F14Z3',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //MIEMBRO ACTIVO 2025-I
-                //Ingresó a GTH el 2 De Mayo 2025
-                'nombres' => 'Eleanor Marycielo',
-                'apellidos' => 'Roca Mendoza',
-                'correo_personal' => NULL,
-                'correo_institucional' => 'emrocam@unitru.edu.pe',
-                'sexo' => 'Femenino',
-                'codigo' => 'E13R13',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //MIEMBRO ACTIVO 2025-I
-                //Ingresó a GTH el 2 De Mayo 2025
-                'nombres' => 'Valeria Angelie',
-                'apellidos' => 'Valderrama Muñoz',
-                'correo_personal' => NULL,
-                'correo_institucional' => 'vavalderramam@unitru.edu.pe',
-                'sexo' => 'Femenino',
-                'codigo' => 'V1V13',
-                'imagen_firma' => NULL,
-            ],
-            [
-                'nombres' => 'Rodrigo Marcial',
-                'apellidos' => 'Gamboa Gonzáles',
-                'correo_personal' => 'rodrigogg0812@gmail.com',
-                'correo_institucional' => 'rmgamboag@unitru.edu.pe',
-                'sexo' => 'Masculino',
-                'codigo' => 'R13G7',
-                'imagen_firma' => NULL,
-            ],
-            [
-                'nombres' => 'Yrma Lucero',
-                'apellidos' => 'Carruitero Aspiros',
-                'correo_personal' => NULL,
-                'correo_institucional' => 'ycarruitero@unitru.edu.pe',
-                'sexo' => 'Femenino',
-                'codigo' => 'Y12C1',
-                'imagen_firma' => NULL,
-            ],
-            [
-                'nombres' => 'Yuliana Zarai',
-                'apellidos' => 'Cuadra Rodriguez',
-                'correo_personal' => 'Zaraicuadra18@gmail.com',
-                'correo_institucional' => 't1020100521@unitru.edu.pe',
-                'sexo' => 'Femenino',
-                'codigo' => 'Y27C19',
-                'imagen_firma' => NULL,
-            ],
-
-            /********************************************
-             *************** ÁREA DE LTK&FNZ ************
-             ******************************************* */
-            //Total de miembros activos en LTK&FNZ - 21
-            [
-                //MIEMBRO ACTIVO 2025-I
-                //Ingresó a MKT el 20 De Noviembre 2021
-                //Se cambió a LTK&FNZ el 03 de Mayo 2023
-                'nombres' => 'Jhosmel Anderson',
-                'apellidos' => 'Vigo Cepeda',
-                'correo_personal' => 'jhosmelvigoc4@gmail.com',
-                'correo_institucional' => 't1511601421@unitru.edu.pe',
-                'sexo' => 'Masculino',
-                'codigo' => 'J1V3',
-                'imagen_firma' => NULL, //Falta firma por ser DP
-            ],
-            [
-                //MIEMBRO ACTIVO 2025-I
-                //Ingresó a LTK&FNZ el 20 De Diciembre 2022 (Convo-Extraordinaria)
-                'nombres' => 'Fernanda Milagros',
-                'apellidos' => 'Rojas Rodriguez',
-                'correo_personal' => NULL,
-                'correo_institucional' => 't1510101721@unitru.edu.pe',
-                'sexo' => 'Femenino',
-                'codigo' => 'F13R19',
-                'imagen_firma' => NULL,
-            ],
-            //Aqui ingresó SEBASTIAN EMANUEL FACUNDO REYES <t1512400421@unitru.edu.pe> 
-            //Ingresó a LTK&FNZ el 20 de Diciembre de 2022(Convo-Extraordinaria)
-            //- Director de LTK&FNZ-2024
-            [
-                //MIEMBRO ACTIVO 2025-I
-                //Ingresó a LTK&FNZ el 13 De Junio 2023
-                'nombres' => 'Kevin Gamaliel',
-                'apellidos' => 'Rodríguez Alfaro',
-                'correo_personal' => NULL,
-                'correo_institucional' => 't1510101021@unitru.edu.pe',
-                'sexo' => 'Masculino',
-                'codigo' => 'K7R1',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //MIEMBRO ACTIVO 2025-I
-                //Ingresó a LTK&FNZ el 01 De Junio 2024
-                'nombres' => 'Grecia Alexandra',
-                'apellidos' => 'Paredes Cachique',
-                'correo_personal' => NULL,
-                'correo_institucional' => 'gaparedesca@unitru.edu.pe',
-                'sexo' => 'Femenino',
-                'codigo' => 'G1P3',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //Ingresó a MKT el 01 De Junio 2024
-                //Se le retiró de LTK&FNZ por bajo rendimiento el 15 de Julio de 2025
-                'nombres' => 'Jimmy Andersonn',
-                'apellidos' => 'Cáceda Olivera',
-                'correo_personal' => NULL,
-                'correo_institucional' => 'jcacedao@unitru.edu.pe',
-                'sexo' => 'Masculino',
-                'codigo' => 'J1C16',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //MIEMBRO ACTIVO 2025-I
-                //Ingresó a LTK&FNZ el 01 De Junio 2024 
-                'nombres' => 'Maria Fernanda',
-                'apellidos' => 'Pretell Leon',
-                'correo_personal' => NULL,
-                'correo_institucional' => 't1010700721@unitru.edu.pe',
-                'sexo' => 'Femenino',
-                'codigo' => 'M6P12',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //MIEMBRO ACTIVO 2025-I
-                //Ingresó a LTK&FNZ el 01 De Junio 2024 
-                'nombres' => 'Mixie Arleni',
-                'apellidos' => 'Gil Zapata',
-                'correo_personal' => NULL,
-                'correo_institucional' => 'magilza@unitru.edu.pe',
-                'sexo' => 'Femenino',
-                'codigo' => 'M1G27',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //MIEMBRO ACTIVO 2025-I
-                //Ingresó a LTK&FNZ el 01 De Junio 2024 
-                'nombres' => 'Nestor Rafael',
-                'apellidos' => 'Placencia De la Cruz',
-                'correo_personal' => NULL,
-                'correo_institucional' => 'nrplasenciade@unitru.edu.pe',
-                'sexo' => 'Masculino',
-                'codigo' => 'N19P4L3',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //MIEMBRO ACTIVO 2025-I
-                //Ingresó a LTK&FNZ el 01 De Junio 2024
-                'nombres' => 'Tatiana Yuleisy',
-                'apellidos' => 'Aliaga Pretell',
-                'correo_personal' => NULL,
-                'correo_institucional' => 'taliaga@unitru.edu.pe',
-                'sexo' => 'Femenino',
-                'codigo' => 'T26A17',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //MIEMBRO ACTIVO 2025-I
-                //Ingresó a LTK&FNZ el 10 De Diciembre 2024
-                'nombres' => 'Christian Rodrigo',
-                'apellidos' => 'Valverde Caspito',
-                'correo_personal' => 'christiancvalverdecaspito@gmail.com',
-                'correo_institucional' => 'crvalverdeca@unitru.edu.pe',
-                'sexo' => 'Masculino',
-                'codigo' => 'C19V3',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //MIEMBRO ACTIVO 2025-I
-                //Ingresó a LTK&FNZ el 10 De Diciembre 2024
-                'nombres' => 'Eddie Alessandro',
-                'apellidos' => 'Jiménez Vilchez',
-                'correo_personal' => 'eddiealessandro20@gmail.com',
-                'correo_institucional' => 'ejimenezv@unitru.edu.pe',
-                'sexo' => 'Masculino',
-                'codigo' => 'E1J23',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //MIEMBRO ACTIVO 2025-I
-                //Ingresó a LTK&FNZ el 10 De Diciembre 2024
-                'nombres' => 'Fabián Nicolas',
-                'apellidos' => 'Paredes Calderón',
-                'correo_personal' => NULL,
-                'correo_institucional' => 'fnparedesca@unitru.edu.pe',
-                'sexo' => 'Masculino',
-                'codigo' => 'F14P3',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //MIEMBRO ACTIVO 2025-I
-                //Ingresó a LTK&FNZ el 10 De Diciembre 2024
-                'nombres' => 'Kiara Marife',
-                'apellidos' => 'Rodriguez Sifuentes',
-                'correo_personal' => NULL,
-                'correo_institucional' => 'krodriguezsi@unitru.edu.pe',
-                'sexo' => 'Femenino',
-                'codigo' => 'K13R20',
-                'imagen_firma' => NULL,
-            ],
-            [
-                //MIEMBRO ACTIVO 2025-I
-                //Ingresó a LTK&FNZ el 10 De Diciembre 2024
-                'nombres' => 'Luis Angel',
-                'apellidos' => 'Laureano Escobedo',
-                'correo_personal' => 'luislaureanoescobedo@gmail.com',
-                'correo_institucional' => 't1511300521@unitru.edu.pe',
-                'sexo' => 'Masculino',
-                'codigo' => 'L1L5',
-                'imagen_firma' => NULL,
-            ],
+            /****************************************************
+             ****************** ÁREA DE LTK&FNZ *****************
+             **************** Miembros activos: 21 **************
+             ****************************************************/
+            //CONVOCATORIA 2025(02-05-2025) (Total : 7 personas)
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a LTK&FNZ el 02 De Mayo 2025
@@ -1307,11 +1271,319 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'Y12R21',
                 'imagen_firma' => NULL,
             ],
+            
+            //CONVOCATORIA EXTRAORDINARIA 2024(10-12-2024) (Total : 5 personas)
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a LTK&FNZ el 10 De Diciembre 2024
+                'nombres' => 'Christian Rodrigo',
+                'apellidos' => 'Valverde Caspito',
+                'correo_personal' => 'christiancvalverdecaspito@gmail.com',
+                'correo_institucional' => 'crvalverdeca@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'C19V3',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a LTK&FNZ el 10 De Diciembre 2024
+                'nombres' => 'Eddie Alessandro',
+                'apellidos' => 'Jiménez Vilchez',
+                'correo_personal' => 'eddiealessandro20@gmail.com',
+                'correo_institucional' => 'ejimenezv@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'E1J23',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a LTK&FNZ el 10 De Diciembre 2024
+                'nombres' => 'Fabián Nicolas',
+                'apellidos' => 'Paredes Calderón',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'fnparedesca@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'F14P3',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a LTK&FNZ el 10 De Diciembre 2024
+                'nombres' => 'Kiara Marife',
+                'apellidos' => 'Rodriguez Sifuentes',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'krodriguezsi@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'K13R20',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a LTK&FNZ el 10 De Diciembre 2024
+                'nombres' => 'Luis Angel',
+                'apellidos' => 'Laureano Escobedo',
+                'correo_personal' => 'luislaureanoescobedo@gmail.com',
+                'correo_institucional' => 't1511300521@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'L1L5',
+                'imagen_firma' => NULL,
+            ],
 
-            /*******************************************
-             *************** ÁREA DE MKT ***************
-             ******************************************* */
-            //Total de miembros activos en MKT - 22
+            //CONVOCATORIA 2024(01-06-2024) (Total : 8 personas)
+            /**
+                Diego Jesús Rodríguez Sabana
+                    //Aqui ingresó DIEGO JESUS RODRIGUEZ SABANA <t1010100421@unitru.edu.pe> 
+                    //Ingresó a LTK&FNZ el 01 de Junio de 2024
+                    //- Director de LTK&FNZ-2025
+            **/
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a LTK&FNZ el 01 De Junio 2024
+                'nombres' => 'Grecia Alexandra',
+                'apellidos' => 'Paredes Cachique',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'gaparedesca@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'G1P3',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //Ingresó a MKT el 01 De Junio 2024
+                //Se le retiró de LTK&FNZ por bajo rendimiento el 15 de Julio de 2025
+                'nombres' => 'Jimmy Andersonn',
+                'apellidos' => 'Cáceda Olivera',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'jcacedao@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'J1C16',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //Ingresó a MKT el 01 De Junio 2024
+                //Se le retiró voluntariamente de LTK&FNZ el 27 de Septiembre de 2024
+                'nombres' => 'Jimmy Javier',
+                'apellidos' => 'Tisnado Sauceda',
+                'correo_personal' => 'jimmytisnado1419@gmail.com',
+                'correo_institucional' => 't1050101421@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'J10T20',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a LTK&FNZ el 01 De Junio 2024 
+                'nombres' => 'Maria Fernanda',
+                'apellidos' => 'Pretell Leon',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1010700721@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'M6P12',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a LTK&FNZ el 01 De Junio 2024 
+                'nombres' => 'Mixie Arleni',
+                'apellidos' => 'Gil Zapata',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'magilza@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'M1G27',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a LTK&FNZ el 01 De Junio 2024 
+                'nombres' => 'Nestor Rafael',
+                'apellidos' => 'Plasencia De la Cruz',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'nrplasenciade@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'N19P4L3',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a LTK&FNZ el 01 De Junio 2024
+                'nombres' => 'Tatiana Yuleisy',
+                'apellidos' => 'Aliaga Pretell',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'taliaga@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'T26A17',
+                'imagen_firma' => NULL,
+            ],
+
+            //CONVOCATORIA 2023-I (13-06-2023) (Total : 4 personas)
+            [
+                //Ingresó a LTK&FNZ el 13 De Junio 2023
+                //Egresó en LTK&FNZ el 17 de marzo de 2025
+                'nombres' => 'Candy Yoana',
+                'apellidos' => 'Castro Torres',
+                'correo_personal' => 'yoanacast1728@gmail.com',
+                'correo_institucional' => 't051301320@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'C26C21',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //Ingresó a LTK&FNZ el 13 De Junio 2023
+                //Egresó en LTK&FNZ el 17 de marzo de 2025
+                'nombres' => 'Handalee Georjina',
+                'apellidos' => 'Graus Silva',
+                'correo_personal' => 'handaleegraussilva@gmail.com',
+                'correo_institucional' => 't050101020@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'H7G20',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //Ingresó a LTK&FNZ el 13 De Junio 2023
+                //Egresó en LTK&FNZ el 17 de marzo de 2025
+                'nombres' => 'Jean Cristopher Elias',
+                'apellidos' => 'León Mallqui',
+                'correo_personal' => 'jeanleon1302@gmail.com',
+                'correo_institucional' => 't513701420@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'J3E12M',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a LTK&FNZ el 13 De Junio 2023
+                'nombres' => 'Kevin Gamaliel',
+                'apellidos' => 'Rodríguez Alfaro',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1510101021@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'K7R1',
+                'imagen_firma' => 'fotos_firmas/Kevin Gamaliel Rodriguez Alfaro.png',
+            ],
+
+            //CONVOCATORIA EXTRAORDINARIA 2022(20-12-2022) (Total : 5 personas)
+            [
+                //Ingresó a LTK&FNZ el 20 De Diciembre 2022 (Convo-Extraordinaria)
+                //Egresó en LTK&FNZ el 17 de marzo de 2025
+                'nombres' => 'Bryan Anghelo Michael',
+                'apellidos' => 'Perez Proaño',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'baperezp@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'B1M17P',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a LTK&FNZ el 20 De Diciembre 2022 (Convo-Extraordinaria)
+                'nombres' => 'Fernanda Milagros',
+                'apellidos' => 'Rojas Rodriguez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1510101721@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'F13R19',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //Ingresó a LTK&FNZ el 20 De Diciembre 2022 (Convo-Extraordinaria)
+                //Se retiró voluntariamente de LTK&FNZ el 22 de Noviembre de 2024
+                'nombres' => 'José Carlos',
+                'apellidos' => 'Cabrera Huaman',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1051300221@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'J3C8',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //Ingresó a LTK&FNZ el 20 De Diciembre 2022 (Convo-Extraordinaria)
+                //Se retiró voluntariamente de LTK&FNZ el 01 de Octubre de 2024
+                'nombres' => 'Karol Nicolle',
+                'apellidos' => 'Apaza Rodriguez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't510100720@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'K14A19',
+                'imagen_firma' => NULL,
+            ],
+            /**
+                Sebastian Emanuel Facundo Reyes
+                    //Aqui ingresó SEBASTIAN EMANUEL FACUNDO REYES <t1512400421@unitru.edu.pe> 
+                    //Ingresó a LTK&FNZ el 20 de Diciembre de 2022(Convo-Extraordinaria)
+                    //- Director de LTK&FNZ-2024
+            **/
+
+            //CONVOCATORIA 2022-I (10-05-2022) (Total : 5 personas | Registrados: 3)
+            [
+                //Ingresó a LTK&FNZ el 10 De Mayo 2022
+                //Se retiró voluntariamente de LTK&FNZ el 04 de Agosto de 2023
+                'nombres' => 'Jessenia Marleth',
+                'apellidos' => 'Lopez Llanos',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't010100520@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'J13L12',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //Ingresó a LTK&FNZ el 10 De Mayo 2022
+                //Se retiró voluntariamente de LTK&FNZ el 23 de Diciembre de 2024
+                'nombres' => 'Jorge Ernesto',
+                'apellidos' => 'Rondo Valeriano',
+                'correo_personal' => NULL,
+                'correo_institucional' => 'jorondov@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'J5R23',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //Ingresó a LTK&FNZ el 10 De Mayo 2022
+                //No hay registro de cuando se le retiró de la sección, pero por su presencia en redes sociales asumiré que se le retiró de LTK&FNZ por bajo rendimiento el 15 de Febrero de 2024
+                'nombres' => 'José Carlos',
+                'apellidos' => 'Diaz Muñoz',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't1051301521@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'J3D13',
+                'imagen_firma' => NULL,
+            ],
+
+            //CONVOCATORIA 2021-I (20-11-2021) (Total : 6 personas | Registrados: 2)
+            [
+                //Ingresó a LTK&FNZ el 20 De Noviembre 2021
+                //Egresó de LTK&FNZ el 17 de marzo de 2025
+                'nombres' => 'Dajhana del Rocio',
+                'apellidos' => 'Rivera Medina',
+                'correo_personal' => 'dajhanariverame@hotmail.com',
+                'correo_institucional' => 't020100520@unitru.edu.pe',
+                'sexo' => 'Femenino',
+                'codigo' => 'D4R19M',
+                'imagen_firma' => NULL,
+            ],
+            [
+                //Ingresó a LTK&FNZ el 20 de Noviembre de 2021
+                //Se cambió a PMO el 10 de Mayo de 2022(Referencia Fecha de convo), fué +- 2 meses.
+                //Ingresó a TI el 17 de Marzo de 2023
+                //Se retiró voluntariamente de TI el 08 de Junio de 2024
+                'nombres' => 'Jorge Luis',
+                'apellidos' => 'Vargas Baltodano',
+                'correo_personal' => 'jorge.baltodano.21.10@gmail.com',
+                'correo_institucional' => 't012700120@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'J12V23',
+                'imagen_firma' => 'fotos_firmas/Jorge Luis Vargas Baltodano.png',
+            ],
+            /**
+                Jhosmel Anderson Vigo Cepeda
+                    //Aqui ingresó JHOSMEL ANDERSON VIGO CEPEDA <t1511601421@unitru.edu.pe>
+                    //Ingresó a MKT el 20 De Noviembre 2021
+                    //Se cambió a LTK&FNZ el 03 de Mayo 2023
+                    //MIEMBRO ACTIVO 2025-I
+            **/
+
+            /****************************************************
+             ******************** ÁREA DE MKT *******************
+             **************** Miembros activos: 21 **************
+             ****************************************************/
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 02 de Mayo de 2025
@@ -1445,6 +1717,17 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
+                //Ingresó a MKT el 13 de Junio de 2023
+                //Egresó de MKT el 17 de marzo de 2025
+                'nombres' => 'José Efrain',
+                'apellidos' => 'Calle Gutierrez',
+                'correo_personal' => NULL,
+                'correo_institucional' => 't010101220@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'J5C7',
+                'imagen_firma' => 'fotos_firmas/Jose Efrain Calle Gutierrez.png',
+            ],
+            [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 02 de Mayo de 2025
                 'nombres' => 'Juan José',
@@ -1459,7 +1742,7 @@ class PersonaSeeder extends Seeder
                 //Ingresó a MKT el 13 De Junio 2023
                 //Egresó el 17 de marzo de 2025
                 'nombres' => 'Lesly Fiorella',
-                'apellidos' => 'Perez Rodriguez',
+                'apellidos' => 'Pérez Rodríguez',
                 'correo_personal' => 'perezrodriguezlesly791@gmail.com',
                 'correo_institucional' => 't028100120@unitru.edu.pe',
                 'sexo' => 'Femenino',
@@ -1565,14 +1848,31 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'Y21G3',
                 'imagen_firma' => NULL,
             ],
-            //Aqui ingresó ZULEMA ADELI VALVERDE ZAVALETA <t1510100321@unitru.edu.pe>
-            //MIEMBRO ACTIVO 2025-I
-            //- Directora de MKT-2024
+            /**
+                Zulema Adeli Valverde Zavaleta
+                    //Aqui ingresó ZULEMA ADELI VALVERDE ZAVALETA <t1510100321@unitru.edu.pe>
+                    //Ingresó a MKT el 20 de Diciembre 2022(Convo-Extraordinaria)
+                    //- Directora de MKT-2024
+                    //MIEMBRO ACTIVO 2025-I
+            **/
+            //CONVOCATORIA 2020-I (08-11-2020) (Total : 7 personas)
+            [
+                //MIEMBRO ACTIVO 2025-I
+                //Ingresó a MKT el 20 De Noviembre 2021
+                //Se cambió a LTK&FNZ el 03 de Mayo 2023
+                'nombres' => 'Jhosmel Anderson',
+                'apellidos' => 'Vigo Cepeda',
+                'correo_personal' => 'jhosmelvigoc4@gmail.com',
+                'correo_institucional' => 't1511601421@unitru.edu.pe',
+                'sexo' => 'Masculino',
+                'codigo' => 'J1V3',
+                'imagen_firma' => 'fotos_firmas/Jhosmel Anderson Vigo Cepeda.png',
+            ],
 
-            /*******************************************
-             *************** ÁREA DE PMO ***************
-             ******************************************* */
-            //Total de miembros activos en PMO - 14
+            /****************************************************
+             ******************** ÁREA DE PMO *******************
+             **************** Miembros activos: 13 **************
+             ****************************************************/
 
             //CONVOCATORIA 2021(20-11-2021)
             /**
@@ -1620,12 +1920,12 @@ class PersonaSeeder extends Seeder
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a PMO el 13 de Junio de 2023
                 'nombres' => 'Jeoselyn Maribel',
-                'apellidos' => 'Espejo Rodriguez',
+                'apellidos' => 'Espejo Rodríguez',
                 'correo_personal' => NULL,
                 'correo_institucional' => 'jespejor@unitru.edu.pe',
                 'sexo' => 'Femenino',
                 'codigo' => 'J13E19',
-                'imagen_firma' => NULL,
+                'imagen_firma' => 'fotos_firmas/Jeoselyn Maribel Espejo Rodriguez.png',
             ],
             [
                 //MIEMBRO ACTIVO 2025-I
@@ -1636,7 +1936,7 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 'mhuamanm@unitru.edu.pe',
                 'sexo' => 'Femenino',
                 'codigo' => 'M3H13',
-                'imagen_firma' => "fotos_firmas/María Celine Huamán Martínez.jpg",//Representante de Centro de Estudiantes de Ingeniería Metalúrgica
+                'imagen_firma' => "fotos_firmas/Maria Celine Huaman Martinez.png",//Representante de Centro de Estudiantes de Ingeniería Metalúrgica
             ],
             /**
                 María Fernanda de la Caridad Herrera Cerquín
@@ -1688,7 +1988,7 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 'axloayzag@unitru.edu.pe',
                 'sexo' => 'Femenino',
                 'codigo' => 'A25L7',
-                'imagen_firma' => NULL,
+                'imagen_firma' => 'fotos_firmas/Angela Xiomara Loayza Gutierrez.png',
             ],
             [
                 //MIEMBRO ACTIVO 2025-I
@@ -1699,7 +1999,7 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 'dnalayosi@unitru.edu.pe',
                 'sexo' => 'Femenino',
                 'codigo' => 'D14AS',
-                'imagen_firma' => NULL,
+                'imagen_firma' => 'fotos_firmas/Dalery Nicoll Alayo Sifuentes.png',
             ],
             [
                 //MIEMBRO ACTIVO 2025-I
@@ -1710,7 +2010,7 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 'dasanchezca@unitru.edu.pe',
                 'sexo' => 'Masculino',
                 'codigo' => 'D1S3',
-                'imagen_firma' => NULL,
+                'imagen_firma' => 'fotos_firmas/Daniel Angel Sanchez Cabrera.png',
             ],
             [
                 //MIEMBRO ACTIVO 2025-I
@@ -1769,8 +2069,8 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
             [
-                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a PMO el 02 de Mayo de 2025 
+                //Se retiró voluntariamente el 17 de Diciembre de 2025
                 'nombres' => 'Sebastian Javier',
                 'apellidos' => 'Vásquez Estrada',
                 'correo_personal' => 'sebastianvasquezestrada2007@gmail.com',
@@ -1780,10 +2080,10 @@ class PersonaSeeder extends Seeder
                 'imagen_firma' => NULL,
             ],
 
-            /******************************************
-             *************** ÁREA DE TI ***************
-             ****************************************** */
-            //Total de miembros activos en TI - 10
+            /****************************************************
+             ******************** ÁREA DE TI ********************
+             **************** Miembros activos: 9 **************
+             ****************************************************/
 
             //Creación del área de TI (17-03-2023)
             [
@@ -1807,21 +2107,17 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 'rulco@unitru.edu.pe',
                 'sexo' => 'Masculino',
                 'codigo' => 'R5U3',
-                'imagen_firma' => 'fotos_firmas/Rommel Eduardo Ulco Chavarria.jpg',
+                'imagen_firma' => 'fotos_firmas/Rommel Eduardo Ulco Chavarria.png',
             ],
-            [
-                //Ingresó a LTK&FNZ el 20 de Noviembre de 2021
-                //Se cambió a PMO el 10 de Mayo de 2022(Referencia Fecha de convo), fué +- 2 meses.
-                //Ingresó a TI el 17 de Marzo de 2023(Fecha que ya no va: 25 de Abril de 2023)
-                //Se retiró de TI el 08 de Junio de 2024
-                'nombres' => 'Jorge Luis',
-                'apellidos' => 'Vargas Baltodano',
-                'correo_personal' => 'jorge.baltodano.21.10@gmail.com',
-                'correo_institucional' => 't012700120@unitru.edu.pe',
-                'sexo' => 'Masculino',
-                'codigo' => 'J12V23',
-                'imagen_firma' => 'fotos_firmas/Jorge Luis Vargas Baltodano.jpg',
-            ],
+            /**
+                Jorge Luis Vargas Baltodano
+                    //Aqui ingresó JORGE LUIS VARGAS BALTODANO <t012700120@unitru.edu.pe>
+                    //Ingresó a LTK&FNZ el 20 de Noviembre de 2021
+                    //Se cambió a PMO el 10 de Mayo de 2022
+                    //Ingresó a TI el 17 de Marzo de 2023
+                    //Se retiró de TI el 08 de Junio de 2024
+            **/
+            
             //CONVOCATORIA 2024(10-12-2024)
             [
                 //Ingresó a TI el 10 de Diciembre de 2024
@@ -1939,7 +2235,7 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 'ilherrerall@unitru.edu.pe',
                 'sexo' => 'Masculino',
                 'codigo' => 'I12H12',
-                'imagen_firma' => 'fotos_firmas/Irving Luis Herrera Llovera.jpg',
+                'imagen_firma' => 'fotos_firmas/Irving Luis Herrera Llovera.png',
             ],
             [
                 'nombres' => 'Mauricio Jesús',
@@ -2621,7 +2917,7 @@ class PersonaSeeder extends Seeder
             ],
             [
                 'nombres' => 'Sofia Georgette',
-                'apellidos' => 'Amaya Caceda',
+                'apellidos' => 'Amaya Cáceda',
                 'correo_personal' => NULL,
                 'correo_institucional' => 't1011300821@unitru.edu.pe',
                 'sexo' => 'Femenino',
@@ -2903,7 +3199,7 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 't1513900521@unitru.edu.pe',
                 'sexo' => 'Femenino',
                 'codigo' => 'M10C7',
-                'imagen_firma' => 'fotos_firmas/Melany Jasmin Cabrera Garcia.jpg',
+                'imagen_firma' => 'fotos_firmas/Melany Jasmin Cabrera Garcia.png',
             ],
             [
                 // Miembro
@@ -3007,7 +3303,7 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 't1050702421@unitru.edu.pe',
                 'sexo' => 'Masculino',
                 'codigo' => 'F12M3',
-                'imagen_firma' => 'fotos_firmas/Frandux Lee Manayay Cieza.jpg',
+                'imagen_firma' => 'fotos_firmas/Frandux Lee Manayay Cieza.png',
             ],
             [
                 // Miembro
@@ -3028,7 +3324,7 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 'fuceda@unitru.edu.pe',
                 'sexo' => 'Masculino',
                 'codigo' => 'F22G',
-                'imagen_firma' => 'fotos_firmas/Fabricio Uceda Garcia.jpg',
+                'imagen_firma' => 'fotos_firmas/Fabricio Uceda Garcia.png',
             ],
             [
                 // Miembro
@@ -3059,7 +3355,7 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 'jvalverdet@unitru.edu.pe',
                 'sexo' => 'Masculino',
                 'codigo' => 'J19V21',
-                'imagen_firma' => 'fotos_firmas/Jeremy Rorievans Valverde Tolentino.jpg',
+                'imagen_firma' => 'fotos_firmas/Jeremy Rorievans Valverde Tolentino.png',
             ],
             [
                 // Miembro
@@ -3160,7 +3456,7 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 't042300220@unitru.edu.pe',
                 'sexo' => 'Femenino',
                 'codigo' => 'V10A3',
-                'imagen_firma' => 'fotos_firmas/Virginia Jhoana Abanto Castillo.jpg',
+                'imagen_firma' => 'fotos_firmas/Virginia Jhoana Abanto Castillo.png',
             ],
             [
                 // Miembro
@@ -3191,7 +3487,7 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 'jaoliverar@unitru.edu.pe',
                 'sexo' => 'Masculino',
                 'codigo' => 'J1O19',
-                'imagen_firma' => 'fotos_firmas/Jairo Arturo Olivera Ramos.jpg',
+                'imagen_firma' => 'fotos_firmas/Jairo Arturo Olivera Ramos.png',
             ],
             [
                 // Miembro
@@ -3222,7 +3518,7 @@ class PersonaSeeder extends Seeder
                 'correo_institucional' => 'asanchezva@unitru.edu.pe',
                 'sexo' => 'Femenino',
                 'codigo' => 'A14Y20V',
-                'imagen_firma' => 'fotos_firmas/Anny Nayeli Yireh Sánchez Vásquez.jpg',
+                'imagen_firma' => 'fotos_firmas/Anny Nayeli Yireh Sánchez Vasquez.png',
             ],
             [
                 // Miembro
