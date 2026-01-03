@@ -408,7 +408,7 @@ class PersonaSeeder extends Seeder
             [
                 //VICEPRESIDENTA-2021
                 //Ingresó a GTH el 03 de Septiembre 2019
-                //No hay registro de si egresó o si se retiró, así que asumo que cumplió con su cargo en la directiva hasta el 29 de Marzo 2022 y también asumiré que se retiró voluntariamente el 03 de Abril de 2022
+                //No hay registro de si egresó o si se retiró, así que asumo que cumplió con su cargo en la directiva y que se retiró voluntariamente el 03 de Abril de 2022
                 'nombres' => 'Lucciana Kathiuzka',
                 'apellidos' => 'Hurtado Soledad',
                 'correo_personal' => 'Luccianahs@gmail.com',
@@ -421,8 +421,7 @@ class PersonaSeeder extends Seeder
             [
                 //DIRECTOR DE GTH-2021
                 //Ingresó a GTH el 03 de Septiembre 2019
-                //No hay registro de si egresó o si se retiró
-                // Según redes sociales, permaneció activo el 21 de Julio de 2022, así que asumiré que se retiró voluntariamente el 22 de Julio de 2022
+                //No hay registro de si egresó o si se retiró, pero según redes sociales, permaneció activo el 21 de Julio de 2022, así que asumiré que se retiró voluntariamente el 22 de Julio de 2022
                 'nombres' => 'José Armando',
                 'apellidos' => 'Vasquez Lopez',
                 'correo_personal' => NULL,
@@ -464,7 +463,7 @@ class PersonaSeeder extends Seeder
                 //No hay registro de cuando SE CAMBIÓ A PMO, así que asumiré que se cambió al inicio de la directiva 2019 (21 de Febrero de 2019)
                 //Egresó el 03 de Abril de 2022
                 'nombres' => 'Pablo César',
-                'apellidos' => 'Vasquez Narvaez',
+                'apellidos' => 'Vásquez Narváez',
                 'correo_personal' => 'Pablocesa25@gmail.com',
                 'correo_institucional' => 'pvasquez@unitru.edu.pe',
                 'sexo' => 'Masculino',
@@ -542,7 +541,7 @@ class PersonaSeeder extends Seeder
                 //Ingresó a MKT el 14 de Octubre de 2016
                 //Se cambió a GTH el 01 de Octubre de 2018
                 //Se cambió a PMO el 01 de Febrero de 2020
-                //No hay registro de si egresó o si se retiró pero asumiré que se retiró despues de culminar su cargo como directo de PMO el 21 de Febrero de 2021
+                //No hay registro de si egresó o si se retiró pero asumiré que se retiró voluntariamente despues de culminar su cargo como directo de PMO el 21 de Febrero de 2021
                 'nombres' => 'Mauricio Sebastian',
                 'apellidos' => 'Bedón Oliva',
                 'correo_personal' => NULL,
@@ -557,6 +556,7 @@ class PersonaSeeder extends Seeder
              **************** Miembros activos: 19 **************
              ****************************************************/
             //CONVOCATORIA 2025(02-05-2025) (Total : 7 personas)
+            //Anderson Alexander Saavedra Nolasco
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 2 De Mayo 2025
@@ -568,6 +568,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'A1S14',
                 'imagen_firma' => NULL,
             ],
+            //Luis Enrique Montoya Aguirre
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 2 De Mayo 2025
@@ -579,6 +580,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'L5M1',
                 'imagen_firma' => NULL,
             ],
+            //Cristhian Luis David Sánchez Obeso
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 2 De Mayo 2025
@@ -590,6 +592,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'C12D20O',
                 'imagen_firma' => NULL,
             ],
+            //Joaquin Adriano Bocanegra Peláez
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 2 De Mayo 2025
@@ -601,6 +604,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'J1B17',
                 'imagen_firma' => NULL,
             ],
+            //Emilly Nicoll Zavaleta Chigne
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 2 De Mayo 2025
@@ -612,6 +616,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'F14Z3',
                 'imagen_firma' => NULL,
             ],
+            //Eleanor Marycielo Roca Mendoza
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 2 De Mayo 2025
@@ -623,6 +628,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'E13R13',
                 'imagen_firma' => NULL,
             ],
+            //Valeria Angelie Valderrama Muñoz
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 2 De Mayo 2025
@@ -636,6 +642,7 @@ class PersonaSeeder extends Seeder
             ],
 
             //CONVOCATORIA EXTRAORDINARIA 2024(10-12-2024) (Total : 5 personas)
+            //Ana Nicoll Segura Aredo
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 10 De Diciembre 2024
@@ -647,6 +654,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'A14S1',
                 'imagen_firma' => NULL,
             ],
+            //Gerson Gabriel Alfaro Tandaypan
             [
                 //Ingresó a GTH el 10 De Diciembre 2024
                 //Se le retiró de GTH por bajo rendimiento el 17 de Junio de 2025
@@ -658,8 +666,10 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'G7A21',
                 'imagen_firma' => NULL,
             ],
+            //Juan Diego Hernández Jáuregui
             [
                 //Ingresó a GTH el 10 De Diciembre 2024
+                //Se retiró voluntariamente de GTH el 07 de Marzo de 2025
                 'nombres' => 'Juan Diego',
                 'apellidos' => 'Hernández Jáuregui',
                 'correo_personal' => 'juanhjauregui15@gmail.com',
@@ -668,6 +678,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'J4H10',
                 'imagen_firma' => NULL,
             ],
+            //Corina Marilu Sanchez Delgado
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 10 De Diciembre 2024
@@ -679,7 +690,9 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'C13S4',
                 'imagen_firma' => NULL,
             ],
+            //Andrweeu Daniel Urtecho Avila
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 10 De Diciembre 2024
                 'nombres' => 'Andrweeu Daniel',
                 'apellidos' => 'Urtecho Avila',
@@ -691,6 +704,7 @@ class PersonaSeeder extends Seeder
             ],
 
             //CONVOCATORIA 2024(01-06-2024) (Total : 9 personas)
+            //Jose Daniel Avila Santillan
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 01 De Junio 2024
@@ -702,6 +716,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'J4A20',
                 'imagen_firma' => 'fotos_firmas/Jose Daniel Avila Santillan.png',
             ],
+            //Lisseth Adelaida Chávez Rosales
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 01 De Junio 2024
@@ -713,6 +728,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'L1C19',
                 'imagen_firma' => NULL,
             ],
+            //Mariann Estefany Fernández Leyva
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 01 De Junio 2024
@@ -724,6 +740,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'M5F12',
                 'imagen_firma' => NULL,
             ],
+            //Michael Junior García García
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 01 De Junio 2024
@@ -735,6 +752,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'M10G7',
                 'imagen_firma' => NULL,
             ],
+            //Nashaly Nicolle Alama Terrones
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 01 De Junio 2024
@@ -746,6 +764,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'N14A21',
                 'imagen_firma' => 'fotos_firmas/Nashaly Nicolle Alama Terrones.png',
             ],
+            //Renzo Georkael Carrasco Lalangui
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 01 De Junio 2024
@@ -757,8 +776,10 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'R7C12',
                 'imagen_firma' => NULL,
             ],
+            //Rodrigo Marcial Gamboa Gonzáles
             [
                 //Ingresó a GTH el 01 De Junio 2024
+                //Se retiró voluntariamente de GTH el 07 de Marzo de 2025
                 'nombres' => 'Rodrigo Marcial',
                 'apellidos' => 'Gamboa Gonzáles',
                 'correo_personal' => 'rodrigogg0812@gmail.com',
@@ -767,14 +788,17 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'R13G7',
                 'imagen_firma' => NULL,
             ],
+            //Silvana Valeria Pereda Llave
             /**
                 Silvana Valeria Pereda Llave
                     //Aqui ingresó SILVANA VALERIA PEREDA LLAVE <speredal@unitru.edu.pe>
                     //Ingresó a GTH el 01 de Junio de 2024
                     //- Vicepresidenta SEDIPRO-2024
             **/
+            //Yrma Lucero Carruitero Aspiros
             [
                 //Ingresó a GTH el 01 De Junio 2024
+                //Se retiró voluntariamente de GTH el 07 de Marzo de 2025
                 'nombres' => 'Yrma Lucero',
                 'apellidos' => 'Carruitero Aspiros',
                 'correo_personal' => NULL,
@@ -785,6 +809,7 @@ class PersonaSeeder extends Seeder
             ],
 
             //CONVOCATORIA 2023-I (13-06-2023) (Total : 6 personas)
+            //Alisson Milagros Pretell Canchas
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 13 De Junio 2023
@@ -796,6 +821,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'A13P3',
                 'imagen_firma' => NULL,
             ],
+            //Dulce Geraldine Chavez Padilla
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 13 De Junio 2023
@@ -807,14 +833,17 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'D7C17',
                 'imagen_firma' => NULL,
             ],
+            //Romina Alejandra Seclen Cespedes
             /**
                 Romina Alejandra Seclen Cespedes
                     //Aqui ingresó ROMINA ALEJANDRA SECLEN CESPEDES <t1052500521@unitru.edu.pe>
                     //Ingresó a GTH el 13 De Junio 2023
                     //- Vicepresidenta SEDIPRO-2024
             **/
+            //Fernando Felipe Sanchez Palacios
             [
                 //Ingresó a GTH el 13 De Junio 2023
+                //Se retiró voluntariamente de GTH el 07 de Marzo de 2025
                 'nombres' => 'Fernando Felipe',
                 'apellidos' => 'Sanchez Palacios',
                 'correo_personal' => NULL,
@@ -823,8 +852,10 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'F6S17',
                 'imagen_firma' => NULL,
             ],
+            //Luz Karina Angulo Urbina
             [
                 //Ingresó a GTH el 13 De Junio 2023
+                //Se retiró voluntariamente de GTH el 20 de Marzo de 2025
                 'nombres' => 'Luz Karina',
                 'apellidos' => 'Angulo Urbina',
                 'correo_personal' => NULL,
@@ -833,8 +864,10 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'L11A22',
                 'imagen_firma' => NULL,
             ],
+            //Santos Maria Juarez Cruz
             [
                 //Ingresó a GTH el 13 De Junio 2023
+                //Se retiró voluntariamente de GTH el 07 de Marzo de 2025
                 'nombres' => 'Santos Maria',
                 'apellidos' => 'Juarez Cruz',
                 'correo_personal' => NULL,
@@ -845,6 +878,7 @@ class PersonaSeeder extends Seeder
             ],
 
             //CONVOCATORIA EXTRAORDINARIA 2022(20-12-2022) (Total : 4 personas)
+            //Angela Valentina Castro Esquivel
             [
                 //Ingresó a GTH el 20 De Diciembre 2022
                 //Se retiró de GTH el 07 de Marzo de 2024
@@ -856,9 +890,10 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'A23C5',
                 'imagen_firma' => NULL,
             ],
+            //Fernando Javier Paredes Juarez
             [
                 //Ingresó a GTH el 20 De Diciembre 2022
-                //Se retiró de GTH por bajo rendimiento el 06 de Octubre de 2023
+                //Se le retiró de GTH por bajo rendimiento el 06 de Octubre de 2023
                 'nombres' => 'Fernando Javier',
                 'apellidos' => 'Paredes Juarez',
                 'correo_personal' => NULL,
@@ -867,6 +902,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'F10P10',
                 'imagen_firma' => NULL,
             ],
+            //Roger Alfredo Morante Escajadillo
             [
                 //Ingresó a GTH el 20 De Diciembre 2022
                 //Se retiró voluntariamente de GTH el 03 de Enero de 2024
@@ -878,6 +914,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'R1M5',
                 'imagen_firma' => NULL,
             ],
+            //Yuliana Zarai Cuadra Rodriguez
             [
                 //Ingresó a GTH el 20 De Diciembre 2022
                 //Se retiró de GTH a finales del 2024
@@ -891,13 +928,17 @@ class PersonaSeeder extends Seeder
             ],
 
             //CONVOCATORIA 2022-I (10-05-2022) (Total : 8 personas)
+            //Marina Lizeth Gonzales Torres
             /**
                 Marina Lizeth Gonzales Torres
                     //Aqui ingresó MARINA LIZETH GONZALES TORRES <t1510600121@unitru.edu.pe>
                     //Ingresó a GTH el 10 de Mayo 2022
                     //- Directora de GTH-2025
-            **/ 
+            **/
+            //Santiago Alonso Morales Flores
             [
+                //Ingresó a GTH el 10 de Mayo 2022
+                //Asumiré que se retiró voluntariamente de GTH el 27 de Diciembre de 2022(Fecha de última aparición en redes)
                 'nombres' => 'Santiago Alonso',
                 'apellidos' => 'Morales Flores',
                 'correo_personal' => NULL,
@@ -906,7 +947,10 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'S1M6',
                 'imagen_firma' => NULL,
             ],
+            //Eduardo David Risco Rios
             [
+                //Ingresó a GTH el 10 de Mayo 2022
+                //Se retiró voluntariamente de GTH el 26 de Febrero de 2023
                 'nombres' => 'Eduardo David',
                 'apellidos' => 'Risco Rios',
                 'correo_personal' => NULL,
@@ -915,7 +959,10 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'E4R19',
                 'imagen_firma' => NULL,
             ],
+            //Aitana Sofia Requejo Valle
             [
+                //Ingresó a GTH el 10 de Mayo 2022
+                //Egresó en GTH el 17 de Marzo de 2025
                 'nombres' => 'Aitana Sofía',
                 'apellidos' => 'Requejo Valle',
                 'correo_personal' => NULL,
@@ -924,13 +971,17 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'A20R23',
                 'imagen_firma' => 'fotos_firmas/Aitana Sofia Requejo Valle.png',
             ],
+            //Bricey Jazmin Ruiz Rodriguez
             /**
                 Bricey Jazmin Ruiz Rodriguez
                     //Aqui ingresó BRICELLY JAZMIN RUIZ RODRIGUEZ <t020101420@unitru.edu.pe>
                     //Ingresó a GTH el 10 de Mayo 2022
                     //- Directora de GTH-2024
             **/
+            //Brayan Micael Linares Oyos
             [
+                //Ingresó a GTH el 10 de Mayo 2022
+                //Asumiré que se retiró voluntariamente de GTH el 21 de Julio de 2022(Última aparicio en redes)
                 'nombres' => 'Brayan Micael',
                 'apellidos' => 'Linares Oyos',
                 'correo_personal' => NULL,
@@ -939,7 +990,10 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'B13L16',
                 'imagen_firma' => NULL,
             ],
+            //Miguel Segundo Cabrera Morales
             [
+                //Ingresó a GTH el 10 de Mayo 2022
+                //Asumiré que se retiró voluntariamente de GTH el 13 de Enero de 2023(Última aparicio en redes)
                 'nombres' => 'Miguel Segundo',
                 'apellidos' => 'Cabrera Morales',
                 'correo_personal' => NULL,
@@ -948,7 +1002,10 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'M20C13',
                 'imagen_firma' => NULL,
             ],
+            //Ariana Esther Navarro Zavaleta
             [
+                //Ingresó a GTH el 10 de Mayo 2022
+                //Asumiré que se retiró voluntariamente de GTH el 25 de Abril de 2023(Última aparicio en redes)
                 'nombres' => 'Ariana Esther',
                 'apellidos' => 'Navarro Zavaleta',
                 'correo_personal' => NULL,
@@ -957,7 +1014,10 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'A5N27',
                 'imagen_firma' => NULL,
             ],
+            //Crhistian Fernando Hilario Salvador
             [
+                //Ingresó a GTH el 10 de Mayo 2022
+                //Egresó en GTH el 21 de Marzo 2023
                 'nombres' => 'Crhistian Fernando',
                 'apellidos' => 'Hilario Salvador',
                 'correo_personal' => NULL,
@@ -968,8 +1028,10 @@ class PersonaSeeder extends Seeder
             ],
 
             //CONVOCATORIA 2021-I (20-11-2021) (Total : 11 personas)
+            //Beatriz Nancy Bamberger Leyva
             [
                 //Ingresó a GTH el 20 de Noviembre 2021
+                //Asumiré que se retiró voluntariamente de GTH el 11 de Abril de 2022(Última interacción con el correo de sedipro)
                 'nombres' => 'Beatriz Nancy',
                 'apellidos' => 'Bamberger Leyva',
                 'correo_personal' => NULL,
@@ -978,14 +1040,17 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'B14B12',
                 'imagen_firma' => NULL,
             ],
+            //Yessenia Jackelyne Angulo Urbina
             /**
                 Yessenia Jackelyne Angulo Urbina
                     //Aqui ingresó YESSENIA JACKELYNE ANGULO URBINA <t510601520@unitru.edu.pe>
                     //Ingresó a GTH el 20 de Noviembre 2021
                     //- Directora de GTH-2023
             **/
+            //Carlos Alberto Catañeda Santisteban
             [
                 //Ingresó a GTH el 20 de Noviembre 2021
+                //Egresó en GTH el 08 de Marzo 2024
                 'nombres' => 'Carlos Alberto',
                 'apellidos' => 'Catañeda Santisteban',
                 'correo_personal' => 'carlosalberto262000@gmail.com',
@@ -994,8 +1059,10 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'C1C20',
                 'imagen_firma' => NULL,
             ],
+            //Diana Noemi De la Cruz Condor
             [
                 //Ingresó a GTH el 20 de Noviembre 2021
+                //Se retiró voluntariamente de GTH el 17 de Noviembre de 2024
                 'nombres' => 'Diana Noemi',
                 'apellidos' => 'De la Cruz Condor',
                 'correo_personal' => NULL,
@@ -1004,8 +1071,10 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'D14D12C3',
                 'imagen_firma' => NULL,
             ],
+            //Geraldine Kathleen Azucena Gonzales Alquizar
             [
                 //Ingresó a GTH el 20 de Noviembre 2021
+                //Se retiró voluntariamente de GTH el 23 de Noviembre de 2024
                 'nombres' => 'Geraldine Kathleen Azucena',
                 'apellidos' => 'Gonzales Alquizar',
                 'correo_personal' => NULL,
@@ -1014,8 +1083,10 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'G11A7A',
                 'imagen_firma' => NULL,
             ],
+            //Santiago Manuel Rodriguez Castillo
             [
                 //Ingresó a GTH el 20 de Noviembre 2021
+                //Asumiré que se retiró voluntariamente de GTH el 06 de Marzo de 2022(Última aparicio en redes)
                 'nombres' => 'Santiago Manuel',
                 'apellidos' => 'Rodriguez Castillo',
                 'correo_personal' => NULL,
@@ -1024,8 +1095,10 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'S13R3',
                 'imagen_firma' => NULL,
             ],
+            //Alexandra Fiorela Ruiz Alfaro
             [
                 //Ingresó a GTH el 20 de Noviembre 2021
+                //Asumiré que se retiró voluntariamente de GTH el 22 de Junio de 2022(NO HAY REGISTRO)
                 'nombres' => 'Alexandra Fiorela',
                 'apellidos' => 'Ruiz Alfaro',
                 'correo_personal' => NULL,
@@ -1034,8 +1107,10 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'A6R1',
                 'imagen_firma' => NULL,
             ],
+            //Luis David Uriol Campos
             [
                 //Ingresó a GTH el 20 de Noviembre 2021
+                //Asumiré que se retiró voluntariamente de GTH el 06 de Marzo de 2022(Última aparicio en redes)
                 'nombres' => 'Luis David',
                 'apellidos' => 'Uriol Campos',
                 'correo_personal' => NULL,
@@ -1044,8 +1119,10 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'L4U3',
                 'imagen_firma' => NULL,
             ],
+            //Cinthia Azucena Narro Mendoza
             [
                 //Ingresó a GTH el 20 de Noviembre 2021
+                //Asumiré que se retiró voluntariamente de GTH el 30 de Abril de 2023(Fecha de emisión de su certificado enviado por correo)
                 'nombres' => 'Cinthia Azucena',
                 'apellidos' => 'Narro Mendoza',
                 'correo_personal' => NULL,
@@ -1054,8 +1131,10 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'C1N13',
                 'imagen_firma' => NULL,
             ],
+            //Jhonner David Pesantes Huaylla
             [
                 //Ingresó a GTH el 20 de Noviembre 2021
+                //Egresó en GTH el 21 de Marzo de 2023
                 'nombres' => 'Jhonner David',
                 'apellidos' => 'Pesantes Huaylla',
                 'correo_personal' => NULL,
@@ -1064,6 +1143,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'J4P8',
                 'imagen_firma' => NULL,
             ],
+            //Elber Isaí Pichén Zavaleta
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a GTH el 20 de Noviembre 2021
@@ -1077,8 +1157,10 @@ class PersonaSeeder extends Seeder
             ],
 
             //CONVOCATORIA 2020-I (08-11-2020) (Total : 7 personas)
+            //Jesús David Nuñez Arteaga
             [
                 //Ingresó a GTH el 08 de Noviembre 2020
+                //Se retiró voluntariamente de GTH el 09 de Mayo de 2022
                 'nombres' => 'Jesús David',
                 'apellidos' => 'Nuñez Arteaga',
                 'correo_personal' => NULL,
@@ -1087,6 +1169,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'J4N1',
                 'imagen_firma' => NULL,
             ],
+            //Willian Alexander Paredes Rojas
             /**
                 Willian Alexander Paredes Rojas
                     //Aqui ingresó WILLIAN ALEXANDER PAREDES ROJAS <waparedesr@unitru.edu.pe>
@@ -1095,8 +1178,10 @@ class PersonaSeeder extends Seeder
                     //- Director de MKT-2023
                     //Egresó de MKT el 08 de Marzo 2024
             **/
+            //Esmeralda Marianela Valverde Moreno
             [
                 //Ingresó a GTH el 08 de Noviembre 2020
+                //Egresó en GTH el 08 de Marzo 2024
                 'nombres' => 'Esmeralda Marianela',
                 'apellidos' => 'Valverde Moreno',
                 'correo_personal' => NULL,
@@ -1105,8 +1190,10 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'E13V13',
                 'imagen_firma' => NULL,
             ],
+            //Edgar Enrique Grijalba Atavios
             [
                 //Ingresó a GTH el 08 de Noviembre 2020
+                //Asumiré que se retiró voluntariamente de GTH el 21 de Febrero de 2021(NO HAY REGISTRO)
                 'nombres' => 'Edgar Enrique',
                 'apellidos' => 'Grijalba Atavios',
                 'correo_personal' => NULL,
@@ -1115,8 +1202,10 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'E5G1',
                 'imagen_firma' => NULL,
             ],
+            //Alexis Angel Raúl Carrera Condo
             [
                 //Ingresó a GTH el 08 de Noviembre 2020
+                //Asumiré que se retiró voluntariamente de GTH el 06 de Febrero de 2021(Última aparicio en redes)
                 'nombres' => 'Alexis Angel Raúl',
                 'apellidos' => 'Carrera Condo',
                 'correo_personal' => NULL,
@@ -1125,6 +1214,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'A1R3C',
                 'imagen_firma' => NULL,
             ],
+            //Kevin Alexander Meregildo Garcia
             [
                 //Ingresó a GTH el 08 de Noviembre 2020
                 //Egresó el 03 de Abril de 2022
@@ -1136,8 +1226,10 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'K1M7',
                 'imagen_firma' => NULL,
             ],
+            //Hilda Patricia Rodriguez Horna
             [
                 //Ingresó a GTH el 08 de Noviembre 2020
+                //Se retiró voluntariamente de GTH el 02 de Octubre de 2022
                 'nombres' => 'Hilda Patricia',
                 'apellidos' => 'Rodriguez Horna',
                 'correo_personal' => NULL,
@@ -1148,8 +1240,10 @@ class PersonaSeeder extends Seeder
             ],
 
             //CONVOCATORIA 2019-I (03-09-2019) (Total : 9 personas)
+            //Fiorella Alexandra Alfaro Aguilar
             [
                 //Ingresó a GTH el 03 de Septiembre 2019
+                //Asumiré que se retiró voluntariamente de GTH el 20 de Enero de 2022(Según su facebook)
                 'nombres' => 'Fiorella Alexandra',
                 'apellidos' => 'Alfaro Aguilar',
                 'correo_personal' => NULL,
@@ -1158,8 +1252,10 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'F1A1',
                 'imagen_firma' => NULL,
             ],
+            //Leydi Estefani Cueva Zavaleta
             [
                 //Ingresó a GTH el 03 de Septiembre 2019
+                //Se retiró voluntariamente de GTH el 28 de Febrero de 2022(Según linkedin)
                 'nombres' => 'Leydi Estefani',
                 'apellidos' => 'Cueva Zavaleta',
                 'correo_personal' => NULL,
@@ -1168,6 +1264,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'L5C27',
                 'imagen_firma' => NULL,
             ],
+            //Angela Mariel Pereda Morales
             [
                 //Ingresó a GTH el 03 de Septiembre 2019
                 //Egresó el 03 de Abril de 2022
@@ -1179,8 +1276,10 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'A13P13',
                 'imagen_firma' => NULL,
             ],
+            //Fiorella Rocio Reyes Cruz
             [
                 //Ingresó a GTH el 03 de Septiembre 2019
+                //Se retiró voluntariamente de GTH el 28 de Marzo de 2021(Según linkedin)
                 'nombres' => 'Fiorella Rocio',
                 'apellidos' => 'Reyes Cruz',
                 'correo_personal' => NULL,
@@ -1189,6 +1288,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'F19R3',
                 'imagen_firma' => NULL,
             ],
+            //Melva Noemi Carranza Rodriguez
             /**
                 Melva Noemi Carranza Rodriguez
                     //Aqui ingresó MELVA NOEMI CARRANZA RODRIGUEZ <noemi.02.carranza@gmail.com>
@@ -1197,8 +1297,10 @@ class PersonaSeeder extends Seeder
                     //- Presidenta de SEDIPRO-2021
                     //Egresó de GTH el 03 de Abril de 2022
             **/
+            //Azucena Lisseth Dominguez Vargas
             [
                 //Ingresó a GTH el 03 de Septiembre 2019
+                //Asumiré que se retiró voluntariamente de GTH el 22 de Junio de 2020(NO HAY REGISTRO)
                 'nombres' => 'Azucena Lisseth',
                 'apellidos' => 'Dominguez Vargas',
                 'correo_personal' => NULL,
@@ -1207,8 +1309,10 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'A12D23',
                 'imagen_firma' => NULL,
             ],
+            //Angelica Alicia Campuzano Guevara
             [
                 //Ingresó a GTH el 03 de Septiembre 2019
+                //Asumiré que se retiró voluntariamente de GTH el 22 de Junio de 2020(NO HAY REGISTRO)
                 'nombres' => 'Angelica Alicia',
                 'apellidos' => 'Campuzano Guevara',
                 'correo_personal' => NULL,
@@ -1217,12 +1321,14 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'A1C7',
                 'imagen_firma' => NULL,
             ],
+            //José Armando Vasquez Lopez
             /**
                 José Armando Vasquez Lopez
                     //Aqui ingresó JOSE ARMANDO VASQUEZ LOPEZ <jvasquezl@unitru.edu.pe>
                     //Ingresó a GTH el 03 de Septiembre 2019
                     //- Director de GTH-2021
             **/
+            //Lucciana Kathiuzka Hurtado Soledad
             /**
                 Lucciana Kathiuzka Hurtado Soledad
                     //Aqui ingresó LUCCIANA KATHIUZKA HURTADO SOLEDAD <lhurtados@unitru.edu.pe>
@@ -1235,6 +1341,7 @@ class PersonaSeeder extends Seeder
              **************** Miembros activos: 21 **************
              ****************************************************/
             //CONVOCATORIA 2025(02-05-2025) (Total : 7 personas)
+            //Cristhian Imanol Campos Castro
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a LTK&FNZ el 02 De Mayo 2025
@@ -1246,6 +1353,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'C9C3',
                 'imagen_firma' => NULL,
             ],
+            //Dalia Irina Garcia De la Cruz
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a LTK&FNZ el 02 De Mayo 2025
@@ -1257,6 +1365,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'D9G4L3',
                 'imagen_firma' => NULL,
             ],
+            //Diego Andree Garro Taboada
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a LTK&FNZ el 02 De Mayo 2025
@@ -1268,6 +1377,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'D1G21',
                 'imagen_firma' => NULL,
             ],
+            //Fabiana Belen Sosa Parra
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a LTK&FNZ el 02 De Mayo 2025
@@ -1279,6 +1389,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'F2S17',
                 'imagen_firma' => NULL,
             ],
+            //Nory Ann Marie Touzet Meneses
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a LTK&FNZ el 02 De Mayo 2025 
@@ -1290,6 +1401,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'N1M21M',
                 'imagen_firma' => NULL,
             ],
+            //Priscila Crystal Villegas Dominguez
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a LTK&FNZ el 02 De Mayo 2025
@@ -1301,6 +1413,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'P3V4',
                 'imagen_firma' => NULL,
             ],
+            //Yamelyn Leslie Rios Tandaypan
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a LTK&FNZ el 02 De Mayo 2025
@@ -1314,6 +1427,7 @@ class PersonaSeeder extends Seeder
             ],
             
             //CONVOCATORIA EXTRAORDINARIA 2024(10-12-2024) (Total : 5 personas)
+            //Christian Rodrigo Valverde Caspito
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a LTK&FNZ el 10 De Diciembre 2024
@@ -1325,6 +1439,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'C19V3',
                 'imagen_firma' => NULL,
             ],
+            //Eddie Alessandro Jiménez Vilchez
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a LTK&FNZ el 10 De Diciembre 2024
@@ -1336,6 +1451,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'E1J23',
                 'imagen_firma' => NULL,
             ],
+            //Fabián Nicolas Paredes Calderón
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a LTK&FNZ el 10 De Diciembre 2024
@@ -1347,6 +1463,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'F14P3',
                 'imagen_firma' => NULL,
             ],
+            //Kiara Marife Rodriguez Sifuentes
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a LTK&FNZ el 10 De Diciembre 2024
@@ -1358,6 +1475,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'K13R20',
                 'imagen_firma' => NULL,
             ],
+            //Luis Angel Laureano Escobedo
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a LTK&FNZ el 10 De Diciembre 2024
@@ -1371,12 +1489,14 @@ class PersonaSeeder extends Seeder
             ],
 
             //CONVOCATORIA 2024(01-06-2024) (Total : 8 personas)
+            //Diego Jesús Rodríguez Sabana
             /**
                 Diego Jesús Rodríguez Sabana
                     //Aqui ingresó DIEGO JESUS RODRIGUEZ SABANA <t1010100421@unitru.edu.pe> 
                     //Ingresó a LTK&FNZ el 01 de Junio de 2024
                     //- Director de LTK&FNZ-2025
             **/
+            //Grecia Alexandra Paredes Cachique
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a LTK&FNZ el 01 De Junio 2024
@@ -1388,6 +1508,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'G1P3',
                 'imagen_firma' => NULL,
             ],
+            //Jimmy Andersonn Cáceda Olivera
             [
                 //Ingresó a MKT el 01 De Junio 2024
                 //Se le retiró de LTK&FNZ por bajo rendimiento el 15 de Julio de 2025
@@ -1399,9 +1520,10 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'J1C16',
                 'imagen_firma' => NULL,
             ],
+            //Jimmy Javier Tisnado Sauceda
             [
                 //Ingresó a MKT el 01 De Junio 2024
-                //Se le retiró voluntariamente de LTK&FNZ el 27 de Septiembre de 2024
+                //Se retiró voluntariamente de LTK&FNZ el 27 de Septiembre de 2024
                 'nombres' => 'Jimmy Javier',
                 'apellidos' => 'Tisnado Sauceda',
                 'correo_personal' => 'jimmytisnado1419@gmail.com',
@@ -1410,6 +1532,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'J10T20',
                 'imagen_firma' => NULL,
             ],
+            //Maria Fernanda Pretell Leon
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a LTK&FNZ el 01 De Junio 2024 
@@ -1421,6 +1544,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'M6P12',
                 'imagen_firma' => NULL,
             ],
+            //Mixie Arleni Gil Zapata
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a LTK&FNZ el 01 De Junio 2024 
@@ -1432,6 +1556,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'M1G27',
                 'imagen_firma' => NULL,
             ],
+            //Nestor Rafael Plasencia De la Cruz
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a LTK&FNZ el 01 De Junio 2024 
@@ -1443,6 +1568,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'N19P4L3',
                 'imagen_firma' => NULL,
             ],
+            //Tatiana Yuleisy Aliaga Pretell
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a LTK&FNZ el 01 De Junio 2024
@@ -1456,6 +1582,7 @@ class PersonaSeeder extends Seeder
             ],
 
             //CONVOCATORIA 2023-I (13-06-2023) (Total : 4 personas)
+            //Candy Yoana Castro Torres
             [
                 //Ingresó a LTK&FNZ el 13 De Junio 2023
                 //Egresó en LTK&FNZ el 17 de marzo de 2025
@@ -1467,6 +1594,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'C26C21',
                 'imagen_firma' => NULL,
             ],
+            //Handalee Georjina Graus Silva
             [
                 //Ingresó a LTK&FNZ el 13 De Junio 2023
                 //Egresó en LTK&FNZ el 17 de marzo de 2025
@@ -1478,6 +1606,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'H7G20',
                 'imagen_firma' => NULL,
             ],
+            //Jean Cristopher Elias León Mallqui
             [
                 //Ingresó a LTK&FNZ el 13 De Junio 2023
                 //Egresó en LTK&FNZ el 17 de marzo de 2025
@@ -1489,6 +1618,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'J3E12M',
                 'imagen_firma' => NULL,
             ],
+            //Kevin Gamaliel Rodríguez Alfaro
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a LTK&FNZ el 13 De Junio 2023
@@ -1502,6 +1632,7 @@ class PersonaSeeder extends Seeder
             ],
 
             //CONVOCATORIA EXTRAORDINARIA 2022(20-12-2022) (Total : 5 personas)
+            //Bryan Anghelo Michael Perez Proaño
             [
                 //Ingresó a LTK&FNZ el 20 De Diciembre 2022 (Convo-Extraordinaria)
                 //Egresó en LTK&FNZ el 17 de marzo de 2025
@@ -1513,6 +1644,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'B1M17P',
                 'imagen_firma' => NULL,
             ],
+            //Fernanda Milagros Rojas Rodriguez
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a LTK&FNZ el 20 De Diciembre 2022 (Convo-Extraordinaria)
@@ -1524,6 +1656,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'F13R19',
                 'imagen_firma' => NULL,
             ],
+            //José Carlos Cabrera Huaman
             [
                 //Ingresó a LTK&FNZ el 20 De Diciembre 2022 (Convo-Extraordinaria)
                 //Se retiró voluntariamente de LTK&FNZ el 22 de Noviembre de 2024
@@ -1535,6 +1668,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'J3C8',
                 'imagen_firma' => NULL,
             ],
+            //Karol Nicolle Apaza Rodriguez
             [
                 //Ingresó a LTK&FNZ el 20 De Diciembre 2022 (Convo-Extraordinaria)
                 //Se retiró voluntariamente de LTK&FNZ el 01 de Octubre de 2024
@@ -1546,6 +1680,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'K14A19',
                 'imagen_firma' => NULL,
             ],
+            //Sebastian Emanuel Facundo Reyes
             /**
                 Sebastian Emanuel Facundo Reyes
                     //Aqui ingresó SEBASTIAN EMANUEL FACUNDO REYES <t1512400421@unitru.edu.pe> 
@@ -1554,6 +1689,7 @@ class PersonaSeeder extends Seeder
             **/
 
             //CONVOCATORIA 2022-I (10-05-2022) (Total : 5 personas | Registrados: 3)
+            //Jessenia Marleth Lopez Llanos
             [
                 //Ingresó a LTK&FNZ el 10 De Mayo 2022
                 //Se retiró voluntariamente de LTK&FNZ el 04 de Agosto de 2023
@@ -1565,6 +1701,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'J13L12',
                 'imagen_firma' => NULL,
             ],
+            //Jorge Ernesto Rondo Valeriano
             [
                 //Ingresó a LTK&FNZ el 10 De Mayo 2022
                 //Se retiró voluntariamente de LTK&FNZ el 23 de Diciembre de 2024
@@ -1576,6 +1713,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'J5R23',
                 'imagen_firma' => NULL,
             ],
+            //José Carlos Diaz Muñoz
             [
                 //Ingresó a LTK&FNZ el 10 De Mayo 2022
                 //No hay registro de cuando se le retiró de la sección, pero por su presencia en redes sociales asumiré que se le retiró de LTK&FNZ por bajo rendimiento el 15 de Febrero de 2024
@@ -1589,6 +1727,7 @@ class PersonaSeeder extends Seeder
             ],
 
             //CONVOCATORIA 2021-I (20-11-2021) (Total : 6 personas | Registrados: 2)
+            //Dajhana del Rocio Rivera Medina
             [
                 //Ingresó a LTK&FNZ el 20 De Noviembre 2021
                 //Egresó de LTK&FNZ el 17 de marzo de 2025
@@ -1600,6 +1739,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'D4R19M',
                 'imagen_firma' => NULL,
             ],
+            //Jorge Luis Vargas Baltodano
             [
                 //Ingresó a LTK&FNZ el 20 de Noviembre de 2021
                 //Se cambió a PMO el 10 de Mayo de 2022(Referencia Fecha de convo), fué +- 2 meses.
@@ -1613,6 +1753,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'J12V23',
                 'imagen_firma' => 'fotos_firmas/Jorge Luis Vargas Baltodano.png',
             ],
+            //Jhosmel Anderson Vigo Cepeda
             /**
                 Jhosmel Anderson Vigo Cepeda
                     //Aqui ingresó JHOSMEL ANDERSON VIGO CEPEDA <t1511601421@unitru.edu.pe>
@@ -1626,6 +1767,7 @@ class PersonaSeeder extends Seeder
              **************** Miembros activos: 21 **************
              ****************************************************/
             //CONVOCATORIA 2025(02-05-2025) (Total : 8 personas)
+            //Adriana Gabriela Castillo Ochoa
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 02 de Mayo de 2025
@@ -1637,6 +1779,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'A7C16',
                 'imagen_firma' => NULL,
             ],
+            //Angelo Salvattore Chavarry Bustamante
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 02 de Mayo de 2025
@@ -1648,6 +1791,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'A20C2',
                 'imagen_firma' => NULL,
             ],
+            //Cesar Junior Quito Cruz
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 02 de Mayo de 2025
@@ -1659,6 +1803,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'C10Q3',
                 'imagen_firma' => NULL,
             ],
+            //Juan José Chávez Tenorio
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 02 de Mayo de 2025
@@ -1670,6 +1815,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'J10C21',
                 'imagen_firma' => NULL,
             ],
+            //Lorena Midalís Primo Bueno
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 02 de Mayo de 2025
@@ -1681,6 +1827,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'L13P2',
                 'imagen_firma' => NULL,
             ],
+            //Malena Shecid Huamán Arana
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 02 de Mayo de 2025
@@ -1692,6 +1839,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'M20H1',
                 'imagen_firma' => NULL,
             ],
+            //Melissa del Rosario Muñoz Uriarte
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 02 de Mayo de 2025
@@ -1703,6 +1851,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'M4R13U',
                 'imagen_firma' => NULL,
             ],
+            //Milene Xiomara Delgado Silva
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 02 de Mayo de 2025
@@ -1716,6 +1865,7 @@ class PersonaSeeder extends Seeder
             ],
 
             //CONVOCATORIA EXTRAORDINARIA 2024(10-12-2024) (Total : 4 personas)
+            //Belinda Maricielo Arroyo Esquivel
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 10 de Diciembre de 2024
@@ -1727,6 +1877,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'B13A5',
                 'imagen_firma' => NULL,
             ],
+            //Diego Jesús Ullilén Chávez
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 10 de Diciembre de 2024
@@ -1738,6 +1889,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'D10U3',
                 'imagen_firma' => NULL,
             ],
+            //Luis Angel Lecca Cortez
             [
                 //MIEMBRO ACTIVO 2025-I
                 //Ingresó a MKT el 10 de Diciembre de 2024
@@ -1749,6 +1901,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'L1L3',
                 'imagen_firma' => NULL,
             ],
+            //Stephanie Angeline Arizola Rodriguez
             [
                 //Ingresó a MKT el 10 de Diciembre de 2024
                 //Se le retiró de MKT por bajo rendimiento el 19 de Marzo de 2025
@@ -1872,7 +2025,7 @@ class PersonaSeeder extends Seeder
             ],
             
             
-            //CONVOCATORIA 2023-I (13-06-2023) (Total : 9 personas)
+            //CONVOCATORIA 2023-I (13-06-2023) (Total : 9 personas | Registrados: 8 personas)
             //Ana Lucía Rojas Chavez
             [
                 //Ingresó a MKT el 13 De Junio 2023
@@ -1905,7 +2058,6 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'C1U21',
                 'imagen_firma' => NULL,
             ],
-            //César Javier Avila Evangelista(Falta pero no hay registro de su salida)
             //José Efrain Calle Gutierrez
             [
                 //Ingresó a MKT el 13 de Junio de 2023
@@ -1976,7 +2128,7 @@ class PersonaSeeder extends Seeder
                     //MIEMBRO ACTIVO 2025-I
             **/
 
-            //CONVOCATORIA 2022-I (10-05-2022) (Total : 9 personas)
+            //CONVOCATORIA 2022-I (10-05-2022) (Total : 9 personas | Registrados: 6 personas)
             //Anderson Abat Otiniano Morales
             [
                 //MIEMBRO ACTIVO 2025-I
@@ -2001,7 +2153,6 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'C7C18',
                 'imagen_firma' => NULL,
             ],
-            //Daniel Abraham Medina Mathey(Falta pero no hay registro de salida)
             //Fabrizio Andree Aliaga Pretell
             [
                 //Ingresó a MKT el 10 de Mayo de 2022
@@ -2026,9 +2177,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'G21E4',
                 'imagen_firma' => NULL,
             ],
-            //Lisbeth Anayeli Reyes Salinas (Falta pero no hay registro de salida)
-            //Luz Jazmin Cabos Martinez (Falta pero no hay registro de salida)
-            //Nathaly Silvana Quiroz Mestanza   t530100220@unitru.edu.pe
+            //Nathaly Silvana Quiroz Mestanza
             [
                 //Ingresó a MKT el 10 de Mayo de 2022
                 //Egresó el 17 de Marzo de 2025
@@ -2410,7 +2559,9 @@ class PersonaSeeder extends Seeder
             **/
             
             //CONVOCATORIA 2024(10-12-2024)
+            //Luis Angel Morales Lino
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a TI el 10 de Diciembre de 2024
                 'nombres' => 'Luis Angel',
                 'apellidos' => 'Morales Lino',
@@ -2420,7 +2571,9 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'L1M12',
                 'imagen_firma' => NULL,
             ],
+            //Marco Camilo Toledo Campos
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a TI el 10 de Diciembre de 2024
                 'nombres' => 'Marco Camilo',
                 'apellidos' => 'Toledo Campos',
@@ -2430,7 +2583,9 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'M3T3',
                 'imagen_firma' => NULL,
             ],
+            //Mirella Esteffany Gamboa Valderrama
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a TI el 10 de Diciembre de 2024
                 'nombres' => 'Mirella Esteffany',
                 'apellidos' => 'Gamboa Valderrama',
@@ -2440,7 +2595,9 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'M5G23',
                 'imagen_firma' => NULL,
             ],
+            //Paúl Jamir Lazaro Solano
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a TI el 10 de Diciembre de 2024
                 'nombres' => 'Paúl Jamir',
                 'apellidos' => 'Lazaro Solano',
@@ -2450,7 +2607,9 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'P10L20',
                 'imagen_firma' => NULL,
             ],
+            //Sadhu Rojas García
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a TI el 10 de Diciembre de 2024
                 'nombres' => 'Sadhu',
                 'apellidos' => 'Rojas García',
@@ -2462,7 +2621,9 @@ class PersonaSeeder extends Seeder
             ],
 
             //CONVOCATORIA 2025(02-05-2025)
+            //Elder Eli De la Cruz Calderón
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a TI el 02 de Mayo de 2025
                 'nombres' => 'Elder Eli',
                 'apellidos' => 'De la Cruz Calderón',
@@ -2472,7 +2633,9 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'E5D12C3',
                 'imagen_firma' => NULL,
             ],
+            //Jhoanny Jheimilyn Xiomara Vargas Ramos
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a TI el 02 de Mayo de 2025
                 'nombres' => 'Jhoanny Jheimilyn Xiomara',
                 'apellidos' => 'Vargas Ramos',
@@ -2482,7 +2645,9 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'J10X23R',
                 'imagen_firma' => NULL,
             ],
+            //Pablo César Sánchez Cabrera
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a TI el 02 de Mayo de 2025
                 'nombres' => 'Pablo César',
                 'apellidos' => 'Sánchez Cabrera',
@@ -2492,7 +2657,9 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'P3S3',
                 'imagen_firma' => NULL,
             ],
+            //Renato Alexander Martinez Aguilar
             [
+                //MIEMBRO ACTIVO 2025-I
                 //Ingresó a TI el 02 de Mayo de 2025
                 'nombres' => 'Renato Alexander',
                 'apellidos' => 'Martinez Aguilar',
@@ -2502,6 +2669,7 @@ class PersonaSeeder extends Seeder
                 'codigo' => 'R1M1',
                 'imagen_firma' => NULL,
             ],
+            //Zaleth Valentina Rivas Calderón
             [
                 //Ingresó a TI el 02 de Mayo de 2025
                 //Se retiró de TI el 22 de Agosto de 2025
