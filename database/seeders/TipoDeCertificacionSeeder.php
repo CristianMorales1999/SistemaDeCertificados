@@ -17,7 +17,7 @@ class TipoDeCertificacionSeeder extends Seeder
             [
                 'nombre' => 'Certificado de Egresado',
                 'descripcion' => 'Certificado otorgado a los egresados de la institución.',
-                'codigo' => 'EG'
+                'codigo' => 'EGR'
             ],
             [
                 'nombre' => 'Certificado de Retiro Voluntario',
@@ -42,7 +42,7 @@ class TipoDeCertificacionSeeder extends Seeder
             [
                 'nombre' => 'Certificado de Coordinador de Proyecto',
                 'descripcion' => 'Certificado otorgado a los coordinadores de un proyecto específico.',
-                'codigo' => 'CORD'
+                'codigo' => 'CORDP'
             ],
             [
                 'nombre' => 'Certificado de Miembros Internos del Proyecto',
@@ -55,43 +55,43 @@ class TipoDeCertificacionSeeder extends Seeder
                 'codigo' => 'MEP'
             ],
             [
-                'nombre' => 'Certificado de Staff de Apoyo Interno de Proyecto',
+                'nombre' => 'Certificado de Staff Interno de Apoyo de Proyecto',
                 'descripcion' => 'Certificado otorgado al staff de apoyo interno de un proyecto específico.',
-                'codigo' => 'SAIP'
+                'codigo' => 'SIAP'
             ],
             [
-                'nombre' => 'Certificado de Staff de Apoyo Externo de Proyecto',
+                'nombre' => 'Certificado de Staff Externo de Apoyo de Proyecto',
                 'descripcion' => 'Certificado otorgado al staff de apoyo externo de un proyecto específico.',
-                'codigo' => 'SAEP'
+                'codigo' => 'SEAP'
             ],
             [
                 'nombre' => 'Certificado de Participación como Ponente de Eventos Generales de SEDIPRO UNT',
                 'descripcion' => 'Certificado otorgado a los ponentes que participan en eventos generales organizados por SEDIPRO UNT.',
-                'codigo' => 'PPEGSU'
+                'codigo' => 'PONEG'
 
             ],
             [
                 'nombre' => 'Certificado de Participación como Ponente para Proyecto',
                 'descripcion' => 'Certificado otorgado a los ponentes que participan en eventos específicos de un proyecto.',
-                'codigo' => 'PPP'
+                'codigo' => 'PONP'
             ],
             [
                 //Eventos generales se refiere a 'Talleres', 'Capacitaciones', 'Conferencias', 'Webinars', etc.
                 'nombre' => 'Certificado de Participación en Evento General de SEDIPRO UNT',
                 'descripcion' => 'Certificado otorgado a los participantes que asisten a eventos generales organizados por SEDIPRO UNT.',
-                'codigo' => 'PEGSU'
+                'codigo' => 'PAREVG'
             ],
             [
                 //Eventos de proyecto se refiere a los mismo eventos generales pero organizados para un proyecto específico.
-                'nombre' => 'Certificado de Participación en Eventos de Proyecto',
+                'nombre' => 'Certificado de Participación en Evento de Proyecto',
                 'descripcion' => 'Certificado otorgado a los participantes que asisten a eventos específicos de un proyecto.',
-                'codigo' => 'PEP'
+                'codigo' => 'PAREVP'
             ],
             [
                 //Colaboradores son aquellos que ayudan en la ejecución del proyecto, pero no son miembros formales del mismo.
                 'nombre' => 'Certificado de Participación en Ejecución de Proyecto',
                 'descripcion' => 'Certificado otorgado a los participantes que colaboran en la ejecución de un proyecto específico.',
-                'codigo' => 'PEEP'
+                'codigo' => 'PAREJP'
             ],
             [
                 'nombre' => 'Certificado de Valores Destacados',
