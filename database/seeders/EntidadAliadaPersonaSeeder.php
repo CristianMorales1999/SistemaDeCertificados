@@ -19,7 +19,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
          * Estados posibles para personas en entidades aliadas:
          * .
                 'Activo',
-                'Inactivo',
+                'Cambio de rol',
                 'Retirado',
          */
         /**
@@ -293,7 +293,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'estado' => 'Activo',
             ],
 
-            //Retirado
+            //Retirados
             [
                 'entidad_aliada' => 'Voluntariado UNT',
                 'correo_persona' => 'ncumpa@unitru.edu.pe', // Neyser Yampier Cumpa Inoñan
@@ -302,15 +302,13 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'rol' => 'Miembro',
                 'estado' => 'Retirado',
             ],
-
-            //Inactivo
             [
                 'entidad_aliada' => 'Voluntariado UNT',
                 'correo_persona' => 'cmsalazarc@unitru.edu.pe', // Clarita Mariliz Salazar Corcuera
                 'fecha_inicio' => '2024-01-01',
                 'fecha_fin' => '2025-12-31',
                 'rol' => 'Miembro',
-                'estado' => 'Inactivo',
+                'estado' => 'Retirado',
             ],
 
             /*********************
@@ -352,7 +350,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'rol' => 'Miembro',
                 'estado' => 'Activo',
             ],
-            //Retirado
+            //Retirados
             [
                 'entidad_aliada' => 'Centro de Estudiantes de Administración',
                 'correo_persona' => 'acriosga@unitru.edu.pe', // Ana Cecilia Rios García
@@ -361,14 +359,13 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'rol' => 'Miembro',
                 'estado' => 'Retirado', // penúltimo
             ],
-            //Inactivo
             [
                 'entidad_aliada' => 'Centro de Estudiantes de Administración',
                 'correo_persona' => 't1020100721@unitru.edu.pe', // Lesly Judith Mejia Rodriguez
                 'fecha_inicio' => '2024-01-01',
                 'fecha_fin' => '2025-12-31',
                 'rol' => 'Miembro',
-                'estado' => 'Inactivo', // último
+                'estado' => 'Retirado', // último
             ],
 
             /*********************
@@ -411,14 +408,13 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'rol' => 'Miembro',
                 'estado' => 'Retirado', //  penúltimo
             ],
-            //Inactivo
             [
                 'entidad_aliada' => 'Centro de Estudiantes de Arquitectura y Urbanismo',
                 'correo_persona' => 't524100120@unitru.edu.pe', // Karol Lisbeth Vera Sánchez
                 'fecha_inicio' => '2024-01-01',
                 'fecha_fin' => '2025-12-31',
                 'rol' => 'Miembro',
-                'estado' => 'Inactivo', // último 
+                'estado' => 'Retirado', // último 
             ],
 
             /*********************
@@ -470,6 +466,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'rol' => 'Miembro',
                 'estado' => 'Activo',
             ],
+            //Retirados
             [
                 'entidad_aliada' => 'Centro de estudiantes de Ingeniería Ambiental',
                 'correo_persona' => 'favillegasvi@unitru.edu.pe', // Flavia Angelica Villegas Villar
@@ -484,7 +481,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'fecha_inicio' => '2024-01-01',
                 'fecha_fin' => '2025-12-31',
                 'rol' => 'Miembro',
-                'estado' => 'Inactivo',
+                'estado' => 'Retirado',
             ],
             /*********************
              **** CEICI *********
@@ -540,6 +537,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'rol' => 'Miembro',
                 'estado' => 'Activo',
             ],
+            //Retirados
             [
                 'entidad_aliada' => 'Centro de Estudiantes de Ingeniería de Materiales',
                 'correo_persona' => 't513500620@unitru.edu.pe', // Bryam Montañez Correa
@@ -554,7 +552,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'fecha_inicio' => '2024-01-01',
                 'fecha_fin' => '2025-12-31',
                 'rol' => 'Miembro',
-                'estado' => 'Inactivo',
+                'estado' => 'Retirado',
             ],
             /****************************
              **** FÍSICA UNT ***********
@@ -579,6 +577,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'rol' => 'Miembro',
                 'estado' => 'Activo',
             ],
+            //Retirados
             [
                 'entidad_aliada' => 'Centro de Estudiantes de Fisica',
                 'correo_persona' => 'aabal@unitru.edu.pe', // Andrew Carlos Abal Mendoza
@@ -593,7 +592,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'fecha_inicio' => '2024-01-01',
                 'fecha_fin' => '2025-12-31',
                 'rol' => 'Miembro',
-                'estado' => 'Inactivo',
+                'estado' => 'Retirado',
             ],
             /**************************************
              **** ING. INDUSTRIAL *****************
@@ -753,6 +752,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'rol' => 'Miembro',
                 'estado' => 'Activo',
             ],
+            //Retirados
             [
                 'entidad_aliada' => 'Centro de Estudiantes de Trabajo Social',
                 'correo_persona' => 'aruizd@unitru.edu.pe', // Ana Cecilia Ruiz Dias
@@ -767,7 +767,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'fecha_inicio' => '2024-01-01',
                 'fecha_fin' => '2025-12-31',
                 'rol' => 'Miembro',
-                'estado' => 'Inactivo',
+                'estado' => 'Retirado',
             ],
             /********************************************
              **** ING. METALÚRGICA **********************
@@ -781,6 +781,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'rol' => 'Miembro',
                 'estado' => 'Activo',
             ],
+            //Retirados
             [
                 'entidad_aliada' => 'Centro de Estudiantes de Ingeniería Metalúrgica',
                 'correo_persona' => 'ecaballeroz@unitru.edu.pe', // Elva Briguith Caballero Zamalloa
@@ -795,7 +796,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'fecha_inicio' => '2024-01-01',
                 'fecha_fin' => '2025-12-31',
                 'rol' => 'Miembro',
-                'estado' => 'Inactivo',
+                'estado' => 'Retirado',
             ],
             /********************************************
              **** TURISMO **********************
@@ -847,6 +848,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'rol' => 'Miembro',
                 'estado' => 'Activo',
             ],
+            //Retirados
             [
                 'entidad_aliada' => 'Centro de Estudiantes de Ingeniería Química',
                 'correo_persona' => 'kinfante@unitru.edu.pe', // Keiko Marianella Infante Palacios
@@ -861,7 +863,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'fecha_inicio' => '2024-01-01',
                 'fecha_fin' => '2025-12-31',
                 'rol' => 'Miembro',
-                'estado' => 'Inactivo',
+                'estado' => 'Retirado',
             ],
             /****************************************
              **** ING. MECATRÓNICA *****************
@@ -886,13 +888,14 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'rol' => 'Miembro',
                 'estado' => 'Activo',
             ],
+            //Retirado
             [
                 'entidad_aliada' => 'Centro de Estudiantes de Ingeniería Mecatrónica',
                 'correo_persona' => 't513600520@unitru.edu.pe', // Karl Alejandro Espinoza León
                 'fecha_inicio' => '2024-01-01',
                 'fecha_fin' => '2025-12-31',
                 'rol' => 'Miembro',
-                'estado' => 'Inactivo',
+                'estado' => 'Retirado',
             ],
             /****************************************
              **** ESTOMATOLOGÍA ********************

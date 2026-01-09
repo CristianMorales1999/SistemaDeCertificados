@@ -26,9 +26,10 @@ return new class extends Migration
             $table->enum('rol',['Miembro','Representante'])->default('Miembro');
             $table->enum('estado',[
                 'Activo',
-                'Inactivo',
+                'Cambio de rol',
                 'Retirado'
             ])->default('Activo');
+            $table->unique(['persona_id', 'entidad_aliada_id', 'rol'],'entidad_aliada_persona_persona_id_entidad_aliada_id_rol_unique');//Índice para evitar duplicados
             $table->timestamps();
         });
     }

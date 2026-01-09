@@ -29,6 +29,7 @@ CREATE TABLE entidades_aliadas (
   cargo_representante_id INTEGER UNSIGNED NULL,
   nombre VARCHAR(255) NOT NULL,
   acronimo VARCHAR(15) NULL,
+  estado ENUM('Activa','Inactiva') NOT NULL DEFAULT 'Activa',
   PRIMARY KEY(id),
   UNIQUE INDEX entidades_aliadas_nombre_unique(nombre),
   UNIQUE INDEX entidades_aliadas_acronimo_unique(acronimo),
@@ -219,10 +220,11 @@ CREATE TABLE entidad_aliada_persona (
   fecha_inicio DATE NOT NULL,
   fecha_fin DATE NULL,
   rol ENUM('Miembro','Representante') NOT NULL DEFAULT 'Miembro',
-  estado ENUM('Activo','Inactivo','Retirado') NOT NULL DEFAULT 'Activo',
+  estado ENUM('Activo','Cambio de rol','Retirado') NOT NULL DEFAULT 'Activo',
   PRIMARY KEY(id),
   INDEX entidad_aliada_persona_FKIndex1(entidad_aliada_id),
-  INDEX entidad_aliada_persona_FKIndex2(persona_id)
+  INDEX entidad_aliada_persona_FKIndex2(persona_id),
+  UNIQUE INDEX entidad_aliada_persona_persona_id_entidad_aliada_id_rol_unique(persona_id, entidad_aliada_id, rol)
 );
 #____________________________________________________________________
 
