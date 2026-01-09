@@ -139,17 +139,20 @@
 
 @layer utilities {
   /* Headings */
-  .h1-Heading-32px-Bold { font: var(--h1-Heading-32px-Bold); font-weight: 700; }
-  .h2-Title-28px-Bold { font: var(--h2-Title-28px-Bold); font-weight: 700; }
+  
+  .h1-Heading-32px-Bold { font: var(--h1-Heading-32px-Bold); font-weight: 700; }/* Titulos de pagina */
+  .h2-Title-28px-Bold { font: var(--h2-Title-28px-Bold); font-weight: 700; }/* Titulos de seccion */
+
   .h3-Subtitle-24px-Semibold { font: var(--h3-Subtitle-24px-Semibold); font-weight: 600; }
+  /* Texto secundario */
   .h4-Subtitle-20px-Medium { font: var(--h4-Subtitle-20px-Medium); font-weight: 500; }
   .h5-Subtitle-18px-Regular { font: var(--h5-Subtitle-18px-Regular); font-weight: 400; }
   .h6-Subtitle-16px-Regular { font: var(--h6-Subtitle-16px-Regular); font-weight: 400; }
 
   /* Paragraphs & Text */
-  .Normaltext-14px-Regular { font: var(--Normaltext-14px-Regular); font-weight: 400; }
-  .Littletext-12px-Light { font: var(--Littletext-12px-Light); font-weight: 300; }
-  .Normaltext-16px-Regular { font: var(--Normaltext-16px-Regular); font-weight: 400; }
+  .Normaltext-14px-Regular { font: var(--Normaltext-14px-Regular); font-weight: 400; }/* Texto secundario */
+  .Littletext-12px-Light { font: var(--Littletext-12px-Light); font-weight: 300; }/* Ayudas */
+  .Normaltext-16px-Regular { font: var(--Normaltext-16px-Regular); font-weight: 400; }/* Texto base */
   .Normaltext-18px-Medium { font: var(--Normaltext-18px-Medium); font-weight: 500; }
   .Normaltext-18px-Semibold { font: var(--Normaltext-18px-Semibold); font-weight: 600; }
   .Normaltext-14px-Semibold { font: var(--Normaltext-14px-Semibold); font-weight: 600; }
