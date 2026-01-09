@@ -9,7 +9,7 @@
 <body>
 
     <!-- HEADER -->
-    <div class="w-full p-3 bg-white shadow-lg flex items-center fixed top-0 z-50">
+    <div class="w-full p-3 bg-white shadow-lg flex items-center top-0 z-50 sticky">
 
         <div class="w-1/4 flex items-center justify-center 2xl:pr-20">
             <a href="{{ url('/') }}">
