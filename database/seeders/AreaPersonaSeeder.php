@@ -221,7 +221,7 @@ class AreaPersonaSeeder extends Seeder
             [
                 //Corina Marilu Sanchez Delgado
                 'area' => 'GTH',
-                'correo_persona' => 'Csanchezd@unitru.edu.pe',
+                'correo_persona' => 'csanchezd@unitru.edu.pe',
                 'fecha_inicio' => '2024-12-10',//Ingresó a GTH el 10 De Diciembre 2024
                 'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
                 'estado' =>'Miembro activo',
