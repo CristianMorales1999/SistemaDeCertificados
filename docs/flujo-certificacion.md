@@ -46,13 +46,31 @@ Este documento describe los flujos principales del sistema SEDICERT: la generaci
 **Filtrado automático**:
 
 El sistema **NO muestra**:
-- Personas retiradas por bajo rendimiento (para cualquier tipo de certificado)
+- Personas retiradas por bajo rendimiento (para **cualquier tipo de certificado**, sin excepción)
 - Personas que no cumplen requisitos específicos del tipo de certificado
 
+**Reglas de filtrado por tipo de certificado**:
+
+#### Certificados que requieren membresía (historial en `area_persona`):
+- **Egresado** o **Retiro Voluntario**: 
+  - ✅ Debe tener historial en `area_persona`
+  - ✅ Mínimo 1 año de membresía (calculado desde historial)
+  - ✅ NO retirado por bajo rendimiento
+- **Directiva, Director/Co-Director/Coordinador de Proyecto, Miembro Interno, Staff Interno, Valores Destacados**:
+  - ✅ Debe tener historial en `area_persona`
+  - ✅ NO retirado por bajo rendimiento
+  - ✅ Asociado al contexto requerido (área/proyecto según corresponda)
+
+#### Certificados que permiten externos (NO requieren historial en `area_persona`):
+- **Miembro Externo, Staff Externo, Ponente, Participante**:
+  - ✅ Asociado al proyecto/evento correspondiente
+  - ⚠️ **EXCEPCIÓN**: Si la persona SÍ es miembro de SEDIPRO y está retirada por bajo rendimiento, **NO puede recibir ningún certificado** (ni siquiera estos)
+
 **Ejemplos de filtrado**:
-- Para certificados de **Egresado** o **Retiro Voluntario**: Solo personas con mínimo 1 año de membresía y no retiradas por bajo rendimiento
-- Para certificados de **Proyecto**: Solo personas asociadas al proyecto seleccionado
-- Para certificados de **Evento**: Solo personas asociadas al evento seleccionado
+- Para certificados de **Egresado** o **Retiro Voluntario**: Solo personas con historial en `area_persona`, mínimo 1 año de membresía y no retiradas por bajo rendimiento
+- Para certificados de **Proyecto (Internos)**: Solo personas con historial en `area_persona`, asociadas al proyecto y no retiradas por bajo rendimiento
+- Para certificados de **Proyecto (Externos)**: Personas asociadas al proyecto (pueden no tener historial en `area_persona`, pero si lo tienen y están retiradas por bajo rendimiento, se excluyen)
+- Para certificados de **Evento**: Personas asociadas al evento (misma regla de exclusión por retiro)
 
 ---
 
@@ -62,17 +80,25 @@ El sistema **NO muestra**:
 
 El sistema valida para cada persona seleccionada:
 
-1. **Reglas del Estatuto**:
-   - Tiempo mínimo de membresía (si aplica)
-   - Estado (no retirado por bajo rendimiento)
-   - Elegibilidad según tipo de certificado
+1. **Reglas de Elegibilidad por Tipo de Certificado**:
+   - **Si el tipo requiere membresía**: Verificar que tenga historial en `area_persona`
+   - **Si el tipo permite externos**: Verificar asociación con proyecto/evento (pero aún así excluir si está retirado por bajo rendimiento)
 
-2. **Reglas de Contexto**:
+2. **Reglas del Estatuto**:
+   - **Tiempo mínimo de membresía**: Solo para Egresado/Retiro Voluntario
+     - Calcular tiempo total desde historial `area_persona`
+     - Considerar cambios de área como continuidad
+     - Validar mínimo 1 año
+   - **Estado de retiro**: Para **TODOS los tipos de certificado**
+     - Consultar estado en historial `area_persona`
+     - Si está retirado por bajo rendimiento → **RECHAZAR** (sin excepción)
+
+3. **Reglas de Contexto**:
    - Asociación con área (si aplica)
    - Asociación con proyecto (si aplica)
    - Asociación con evento (si aplica)
 
-3. **Reglas de Firmas**:
+4. **Reglas de Firmas**:
    - Verificación de firmantes requeridos disponibles
    - Validación de configuración de firmas
 
@@ -282,14 +308,22 @@ Buscar Certificado
 ### Certificados de Egresado/Retiro Voluntario
 
 **Validaciones adicionales**:
-- Mínimo 1 año de membresía activa
-- No retirado por bajo rendimiento
-- Historial completo verificado
+- **Mínimo 1 año de membresía activa**:
+  - Calcular desde historial completo en `area_persona`
+  - Sumar todos los periodos de pertenencia
+  - Considerar cambios de área como continuidad (no reinicia el tiempo)
+- **No retirado por bajo rendimiento**:
+  - Consultar estado en historial `area_persona`
+  - Si existe estado de retiro por bajo rendimiento → **RECHAZAR**
+- **Historial completo verificado**:
+  - Verificar que tenga al menos un registro en `area_persona`
+  - Validar fechas de inicio y fin
 
 **Proceso especial**:
 - Cálculo de tiempo de membresía considerando cambios de área
-- Verificación de estado histórico
+- Verificación de estado histórico en `area_persona`
 - Validación estricta antes de permitir generación
+- **Implementación requerida**: Función o servicio de dominio para calcular tiempo de membresía
 
 ---
 
