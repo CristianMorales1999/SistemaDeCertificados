@@ -298,7 +298,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'entidad_aliada' => 'Voluntariado UNT',
                 'correo_persona' => 'ncumpa@unitru.edu.pe', // Neyser Yampier Cumpa Inoñan
                 'fecha_inicio' => '2024-01-01',
-                'fecha_fin' => null,
+                'fecha_fin' => '2025-12-31',
                 'rol' => 'Miembro',
                 'estado' => 'Retirado',
             ],
@@ -308,7 +308,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'entidad_aliada' => 'Voluntariado UNT',
                 'correo_persona' => 'cmsalazarc@unitru.edu.pe', // Clarita Mariliz Salazar Corcuera
                 'fecha_inicio' => '2024-01-01',
-                'fecha_fin' => null,
+                'fecha_fin' => '2025-12-31',
                 'rol' => 'Miembro',
                 'estado' => 'Inactivo',
             ],
@@ -357,7 +357,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'entidad_aliada' => 'Centro de Estudiantes de Administración',
                 'correo_persona' => 'acriosga@unitru.edu.pe', // Ana Cecilia Rios García
                 'fecha_inicio' => '2024-01-01',
-                'fecha_fin' => null,
+                'fecha_fin' => '2025-12-31',
                 'rol' => 'Miembro',
                 'estado' => 'Retirado', // penúltimo
             ],
@@ -366,7 +366,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'entidad_aliada' => 'Centro de Estudiantes de Administración',
                 'correo_persona' => 't1020100721@unitru.edu.pe', // Lesly Judith Mejia Rodriguez
                 'fecha_inicio' => '2024-01-01',
-                'fecha_fin' => null,
+                'fecha_fin' => '2025-12-31',
                 'rol' => 'Miembro',
                 'estado' => 'Inactivo', // último
             ],
@@ -407,7 +407,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'entidad_aliada' => 'Centro de Estudiantes de Arquitectura y Urbanismo',
                 'correo_persona' => 'ealvarez@unitru.edu.pe', // Daniel Eduardo Alvarez Abanto
                 'fecha_inicio' => '2024-01-01',
-                'fecha_fin' => null,
+                'fecha_fin' => '2025-12-31',
                 'rol' => 'Miembro',
                 'estado' => 'Retirado', //  penúltimo
             ],
@@ -416,7 +416,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'entidad_aliada' => 'Centro de Estudiantes de Arquitectura y Urbanismo',
                 'correo_persona' => 't524100120@unitru.edu.pe', // Karol Lisbeth Vera Sánchez
                 'fecha_inicio' => '2024-01-01',
-                'fecha_fin' => null,
+                'fecha_fin' => '2025-12-31',
                 'rol' => 'Miembro',
                 'estado' => 'Inactivo', // último 
             ],
@@ -474,7 +474,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'entidad_aliada' => 'Centro de estudiantes de Ingeniería Ambiental',
                 'correo_persona' => 'favillegasvi@unitru.edu.pe', // Flavia Angelica Villegas Villar
                 'fecha_inicio' => '2024-01-01',
-                'fecha_fin' => null,
+                'fecha_fin' => '2025-12-31',
                 'rol' => 'Miembro',
                 'estado' => 'Retirado',
             ],
@@ -482,7 +482,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'entidad_aliada' => 'Centro de estudiantes de Ingeniería Ambiental',
                 'correo_persona' => 'varamoshe@unitru.edu.pe', // Valeria Alejandra Ramos Hernandez
                 'fecha_inicio' => '2024-01-01',
-                'fecha_fin' => null,
+                'fecha_fin' => '2025-12-31',
                 'rol' => 'Miembro',
                 'estado' => 'Inactivo',
             ],
@@ -507,15 +507,15 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'fecha_inicio' => '2024-01-01',
                 'fecha_fin' => null,
                 'rol' => 'Miembro',
-                'estado' => 'Retirado',
+                'estado' => 'Activo',
             ],
             [
                 'entidad_aliada' => 'Centro de Estudiantes de Ingeniería Civil',
                 'correo_persona' => 'ceteranre@unitru.edu.pe', // Carlos Eduardo Terán Revilla
                 'fecha_inicio' => '2024-01-01',
-                'fecha_fin' => null,
+                'fecha_fin' => '2025-12-31',
                 'rol' => 'Miembro',
-                'estado' => 'Inactivo',
+                'estado' => 'Retirado',
             ],
             /*********************
              **** CEIMAT ********
@@ -544,7 +544,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'entidad_aliada' => 'Centro de Estudiantes de Ingeniería de Materiales',
                 'correo_persona' => 't513500620@unitru.edu.pe', // Bryam Montañez Correa
                 'fecha_inicio' => '2024-01-01',
-                'fecha_fin' => null,
+                'fecha_fin' => '2025-12-31',
                 'rol' => 'Miembro',
                 'estado' => 'Retirado',
             ],
@@ -552,7 +552,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'entidad_aliada' => 'Centro de Estudiantes de Ingeniería de Materiales',
                 'correo_persona' => 'ejruizp@unitru.edu.pe', // Emerson Josue Ruiz Polo
                 'fecha_inicio' => '2024-01-01',
-                'fecha_fin' => null,
+                'fecha_fin' => '2025-12-31',
                 'rol' => 'Miembro',
                 'estado' => 'Inactivo',
             ],
@@ -583,7 +583,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'entidad_aliada' => 'Centro de Estudiantes de Fisica',
                 'correo_persona' => 'aabal@unitru.edu.pe', // Andrew Carlos Abal Mendoza
                 'fecha_inicio' => '2024-01-01',
-                'fecha_fin' => null,
+                'fecha_fin' => '2025-12-31',
                 'rol' => 'Miembro',
                 'estado' => 'Retirado',
             ],
@@ -591,7 +591,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'entidad_aliada' => 'Centro de Estudiantes de Fisica',
                 'correo_persona' => 'peabanto@unitru.edu.pe', // Pedro Alberto Abanto Muñoz
                 'fecha_inicio' => '2024-01-01',
-                'fecha_fin' => null,
+                'fecha_fin' => '2025-12-31',
                 'rol' => 'Miembro',
                 'estado' => 'Inactivo',
             ],
@@ -663,7 +663,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'entidad_aliada' => 'Centro de Estudiantes de Ingeniería Industrial',
                 'correo_persona' => 'msrosasa@unitru.edu.pe', // Mauricio Sebastian Rosas Alvarez
                 'fecha_inicio' => '2024-01-01',
-                'fecha_fin' => null,
+                'fecha_fin' => '2025-12-31',
                 'rol' => 'Miembro',
                 'estado' => 'Retirado',
             ],
@@ -688,15 +688,15 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'fecha_inicio' => '2024-01-01',
                 'fecha_fin' => null,
                 'rol' => 'Miembro',
-                'estado' => 'Retirado',
+                'estado' => 'Activo',
             ],
             [
                 'entidad_aliada' => 'Centro de Estudiantes de Medicina',
                 'correo_persona' => 't1053702220@unitru.edu.pe', // Miguel Angel Zavaleta Ríos
                 'fecha_inicio' => '2024-01-01',
-                'fecha_fin' => null,
+                'fecha_fin' => '2025-12-31',
                 'rol' => 'Miembro',
-                'estado' => 'Inactivo',
+                'estado' => 'Retirado',
             ],
             /*************************************
              **** TRABAJO SOCIAL *****************
@@ -757,7 +757,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'entidad_aliada' => 'Centro de Estudiantes de Trabajo Social',
                 'correo_persona' => 'aruizd@unitru.edu.pe', // Ana Cecilia Ruiz Dias
                 'fecha_inicio' => '2024-01-01',
-                'fecha_fin' => null,
+                'fecha_fin' => '2025-12-31',
                 'rol' => 'Miembro',
                 'estado' => 'Retirado',
             ],
@@ -765,7 +765,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'entidad_aliada' => 'Centro de Estudiantes de Trabajo Social',
                 'correo_persona' => 'spvalderramam@unitru.edu.pe', // Sandra Patricia Valderrama Mercedes
                 'fecha_inicio' => '2024-01-01',
-                'fecha_fin' => null,
+                'fecha_fin' => '2025-12-31',
                 'rol' => 'Miembro',
                 'estado' => 'Inactivo',
             ],
@@ -785,7 +785,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'entidad_aliada' => 'Centro de Estudiantes de Ingeniería Metalúrgica',
                 'correo_persona' => 'ecaballeroz@unitru.edu.pe', // Elva Briguith Caballero Zamalloa
                 'fecha_inicio' => '2024-01-01',
-                'fecha_fin' => null,
+                'fecha_fin' => '2025-12-31',
                 'rol' => 'Miembro',
                 'estado' => 'Retirado',
             ],
@@ -793,7 +793,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'entidad_aliada' => 'Centro de Estudiantes de Ingeniería Metalúrgica',
                 'correo_persona' => 'cgarciaro@unitru.edu.pe', // Cristhian Andres García Rodriguez
                 'fecha_inicio' => '2024-01-01',
-                'fecha_fin' => null,
+                'fecha_fin' => '2025-12-31',
                 'rol' => 'Miembro',
                 'estado' => 'Inactivo',
             ],
@@ -851,7 +851,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'entidad_aliada' => 'Centro de Estudiantes de Ingeniería Química',
                 'correo_persona' => 'kinfante@unitru.edu.pe', // Keiko Marianella Infante Palacios
                 'fecha_inicio' => '2024-01-01',
-                'fecha_fin' => null,
+                'fecha_fin' => '2025-12-31',
                 'rol' => 'Miembro',
                 'estado' => 'Retirado',
             ],
@@ -859,7 +859,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'entidad_aliada' => 'Centro de Estudiantes de Ingeniería Química',
                 'correo_persona' => 'ehyoverah@unitru.edu.pe', // Erick Humberto Yovera Hernández
                 'fecha_inicio' => '2024-01-01',
-                'fecha_fin' => null,
+                'fecha_fin' => '2025-12-31',
                 'rol' => 'Miembro',
                 'estado' => 'Inactivo',
             ],
@@ -890,7 +890,7 @@ class EntidadAliadaPersonaSeeder extends Seeder
                 'entidad_aliada' => 'Centro de Estudiantes de Ingeniería Mecatrónica',
                 'correo_persona' => 't513600520@unitru.edu.pe', // Karl Alejandro Espinoza León
                 'fecha_inicio' => '2024-01-01',
-                'fecha_fin' => null,
+                'fecha_fin' => '2025-12-31',
                 'rol' => 'Miembro',
                 'estado' => 'Inactivo',
             ],
