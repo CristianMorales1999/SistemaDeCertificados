@@ -4,6 +4,13 @@
 
 SEDICERT implementa un sistema de roles y permisos multi-rol, donde un usuario puede tener múltiples roles activos simultáneamente. Cada rol define un conjunto específico de capacidades dentro del sistema.
 
+**Nota Importante**: Las capacidades funcionales listadas para cada rol representan **permisos del sistema**, no solo elementos del menú. Cada rol tiene acceso a un **sidebar diferenciado** que refleja sus capacidades funcionales. Además, cada rol tiene un **dashboard específico** según sus responsabilidades:
+
+- **Administrador**: Dashboard institucional con métricas y gráficos del sistema completo
+- **Supervisor**: Dashboard institucional en modo solo lectura
+- **Marketing**: Dashboard enfocado en grupos de certificación y plantillas
+- **Usuario Normal**: Dashboard personal con estadísticas individuales
+
 ---
 
 ## Roles del Sistema
@@ -12,10 +19,24 @@ SEDICERT implementa un sistema de roles y permisos multi-rol, donde un usuario p
 
 **Descripción**: Control total del sistema.
 
-**Capacidades**:
-- ✅ Gestión completa de usuarios y roles
-- ✅ Gestión completa de personas
-- ✅ Gestión completa de áreas, cargos, proyectos y eventos
+**Capacidades Funcionales** (secciones del sistema):
+- ✅ **Dashboard institucional**: Métricas y gráficos del sistema completo
+- ✅ **Marca Institucional**: Configuración de logo, sello, tipografía y colores por defecto
+- ✅ **Logos y Sellos**: CRUD completo de recursos gráficos institucionales
+- ✅ **Usuarios**: Gestión completa de usuarios y roles (implícitos)
+- ✅ **Entidades Aliadas**: Gestión completa de entidades externas
+- ✅ **Personas**: Gestión completa de personas del sistema
+- ✅ **Áreas**: Gestión completa de áreas organizacionales
+- ✅ **Cargos**: Gestión completa de cargos institucionales
+- ✅ **Proyectos**: Gestión completa de proyectos
+- ✅ **Eventos**: Gestión de eventos generales y de proyectos
+- ✅ **Valores destacados**: Gestión de reconocimientos especiales
+- ✅ **Grupos de Certificación**: Gestión completa incluyendo configuraciones de diseño y certificados
+- ✅ **Notificaciones**: Gestión y visualización de notificaciones del sistema
+- ✅ **Plantillas**: Gestión completa de plantillas de certificados
+- ✅ **Mi perfil**: Gestión de credenciales y datos personales
+
+**Capacidades Técnicas**:
 - ✅ Generación de certificados (todos los tipos)
 - ✅ Modificación y eliminación de certificados
 - ✅ Acceso a todas las configuraciones del sistema
@@ -31,17 +52,24 @@ SEDICERT implementa un sistema de roles y permisos multi-rol, donde un usuario p
 
 **Descripción**: Gestión y generación de certificados.
 
-**Capacidades**:
-- ✅ Crear grupos de certificación
+**Capacidades Funcionales** (secciones del sistema):
+- ✅ **Grupos de Certificación**: Creación y gestión de grupos de certificación
+- ✅ **Plantillas**: Gestión de plantillas de certificados
+- ✅ **Configuración de Diseños**: Configuración de plantilla, fuentes, colores, tamaños y estilos por grupo
+- ✅ **Notificaciones**: Recepción de notificaciones de aprobación o rechazo de configuraciones
+- ✅ **Mi perfil**: Gestión de credenciales y datos personales
+
+**Capacidades Técnicas**:
 - ✅ Generar certificados (todos los tipos)
 - ✅ Visualizar certificados generados
 - ✅ Descargar certificados generados
-- ✅ Consultar personas y sus historiales
-- ✅ Consultar proyectos y eventos
+- ✅ Consultar personas y sus historiales (solo lectura)
+- ✅ Consultar proyectos y eventos (solo lectura)
 - ✅ Visualizar reportes de certificados generados
-- ❌ NO puede modificar configuraciones del sistema
+- ❌ NO puede modificar configuraciones del sistema (marca institucional, logos, sellos)
 - ❌ NO puede gestionar usuarios y roles
 - ❌ NO puede eliminar certificados (solo marcar como inválidos si está permitido)
+- ❌ NO puede gestionar personas, áreas, cargos, proyectos o eventos directamente
 
 **Uso típico**: Personal del área de Marketing responsable de la generación y emisión de certificados.
 
@@ -49,27 +77,47 @@ SEDICERT implementa un sistema de roles y permisos multi-rol, donde un usuario p
 
 ### 3. Supervisor
 
-**Descripción**: Solo lectura para supervisión institucional.
+**Descripción**: Solo lectura para supervisión institucional. Mismo alcance que Administrador pero en **modo solo lectura**.
 
-**Capacidades**:
+**Capacidades Funcionales** (secciones del sistema - todas en modo solo lectura):
+- ✅ **Dashboard institucional**: Visualización de métricas y gráficos (solo lectura)
+- ✅ **Marca Institucional**: Visualización de configuración (solo lectura)
+- ✅ **Logos y Sellos**: Visualización de recursos gráficos (solo lectura)
+- ✅ **Usuarios**: Visualización de usuarios y roles (solo lectura)
+- ✅ **Entidades Aliadas**: Visualización de entidades externas (solo lectura)
+- ✅ **Personas**: Visualización de personas del sistema (solo lectura)
+- ✅ **Áreas**: Visualización de áreas organizacionales (solo lectura)
+- ✅ **Cargos**: Visualización de cargos institucionales (solo lectura)
+- ✅ **Proyectos**: Visualización de proyectos (solo lectura)
+- ✅ **Eventos**: Visualización de eventos generales y de proyectos (solo lectura)
+- ✅ **Valores destacados**: Visualización de reconocimientos especiales (solo lectura)
+- ✅ **Grupos de Certificación**: Visualización de grupos, configuraciones y certificados (solo lectura)
+- ✅ **Notificaciones**: Visualización de notificaciones del sistema (solo lectura)
+- ✅ **Plantillas**: Visualización de plantillas de certificados (solo lectura)
+- ✅ **Mi perfil**: Gestión de credenciales y datos personales (lectura/escritura propia)
+
+**Capacidades Técnicas**:
 - ✅ Visualizar todos los certificados generados
-- ✅ Visualizar reportes y estadísticas
-- ✅ Consultar personas y sus historiales
-- ✅ Consultar proyectos y eventos
+- ✅ Visualizar reportes y estadísticas completas
 - ✅ Validar certificados públicamente
 - ❌ NO puede generar certificados
-- ❌ NO puede modificar ningún dato
-- ❌ NO puede acceder a configuraciones
+- ❌ NO puede modificar ningún dato del sistema
+- ❌ NO puede acceder a configuraciones en modo edición
 
 **Uso típico**: Presidente y Vicepresidente de SEDIPRO UNT que requieren supervisar la actividad sin capacidad de modificación.
 
 ---
 
-### 4. Usuario
+### 4. Usuario Normal
 
-**Descripción**: Consulta de certificados propios.
+**Descripción**: Consulta de certificados propios y gestión personal.
 
-**Capacidades**:
+**Capacidades Funcionales** (secciones del sistema):
+- ✅ **Dashboard personal**: Estadísticas individuales y resumen personal
+- ✅ **Mis certificados**: Visualización y descarga de certificados propios
+- ✅ **Mi perfil**: Cambio de credenciales y gestión de datos personales
+
+**Capacidades Técnicas**:
 - ✅ Visualizar sus propios certificados
 - ✅ Descargar sus propios certificados
 - ✅ Validar certificados públicamente
@@ -77,6 +125,7 @@ SEDICERT implementa un sistema de roles y permisos multi-rol, donde un usuario p
 - ❌ NO puede generar certificados
 - ❌ NO puede ver certificados de otras personas
 - ❌ NO puede acceder a funciones administrativas
+- ❌ NO puede acceder a gestión de grupos, plantillas o configuraciones
 
 **Uso típico**: Miembros de SEDIPRO que quieren acceder a sus certificados personales.
 

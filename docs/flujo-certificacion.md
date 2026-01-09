@@ -25,10 +25,35 @@ Este documento describe los flujos principales del sistema SEDICERT: la generaci
      - Evento específico
      - Ninguno (para certificados generales)
 
+**Regla de Dominio Crítica**: 
+- Un grupo de certificación **siempre está ligado a un tipo de certificado**.
+- El tipo de certificado **define el comportamiento del formulario** y las reglas de elegibilidad.
+
+**Comportamiento Dinámico del Formulario**:
+
+El formulario de creación de grupos se comporta de manera **dinámica según el tipo de certificado seleccionado**:
+
+1. **Campos de contexto condicionales**:
+   - Si el tipo requiere **proyecto** → El campo "Proyecto" aparece y es obligatorio
+   - Si el tipo requiere **evento** → El campo "Evento" aparece y es obligatorio
+   - Si el tipo requiere **área** → El campo "Área" aparece y es obligatorio
+   - Si el tipo no requiere contexto → Estos campos no aparecen
+
+2. **Validación en tiempo real**:
+   - Al seleccionar el tipo de certificado, el sistema valida qué contexto es necesario
+   - Los campos no requeridos se ocultan automáticamente
+   - Los campos requeridos se marcan como obligatorios
+
+3. **Filtrado de opciones**:
+   - Las listas desplegables (proyectos, eventos, áreas) se filtran según disponibilidad
+   - Solo se muestran opciones válidas para el tipo de certificado seleccionado
+
+**Esta regla forma parte del dominio del sistema**, no solo de la interfaz. El backend valida que el contexto proporcionado sea el correcto para el tipo de certificado.
+
 **Validaciones iniciales**:
 - Usuario tiene permisos para generar certificados
 - Tipo de certificado seleccionado es válido
-- Contexto es válido para el tipo de certificado seleccionado
+- Contexto es válido para el tipo de certificado seleccionado (validado por reglas del dominio)
 
 ---
 
@@ -43,11 +68,20 @@ Este documento describe los flujos principales del sistema SEDICERT: la generaci
 
 2. El usuario selecciona las personas que recibirán certificados
 
-**Filtrado automático**:
+**Filtrado Dinámico de Personas**:
+
+El sistema aplica **filtrado automático basado en reglas del dominio**:
+
+- **El tipo de certificado define qué personas son elegibles**
+- **El contexto (proyecto/evento/área) filtra adicionalmente las opciones**
+- **Las reglas del estatuto se aplican universalmente**
+
+**Regla de Dominio**: La tabla de personas disponibles se **filtra dinámicamente** según las reglas del tipo de certificado. **No deben mostrarse personas no elegibles** en la interfaz.
 
 El sistema **NO muestra**:
 - Personas retiradas por bajo rendimiento (para **cualquier tipo de certificado**, sin excepción)
 - Personas que no cumplen requisitos específicos del tipo de certificado
+- Personas que no están asociadas al contexto requerido (proyecto/evento/área)
 
 **Reglas de filtrado por tipo de certificado**:
 

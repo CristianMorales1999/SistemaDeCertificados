@@ -167,13 +167,53 @@ Certificados que reconocen participación en eventos:
 
 ## Características de Cada Tipo de Certificado
 
+Cada tipo de certificado define **completamente** el comportamiento del sistema para ese tipo:
+
+### 1. Reglas de Elegibilidad
+
+- Quién puede recibirlo (miembros, externos, o ambos)
+- Qué validaciones se requieren (tiempo mínimo, estado, etc.)
+- Qué contexto es necesario (proyecto, evento, área, o ninguno)
+
+### 2. Contexto Obligatorio
+
+Cada tipo de certificado define qué contexto es **obligatorio**:
+
+- **Proyecto**: El grupo debe estar asociado a un proyecto específico
+- **Evento**: El grupo debe estar asociado a un evento específico
+- **Área**: El grupo debe estar asociado a un área específica (ej: Directiva)
+- **Ninguno**: El grupo no requiere contexto adicional (ej: Egresado, Retiro Voluntario)
+
+**Implicación en la Interfaz**: Los formularios se comportan dinámicamente según el tipo:
+- Si el tipo requiere proyecto → El campo "Proyecto" aparece y es obligatorio
+- Si el tipo no requiere contexto → Los campos de contexto no aparecen
+
+### 3. Firmas Requeridas
+
 Cada tipo de certificado define:
+- **Quién debe firmar**: Roles o cargos específicos (Presidente, Vicepresidente, Director de Área, etc.)
+- **Orden de firmas**: Secuencia en que aparecen las firmas en el PDF
+- **Tipos de firma**: Digital, física, o ambas
 
-### Reglas de Elegibilidad
+### 4. Texto Base (Speech)
 
-- Quién puede recibirlo
-- Qué validaciones se requieren
-- Qué contexto es necesario
+Cada tipo de certificado tiene un **texto base** que incluye:
+- **Contenido estático**: Texto fijo que no cambia
+- **Partes dinámicas**: Variables que se reemplazan con datos de la persona:
+  - `{nombre}`: Nombre completo de la persona
+  - `{cargo}`: Cargo actual (si aplica)
+  - `{area}`: Área actual (si aplica)
+  - `{proyecto}`: Nombre del proyecto (si aplica)
+  - `{evento}`: Nombre del evento (si aplica)
+  - `{fecha}`: Fecha de emisión
+- **Formato específico**: Estructura y estilo del texto
+
+**Ejemplo de texto base**:
+```
+Certificamos que {nombre}, quien desempeñó el cargo de {cargo} 
+en el área de {area}, ha cumplido satisfactoriamente sus funciones 
+durante el periodo {fecha_inicio} a {fecha_fin}.
+```
 
 ---
 
@@ -211,24 +251,31 @@ Los siguientes tipos de certificados **PUEDEN ser otorgados a personas que NO so
 
 **Nota importante**: Aunque estos certificados pueden ser otorgados a externos, si la persona **SÍ es miembro de SEDIPRO** y está **retirada por bajo rendimiento**, **NO puede recibir ningún tipo de certificado** (regla de exclusión absoluta).
 
-### Firmas Obligatorias
+### Relación Tipo de Certificado → Grupo de Certificación
 
-- Quién debe firmar
-- Orden de firmas
-- Tipos de firma (digital, física, etc.)
+**Regla de Dominio Fundamental**:
 
-### Texto Base (Speech)
+El tipo de certificado **define completamente** cómo se comporta un grupo de certificación:
 
-- Contenido estático
-- Partes dinámicas (nombre, cargo, fecha, etc.)
-- Formato específico
+1. **Al crear un grupo**, el usuario selecciona un tipo de certificado
+2. **El tipo determina**:
+   - Qué campos de contexto aparecen en el formulario (comportamiento dinámico)
+   - Qué personas son elegibles para selección (filtrado automático)
+   - Qué firmas son requeridas
+   - Qué texto base se utilizará para generar los certificados
 
-### Contexto
+3. **El formulario se adapta**:
+   - Si el tipo requiere proyecto → Campo "Proyecto" aparece y es obligatorio
+   - Si el tipo requiere evento → Campo "Evento" aparece y es obligatorio
+   - Si el tipo requiere área → Campo "Área" aparece y es obligatorio
+   - Si el tipo no requiere contexto → Estos campos no aparecen
 
-- **Área**: Certificados relacionados con área específica
-- **Proyecto**: Certificados relacionados con proyecto específico
-- **Evento**: Certificados relacionados con evento específico
-- **Ninguno**: Certificados generales
+4. **La lista de personas se filtra**:
+   - Solo se muestran personas que cumplen las reglas de elegibilidad del tipo
+   - El contexto adicional (proyecto/evento) filtra aún más las opciones
+   - Personas no elegibles **nunca aparecen** en la lista
+
+**Esta es una regla de negocio del dominio**, no solo una característica de la interfaz. El backend valida y aplica estas reglas independientemente de la UI.
 
 ---
 
@@ -273,8 +320,13 @@ Los siguientes tipos de certificados **PUEDEN ser otorgados a personas que NO so
 ### Grupos de Certificación
 
 - **Descripción**: Lotes de certificados generados juntos
-- **Atributos clave**: Nombre, tipo, fecha de generación
-- **Relaciones**: Certificados, usuario generador
+- **Atributos clave**: Nombre, tipo, fecha de generación, contexto (proyecto/evento/área)
+- **Relaciones**: Certificados, usuario generador, tipo de certificación, proyecto (opcional), evento (opcional)
+
+**Regla de Dominio Crítica**: 
+- Un grupo de certificación **siempre está ligado a un tipo de certificado**.
+- El tipo de certificado **define todas las reglas de elegibilidad y comportamiento** del grupo.
+- El grupo hereda las características del tipo de certificado (contexto obligatorio, firmas requeridas, texto base).
 
 ---
 
@@ -330,6 +382,35 @@ Los siguientes tipos de certificados **PUEDEN ser otorgados a personas que NO so
 - Configuración por tipo de certificación
 - Validación antes de emitir
 - Generación de PDF con firmas correctas
+
+### 5. Formularios Dinámicos y Filtrado de Personas
+
+**Regla**: El comportamiento de los formularios y la disponibilidad de personas se determina por el tipo de certificado seleccionado.
+
+**Aplicación**:
+
+1. **Formularios Dinámicos**:
+   - Los campos de contexto (proyecto, evento, área) aparecen **solo si el tipo de certificado los requiere**
+   - El sistema valida en backend que el contexto proporcionado sea válido para el tipo
+   - Esta es una **regla de dominio**, no solo una característica de UI
+
+2. **Filtrado Dinámico de Personas**:
+   - La lista de personas disponibles se filtra automáticamente según:
+     - Reglas de elegibilidad del tipo de certificado
+     - Contexto seleccionado (proyecto/evento/área)
+     - Reglas del estatuto (retiro por bajo rendimiento, tiempo mínimo, etc.)
+   - Personas no elegibles **nunca aparecen** en la lista de selección
+   - El filtrado se realiza en el backend usando servicios de dominio
+
+3. **Validación en Múltiples Capas**:
+   - Frontend: Oculta campos y filtra opciones según tipo seleccionado
+   - Backend: Valida que el contexto sea correcto y que las personas sean elegibles
+   - Dominio: Servicios de elegibilidad determinan quién puede recibir cada tipo
+
+**Esta regla garantiza** que:
+- Los usuarios no pueden crear grupos con configuración inválida
+- Los usuarios solo ven personas que realmente pueden recibir el certificado
+- El sistema mantiene integridad de datos independientemente de la interfaz
 
 ---
 
