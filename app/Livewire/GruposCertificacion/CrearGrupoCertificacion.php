@@ -103,6 +103,7 @@ class CrearGrupoCertificacion extends Component
         }
         $this->resetPersonas();
         $this->updateQueryParams();
+        $this->dispatch('proyecto-seleccionado');
     }
     
     public function updatedEventoId($value)

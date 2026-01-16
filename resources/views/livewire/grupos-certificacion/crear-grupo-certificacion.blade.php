@@ -352,17 +352,138 @@
                                 <h3 class="font-semibold text-lg text-gray-800">Contexto</h3>
                                 
                                 @if($this->contextoRequerido['requiere_proyecto'])
-                                    <div class="w-full">
+                                    <div x-data="{ 
+                                            open: false,
+                                            searchInput: '',
+                                            visibleCount: {{ $this->proyectosDisponibles->count() }},
+                                            filterProyectos() {
+                                                this.$nextTick(() => {
+                                                    this.updateVisibleCount();
+                                                });
+                                            },
+                                            updateVisibleCount() {
+                                                if (!this.$refs.proyectosList) {
+                                                    this.visibleCount = 0;
+                                                    return;
+                                                }
+                                                const listItems = this.$refs.proyectosList.querySelectorAll('li[data-nombre]');
+                                                if (listItems.length === 0) {
+                                                    this.visibleCount = 0;
+                                                    return;
+                                                }
+                                                
+                                                let count = 0;
+                                                listItems.forEach(item => {
+                                                    if (item.offsetParent !== null) {
+                                                        count++;
+                                                    }
+                                                });
+                                                this.visibleCount = count;
+                                            },
+                                            matchesSearch(nombre) {
+                                                if (!this.searchInput || this.searchInput.trim() === '') {
+                                                    return true;
+                                                }
+                                                const search = this.searchInput.toLowerCase().trim();
+                                                const matches = nombre.toLowerCase().includes(search);
+                                                
+                                                this.$nextTick(() => {
+                                                    this.updateVisibleCount();
+                                                });
+                                                
+                                                return matches;
+                                            },
+                                            clearSearch() {
+                                                this.searchInput = '';
+                                                this.visibleCount = {{ $this->proyectosDisponibles->count() }};
+                                            },
+                                            adjustDropdownHeight() {
+                                                if (this.open) {
+                                                    setTimeout(() => {
+                                                        const dropdown = this.$refs.dropdownProyecto;
+                                                        const innerDiv = this.$refs.dropdownInnerProyecto;
+                                                        if (dropdown && innerDiv) {
+                                                            const rect = dropdown.getBoundingClientRect();
+                                                            const footerHeight = 147;
+                                                            const paddingBottom = 200;
+                                                            const availableHeight = window.innerHeight - rect.top - footerHeight - paddingBottom - 20;
+                                                            const maxHeight = Math.min(400, Math.max(200, availableHeight));
+                                                            innerDiv.style.maxHeight = maxHeight + 'px';
+                                                        }
+                                                    }, 10);
+                                                }
+                                            }
+                                         }" 
+                                         x-on:proyecto-seleccionado.window="open = false; clearSearch()"
+                                         x-on:close-dropdown-proyecto="open = false; clearSearch()"
+                                         class="w-full relative" 
+                                         style="z-index: 100; isolation: isolate;">
                                         <label class="block mb-2 text-sm font-medium text-gray-700">Proyecto <span class="text-red-500">*</span></label>
-                                        <select 
-                                            wire:model.live="proyectoId"
-                                            class="w-full p-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-900"
-                                        >
-                                            <option value="">Seleccione un proyecto</option>
-                                            @foreach($this->proyectosDisponibles as $proyecto)
-                                                <option value="{{ $proyecto->id }}">{{ $proyecto->nombre }}</option>
-                                            @endforeach
-                                        </select>
+                                        <div class="w-full flex items-center justify-between p-3 bg-white border border-gray-300 rounded-lg cursor-pointer relative"
+                                            @click="open = !open; adjustDropdownHeight(); if(open) { $nextTick(() => { visibleCount = {{ $this->proyectosDisponibles->count() }}; updateVisibleCount(); }); }"
+                                            style="z-index: 101;">
+                                            <p class="w-full truncate">{{ $proyectoId ? ($this->proyectosDisponibles->firstWhere('id', $proyectoId)?->nombre ?? 'Cargando...') : 'Seleccionar proyecto' }}</p>
+                                            <svg class="w-4 h-4 text-gray-600 transition-transform" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                            </svg>
+                                        </div>
+
+                                        <div x-ref="dropdownProyecto"
+                                             x-show="open" 
+                                             x-cloak
+                                             x-transition
+                                             @click.outside="open = false; clearSearch()"
+                                             style="position: absolute; top: 100%; left: 0; right: 0; z-index: 99999 !important; margin-top: 4px; isolation: isolate;">
+                                            <div x-ref="dropdownInnerProyecto" class="bg-white border border-gray-300 rounded-lg shadow-2xl" style="overflow-y: auto; overflow-x: hidden; position: relative; z-index: 99999 !important; isolation: isolate;">
+                                                <div style="position: sticky; top: 0; z-index: 10; background: white; border-bottom: 1px solid #e5e7eb;" @click.stop>
+                                                    <input type="text"
+                                                           x-model="searchInput"
+                                                           @input="filterProyectos()"
+                                                           @keyup="filterProyectos()"
+                                                           placeholder="Buscar..."
+                                                           class="w-full p-2 outline-none bg-white"
+                                                           autocomplete="off">
+                                                </div>
+
+                                                <ul style="overflow-y: visible; overflow-x: hidden;" x-ref="proyectosList">
+                                                @foreach ($this->proyectosDisponibles as $proyecto)
+                                                    <li x-show="matchesSearch('{{ strtolower($proyecto->nombre) }}')"
+                                                        onclick="
+                                                            const component = Livewire.find('{{ $_instance->getId() }}');
+                                                            if (component) {
+                                                                component.set('proyectoId', {{ $proyecto->id }});
+                                                            }
+                                                            setTimeout(() => {
+                                                                const dropdown = document.querySelector('[x-on\\:close-dropdown-proyecto]');
+                                                                if (dropdown && dropdown.__x) {
+                                                                    dropdown.__x.$data.open = false;
+                                                                    dropdown.__x.$data.searchInput = '';
+                                                                }
+                                                            }, 50);
+                                                        " 
+                                                        class="p-2 cursor-pointer hover:bg-gray-200 transition-colors"
+                                                        data-nombre="{{ strtolower($proyecto->nombre) }}">
+                                                        {{ $proyecto->nombre }}
+                                                    </li>
+                                                @endforeach
+                                                </ul>
+                                                
+                                                {{-- Mensaje cuando no hay resultados --}}
+                                                <div x-show="searchInput && searchInput.trim() !== '' && visibleCount === 0" 
+                                                     x-cloak
+                                                     x-transition
+                                                     class="p-4 text-center text-gray-500 bg-gray-50 border-t border-gray-200">
+                                                    <div class="flex flex-col items-center gap-2">
+                                                        <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                                        </svg>
+                                                        <p class="text-sm font-medium">No se encontraron resultados</p>
+                                                        <p class="text-xs text-gray-400">Intenta con otro término de búsqueda</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
                                         @error('proyectoId')
                                             <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
                                         @enderror
