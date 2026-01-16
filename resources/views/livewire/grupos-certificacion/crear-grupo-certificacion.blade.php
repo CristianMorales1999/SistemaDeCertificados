@@ -195,28 +195,55 @@
                         <div x-data="{ 
                                 open: false,
                                 searchInput: '',
+                                visibleCount: {{ $this->tiposCertificados->count() }},
                                 filterTipos() {
-                                    // El filtrado se hace automáticamente con x-show
+                                    // Actualizar el conteo después de que Alpine.js actualice el DOM
+                                    this.$nextTick(() => {
+                                        this.updateVisibleCount();
+                                    });
+                                },
+                                updateVisibleCount() {
+                                    if (!this.$refs.tiposList) {
+                                        this.visibleCount = 0;
+                                        return;
+                                    }
+                                    const listItems = this.$refs.tiposList.querySelectorAll('li[data-nombre]');
+                                    if (listItems.length === 0) {
+                                        this.visibleCount = 0;
+                                        return;
+                                    }
+                                    
+                                    let count = 0;
+                                    listItems.forEach(item => {
+                                        // Verificar visibilidad real del elemento
+                                        // offsetParent es null cuando el elemento está oculto (incluyendo x-show de Alpine.js)
+                                        if (item.offsetParent !== null) {
+                                            count++;
+                                        }
+                                    });
+                                    this.visibleCount = count;
                                 },
                                 matchesSearch(nombre) {
                                     if (!this.searchInput || this.searchInput.trim() === '') {
                                         return true;
                                     }
                                     const search = this.searchInput.toLowerCase().trim();
-                                    return nombre.includes(search);
+                                    const matches = nombre.toLowerCase().includes(search);
+                                    
+                                    // Actualizar conteo después de que Alpine evalúe x-show
+                                    this.$nextTick(() => {
+                                        this.updateVisibleCount();
+                                    });
+                                    
+                                    return matches;
                                 },
                                 hasResults() {
-                                    const listItems = this.$refs.tiposList?.querySelectorAll('li[data-nombre]') || [];
-                                    let visibleCount = 0;
-                                    listItems.forEach(item => {
-                                        if (item.offsetParent !== null) {
-                                            visibleCount++;
-                                        }
-                                    });
-                                    return visibleCount > 0;
+                                    // Usar el conteo actualizado
+                                    return this.visibleCount > 0;
                                 },
                                 clearSearch() {
                                     this.searchInput = '';
+                                    this.visibleCount = {{ $this->tiposCertificados->count() }};
                                 },
                                 adjustDropdownHeight() {
                                     if (this.open) {
@@ -242,7 +269,7 @@
                              style="z-index: 100; isolation: isolate;">
                             <p class="block mb-2 text-sm font-medium text-gray-700">Tipo de Certificado <span class="text-red-500">*</span></p>
                             <div class="w-full flex items-center justify-between p-3 bg-white border border-gray-300 rounded-lg cursor-pointer relative"
-                                @click="open = !open; adjustDropdownHeight()"
+                                @click="open = !open; adjustDropdownHeight(); if(open) { $nextTick(() => { visibleCount = {{ $this->tiposCertificados->count() }}; }); }"
                                 style="z-index: 101;">
                                 <p class="w-full truncate">{{ $tipoCertificacionId ? ($this->tipoCertificacion ? $this->tipoCertificacion->nombre : 'Cargando...') : 'Seleccionar tipo de certificado' }}</p>
                                 <svg class="w-4 h-4 text-gray-600 transition-transform" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -261,6 +288,7 @@
                                         <input type="text"
                                                x-model="searchInput"
                                                @input="filterTipos()"
+                                               @keyup="filterTipos()"
                                                placeholder="Buscar..."
                                                class="w-full p-2 outline-none bg-white"
                                                autocomplete="off">
@@ -289,22 +317,10 @@
                                     @endforeach
                                     </ul>
                                     
-                                    {{-- Mensaje cuando no hay resultados --}}
-                                    <div x-show="searchInput && searchInput.trim() !== '' && !hasResults()" 
+                                    {{-- Mensaje cuando no hay resultados - Solo uno --}}
+                                    <div x-show="searchInput && searchInput.trim() !== '' && visibleCount === 0" 
                                          x-cloak
-                                         class="p-4 text-center text-gray-500 bg-gray-50 border-t border-gray-200">
-                                        <div class="flex flex-col items-center gap-2">
-                                            <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                            </svg>
-                                            <p class="text-sm font-medium">No se encontraron resultados</p>
-                                            <p class="text-xs text-gray-400">Intenta con otro término de búsqueda</p>
-                                        </div>
-                                    </div>
-                                    
-                                    {{-- Mensaje cuando no hay resultados --}}
-                                    <div x-show="searchInput && searchInput.trim() !== '' && !hasResults()" 
-                                         x-cloak
+                                         x-transition
                                          class="p-4 text-center text-gray-500 bg-gray-50 border-t border-gray-200">
                                         <div class="flex flex-col items-center gap-2">
                                             <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
