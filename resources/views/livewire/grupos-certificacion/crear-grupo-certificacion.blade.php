@@ -205,6 +205,19 @@
                                     const search = this.searchInput.toLowerCase().trim();
                                     return nombre.includes(search);
                                 },
+                                hasResults() {
+                                    const listItems = this.$refs.tiposList?.querySelectorAll('li[data-nombre]') || [];
+                                    let visibleCount = 0;
+                                    listItems.forEach(item => {
+                                        if (item.offsetParent !== null) {
+                                            visibleCount++;
+                                        }
+                                    });
+                                    return visibleCount > 0;
+                                },
+                                clearSearch() {
+                                    this.searchInput = '';
+                                },
                                 adjustDropdownHeight() {
                                     if (this.open) {
                                         setTimeout(() => {
@@ -221,8 +234,9 @@
                                         }, 10);
                                     }
                                 }
-                             }" 
-                             x-on:close-dropdown="open = false"
+                             }"
+                             x-on:tipo-certificado-seleccionado.window="open = false; clearSearch()"
+                             x-on:close-dropdown="open = false; clearSearch()"
                              x-on:tipo-certificado-seleccionado.window="open = false"
                              class="w-full relative" 
                              style="z-index: 100; isolation: isolate;">
@@ -240,7 +254,7 @@
                                  x-show="open" 
                                  x-cloak
                                  x-transition
-                                 @click.outside="open = false"
+                                 @click.outside="open = false; clearSearch()"
                                  style="position: absolute; top: 100%; left: 0; right: 0; z-index: 99999 !important; margin-top: 4px; isolation: isolate;">
                                 <div x-ref="dropdownInner" class="bg-white border border-gray-300 rounded-lg shadow-2xl" style="overflow-y: auto; overflow-x: hidden; position: relative; z-index: 99999 !important; isolation: isolate;">
                                     <div style="position: sticky; top: 0; z-index: 10; background: white; border-bottom: 1px solid #e5e7eb;" @click.stop>
@@ -274,6 +288,32 @@
                                         </li>
                                     @endforeach
                                     </ul>
+                                    
+                                    {{-- Mensaje cuando no hay resultados --}}
+                                    <div x-show="searchInput && searchInput.trim() !== '' && !hasResults()" 
+                                         x-cloak
+                                         class="p-4 text-center text-gray-500 bg-gray-50 border-t border-gray-200">
+                                        <div class="flex flex-col items-center gap-2">
+                                            <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                            </svg>
+                                            <p class="text-sm font-medium">No se encontraron resultados</p>
+                                            <p class="text-xs text-gray-400">Intenta con otro término de búsqueda</p>
+                                        </div>
+                                    </div>
+                                    
+                                    {{-- Mensaje cuando no hay resultados --}}
+                                    <div x-show="searchInput && searchInput.trim() !== '' && !hasResults()" 
+                                         x-cloak
+                                         class="p-4 text-center text-gray-500 bg-gray-50 border-t border-gray-200">
+                                        <div class="flex flex-col items-center gap-2">
+                                            <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                            </svg>
+                                            <p class="text-sm font-medium">No se encontraron resultados</p>
+                                            <p class="text-xs text-gray-400">Intenta con otro término de búsqueda</p>
+                                        </div>
+                                    </div>
 
                                 </div>
                             </div>
