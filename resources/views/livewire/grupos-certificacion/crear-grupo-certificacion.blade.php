@@ -266,11 +266,11 @@
                              x-on:close-dropdown="open = false; clearSearch()"
                              x-on:tipo-certificado-seleccionado.window="open = false"
                              class="w-full relative" 
-                             style="z-index: 100; isolation: isolate;">
+                             style="z-index: 300; isolation: isolate;">
                             <p class="block mb-2 text-sm font-medium text-gray-700">Tipo de Certificado <span class="text-red-500">*</span></p>
                             <div class="w-full flex items-center justify-between p-3 bg-white border border-gray-300 rounded-lg cursor-pointer relative"
                                 @click="open = !open; adjustDropdownHeight(); if(open) { $nextTick(() => { visibleCount = {{ $this->tiposCertificados->count() }}; }); }"
-                                style="z-index: 101;">
+                                style="z-index: 301;">
                                 <p class="w-full truncate">{{ $tipoCertificacionId ? ($this->tipoCertificacion ? $this->tipoCertificacion->nombre : 'Cargando...') : 'Seleccionar tipo de certificado' }}</p>
                                 <svg class="w-4 h-4 text-gray-600 transition-transform" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -282,8 +282,8 @@
                                  x-cloak
                                  x-transition
                                  @click.outside="open = false; clearSearch()"
-                                 style="position: absolute; top: 100%; left: 0; right: 0; z-index: 99999 !important; margin-top: 4px; isolation: isolate;">
-                                <div x-ref="dropdownInner" class="bg-white border border-gray-300 rounded-lg shadow-2xl" style="overflow-y: auto; overflow-x: hidden; position: relative; z-index: 99999 !important; isolation: isolate;">
+                                 style="position: absolute; top: 100%; left: 0; right: 0; z-index: 300000 !important; margin-top: 4px; isolation: isolate;">
+                                <div x-ref="dropdownInner" class="bg-white border border-gray-300 rounded-lg shadow-2xl" style="overflow-y: auto; overflow-x: hidden; position: relative; z-index: 300000 !important; isolation: isolate;">
                                     <div style="position: sticky; top: 0; z-index: 10; background: white; border-bottom: 1px solid #e5e7eb;" @click.stop>
                                         <input type="text"
                                                x-model="searchInput"
@@ -417,7 +417,7 @@
                                          x-on:proyecto-seleccionado.window="open = false; clearSearch()"
                                          x-on:close-dropdown-proyecto="open = false; clearSearch()"
                                          class="w-full relative" 
-                                         style="z-index: 100; isolation: isolate;">
+                                         style="z-index: 200; isolation: isolate;">
                                         <label class="block mb-2 text-sm font-medium text-gray-700">Proyecto <span class="text-red-500">*</span></label>
                                         <div class="w-full flex items-center justify-between p-3 bg-white border border-gray-300 rounded-lg cursor-pointer relative"
                                             @click="open = !open; adjustDropdownHeight(); if(open) { $nextTick(() => { visibleCount = {{ $this->proyectosDisponibles->count() }}; updateVisibleCount(); }); }"
@@ -433,8 +433,8 @@
                                              x-cloak
                                              x-transition
                                              @click.outside="open = false; clearSearch()"
-                                             style="position: absolute; top: 100%; left: 0; right: 0; z-index: 99999 !important; margin-top: 4px; isolation: isolate;">
-                                            <div x-ref="dropdownInnerProyecto" class="bg-white border border-gray-300 rounded-lg shadow-2xl" style="overflow-y: auto; overflow-x: hidden; position: relative; z-index: 99999 !important; isolation: isolate;">
+                                             style="position: absolute; top: 100%; left: 0; right: 0; z-index: 200000 !important; margin-top: 4px; isolation: isolate;">
+                                            <div x-ref="dropdownInnerProyecto" class="bg-white border border-gray-300 rounded-lg shadow-2xl" style="overflow-y: auto; overflow-x: hidden; position: relative; z-index: 200000 !important; isolation: isolate;">
                                                 <div style="position: sticky; top: 0; z-index: 10; background: white; border-bottom: 1px solid #e5e7eb;" @click.stop>
                                                     <input type="text"
                                                            x-model="searchInput"
@@ -491,21 +491,167 @@
                                 @endif
 
                                 @if($this->contextoRequerido['requiere_evento'])
-                                    <div class="w-full">
+                                    <div x-data="{ 
+                                            open: false,
+                                            searchInput: '',
+                                            visibleCount: {{ max(0, $this->eventosDisponibles->count()) }},
+                                            proyectoId: {{ $proyectoId ?? 'null' }},
+                                            eventoDependeProyecto: {{ $this->contextoRequerido['evento_depende_proyecto'] ? 'true' : 'false' }},
+                                            get canOpen() {
+                                                if (!this.eventoDependeProyecto) return true;
+                                                return this.proyectoId !== null && this.proyectoId !== '';
+                                            },
+                                            filterEventos() {
+                                                this.$nextTick(() => {
+                                                    this.updateVisibleCount();
+                                                });
+                                            },
+                                            updateVisibleCount() {
+                                                if (!this.$refs.eventosList) {
+                                                    this.visibleCount = 0;
+                                                    return;
+                                                }
+                                                const listItems = this.$refs.eventosList.querySelectorAll('li[data-nombre]');
+                                                if (listItems.length === 0) {
+                                                    this.visibleCount = 0;
+                                                    return;
+                                                }
+                                                
+                                                let count = 0;
+                                                listItems.forEach(item => {
+                                                    if (item.offsetParent !== null) {
+                                                        count++;
+                                                    }
+                                                });
+                                                this.visibleCount = count;
+                                            },
+                                            matchesSearch(nombre) {
+                                                if (!this.searchInput || this.searchInput.trim() === '') {
+                                                    return true;
+                                                }
+                                                const search = this.searchInput.toLowerCase().trim();
+                                                const matches = nombre.toLowerCase().includes(search);
+                                                
+                                                this.$nextTick(() => {
+                                                    this.updateVisibleCount();
+                                                });
+                                                
+                                                return matches;
+                                            },
+                                            clearSearch() {
+                                                this.searchInput = '';
+                                                this.visibleCount = {{ max(0, $this->eventosDisponibles->count()) }};
+                                            },
+                                            adjustDropdownHeight() {
+                                                if (this.open) {
+                                                    setTimeout(() => {
+                                                        const dropdown = this.$refs.dropdownEvento;
+                                                        const innerDiv = this.$refs.dropdownInnerEvento;
+                                                        if (dropdown && innerDiv) {
+                                                            const rect = dropdown.getBoundingClientRect();
+                                                            const footerHeight = 147;
+                                                            const paddingBottom = 200;
+                                                            const availableHeight = window.innerHeight - rect.top - footerHeight - paddingBottom - 20;
+                                                            const maxHeight = Math.min(400, Math.max(200, availableHeight));
+                                                            innerDiv.style.maxHeight = maxHeight + 'px';
+                                                        }
+                                                    }, 10);
+                                                }
+                                            }
+                                         }" 
+                                         x-on:evento-seleccionado.window="open = false; clearSearch()"
+                                         x-on:close-dropdown-evento="open = false; clearSearch()"
+                                         x-on:proyecto-seleccionado.window="
+                                             proyectoId = {{ $proyectoId ?? 'null' }};
+                                             $nextTick(() => {
+                                                 visibleCount = {{ max(0, $this->eventosDisponibles->count()) }};
+                                                 updateVisibleCount();
+                                             });
+                                         "
+                                         class="w-full relative" 
+                                         style="z-index: 50; isolation: isolate;">
                                         <label class="block mb-2 text-sm font-medium text-gray-700">Evento <span class="text-red-500">*</span></label>
-                                        <select 
-                                            wire:model.live="eventoId"
-                                            class="w-full p-3 bg-white border border-gray-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-900"
-                                            @if($this->contextoRequerido['evento_depende_proyecto'] && !$proyectoId) disabled @endif
-                                        >
-                                            <option value="">Seleccione un evento</option>
-                                            @foreach($this->eventosDisponibles as $evento)
-                                                <option value="{{ $evento->id }}">{{ $evento->nombre }}</option>
-                                            @endforeach
-                                        </select>
+                                        <div class="w-full flex items-center justify-between p-3 bg-white border border-gray-300 rounded-lg cursor-pointer relative"
+                                            @click="
+                                                if (canOpen) {
+                                                    open = !open; 
+                                                    adjustDropdownHeight(); 
+                                                    if(open) { 
+                                                        $nextTick(() => { 
+                                                            visibleCount = {{ max(0, $this->eventosDisponibles->count()) }}; 
+                                                            updateVisibleCount(); 
+                                                        }); 
+                                                    }
+                                                }
+                                            "
+                                            :class="{ 'opacity-50 cursor-not-allowed': !canOpen }"
+                                            style="z-index: 101;">
+                                            <p class="w-full truncate">{{ $eventoId ? ($this->eventosDisponibles->firstWhere('id', $eventoId)?->nombre ?? 'Cargando...') : 'Seleccionar evento' }}</p>
+                                            <svg class="w-4 h-4 text-gray-600 transition-transform" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                            </svg>
+                                        </div>
+
                                         @if($this->contextoRequerido['evento_depende_proyecto'] && !$proyectoId)
                                             <p class="mt-1 text-xs text-gray-500">Primero debe seleccionar un proyecto</p>
                                         @endif
+
+                                        <div x-ref="dropdownEvento"
+                                             x-show="open" 
+                                             x-cloak
+                                             x-transition
+                                             @click.outside="open = false; clearSearch()"
+                                             style="position: absolute; top: 100%; left: 0; right: 0; z-index: 100000 !important; margin-top: 4px; isolation: isolate;">
+                                            <div x-ref="dropdownInnerEvento" class="bg-white border border-gray-300 rounded-lg shadow-2xl" style="overflow-y: auto; overflow-x: hidden; position: relative; z-index: 100000 !important; isolation: isolate;">
+                                                <div style="position: sticky; top: 0; z-index: 10; background: white; border-bottom: 1px solid #e5e7eb;" @click.stop>
+                                                    <input type="text"
+                                                           x-model="searchInput"
+                                                           @input="filterEventos()"
+                                                           @keyup="filterEventos()"
+                                                           placeholder="Buscar..."
+                                                           class="w-full p-2 outline-none bg-white"
+                                                           autocomplete="off">
+                                                </div>
+
+                                                <ul style="overflow-y: visible; overflow-x: hidden;" x-ref="eventosList">
+                                                @foreach ($this->eventosDisponibles as $evento)
+                                                    <li x-show="matchesSearch('{{ strtolower($evento->nombre) }}')"
+                                                        onclick="
+                                                            const component = Livewire.find('{{ $_instance->getId() }}');
+                                                            if (component) {
+                                                                component.set('eventoId', {{ $evento->id }});
+                                                            }
+                                                            setTimeout(() => {
+                                                                const dropdown = document.querySelector('[x-on\\:close-dropdown-evento]');
+                                                                if (dropdown && dropdown.__x) {
+                                                                    dropdown.__x.$data.open = false;
+                                                                    dropdown.__x.$data.searchInput = '';
+                                                                }
+                                                            }, 50);
+                                                        " 
+                                                        class="p-2 cursor-pointer hover:bg-gray-200 transition-colors"
+                                                        data-nombre="{{ strtolower($evento->nombre) }}">
+                                                        {{ $evento->nombre }}
+                                                    </li>
+                                                @endforeach
+                                                </ul>
+                                                
+                                                {{-- Mensaje cuando no hay resultados --}}
+                                                <div x-show="searchInput && searchInput.trim() !== '' && visibleCount === 0" 
+                                                     x-cloak
+                                                     x-transition
+                                                     class="p-4 text-center text-gray-500 bg-gray-50 border-t border-gray-200">
+                                                    <div class="flex flex-col items-center gap-2">
+                                                        <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                                        </svg>
+                                                        <p class="text-sm font-medium">No se encontraron resultados</p>
+                                                        <p class="text-xs text-gray-400">Intenta con otro término de búsqueda</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
                                         @error('eventoId')
                                             <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
                                         @enderror

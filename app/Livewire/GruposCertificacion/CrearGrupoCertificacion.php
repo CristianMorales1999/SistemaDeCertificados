@@ -111,6 +111,7 @@ class CrearGrupoCertificacion extends Component
         $this->eventoId = $value;
         $this->resetPersonas();
         $this->updateQueryParams();
+        $this->dispatch('evento-seleccionado');
     }
     
     public function updatedAnio($value)
