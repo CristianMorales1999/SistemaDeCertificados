@@ -194,6 +194,17 @@
                         <!--------------- Dropdown Tipo de certificado ----------------->
                         <div x-data="{ 
                                 open: false,
+                                searchInput: '',
+                                filterTipos() {
+                                    // El filtrado se hace automáticamente con x-show
+                                },
+                                matchesSearch(nombre) {
+                                    if (!this.searchInput || this.searchInput.trim() === '') {
+                                        return true;
+                                    }
+                                    const search = this.searchInput.toLowerCase().trim();
+                                    return nombre.includes(search);
+                                },
                                 adjustDropdownHeight() {
                                     if (this.open) {
                                         setTimeout(() => {
@@ -202,7 +213,7 @@
                                             if (dropdown && innerDiv) {
                                                 const rect = dropdown.getBoundingClientRect();
                                                 const footerHeight = 147;
-                                                const paddingBottom = 200; // Espacio adicional que agregamos al contenedor
+                                                const paddingBottom = 200;
                                                 const availableHeight = window.innerHeight - rect.top - footerHeight - paddingBottom - 20;
                                                 const maxHeight = Math.min(400, Math.max(200, availableHeight));
                                                 innerDiv.style.maxHeight = maxHeight + 'px';
@@ -232,44 +243,36 @@
                                  @click.outside="open = false"
                                  style="position: absolute; top: 100%; left: 0; right: 0; z-index: 99999 !important; margin-top: 4px; isolation: isolate;">
                                 <div x-ref="dropdownInner" class="bg-white border border-gray-300 rounded-lg shadow-2xl" style="overflow-y: auto; overflow-x: hidden; position: relative; z-index: 99999 !important; isolation: isolate;">
-                                    <input type="text"
-                                            wire:model.live="searchTipoCertificado"
-                                           placeholder="Buscar..."
-                                           class="w-full p-2 border-b border-gray-300 outline-none sticky top-0 bg-white z-10"
-                                           @click.stop
-                                           style="position: sticky; top: 0; z-index: 10; background: white;">
+                                    <div style="position: sticky; top: 0; z-index: 10; background: white; border-bottom: 1px solid #e5e7eb;" @click.stop>
+                                        <input type="text"
+                                               x-model="searchInput"
+                                               @input="filterTipos()"
+                                               placeholder="Buscar..."
+                                               class="w-full p-2 outline-none bg-white"
+                                               autocomplete="off">
+                                    </div>
 
-                                    <ul style="overflow-y: visible; overflow-x: hidden;">
-                                    @php
-                                        $tiposCertificadosFiltrados = collect($this->tiposCertificados)->filter(function($tipoCertificado) {
-                                            $search = $searchTipoCertificado ?? '';
-                                            return str_contains(strtolower($tipoCertificado->nombre), strtolower($search));
-                                        });
-                                    @endphp
-
-                                    @forelse ($tiposCertificadosFiltrados as $tipoCertificado)
-                                        <li onclick="
-                                            const component = Livewire.find('{{ $_instance->getId() }}');
-                                            if (component) {
-                                                component.call('selectTipoCertificado', {{ $tipoCertificado->id }});
-                                            }
-                                            setTimeout(() => {
-                                                const dropdown = document.querySelector('[x-on\\:close-dropdown]');
-                                                if (dropdown && dropdown.__x) {
-                                                    dropdown.__x.$data.open = false;
+                                    <ul style="overflow-y: visible; overflow-x: hidden;" x-ref="tiposList">
+                                    @foreach ($this->tiposCertificados as $tipoCertificado)
+                                        <li x-show="matchesSearch('{{ strtolower($tipoCertificado->nombre) }}')"
+                                            onclick="
+                                                const component = Livewire.find('{{ $_instance->getId() }}');
+                                                if (component) {
+                                                    component.call('selectTipoCertificado', {{ $tipoCertificado->id }});
                                                 }
-                                            }, 50);
-                                        " 
-                                            class="p-2 cursor-pointer hover:bg-gray-200 transition-colors">
+                                                setTimeout(() => {
+                                                    const dropdown = document.querySelector('[x-on\\:close-dropdown]');
+                                                    if (dropdown && dropdown.__x) {
+                                                        dropdown.__x.$data.open = false;
+                                                        dropdown.__x.$data.searchInput = '';
+                                                    }
+                                                }, 50);
+                                            " 
+                                            class="p-2 cursor-pointer hover:bg-gray-200 transition-colors"
+                                            data-nombre="{{ strtolower($tipoCertificado->nombre) }}">
                                             {{ $tipoCertificado->nombre }}
                                         </li>
-
-                                        @empty
-                                        <li class="p-2 text-gray-500">
-                                            No se encuentran coincidencias.
-                                        </li>
-
-                                        @endforelse
+                                    @endforeach
                                     </ul>
 
                                 </div>

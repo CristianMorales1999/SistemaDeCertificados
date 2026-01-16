@@ -131,6 +131,12 @@ class CrearGrupoCertificacion extends Component
         // La búsqueda se aplica en el computed property
     }
     
+    public function updatedSearchTipoCertificado()
+    {
+        // La búsqueda se aplica en el computed property tiposCertificadosFiltrados
+        // Livewire recalcula automáticamente las computed properties cuando cambian las dependencias
+    }
+    
     public function crearGrupo()
     {
         $this->loading = true;
@@ -297,6 +303,24 @@ class CrearGrupoCertificacion extends Component
     public function getTiposCertificadosProperty()
     {
         return TipoDeCertificacion::orderBy('nombre')->get();
+    }
+    
+    public function getTiposCertificadosFiltradosProperty()
+    {
+        $tipos = $this->tiposCertificados;
+        
+        $search = trim($this->searchTipoCertificado ?? '');
+        
+        if (empty($search)) {
+            return $tipos;
+        }
+        
+        $searchLower = mb_strtolower($search, 'UTF-8');
+        
+        return $tipos->filter(function($tipoCertificado) use ($searchLower) {
+            $nombre = mb_strtolower($tipoCertificado->nombre ?? '', 'UTF-8');
+            return mb_strpos($nombre, $searchLower) !== false;
+        })->values();
     }
     
     public function getContextoRequeridoProperty()
