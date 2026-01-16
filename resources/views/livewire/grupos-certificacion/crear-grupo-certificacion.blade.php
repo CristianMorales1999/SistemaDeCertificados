@@ -1,5 +1,5 @@
-<div class="bg-[var(--color-primary-50)] overflow-hidden">
-    <div class="w-full mx-auto sm:p-2 md:p-4 lg:p-8 xl:p-16">
+<div class="bg-[var(--color-primary-50)]" style="overflow-x: hidden; overflow-y: visible; position: relative;">
+    <div class="w-full mx-auto sm:p-2 md:p-4 lg:p-8 xl:p-16" style="overflow: visible;">
         <!-- Título -->
         <div class="w-full m-auto flex justify-center py-12">
             <h2 class="font-bold text-xl md:text-2xl xl:text-3xl">
@@ -164,7 +164,7 @@
             </div>
 
             <!------------------------------- ENTRADAS PARA CREAR GRUPO ------------------------------->
-            <div class="w-full lg:w-1/3 mx-auto min-h-max h-auto flex flex-col justify-between content-between font-normal text-sm md:text-base text-gray-700">
+            <div class="w-full lg:w-1/3 mx-auto min-h-max h-auto flex flex-col justify-between content-between font-normal text-sm md:text-base text-gray-700" style="position: relative; z-index: 100;">
                 <div class="w-full space-y-8">
                     <div class="space-y-4">
                         {{-- Input nombre --}}
@@ -192,10 +192,14 @@
                         </div>
 
                         <!--------------- Dropdown Tipo de certificado ----------------->
-                        <div x-data="{ open: false }" class="w-full" style="position: relative; overflow: visible; z-index: 50;">
+                        <div x-data="{ open: false }" 
+                             x-on:close-dropdown="open = false"
+                             class="w-full relative" 
+                             style="z-index: 1000;">
                             <p class="block mb-2 text-sm font-medium text-gray-700">Tipo de Certificado <span class="text-red-500">*</span></p>
-                            <div class="w-full flex items-center justify-between p-3 bg-white border border-gray-300 rounded-lg cursor-pointer"
-                                @click="open = !open">
+                            <div class="w-full flex items-center justify-between p-3 bg-white border border-gray-300 rounded-lg cursor-pointer relative"
+                                @click="open = !open"
+                                style="z-index: 1001;">
                                 <p class="w-full truncate">{{ $this->tipoCertificacion ? $this->tipoCertificacion->nombre : 'Seleccionar tipo de certificado' }}</p>
                                 <svg class="w-4 h-4 text-gray-600 transition-transform" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
@@ -203,10 +207,11 @@
                             </div>
 
                             <div x-show="open" 
+                                 x-cloak
                                  x-transition
                                  @click.outside="open = false"
-                                 style="position: absolute; top: 100%; left: 0; right: 0; z-index: 99999; margin-top: 4px;">
-                                <div class="bg-white border border-gray-300 rounded-lg shadow-2xl" style="max-height: 300px; overflow-y: auto;">
+                                 style="position: absolute; top: 100%; left: 0; right: 0; z-index: 99999 !important; margin-top: 4px;">
+                                <div class="bg-white border border-gray-300 rounded-lg shadow-2xl" style="max-height: 500px; overflow-y: auto;">
                                     <input type="text"
                                             wire:model.live="searchTipoCertificado"
                                            placeholder="Buscar..."
@@ -222,7 +227,14 @@
                                     @endphp
 
                                     @forelse ($tiposCertificadosFiltrados as $tipoCertificado)
-                                        <li onclick="Livewire.find('{{ $_instance->getId() }}').call('selectTipoCertificado', {{ $tipoCertificado->id }})" 
+                                        <li onclick="
+                                            const component = Livewire.find('{{ $_instance->getId() }}');
+                                            component.call('selectTipoCertificado', {{ $tipoCertificado->id }});
+                                            const dropdown = document.querySelector('[x-on\\:close-dropdown]');
+                                            if (dropdown && dropdown.__x) {
+                                                dropdown.__x.$data.open = false;
+                                            }
+                                        " 
                                             class="p-2 cursor-pointer hover:bg-gray-200 transition-colors">
                                             {{ $tipoCertificado->nombre }}
                                         </li>
