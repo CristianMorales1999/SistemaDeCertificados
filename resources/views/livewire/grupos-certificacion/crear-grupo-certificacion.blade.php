@@ -1,5 +1,5 @@
 <div class="bg-[var(--color-primary-50)]" style="overflow-x: hidden; overflow-y: visible; position: relative;">
-    <div class="w-full mx-auto sm:p-2 md:p-4 lg:p-8 xl:p-16" style="overflow: visible;">
+    <div class="w-full mx-auto sm:p-2 md:p-4 lg:p-8 xl:p-16 pb-24 md:pb-32" style="overflow: visible;">
         <!-- Título -->
         <div class="w-full m-auto flex justify-center py-12">
             <h2 class="font-bold text-xl md:text-2xl xl:text-3xl">
@@ -194,13 +194,14 @@
                         <!--------------- Dropdown Tipo de certificado ----------------->
                         <div x-data="{ open: false }" 
                              x-on:close-dropdown="open = false"
+                             x-on:tipo-certificado-seleccionado.window="open = false"
                              class="w-full relative" 
                              style="z-index: 1000;">
                             <p class="block mb-2 text-sm font-medium text-gray-700">Tipo de Certificado <span class="text-red-500">*</span></p>
                             <div class="w-full flex items-center justify-between p-3 bg-white border border-gray-300 rounded-lg cursor-pointer relative"
                                 @click="open = !open"
                                 style="z-index: 1001;">
-                                <p class="w-full truncate">{{ $this->tipoCertificacion ? $this->tipoCertificacion->nombre : 'Seleccionar tipo de certificado' }}</p>
+                                <p class="w-full truncate">{{ $tipoCertificacionId ? ($this->tipoCertificacion ? $this->tipoCertificacion->nombre : 'Cargando...') : 'Seleccionar tipo de certificado' }}</p>
                                 <svg class="w-4 h-4 text-gray-600 transition-transform" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
@@ -229,11 +230,15 @@
                                     @forelse ($tiposCertificadosFiltrados as $tipoCertificado)
                                         <li onclick="
                                             const component = Livewire.find('{{ $_instance->getId() }}');
-                                            component.call('selectTipoCertificado', {{ $tipoCertificado->id }});
-                                            const dropdown = document.querySelector('[x-on\\:close-dropdown]');
-                                            if (dropdown && dropdown.__x) {
-                                                dropdown.__x.$data.open = false;
+                                            if (component) {
+                                                component.call('selectTipoCertificado', {{ $tipoCertificado->id }});
                                             }
+                                            setTimeout(() => {
+                                                const dropdown = document.querySelector('[x-on\\:close-dropdown]');
+                                                if (dropdown && dropdown.__x) {
+                                                    dropdown.__x.$data.open = false;
+                                                }
+                                            }, 50);
                                         " 
                                             class="p-2 cursor-pointer hover:bg-gray-200 transition-colors">
                                             {{ $tipoCertificado->nombre }}

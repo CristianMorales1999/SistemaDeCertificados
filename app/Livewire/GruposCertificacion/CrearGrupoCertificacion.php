@@ -77,6 +77,8 @@ class CrearGrupoCertificacion extends Component
             $this->searchTipoCertificado = '';
             $this->resetContexto();
             $this->resetPersonas();
+            $this->updateQueryParams();
+            $this->dispatch('tipo-certificado-seleccionado');
         } catch (\Exception $e) {
             \Log::error('Error en selectTipoCertificado: ' . $e->getMessage());
             $this->addError('general', 'Error al seleccionar tipo de certificado: ' . $e->getMessage());
