@@ -1,5 +1,5 @@
 <div class="bg-[var(--color-primary-50)]" style="overflow-x: hidden; overflow-y: visible; position: relative;">
-    <div class="w-full mx-auto sm:p-2 md:p-4 lg:p-8 xl:p-16 pb-24 md:pb-32" style="overflow: visible;">
+    <div class="w-full mx-auto sm:p-2 md:p-4 lg:p-8 xl:p-16 pb-40 md:pb-48" style="overflow: visible; padding-bottom: 200px;">
         <!-- Título -->
         <div class="w-full m-auto flex justify-center py-12">
             <h2 class="font-bold text-xl md:text-2xl xl:text-3xl">
@@ -164,7 +164,7 @@
             </div>
 
             <!------------------------------- ENTRADAS PARA CREAR GRUPO ------------------------------->
-            <div class="w-full lg:w-1/3 mx-auto min-h-max h-auto flex flex-col justify-between content-between font-normal text-sm md:text-base text-gray-700" style="position: relative; z-index: 100;">
+            <div class="w-full lg:w-1/3 mx-auto min-h-max h-auto flex flex-col justify-between content-between font-normal text-sm md:text-base text-gray-700" style="position: relative; z-index: 1;">
                 <div class="w-full space-y-8">
                     <div class="space-y-4">
                         {{-- Input nombre --}}
@@ -192,34 +192,54 @@
                         </div>
 
                         <!--------------- Dropdown Tipo de certificado ----------------->
-                        <div x-data="{ open: false }" 
+                        <div x-data="{ 
+                                open: false,
+                                adjustDropdownHeight() {
+                                    if (this.open) {
+                                        setTimeout(() => {
+                                            const dropdown = this.$refs.dropdown;
+                                            const innerDiv = this.$refs.dropdownInner;
+                                            if (dropdown && innerDiv) {
+                                                const rect = dropdown.getBoundingClientRect();
+                                                const footerHeight = 147;
+                                                const paddingBottom = 200; // Espacio adicional que agregamos al contenedor
+                                                const availableHeight = window.innerHeight - rect.top - footerHeight - paddingBottom - 20;
+                                                const maxHeight = Math.min(400, Math.max(200, availableHeight));
+                                                innerDiv.style.maxHeight = maxHeight + 'px';
+                                            }
+                                        }, 10);
+                                    }
+                                }
+                             }" 
                              x-on:close-dropdown="open = false"
                              x-on:tipo-certificado-seleccionado.window="open = false"
                              class="w-full relative" 
-                             style="z-index: 1000;">
+                             style="z-index: 100; isolation: isolate;">
                             <p class="block mb-2 text-sm font-medium text-gray-700">Tipo de Certificado <span class="text-red-500">*</span></p>
                             <div class="w-full flex items-center justify-between p-3 bg-white border border-gray-300 rounded-lg cursor-pointer relative"
-                                @click="open = !open"
-                                style="z-index: 1001;">
+                                @click="open = !open; adjustDropdownHeight()"
+                                style="z-index: 101;">
                                 <p class="w-full truncate">{{ $tipoCertificacionId ? ($this->tipoCertificacion ? $this->tipoCertificacion->nombre : 'Cargando...') : 'Seleccionar tipo de certificado' }}</p>
                                 <svg class="w-4 h-4 text-gray-600 transition-transform" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                 </svg>
                             </div>
 
-                            <div x-show="open" 
+                            <div x-ref="dropdown"
+                                 x-show="open" 
                                  x-cloak
                                  x-transition
                                  @click.outside="open = false"
-                                 style="position: absolute; top: 100%; left: 0; right: 0; z-index: 99999 !important; margin-top: 4px;">
-                                <div class="bg-white border border-gray-300 rounded-lg shadow-2xl" style="max-height: 500px; overflow-y: auto;">
+                                 style="position: absolute; top: 100%; left: 0; right: 0; z-index: 99999 !important; margin-top: 4px; isolation: isolate;">
+                                <div x-ref="dropdownInner" class="bg-white border border-gray-300 rounded-lg shadow-2xl" style="overflow-y: auto; overflow-x: hidden; position: relative; z-index: 99999 !important; isolation: isolate;">
                                     <input type="text"
                                             wire:model.live="searchTipoCertificado"
                                            placeholder="Buscar..."
-                                           class="w-full p-2 border-b border-gray-300 outline-none sticky top-0 bg-white"
-                                           @click.stop>
+                                           class="w-full p-2 border-b border-gray-300 outline-none sticky top-0 bg-white z-10"
+                                           @click.stop
+                                           style="position: sticky; top: 0; z-index: 10; background: white;">
 
-                                    <ul class="max-h-60 overflow-y-auto">
+                                    <ul style="overflow-y: visible; overflow-x: hidden;">
                                     @php
                                         $tiposCertificadosFiltrados = collect($this->tiposCertificados)->filter(function($tipoCertificado) {
                                             $search = $searchTipoCertificado ?? '';
