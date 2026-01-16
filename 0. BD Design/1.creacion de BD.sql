@@ -208,6 +208,7 @@ CREATE TABLE area_persona_valor_destacado (
   valor_destacado_id INTEGER UNSIGNED NOT NULL,
   anio YEAR NOT NULL,
   periodo ENUM('I','II') NOT NULL,
+  estado_certificacion BOOLEAN NOT NULL DEFAULT FALSE,
   PRIMARY KEY(id),
   INDEX area_persona_valor_destacado_FKIndex1(valor_destacado_id),
   INDEX area_persona_valor_destacado_FKIndex2(area_persona_id)

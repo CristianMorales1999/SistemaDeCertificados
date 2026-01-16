@@ -85,6 +85,18 @@ El sistema **NO muestra**:
 
 **Reglas de filtrado por tipo de certificado**:
 
+**Las reglas detalladas de elegibilidad están documentadas en `dominio.md` (sección "Reglas Detalladas de Elegibilidad por Tipo de Certificado")**. 
+
+El sistema implementa **16 reglas específicas** que determinan exactamente qué personas pueden recibir cada tipo de certificado según:
+
+1. **Tipo de certificado seleccionado**
+2. **Contexto requerido** (proyecto, evento, año/periodo, o ninguno)
+3. **Estado de membresía** (activo, egresado, retirado)
+4. **Asociaciones** (proyectos, eventos, cargos, roles)
+5. **Historial de certificaciones** (proyectos/eventos ya certificados)
+
+**Resumen de categorías**:
+
 #### Certificados que requieren membresía (historial en `area_persona`):
 - **Egresado** o **Retiro Voluntario**: 
   - ✅ Debe tener historial en `area_persona`
@@ -105,6 +117,8 @@ El sistema **NO muestra**:
 - Para certificados de **Proyecto (Internos)**: Solo personas con historial en `area_persona`, asociadas al proyecto y no retiradas por bajo rendimiento
 - Para certificados de **Proyecto (Externos)**: Personas asociadas al proyecto (pueden no tener historial en `area_persona`, pero si lo tienen y están retiradas por bajo rendimiento, se excluyen)
 - Para certificados de **Evento**: Personas asociadas al evento (misma regla de exclusión por retiro)
+
+**⚠️ IMPORTANTE**: Las reglas específicas por tipo (incluyendo filtrado de proyectos/eventos ya certificados, roles específicos, y dependencias de contexto) están documentadas en detalle en `dominio.md`. El sistema implementa estas reglas mediante el servicio `ReglaElegibilidadResolver`.
 
 ---
 

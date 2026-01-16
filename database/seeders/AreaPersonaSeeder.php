@@ -32,7 +32,7 @@ class AreaPersonaSeeder extends Seeder
             [
                 //PRESIDENTA 2025
                 'area' => 'PMO',
-                'correo_persona' => 't1051300621@unitru.edu.pe',//lucia de fatima Amaya Caceda
+                'correo_persona' => 't1051300621@unitru.edu.pe',//lucia de Fatima Amaya Caceda
                 'fecha_inicio' => '2024-06-01',//Ingresó a PMO el 01 de Junio de 2024
                 'fecha_fin' => NULL,
                 'estado' =>'Cargo en Directiva',
@@ -40,7 +40,7 @@ class AreaPersonaSeeder extends Seeder
             [
                 //VICEPRESIDENTA
                 'area' => 'GTH',
-                'correo_persona' => 'speredal@unitru.edu.pe',//Silvana Pereda Llave
+                'correo_persona' => 'speredal@unitru.edu.pe',//Silvana Valeria Pereda Llave
                 'fecha_inicio' => '2024-06-01',//Ingresó a GTH el 01 de Junio de 2024
                 'fecha_fin' => NULL,
                 'estado' =>'Cargo en Directiva',
@@ -48,7 +48,7 @@ class AreaPersonaSeeder extends Seeder
             [
                 //DIRECTOR(A) GTH
                 'area' => 'GTH',
-                'correo_persona' => 't1510600121@unitru.edu.pe',//Marina Gonzales Torres
+                'correo_persona' => 't1510600121@unitru.edu.pe',//Marina Lizeth Gonzales Torres
                 'fecha_inicio' => '2022-05-10',//Ingresó a GTH el 10 De Mayo 2022
                 'fecha_fin' => NULL,
                 'estado' =>'Cargo en Directiva',
@@ -325,6 +325,15 @@ class AreaPersonaSeeder extends Seeder
               ******************************************* */
             // GTH MIEMBROS ACTIVOS EN 2025 (21: 19 MIEMBROS ACTIVO - 2 RETIRADOS)
             //CONVOCATORIA 2025 (02-05-2025)
+            /**
+                Anderson Alexander Saavedra Nolasco
+                Cristhian Luis David Sánchez Obeso
+                Eleanor Marycielo Roca Mendoza
+                Emilly Nicoll Zavaleta Chigne
+                Joaquin Adriano Bocanegra Peláez
+                Luis Enrique Montoya Aguirre
+                Valeria Angelie Valderrama Muñoz
+            **/
             [
                 //Anderson Alexander Saavedra Nolasco
                 'area' => 'GTH',
@@ -382,6 +391,11 @@ class AreaPersonaSeeder extends Seeder
                 'estado' =>'Miembro activo',
             ],
             //CONVOCATORIA EXTRAORDINARIA 2024(10-12-2024)
+            /**
+                Ana Nicoll Segura Aredo
+                Andrweeu Daniel Urtecho Avila
+                Corina Marilu Sanchez Delgado
+            **/
             [
                 //Ana Nicoll Segura Aredo
                 'area' => 'GTH',
@@ -423,6 +437,14 @@ class AreaPersonaSeeder extends Seeder
                 'estado' =>'Retiro voluntario',
             ],
             //CONVOCATORIA 2024(01-06-2024)
+            /**
+                José Daniel Avila Santillan
+                Lisseth Adelaida Chávez Rosales
+                Mariann Estefany Fernández Leyva
+                Michael Junior García García
+                Nashaly Nicolle Alama Terrones
+                Renzo Georkael Carrasco Lalangui
+            **/
             [
                 //José Daniel Avila Santillan
                 'area' => 'GTH',
@@ -488,6 +510,10 @@ class AreaPersonaSeeder extends Seeder
                 'estado' =>'Retiro voluntario',
             ],
             //CONVOCATORIA 2023(13-06-2023)
+            /**
+                Alisson Milagros Pretell Canchas
+                Dulce Geraldine Chavez Padilla
+            **/
             [
                 //Alisson Milagros Pretell Canchas
                 'area' => 'GTH',
@@ -567,22 +593,6 @@ class AreaPersonaSeeder extends Seeder
             ],
             //CONVOCATORIA 2022(10-05-2022)
             [
-                //Santiago Alonso Morales Flores
-                'area' => 'GTH',
-                'correo_persona' => 't010601720@unitru.edu.pe',
-                'fecha_inicio' => '2022-05-10',//Ingresó a GTH el 10 de Mayo 2022
-                'fecha_fin' => '2022-12-27',//Asumiré que se retiró voluntariamente de GTH el 27 de Diciembre de 2022
-                'estado' =>'Retiro voluntario',
-            ],
-            [
-                //Eduardo David Risco Rios
-                'area' => 'GTH',
-                'correo_persona' => 't514000420@unitru.edu.pe',
-                'fecha_inicio' => '2022-05-10',//Ingresó a GTH el 10 de Mayo 2022
-                'fecha_fin' => '2023-02-26',//Se retiró voluntariamente de GTH el 26 de Febrero de 2023
-                'estado' =>'Retiro voluntario',
-            ],
-            [
                 //Aitana Sofia Requejo Valle
                 'area' => 'GTH',
                 'correo_persona' => 't050100720@unitru.edu.pe',
@@ -591,11 +601,35 @@ class AreaPersonaSeeder extends Seeder
                 'estado' =>'Egresado',
             ],
             [
+                //Ariana Esther Navarro Zavaleta
+                'area' => 'GTH',
+                'correo_persona' => 't1510602021@unitru.edu.pe',
+                'fecha_inicio' => '2022-05-10',//Ingresó a GTH el 10 de Mayo 2022
+                'fecha_fin' => '2023-04-25',//Asumiré que se retiró voluntariamente de GTH el 25 de Abril de 2023
+                'estado' =>'Retiro voluntario',
+            ],
+            [
                 //Brayan Micael Linares Oyos
                 'area' => 'GTH',
                 'correo_persona' => 'blinares@unitru.edu.pe',
                 'fecha_inicio' => '2022-05-10',//Ingresó a GTH el 10 de Mayo 2022
                 'fecha_fin' => '2022-07-21',//Asumiré que se retiró voluntariamente de GTH el 21 de Julio de 2022
+                'estado' =>'Retiro voluntario',
+            ],
+            [
+                //Crhistian Fernando Hilario Salvador
+                'area' => 'GTH',
+                'correo_persona' => 'chilario@unitru.edu.pe',
+                'fecha_inicio' => '2022-05-10',//Ingresó a GTH el 10 de Mayo 2022
+                'fecha_fin' => '2023-03-21',//Egresó en GTH el 21 de Marzo 2023
+                'estado' =>'Egresado',
+            ],
+            [
+                //Eduardo David Risco Rios
+                'area' => 'GTH',
+                'correo_persona' => 't514000420@unitru.edu.pe',
+                'fecha_inicio' => '2022-05-10',//Ingresó a GTH el 10 de Mayo 2022
+                'fecha_fin' => '2023-02-26',//Se retiró voluntariamente de GTH el 26 de Febrero de 2023
                 'estado' =>'Retiro voluntario',
             ],
             [
@@ -607,22 +641,22 @@ class AreaPersonaSeeder extends Seeder
                 'estado' =>'Retiro voluntario',
             ],
             [
-                //Ariana Esther Navarro Zavaleta
+                //Santiago Alonso Morales Flores
                 'area' => 'GTH',
-                'correo_persona' => 't1510602021@unitru.edu.pe',
+                'correo_persona' => 't010601720@unitru.edu.pe',
                 'fecha_inicio' => '2022-05-10',//Ingresó a GTH el 10 de Mayo 2022
-                'fecha_fin' => '2023-04-25',//Asumiré que se retiró voluntariamente de GTH el 25 de Abril de 2023
+                'fecha_fin' => '2022-12-27',//Asumiré que se retiró voluntariamente de GTH el 27 de Diciembre de 2022
                 'estado' =>'Retiro voluntario',
             ],
-            [
-                //Crhistian Fernando Hilario Salvador
-                'area' => 'GTH',
-                'correo_persona' => 'chilario@unitru.edu.pe',
-                'fecha_inicio' => '2022-05-10',//Ingresó a GTH el 10 de Mayo 2022
-                'fecha_fin' => '2023-03-21',//Egresó en GTH el 21 de Marzo 2023
-                'estado' =>'Egresado',
-            ],
             //CONVOCATORIA 2021(20-11-2021)
+            [
+                //Alexandra Fiorela Ruiz Alfaro
+                'area' => 'GTH',
+                'correo_persona' => 't1012600121@unitru.edu.pe',
+                'fecha_inicio' => '2021-11-20',//Ingresó a GTH el 20 de Noviembre 2021
+                'fecha_fin' => '2022-06-22',//Asumiré que se retiró voluntariamente de GTH el 22 de Junio de 2022
+                'estado' =>'Retiro voluntario',
+            ],
             [
                 //Beatriz Nancy Bamberger Leyva
                 'area' => 'GTH',
@@ -640,12 +674,28 @@ class AreaPersonaSeeder extends Seeder
                 'estado' =>'Egresado',
             ],
             [
+                //Cinthia Azucena Narro Mendoza
+                'area' => 'GTH',
+                'correo_persona' => 't050100420@unitru.edu.pe',
+                'fecha_inicio' => '2021-11-20',//Ingresó a GTH el 20 de Noviembre 2021
+                'fecha_fin' => '2023-04-30',//Asumiré que se retiró voluntariamente de GTH el 30 de Abril de 2023
+                'estado' =>'Retiro voluntario',
+            ],
+            [
                 //Diana Noemi De la Cruz Condor
                 'area' => 'GTH',
                 'correo_persona' => 'ddelacruzc@unitru.edu.pe',
                 'fecha_inicio' => '2021-11-20',//Ingresó a GTH el 20 de Noviembre 2021
                 'fecha_fin' => '2024-11-17',//Se retiró voluntariamente de GTH el 17 de Noviembre de 2024
                 'estado' =>'Retiro voluntario',
+            ],
+            [
+                //Elber Isaí Pichén Zavaleta
+                'area' => 'GTH',
+                'correo_persona' => 't1024000121@unitru.edu.pe',
+                'fecha_inicio' => '2021-11-20',//Ingresó a GTH el 20 de Noviembre 2021
+                'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
+                'estado' =>'Miembro activo',
             ],
             [
                 //Geraldine Kathleen Azucena Gonzales Alquizar
@@ -656,20 +706,12 @@ class AreaPersonaSeeder extends Seeder
                 'estado' =>'Retiro voluntario',
             ],
             [
-                //Santiago Manuel Rodriguez Castillo
+                //Jhonner David Pesantes Huaylla
                 'area' => 'GTH',
-                'correo_persona' => 'smrodriguezc@unitru.edu.pe',
+                'correo_persona' => 'jpesantesh@unitru.edu.pe',
                 'fecha_inicio' => '2021-11-20',//Ingresó a GTH el 20 de Noviembre 2021
-                'fecha_fin' => '2022-03-06',//Asumiré que se retiró voluntariamente de GTH el 06 de Marzo de 2022
-                'estado' =>'Retiro voluntario',
-            ],
-            [
-                //Alexandra Fiorela Ruiz Alfaro
-                'area' => 'GTH',
-                'correo_persona' => 't1012600121@unitru.edu.pe',
-                'fecha_inicio' => '2021-11-20',//Ingresó a GTH el 20 de Noviembre 2021
-                'fecha_fin' => '2022-06-22',//Asumiré que se retiró voluntariamente de GTH el 22 de Junio de 2022
-                'estado' =>'Retiro voluntario',
+                'fecha_fin' => '2023-03-21',//Egresó en GTH el 21 de Marzo de 2023
+                'estado' =>'Egresado',
             ],
             [
                 //Luis David Uriol Campos
@@ -680,37 +722,28 @@ class AreaPersonaSeeder extends Seeder
                 'estado' =>'Retiro voluntario',
             ],
             [
-                //Cinthia Azucena Narro Mendoza
+                //Santiago Manuel Rodriguez Castillo
                 'area' => 'GTH',
-                'correo_persona' => 't050100420@unitru.edu.pe',
+                'correo_persona' => 'smrodriguezc@unitru.edu.pe',
                 'fecha_inicio' => '2021-11-20',//Ingresó a GTH el 20 de Noviembre 2021
-                'fecha_fin' => '2023-04-30',//Asumiré que se retiró voluntariamente de GTH el 30 de Abril de 2023
+                'fecha_fin' => '2022-03-06',//Asumiré que se retiró voluntariamente de GTH el 06 de Marzo de 2022
                 'estado' =>'Retiro voluntario',
-            ],
-            [
-                //Jhonner David Pesantes Huaylla
-                'area' => 'GTH',
-                'correo_persona' => 'jpesantesh@unitru.edu.pe',
-                'fecha_inicio' => '2021-11-20',//Ingresó a GTH el 20 de Noviembre 2021
-                'fecha_fin' => '2023-03-21',//Egresó en GTH el 21 de Marzo de 2023
-                'estado' =>'Egresado',
-            ],
-            //CONVOCATORIA 2021(20-11-2021)
-            [
-                //Elber Isaí Pichén Zavaleta
-                'area' => 'GTH',
-                'correo_persona' => 't1024000121@unitru.edu.pe',
-                'fecha_inicio' => '2021-11-20',//Ingresó a GTH el 20 de Noviembre 2021
-                'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
-                'estado' =>'Miembro activo',
             ],
             //CONVOCATORIA 2020(08-11-2020)
             [
-                //Jesús David Nuñez Arteaga
+                //Alexis Angel Raúl Carrera Condo
                 'area' => 'GTH',
-                'correo_persona' => 'jdnuneza@unitru.edu.pe',
+                'correo_persona' => 'acarrerac@unitru.edu.pe',
                 'fecha_inicio' => '2020-11-08',//Ingresó a GTH el 08 de Noviembre 2020
-                'fecha_fin' => '2022-05-09',//Se retiró voluntariamente de GTH el 09 de Mayo de 2022
+                'fecha_fin' => '2021-02-06',//Asumiré que se retiró voluntariamente de GTH el 06 de Febrero de 2021
+                'estado' =>'Retiro voluntario',
+            ],
+            [
+                //Edgar Enrique Grijalba Atavios
+                'area' => 'GTH',
+                'correo_persona' => 'egrijalbaa@unitru.edu.pe',
+                'fecha_inicio' => '2020-11-08',//Ingresó a GTH el 08 de Noviembre 2020
+                'fecha_fin' => '2021-02-21',//Asumiré que se retiró voluntariamente de GTH el 21 de Febrero de 2021
                 'estado' =>'Retiro voluntario',
             ],
             [
@@ -722,19 +755,19 @@ class AreaPersonaSeeder extends Seeder
                 'estado' =>'Egresado',
             ],
             [
-                //Edgar Enrique Grijalba Atavios
+                //Hilda Patricia Rodriguez Horna
                 'area' => 'GTH',
-                'correo_persona' => 'egrijalbaa@unitru.edu.pe',
+                'correo_persona' => 'hrodriguezh@unitru.edu.pe',
                 'fecha_inicio' => '2020-11-08',//Ingresó a GTH el 08 de Noviembre 2020
-                'fecha_fin' => '2021-02-21',//Asumiré que se retiró voluntariamente de GTH el 21 de Febrero de 2021
+                'fecha_fin' => '2022-10-02',//Se retiró voluntariamente de GTH el 02 de Octubre de 2022
                 'estado' =>'Retiro voluntario',
             ],
             [
-                //Alexis Angel Raúl Carrera Condo
+                //Jesús David Nuñez Arteaga
                 'area' => 'GTH',
-                'correo_persona' => 'acarrerac@unitru.edu.pe',
+                'correo_persona' => 'jdnuneza@unitru.edu.pe',
                 'fecha_inicio' => '2020-11-08',//Ingresó a GTH el 08 de Noviembre 2020
-                'fecha_fin' => '2021-02-06',//Asumiré que se retiró voluntariamente de GTH el 06 de Febrero de 2021
+                'fecha_fin' => '2022-05-09',//Se retiró voluntariamente de GTH el 09 de Mayo de 2022
                 'estado' =>'Retiro voluntario',
             ],
             [
@@ -746,30 +779,14 @@ class AreaPersonaSeeder extends Seeder
                 'estado' =>'Egresado',
             ],
             [
-                //Hilda Patricia Rodriguez Horna
+                //Willian Alexander Paredes Rojas
                 'area' => 'GTH',
-                'correo_persona' => 'hrodriguezh@unitru.edu.pe',
+                'correo_persona' => 'waparedesr@unitru.edu.pe',
                 'fecha_inicio' => '2020-11-08',//Ingresó a GTH el 08 de Noviembre 2020
-                'fecha_fin' => '2022-10-02',//Se retiró voluntariamente de GTH el 02 de Octubre de 2022
-                'estado' =>'Retiro voluntario',
+                'fecha_fin' => '2021-02-21',//Se cambió a MKT en 2021 (Asumiré: 21 de Febrero 2021)
+                'estado' =>'Cambio de área',
             ],
             //CONVOCATORIA 2019(03-09-2019)
-            [
-                //Fiorella Alexandra Alfaro Aguilar
-                'area' => 'GTH',
-                'correo_persona' => 'falfaro@unitru.edu.pe',
-                'fecha_inicio' => '2019-09-03',//Ingresó a GTH el 03 de Septiembre 2019
-                'fecha_fin' => '2022-01-20',//Asumiré que se retiró voluntariamente de GTH el 20 de Enero de 2022
-                'estado' =>'Retiro voluntario',
-            ],
-            [
-                //Leydi Estefani Cueva Zavaleta
-                'area' => 'GTH',
-                'correo_persona' => 'lcuevaz@unitru.edu.pe',
-                'fecha_inicio' => '2019-09-03',//Ingresó a GTH el 03 de Septiembre 2019
-                'fecha_fin' => '2022-02-28',//Se retiró voluntariamente de GTH el 28 de Febrero de 2022
-                'estado' =>'Retiro voluntario',
-            ],
             [
                 //Angela Mariel Pereda Morales
                 'area' => 'GTH',
@@ -779,11 +796,11 @@ class AreaPersonaSeeder extends Seeder
                 'estado' =>'Egresado',
             ],
             [
-                //Fiorella Rocio Reyes Cruz
+                //Angelica Alicia Campuzano Guevara
                 'area' => 'GTH',
-                'correo_persona' => 'freyesc@unitru.edu.pe',
+                'correo_persona' => 'acampuzanoa@unitru.edu.pe',
                 'fecha_inicio' => '2019-09-03',//Ingresó a GTH el 03 de Septiembre 2019
-                'fecha_fin' => '2021-03-28',//Se retiró voluntariamente de GTH el 28 de Marzo de 2021
+                'fecha_fin' => '2020-06-22',//Asumiré que se retiró voluntariamente de GTH el 22 de Junio de 2020
                 'estado' =>'Retiro voluntario',
             ],
             [
@@ -795,11 +812,27 @@ class AreaPersonaSeeder extends Seeder
                 'estado' =>'Retiro voluntario',
             ],
             [
-                //Angelica Alicia Campuzano Guevara
+                //Fiorella Alexandra Alfaro Aguilar
                 'area' => 'GTH',
-                'correo_persona' => 'acampuzanoa@unitru.edu.pe',
+                'correo_persona' => 'falfaro@unitru.edu.pe',
                 'fecha_inicio' => '2019-09-03',//Ingresó a GTH el 03 de Septiembre 2019
-                'fecha_fin' => '2020-06-22',//Asumiré que se retiró voluntariamente de GTH el 22 de Junio de 2020
+                'fecha_fin' => '2022-01-20',//Asumiré que se retiró voluntariamente de GTH el 20 de Enero de 2022
+                'estado' =>'Retiro voluntario',
+            ],
+            [
+                //Fiorella Rocio Reyes Cruz
+                'area' => 'GTH',
+                'correo_persona' => 'freyesc@unitru.edu.pe',
+                'fecha_inicio' => '2019-09-03',//Ingresó a GTH el 03 de Septiembre 2019
+                'fecha_fin' => '2021-03-28',//Se retiró voluntariamente de GTH el 28 de Marzo de 2021
+                'estado' =>'Retiro voluntario',
+            ],
+            [
+                //Leydi Estefani Cueva Zavaleta
+                'area' => 'GTH',
+                'correo_persona' => 'lcuevaz@unitru.edu.pe',
+                'fecha_inicio' => '2019-09-03',//Ingresó a GTH el 03 de Septiembre 2019
+                'fecha_fin' => '2022-02-28',//Se retiró voluntariamente de GTH el 28 de Febrero de 2022
                 'estado' =>'Retiro voluntario',
             ],
 
@@ -829,8 +862,8 @@ class AreaPersonaSeeder extends Seeder
                 'area' => 'LTK & FNZ',
                 'correo_persona' => 'dgarro@unitru.edu.pe',
                 'fecha_inicio' => '2025-05-02',//Ingresó a LTK & FNZ el 02 de Mayo 2025
-                'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
-                'estado' =>'Miembro activo',
+                'fecha_fin' =>'2026-01-09',//Se retiró voluntariamente de LTK & FNZ el 09 de Enero de 2026
+                'estado' =>'Retiro voluntario',
             ],
             [
                 //Fabiana Belén Sosa Parra
@@ -923,6 +956,14 @@ class AreaPersonaSeeder extends Seeder
                 'estado' =>'Retiro por bajo rendimiento',
             ],
             [
+                //Jimmy Javier Tisnado Sauceda
+                'area' => 'LTK & FNZ',
+                'correo_persona' => 't1050101421@unitru.edu.pe',
+                'fecha_inicio' => '2024-06-01',//Ingresó a LTK & FNZ el 01 de Junio 2024
+                'fecha_fin' => '2024-09-27',//Se retiró voluntariamente de LTK&FNZ el 27 de Septiembre de 2024
+                'estado' =>'Retiro voluntario',
+            ],
+            [
                 //Maria Fernanda Pretell Leon
                 'area' => 'LTK & FNZ',
                 'correo_persona' => 't1010700721@unitru.edu.pe',
@@ -956,28 +997,6 @@ class AreaPersonaSeeder extends Seeder
             ],
             //CONVOCATORIA 2023(13-06-2023)
             [
-                //Kevin Gamaliel Rodríguez Alfaro
-                'area' => 'LTK & FNZ',
-                'correo_persona' => 't1510101021@unitru.edu.pe',
-                'fecha_inicio' => '2023-06-13',//Ingresó a LTK & FNZ el 13 de Junio 2023
-                'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
-                'estado' =>'Miembro activo',
-            ],
-            //CONVOCATORIA EXTRAORDINARIA 2022(20-12-2022)
-            [
-                //Fernanda Milagros Rojas Rodriguez
-                'area' => 'LTK & FNZ',
-                'correo_persona' => 't1510101721@unitru.edu.pe',
-                'fecha_inicio' => '2022-12-20',//Ingresó a LTK & FNZ el 20 de Diciembre 2022
-                'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
-                'estado' =>'Miembro activo',
-            ],
-            //Aqui ingresó SEBASTIAN EMANUEL FACUNDO REYES <t1512400421@unitru.edu.pe> 
-                    //- Director de LTK&FNZ-2024
-                    //- MIEMBRO ACTIVO DE LTK&FNZ 2025-I
-                    //Ingresó a LTK&FNZ el 20 de Diciembre de 2022
-            //CONVOCATORIA 2023(13-06-2023)
-            [
                 //Candy Yoana Castro Torres
                 'area' => 'LTK & FNZ',
                 'correo_persona' => 't051301320@unitru.edu.pe',
@@ -1001,6 +1020,14 @@ class AreaPersonaSeeder extends Seeder
                 'fecha_fin' => '2025-03-17',//Egresó en LTK&FNZ el 17 de marzo de 2025
                 'estado' =>'Egresado',
             ],
+            [
+                //Kevin Gamaliel Rodríguez Alfaro
+                'area' => 'LTK & FNZ',
+                'correo_persona' => 't1510101021@unitru.edu.pe',
+                'fecha_inicio' => '2023-06-13',//Ingresó a LTK & FNZ el 13 de Junio 2023
+                'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
+                'estado' =>'Miembro activo',
+            ],
             //CONVOCATORIA EXTRAORDINARIA 2022(20-12-2022)
             [
                 //Bryan Anghelo Michael Perez Proaño
@@ -1009,6 +1036,14 @@ class AreaPersonaSeeder extends Seeder
                 'fecha_inicio' => '2022-12-20',//Ingresó a LTK&FNZ el 20 De Diciembre 2022
                 'fecha_fin' => '2025-03-17',//Egresó en LTK&FNZ el 17 de marzo de 2025
                 'estado' =>'Egresado',
+            ],
+            [
+                //Fernanda Milagros Rojas Rodriguez
+                'area' => 'LTK & FNZ',
+                'correo_persona' => 't1510101721@unitru.edu.pe',
+                'fecha_inicio' => '2022-12-20',//Ingresó a LTK & FNZ el 20 de Diciembre 2022
+                'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
+                'estado' =>'Miembro activo',
             ],
             [
                 //José Carlos Cabrera Huaman
@@ -1026,6 +1061,11 @@ class AreaPersonaSeeder extends Seeder
                 'fecha_fin' => '2024-10-01',//Se retiró voluntariamente de LTK&FNZ el 01 de Octubre de 2024
                 'estado' =>'Retiro voluntario',
             ],
+            //Aqui ingresó SEBASTIAN EMANUEL FACUNDO REYES <t1512400421@unitru.edu.pe> 
+                    //- Director de LTK&FNZ-2024
+                    //- MIEMBRO ACTIVO DE LTK&FNZ 2025-I
+                    //Ingresó a LTK&FNZ el 20 de Diciembre de 2022
+
             //CONVOCATORIA 2022(10-05-2022)
             [
                 //Jessenia Marleth Lopez Llanos
@@ -1060,29 +1100,14 @@ class AreaPersonaSeeder extends Seeder
                 'fecha_fin' => '2025-03-17',//Egresó de LTK&FNZ el 17 de marzo de 2025
                 'estado' =>'Egresado',
             ],
+            //Jorge Luis Vargas Baltodano
             [
-                //Jimmy Andersonn Cáceda Olivera - Cambio de área
-                'area' => 'MKT',
-                'correo_persona' => 'jcacedao@unitru.edu.pe',
-                'fecha_inicio' => '2024-06-01',//Ingresó a MKT el 01 De Junio 2024
-                'fecha_fin' => '2024-06-01',//Se cambió a LTK&FNZ el mismo día (asumiré que fue inmediato)
-                'estado' =>'Cambio de área',
-            ],
-            [
-                //Jimmy Javier Tisnado Sauceda - Cambio de área
-                'area' => 'MKT',
-                'correo_persona' => 't1050101421@unitru.edu.pe',
-                'fecha_inicio' => '2024-06-01',//Ingresó a MKT el 01 De Junio 2024
-                'fecha_fin' => '2024-06-01',//Se cambió a LTK&FNZ el mismo día (asumiré que fue inmediato)
-                'estado' =>'Cambio de área',
-            ],
-            [
-                //Jimmy Javier Tisnado Sauceda
+                //Ingresó a LTK&FNZ el 20 de Noviembre de 2021
                 'area' => 'LTK & FNZ',
-                'correo_persona' => 't1050101421@unitru.edu.pe',
-                'fecha_inicio' => '2024-06-01',//Se cambió a LTK&FNZ el 01 De Junio 2024
-                'fecha_fin' => '2024-09-27',//Se retiró voluntariamente de LTK&FNZ el 27 de Septiembre de 2024
-                'estado' =>'Retiro voluntario',
+                'correo_persona' => 't012700120@unitru.edu.pe',
+                'fecha_inicio' => '2021-11-20',
+                'fecha_fin' => '2022-05-10',//Se cambió a PMO el 10 de Mayo de 2022
+                'estado' =>'Cambio de área',
             ],
             
             /********************************************
@@ -1165,14 +1190,6 @@ class AreaPersonaSeeder extends Seeder
                 'estado' =>'Miembro activo',
             ],
             //CONVOCATORIA EXTRAORDINARIA 2024(10-12-2024)
-            [
-                //Stephanie Angeline Arizola Rodriguez
-                'area' => 'MKT',
-                'correo_persona' => 't1051301921@unitru.edu.pe',
-                'fecha_inicio' => '2024-12-10',//Ingresó a MKT el 10 de Diciembre de 2024
-                'fecha_fin' => '2025-03-19',//Se le retiró de MKT por bajo rendimiento el 19 de Marzo de 2025
-                'estado' =>'Retiro por bajo rendimiento',
-            ],
             /**
                 BELINDA MARICIELO ARROYO ESQUIVEL
                 DIEGO JESÚS	ULLILÉN CHÁVEZ
@@ -1202,23 +1219,15 @@ class AreaPersonaSeeder extends Seeder
                 'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
                 'estado' =>'Miembro activo',
             ],
+            [
+                //Stephanie Angeline Arizola Rodriguez
+                'area' => 'MKT',
+                'correo_persona' => 't1051301921@unitru.edu.pe',
+                'fecha_inicio' => '2024-12-10',//Ingresó a MKT el 10 de Diciembre de 2024
+                'fecha_fin' => '2025-03-19',//Se le retiró de MKT por bajo rendimiento el 19 de Marzo de 2025
+                'estado' =>'Retiro por bajo rendimiento',
+            ],
             //CONVOCATORIA 2024(01-06-2024)
-            [
-                //César Manuel Sánchez Castillo
-                'area' => 'MKT',
-                'correo_persona' => 'cmsanchezca@unitru.edu.pe',
-                'fecha_inicio' => '2024-06-01',//Ingresó a MKT el 01 de Junio de 2024
-                'fecha_fin' => '2025-01-03',//Se le retiró de MKT por bajo rendimiento el 03 de Enero de 2025
-                'estado' =>'Retiro por bajo rendimiento',
-            ],
-            [
-                //Darla Mariana Yparraguirre Ortiz
-                'area' => 'MKT',
-                'correo_persona' => 't1513900321@unitru.edu.pe',
-                'fecha_inicio' => '2024-06-01',//Ingresó a MKT el 01 de Junio de 2024
-                'fecha_fin' => '2025-01-03',//Se le retiró de MKT por bajo rendimiento el 03 de Enero de 2025
-                'estado' =>'Retiro por bajo rendimiento',
-            ],
             /**
                 Angie Tatiana Recuenco Tapia
                 Cielo Valentina	Abanto Rojas
@@ -1237,12 +1246,28 @@ class AreaPersonaSeeder extends Seeder
                 'estado' =>'Miembro activo',
             ],
             [
+                //César Manuel Sánchez Castillo
+                'area' => 'MKT',
+                'correo_persona' => 'cmsanchezca@unitru.edu.pe',
+                'fecha_inicio' => '2024-06-01',//Ingresó a MKT el 01 de Junio de 2024
+                'fecha_fin' => '2025-01-03',//Se le retiró de MKT por bajo rendimiento el 03 de Enero de 2025
+                'estado' =>'Retiro por bajo rendimiento',
+            ],
+            [
                 //Cielo Valentina Abanto Rojas
                 'area' => 'MKT',
                 'correo_persona' => 'cvabantor@unitru.edu.pe',
                 'fecha_inicio' => '2024-06-01',//Ingresó a MKT el 01 de Junio 2024
                 'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
                 'estado' =>'Miembro activo',
+            ],
+            [
+                //Darla Mariana Yparraguirre Ortiz
+                'area' => 'MKT',
+                'correo_persona' => 't1513900321@unitru.edu.pe',
+                'fecha_inicio' => '2024-06-01',//Ingresó a MKT el 01 de Junio de 2024
+                'fecha_fin' => '2025-01-03',//Se le retiró de MKT por bajo rendimiento el 03 de Enero de 2025
+                'estado' =>'Retiro por bajo rendimiento',
             ],
             [
                 //Emelyn Yasmin Aguirre Valverde 
@@ -1285,6 +1310,10 @@ class AreaPersonaSeeder extends Seeder
                 'estado' =>'Miembro activo',
             ],
             //CONVOCATORIA 2023(13-06-2023)
+            /**
+                Maria Fernanda Cárdenas Hidalgo
+                Stefany Isabel Gutierrez Vega
+            **/
             [
                 //Ana Lucía Rojas Chavez
                 'area' => 'MKT',
@@ -1317,10 +1346,6 @@ class AreaPersonaSeeder extends Seeder
                 'fecha_fin' => '2025-03-17',//Egresó el 17 de marzo de 2025
                 'estado' =>'Egresado',
             ],
-            /**
-                Maria Fernanda Cárdenas Hidalgo
-                Stefany Isabel Gutierrez Vega
-            **/
             [
                 //Maria Fernanda Cárdenas Hidalgo
                 'area' => 'MKT',
@@ -1328,6 +1353,14 @@ class AreaPersonaSeeder extends Seeder
                 'fecha_inicio' => '2023-06-13',//Ingresó a MKT el 13 de Junio 2023
                 'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
                 'estado' =>'Miembro activo',
+            ],
+            [
+                //Santos Medali Quiliche Vasquez
+                'area' => 'MKT',
+                'correo_persona' => 't020101720@unitru.edu.pe',
+                'fecha_inicio' => '2023-06-13',//Ingresó a MKT el 13 De Junio 2023
+                'fecha_fin' => '2025-03-17',//Egresó el 17 de marzo de 2025
+                'estado' =>'Egresado',
             ],
             [
                 //Stefany Isabel Gutierrez Vega
@@ -1347,6 +1380,18 @@ class AreaPersonaSeeder extends Seeder
                     //Ingresó a MKT el 20 de Diciembre 2022
             
             //CONVOCATORIA 2022(10-05-2022)
+            /**
+                Anderson Abat Otiniano Morales
+                Ghenary Tais Esquivel Davila
+            **/
+            [
+                //Anderson Abat Otiniano Morales
+                'area' => 'MKT',
+                'correo_persona' => 'aotinianom@unitru.edu.pe',
+                'fecha_inicio' => '2022-05-10',//Ingresó a MKT el 10 de Mayo 2022
+                'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
+                'estado' =>'Miembro activo',
+            ],
             [
                 //Christian Giancarlo Cortijo Quispe
                 'area' => 'MKT',
@@ -1364,6 +1409,14 @@ class AreaPersonaSeeder extends Seeder
                 'estado' =>'Egresado',
             ],
             [
+                //Ghenary Tais Esquivel Davila
+                'area' => 'MKT',
+                'correo_persona' => 't1053200921@unitru.edu.pe',
+                'fecha_inicio' => '2022-05-10',//Ingresó a MKT el 10 de Mayo 2022
+                'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
+                'estado' =>'Miembro activo',
+            ],
+            [
                 //Nathaly Silvana Quiroz Mestanza
                 'area' => 'MKT',
                 'correo_persona' => 't530100220@unitru.edu.pe',
@@ -1379,26 +1432,6 @@ class AreaPersonaSeeder extends Seeder
                 'fecha_fin' => '2024-07-14',//Se retiró voluntariamente de MKT el 14 de Julio de 2024
                 'estado' =>'Retiro voluntario',
             ],
-            /**
-                Anderson Abat Otiniano Morales
-                Ghenary Tais Esquivel Davila
-            **/
-            [
-                //Anderson Abat Otiniano Morales
-                'area' => 'MKT',
-                'correo_persona' => 'aotinianom@unitru.edu.pe',
-                'fecha_inicio' => '2022-05-10',//Ingresó a MKT el 10 de Mayo 2022
-                'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
-                'estado' =>'Miembro activo',
-            ],
-            [
-                //Ghenary Tais Esquivel Davila
-                'area' => 'MKT',
-                'correo_persona' => 't1053200921@unitru.edu.pe',
-                'fecha_inicio' => '2022-05-10',//Ingresó a MKT el 10 de Mayo 2022
-                'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
-                'estado' =>'Miembro activo',
-            ],
             //CONVOCATORIA 2021(20-11-2021)
             [
                 //Jhosmel Anderson Vigo Cepeda
@@ -1406,6 +1439,23 @@ class AreaPersonaSeeder extends Seeder
                 'correo_persona' => 't1511601421@unitru.edu.pe',
                 'fecha_inicio' => '2021-11-20',//Ingresó a MKT el 20 De Noviembre 2021
                 'fecha_fin' => '2023-05-03',//Se cambió a LTK&FNZ el 03 de Mayo 2023
+                'estado' =>'Cambio de área',
+            ],
+            [
+                //Rommel Eduardo Ulco Chavarria
+                'area' => 'MKT',
+                'correo_persona' => 'rulco@unitru.edu.pe',
+                'fecha_inicio' => '2021-11-20',//Ingresó a MKT el 20 de Noviembre de 2021
+                'fecha_fin' => '2023-03-17',//Se cambió a TI el 17 de Marzo de 2023
+                'estado' =>'Cambio de área',
+            ],
+            //CONVOCATORIA 2020(08-11-2020)
+            [
+                //Geraldine Lucia Solano Carranza - Cambio de área
+                'area' => 'MKT',
+                'correo_persona' => 'gsolano@unitru.edu.pe',
+                'fecha_inicio' => '2020-11-08',//Ingresó a MKT el 08 de Noviembre 2020
+                'fecha_fin' => '2022-04-03',//Se cambió a LTK&FNZ en 2022(Asi que asumiré: 03 de Abril de 2022)
                 'estado' =>'Cambio de área',
             ],
             /********************************************
@@ -1455,14 +1505,6 @@ class AreaPersonaSeeder extends Seeder
                 'estado' =>'Miembro activo',
             ],
             //CONVOCATORIA 2024(01-06-2024)
-            [
-                //Alexandra Brighit Valverde Escobar
-                'area' => 'PMO',
-                'correo_persona' => 'avelarde@unitru.edu.pe',
-                'fecha_inicio' => '2024-06-01',//Ingresó a PMO el 01 de Junio de 2024
-                'fecha_fin' => '2025-03-07',//Se retiró voluntariamente el 07 de marzo de 2025
-                'estado' =>'Retiro voluntario',
-            ],
             /**   
                 ABEL MAXIMILIANO PEREDA CABANILLAS
                 Angela Xiomara Loayza Gutierrez
@@ -1478,6 +1520,14 @@ class AreaPersonaSeeder extends Seeder
                 'fecha_inicio' => '2024-06-01',//Ingresó a PMO el 01 de Junio 2024
                 'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
                 'estado' =>'Miembro activo',
+            ],
+            [
+                //Alexandra Brighit Valverde Escobar
+                'area' => 'PMO',
+                'correo_persona' => 'avelarde@unitru.edu.pe',
+                'fecha_inicio' => '2024-06-01',//Ingresó a PMO el 01 de Junio de 2024
+                'fecha_fin' => '2025-03-07',//Se retiró voluntariamente el 07 de marzo de 2025
+                'estado' =>'Retiro voluntario',
             ],
             [
                 //Angela Xiomara Loayza Gutierrez
@@ -1520,6 +1570,19 @@ class AreaPersonaSeeder extends Seeder
                 'estado' =>'Miembro activo',
             ],
             //CONVOCATORIA 2023(13-06-2023)
+            /**
+                Aaron Kaleb Arteaga Rodriguez
+                Jeoselyn Maribel Espejo Rodríguez
+                María Celine Huamán Martínez
+            **/
+            [
+                //Aaron Kaleb Arteaga Rodriguez
+                'area' => 'PMO',
+                'correo_persona' => 't1452700121@unitru.edu.pe',
+                'fecha_inicio' => '2023-06-13',//Ingresó a PMO el 13 de Junio 2023
+                'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
+                'estado' =>'Miembro activo',
+            ],
             [
                 //David Caleb Céspedes Esquivel
                 'area' => 'PMO',
@@ -1537,30 +1600,9 @@ class AreaPersonaSeeder extends Seeder
                 'estado' =>'Egresado',
             ],
             [
-                //Renato Martin Nunez Ortiz
-                'area' => 'PMO',
-                'correo_persona' => 'rnunezo@unitru.edu.pe',
-                'fecha_inicio' => '2023-06-13',//Ingresó a PMO el 13 de Junio de 2023
-                'fecha_fin' => '2025-03-17',//Egresó el 17 de marzo de 2025
-                'estado' =>'Egresado',
-            ],
-            /**
-                Jeoselyn Maribel Espejo Rodríguez
-                Kaleb Arteaga Rodriguez
-                María Celine Huamán Martínez
-            **/
-            [
                 //Jeoselyn Maribel Espejo Rodríguez
                 'area' => 'PMO',
                 'correo_persona' => 'jespejor@unitru.edu.pe',
-                'fecha_inicio' => '2023-06-13',//Ingresó a PMO el 13 de Junio 2023
-                'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
-                'estado' =>'Miembro activo',
-            ],
-            [
-                //Kaleb Arteaga Rodriguez
-                'area' => 'PMO',
-                'correo_persona' => 't1452700121@unitru.edu.pe',
                 'fecha_inicio' => '2023-06-13',//Ingresó a PMO el 13 de Junio 2023
                 'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
                 'estado' =>'Miembro activo',
@@ -1573,6 +1615,22 @@ class AreaPersonaSeeder extends Seeder
                 'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
                 'estado' =>'Miembro activo',
             ],
+            [
+                //Renato Martin Nunez Ortiz
+                'area' => 'PMO',
+                'correo_persona' => 'rnunezo@unitru.edu.pe',
+                'fecha_inicio' => '2023-06-13',//Ingresó a PMO el 13 de Junio de 2023
+                'fecha_fin' => '2025-03-17',//Egresó el 17 de marzo de 2025
+                'estado' =>'Egresado',
+            ],
+            //CONVOCATORIA 2022(10-05-2022)
+            /**
+                Cinthya Soledad Gil Toribio
+            **/
+            //Aqui ingresó CINTHYA SOLEDAD GIL TORIBIO <t010100820@unitru.edu.pe>
+                    //Ingresó a PMO el 10 de Mayo de 2022
+                    //- PRESIDENTA SEDIPRO UNT-2024
+            
             //CONVOCATORIA 2021(20-11-2021)
             /**
                 Ivanna Sofia Vela Ocampo
@@ -1668,6 +1726,31 @@ class AreaPersonaSeeder extends Seeder
                 'fecha_fin' =>NULL,//NULL mientras no se retire o egrese
                 'estado' =>'Miembro activo',
             ],
+            //CONVOCATORIA 2024(01-06-2024)
+            [
+                //Anthony Jhonatan Osorio Trujillo
+                'area' => 'TI',
+                'correo_persona' => 'ajosoriot@unitru.edu.pe',
+                'fecha_inicio' => '2024-06-01',//Ingresó a TI el 01 de Junio de 2024
+                'fecha_fin' =>'2025-03-17',//Egresó en TI el 17 de marzo de 2025
+                'estado' =>'Egresado',
+            ],
+            [
+                //Braggi Jayson Bamberger Plasencia
+                'area' => 'TI',
+                'correo_persona' => 'bbamberger@unitru.edu.pe',
+                'fecha_inicio' => '2024-06-01',//Ingresó a TI el 01 de Junio de 2024
+                'fecha_fin' =>'2025-03-17',//Egresó en TI el 17 de marzo de 2025
+                'estado' =>'Egresado',
+            ],
+            [
+                //Jean Pierre Camilo Liñer Sagástegui
+                'area' => 'TI',
+                'correo_persona' => 'jliner@unitru.edu.pe',
+                'fecha_inicio' => '2024-06-01',//Ingresó a TI el 01 de Junio de 2024
+                'fecha_fin' =>'2024-11-30',//Se le retiró de TI por bajo rendimiento el 30 de Noviembre de 2024
+                'estado' =>'Retiro por bajo rendimiento',
+            ],
             //INGRESO A TI EN AÑO DE FUNDACIÓN DEL ÁREA MEDIANTE CAMBIO DE ÁREA (2023)
             [
                 //Anahy Estrella Cruz Ulloa
@@ -1681,7 +1764,7 @@ class AreaPersonaSeeder extends Seeder
                 //Jorge Luis Vargas Baltodano
                 'area' => 'TI',
                 'correo_persona' => 't012700120@unitru.edu.pe',
-                'fecha_inicio' => '2023-03-17',//Ingresó a TI el 17 de Marzo de 2023
+                'fecha_inicio' => '2023-03-17',//Ingresó a TI desde PMO el 17 de Marzo de 2023
                 'fecha_fin' =>'2024-06-08',//Se retiró de TI el 08 de Junio de 2024
                 'estado' =>'Retiro voluntario',
             ],
@@ -1711,17 +1794,8 @@ class AreaPersonaSeeder extends Seeder
                 //Ingresó a MKT el 08 de Noviembre 2020
                 'area' => 'MKT',
                 'correo_persona' => 'ejzeladav@unitru.edu.pe',
-                'fecha_inicio' => '2020-11-08',
+                'fecha_inicio' => '2020-11-08',//Ingresó a MKT el 08 de Noviembre 2020
                 'fecha_fin' => '2021-02-21',//Se cambió a LTK en 2021 (Asumiré: 21 de Febrero 2021)
-                'estado' =>'Cambio de área',
-            ],
-            //Willian Alexander Paredes Rojas
-            [
-                //Ingresó a GTH el 08 de Noviembre 2020
-                'area' => 'GTH',
-                'correo_persona' => 'waparedesr@unitru.edu.pe',
-                'fecha_inicio' => '2020-11-08',
-                'fecha_fin' => '2021-02-21',//Se cambió a MKT en 2021 (Asumiré: 21 de Febrero 2021)
                 'estado' =>'Cambio de área',
             ],
             //Edwin Jeyson Valencia Gaona
@@ -1729,7 +1803,7 @@ class AreaPersonaSeeder extends Seeder
                 //Ingresó a MKT el 08 de Noviembre 2020
                 'area' => 'MKT',
                 'correo_persona' => 'evalencia@unitru.edu.pe',
-                'fecha_inicio' => '2020-11-08',
+                'fecha_inicio' => '2020-11-08',//Ingresó a MKT el 08 de Noviembre 2020
                 'fecha_fin' => '2021-12-01',//Se cambió a PMO a finales del 2021 (Asumiré: 01 de Diciembre de 2021)
                 'estado' =>'Cambio de área',
             ],
@@ -1747,7 +1821,7 @@ class AreaPersonaSeeder extends Seeder
                 //Ingresó a MKT el 03 de Septiembre 2019
                 'area' => 'MKT',
                 'correo_persona' => 'hcubenos@unitru.edu.pe',
-                'fecha_inicio' => '2019-09-03',
+                'fecha_inicio' => '2019-09-03',//Ingresó a MKT el 03 de Septiembre 2019
                 'fecha_fin' => '2021-02-21',//Se cambió a PMO a inicios de 2021(Asumiré: 21 de Febrero de 2021)
                 'estado' =>'Cambio de área',
             ],
@@ -1756,8 +1830,8 @@ class AreaPersonaSeeder extends Seeder
                 //Ingresó a GTH el 29 de Octubre de 2018
                 'area' => 'GTH',
                 'correo_persona' => 'pvasquez@unitru.edu.pe',
-                'fecha_inicio' => '2018-10-29',
-                'fecha_fin' => '2019-02-21',//Asumiré que se cambió al inicio de la directiva 2019 (21 de Febrero de 2019)
+                'fecha_inicio' => '2018-10-29',//Ingresó a GTH el 29 de Octubre de 2018
+                'fecha_fin' => '2019-02-21',//Asumiré que se cambió a PMO al inicio de la directiva 2019 (21 de Febrero de 2019)
                 'estado' =>'Cambio de área',
             ],
             //Mauricio Sebastian Bedon Oliva
@@ -1765,85 +1839,46 @@ class AreaPersonaSeeder extends Seeder
                 //Ingresó a MKT el 14 de Octubre de 2016
                 'area' => 'MKT',
                 'correo_persona' => 'mbedono@unitru.edu.pe',
-                'fecha_inicio' => '2016-10-14',
+                'fecha_inicio' => '2016-10-14',//Ingresó a MKT el 14 de Octubre de 2016
                 'fecha_fin' => '2018-10-01',//Se cambió a GTH el 01 de Octubre de 2018
                 'estado' =>'Cambio de área',
             ],
             [
-                //Se cambió a GTH el 01 de Octubre de 2018
+                //Se cambió de MKT a GTH el 01 de Octubre de 2018
                 'area' => 'GTH',
                 'correo_persona' => 'mbedono@unitru.edu.pe',
-                'fecha_inicio' => '2018-10-01',
+                'fecha_inicio' => '2018-10-01',//Ingresó a GTH el 01 de Octubre de 2018
                 'fecha_fin' => '2020-02-01',//Se cambió a PMO el 01 de Febrero de 2020
                 'estado' =>'Cambio de área',
             ],
             //Jhosmel Anderson Vigo Cepeda
             [
-                //Se cambió a LTK&FNZ el 03 de Mayo 2023
+                //Se cambió de MKT a LTK&FNZ el 03 de Mayo 2023
                 'area' => 'LTK & FNZ',
                 'correo_persona' => 't1511601421@unitru.edu.pe',
-                'fecha_inicio' => '2023-05-03',
+                'fecha_inicio' => '2023-05-03',//Ingresó a LTK&FNZ el 03 de Mayo 2023
                 'fecha_fin' => NULL,//MIEMBRO ACTIVO 2025-I
                 'estado' =>'Miembro activo',
             ],
-            //Rommel Eduardo Ulco Chavarria
-            [
-                //Ingresó a MKT el 20 de Noviembre de 2021
-                'area' => 'MKT',
-                'correo_persona' => 'rulco@unitru.edu.pe',
-                'fecha_inicio' => '2021-11-20',
-                'fecha_fin' => '2023-03-17',//Se cambió a TI el 17 de Marzo de 2023
-                'estado' =>'Cambio de área',
-            ],
             //Jorge Luis Vargas Baltodano
             [
-                //Ingresó a LTK&FNZ el 20 de Noviembre de 2021
-                'area' => 'LTK & FNZ',
-                'correo_persona' => 't012700120@unitru.edu.pe',
-                'fecha_inicio' => '2021-11-20',
-                'fecha_fin' => '2022-05-10',//Se cambió a PMO el 10 de Mayo de 2022
-                'estado' =>'Cambio de área',
-            ],
-            [
-                //Se cambió a PMO el 10 de Mayo de 2022
+                //Se cambió de LTK&FNZ a PMO el 10 de Mayo de 2022
                 'area' => 'PMO',
                 'correo_persona' => 't012700120@unitru.edu.pe',
-                'fecha_inicio' => '2022-05-10',
-                'fecha_fin' => '2023-03-17',//Ingresó a TI el 17 de Marzo de 2023
+                'fecha_inicio' => '2022-05-10',//Ingresó a PMO el 10 de Mayo de 2022
+                'fecha_fin' => '2023-03-17',//Se cambió de PMO a TI el 17 de Marzo de 2023
                 'estado' =>'Cambio de área',
             ],
-
-            /********************************************
-              ********** MIEMBROS FALTANTES **************
-              ******************************************* */
-            //LTK&FNZ - CONVOCATORIA 2022
+            //Geraldine Lucia Solano Carranza
             [
-                //Geraldine Lucia Solano Carranza - Cambio de área
-                'area' => 'MKT',
-                'correo_persona' => 'gsolano@unitru.edu.pe',
-                'fecha_inicio' => '2020-11-08',//Ingresó a MKT el 08 de Noviembre 2020
-                'fecha_fin' => '2022-04-03',//Se cambió a LTK&FNZ en 2022(Asi que asumiré: 03 de Abril de 2022)
-                'estado' =>'Cambio de área',
-            ],
-            [
-                //Geraldine Lucia Solano Carranza
+                //Se cambió de MKT a LTK&FNZ el 03 de Abril de 2022
                 'area' => 'LTK & FNZ',
                 'correo_persona' => 'gsolano@unitru.edu.pe',
-                'fecha_inicio' => '2022-04-03',//Se cambió a LTK&FNZ en 2022(Asi que asumiré: 03 de Abril de 2022)
+                'fecha_inicio' => '2022-04-03',//Ingresó a LTK&FNZ el 03 de Abril de 2022
                 'fecha_fin' => '2024-01-05',//Se retiró voluntariamente de LTK&FNZ el 05 de Enero de 2024
                 'estado' =>'Retiro voluntario',
             ],
-            //MKT - CONVOCATORIA 2023
-            [
-                //Santos Medali Quiliche Vasquez
-                'area' => 'MKT',
-                'correo_persona' => 't020101720@unitru.edu.pe',
-                'fecha_inicio' => '2023-06-13',//Ingresó a MKT el 13 De Junio 2023
-                'fecha_fin' => '2025-03-17',//Egresó el 17 de marzo de 2025
-                'estado' =>'Egresado',
-            ],
-        ];
-
+        ];   
         foreach ($personasEnAreas as $personaEnArea) {
             $personaEnArea['area_id'] = Area::where('abreviatura', $personaEnArea['area'])->first()->id;
             $personaEnArea['persona_id'] = Persona::where('correo_institucional', $personaEnArea['correo_persona'])->first()->id;

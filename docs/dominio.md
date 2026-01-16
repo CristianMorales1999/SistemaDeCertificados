@@ -279,6 +279,223 @@ El tipo de certificado **define completamente** cómo se comporta un grupo de ce
 
 ---
 
+## Reglas Detalladas de Elegibilidad por Tipo de Certificado
+
+Las siguientes son las **16 reglas específicas de elegibilidad** implementadas en el sistema. Estas reglas son la **fuente única de verdad** para determinar qué personas pueden recibir cada tipo de certificado.
+
+### Regla 1: Certificado de Egresado
+
+**Personas elegibles**: Todos los miembros de SEDIPRO UNT (tabla: `area_persona`) con estado **'Miembro activo'**.
+
+**Contexto requerido**: Ninguno.
+
+**Nota**: Esta regla muestra todos los miembros activos. La validación de tiempo mínimo de membresía (1 año) se realiza en el servicio de elegibilidad antes de permitir la creación del certificado.
+
+---
+
+### Regla 2: Certificado de Retiro Voluntario
+
+**Personas elegibles**: Todos los miembros de SEDIPRO UNT (tabla: `area_persona`) con estado **'Miembro activo'**.
+
+**Contexto requerido**: Ninguno.
+
+**Nota**: Similar a Egresado, pero con validación de tiempo mínimo de membresía (1 año) antes de permitir la creación.
+
+---
+
+### Regla 3: Certificado de Directiva
+
+**Personas elegibles**: Todos los miembros de SEDIPRO (tabla: `area_persona`) que actualmente ocupan los cargos de:
+- **'Presidente SEDIPRO UNT'**
+- **'Vicepresidente SEDIPRO UNT'**
+- Cualquier otro cargo que **inicie con 'Director de '** y **termine con 'SEDIPRO UNT'**
+
+Y que tienen el estado **'Cargo activo'** en la tabla `area_persona_cargo` (sin `proyecto_id`, ya que son cargos de directiva).
+
+**Contexto requerido**: Ninguno.
+
+---
+
+### Regla 4: Certificado de Director de Proyecto
+
+**Personas elegibles**: Los Directores de Proyecto (DPs) de todos los proyectos existentes que **NO están vinculados** a algún grupo de certificación validado que esté asociado a este tipo de certificación.
+
+**Contexto requerido**: Ninguno (se muestran todos los proyectos disponibles).
+
+**Proceso**:
+1. Obtener todos los proyectos que NO están vinculados a grupos validados de este tipo
+2. Mostrar como elegibles a los DPs de esos proyectos (cargo 'Director de Proyecto' con estado 'Cargo activo')
+
+---
+
+### Regla 5: Certificado de Co-Director de Proyecto
+
+**Personas elegibles**: Los Co-Directores de Proyecto (CODPs) de todos los proyectos existentes que **NO están vinculados** a algún grupo de certificación validado que esté asociado a este tipo de certificación.
+
+**Contexto requerido**: Ninguno (se muestran todos los proyectos disponibles).
+
+**Proceso**:
+1. Obtener todos los proyectos que NO están vinculados a grupos validados de este tipo
+2. Mostrar como elegibles a los CODPs de esos proyectos (cargo 'Codirector de Proyecto' con estado 'Cargo activo')
+
+---
+
+### Regla 6: Certificado de Coordinadores de Proyecto
+
+**Personas elegibles**: Todos los miembros de SEDIPRO que ocupan el cargo de **'Coordinador de Proyecto'** y que están asociados al proyecto seleccionado, con estado **'Cargo activo'** en la tabla `area_persona_cargo`.
+
+**Contexto requerido**: **Proyecto** (obligatorio).
+
+**Proceso**:
+1. El campo de selección de proyecto aparece dinámicamente
+2. Solo muestra proyectos que NO están vinculados a grupos validados de este tipo
+3. Al seleccionar un proyecto, se muestran los coordinadores de ese proyecto
+
+---
+
+### Regla 7: Certificado de Miembros Internos del Proyecto
+
+**Personas elegibles**: Todos los miembros de SEDIPRO que están vinculados al proyecto seleccionado y ocupan el rol de **'Miembro'** en la tabla `area_persona_proyecto`.
+
+**Contexto requerido**: **Proyecto** (obligatorio).
+
+**Proceso**:
+1. El campo de selección de proyecto aparece dinámicamente
+2. Solo muestra proyectos que NO están vinculados a grupos validados de este tipo
+3. Al seleccionar un proyecto, se muestran los miembros internos de ese proyecto
+
+---
+
+### Regla 8: Certificado de Staff Interno de Apoyo de Proyecto
+
+**Personas elegibles**: Todos los miembros de SEDIPRO que están vinculados al proyecto seleccionado y ocupan el rol de **'Staff de apoyo'** en la tabla `area_persona_proyecto`.
+
+**Contexto requerido**: **Proyecto** (obligatorio).
+
+**Proceso**:
+1. El campo de selección de proyecto aparece dinámicamente
+2. Solo muestra proyectos que NO están vinculados a grupos validados de este tipo
+3. Al seleccionar un proyecto, se muestran los staff internos de ese proyecto
+
+---
+
+### Regla 9: Certificado de Miembros Externos del Proyecto
+
+**Personas elegibles**: Todos los miembros de cualquier entidad aliada que están vinculados al proyecto seleccionado y ocupan el rol de **'Miembro externo'** en la tabla `entidad_aliada_persona_proyecto`.
+
+**Contexto requerido**: **Proyecto** (obligatorio).
+
+**Proceso**:
+1. El campo de selección de proyecto aparece dinámicamente
+2. Solo muestra proyectos que NO están vinculados a grupos validados de este tipo
+3. Al seleccionar un proyecto, se muestran los miembros externos de ese proyecto
+
+---
+
+### Regla 10: Certificado de Staff Externo de Apoyo de Proyecto
+
+**Personas elegibles**: Todos los miembros de cualquier entidad aliada que están vinculados al proyecto seleccionado y ocupan el rol de **'Staff de apoyo'** en la tabla `entidad_aliada_persona_proyecto`.
+
+**Contexto requerido**: **Proyecto** (obligatorio).
+
+**Proceso**:
+1. El campo de selección de proyecto aparece dinámicamente
+2. Solo muestra proyectos que NO están vinculados a grupos validados de este tipo
+3. Al seleccionar un proyecto, se muestran los staff externos de ese proyecto
+
+---
+
+### Regla 11: Certificado de Participación como Ponente de Eventos Generales de SEDIPRO UNT
+
+**Personas elegibles**: Todas las personas asociadas a eventos generales (con `proyecto_id = NULL`) que **NO están vinculados** a algún grupo de certificación validado que esté asociado a este tipo de certificación, y que tienen únicamente el rol de **'Ponente'** en la tabla `evento_persona`.
+
+**Contexto requerido**: Ninguno (se muestran todos los eventos generales disponibles).
+
+**Proceso**:
+1. Obtener todos los eventos generales (sin proyecto) que NO están vinculados a grupos validados de este tipo
+2. Mostrar como elegibles a todas las personas con rol 'Ponente' en esos eventos
+
+---
+
+### Regla 12: Certificado de Participación en Evento General de SEDIPRO UNT
+
+**Personas elegibles**: Todas las personas que están vinculadas al evento seleccionado y ocupan el rol de **'Participante'** en la tabla `evento_persona`.
+
+**Contexto requerido**: **Evento** (obligatorio, solo eventos generales con `proyecto_id = NULL`).
+
+**Proceso**:
+1. El campo de selección de evento aparece dinámicamente
+2. Solo muestra eventos generales (sin proyecto) que NO están vinculados a grupos validados de este tipo
+3. Al seleccionar un evento, se muestran los participantes de ese evento
+
+---
+
+### Regla 13: Certificado de Participación como Ponente para Proyecto
+
+**Personas elegibles**: Todas las personas asociadas a proyectos (mediante los eventos de esos proyectos, pero solo eventos con `tipo` diferente de 'Ejecución de proyecto') que **NO están vinculados** a algún grupo de certificación validado que esté asociado a este tipo de certificación, y que tienen únicamente el rol de **'Ponente'** en la tabla `evento_persona`.
+
+**Contexto requerido**: Ninguno (se muestran todos los proyectos disponibles con eventos no de ejecución).
+
+**Proceso**:
+1. Obtener todos los proyectos (con al menos 1 evento asociado con tipo diferente de 'Ejecución de proyecto') que NO están vinculados a grupos validados de este tipo
+2. Obtener eventos de esos proyectos (excluyendo 'Ejecución de proyecto')
+3. Mostrar como elegibles a todas las personas con rol 'Ponente' en esos eventos
+
+---
+
+### Regla 14: Certificado de Participación en Evento de Proyecto
+
+**Personas elegibles**: Todas las personas que están vinculadas al evento del proyecto seleccionado y ocupan el rol de **'Participante'** en la tabla `evento_persona`.
+
+**Contexto requerido**: **Proyecto** y **Evento** (ambos obligatorios, el evento depende del proyecto).
+
+**Proceso**:
+1. El campo de selección de proyecto aparece dinámicamente
+2. Solo muestra proyectos que NO están vinculados a grupos validados de este tipo
+3. Al seleccionar un proyecto, aparece el campo de selección de evento
+4. El evento solo muestra eventos del proyecto seleccionado
+5. Al seleccionar un evento, se muestran los participantes de ese evento
+
+---
+
+### Regla 15: Certificado de Participación en Ejecución de Proyecto
+
+**Personas elegibles**: Todas las personas que están vinculadas al evento de ejecución (evento único con campo `tipo` igual a **'Ejecución de proyecto'**) del proyecto seleccionado y que ocupan el rol de **'Participante'** en la tabla `evento_persona`.
+
+**Contexto requerido**: **Proyecto** (obligatorio).
+
+**Proceso**:
+1. El campo de selección de proyecto aparece dinámicamente
+2. Solo muestra proyectos que NO están vinculados a grupos validados de este tipo
+3. Al seleccionar un proyecto, se muestran automáticamente los participantes del evento de ejecución de ese proyecto
+
+---
+
+### Regla 16: Certificado de Valores Destacados
+
+**Personas elegibles**: Todos los miembros de SEDIPRO ganadores de los diferentes valores destacados en el año y periodo seleccionados.
+
+**Contexto requerido**: **Año** y **Periodo** (ambos obligatorios).
+
+**Proceso**:
+1. Los campos de selección de año y periodo aparecen dinámicamente
+2. Solo muestran años y periodos de los que se tenga registro de ganadores a algún valor destacado en la tabla `area_persona_valor_destacado`
+3. Para la selección, se toman solo los años y periodos donde algún registro de `area_persona_valor_destacado` tenga el campo `estado_certificacion` igual a **'FALSE'**
+4. Al seleccionar año y periodo, se muestran los miembros ganadores de valores destacados en ese periodo
+
+---
+
+### Nota Importante sobre Grupos Validados
+
+**Cuando se menciona "grupo de certificación validado"**, se refiere a los registros en la tabla `grupos_de_certificacion` que tienen en su campo `estado` el valor de **'Validado'**.
+
+Esto significa que:
+- Un proyecto/evento que ya tiene un grupo validado de un tipo específico **NO puede volver a certificarse** con ese mismo tipo
+- Esto previene duplicación de certificaciones para el mismo contexto
+- Solo los grupos con estado 'Validado' se consideran para esta exclusión
+
+---
+
 ## Entidades del Dominio
 
 ### Personas

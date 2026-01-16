@@ -23,6 +23,7 @@ return new class extends Migration
                 ->cascadeOnDelete();
             $table->year('anio');
             $table->enum('periodo',['I','II']);
+            $table->boolean('estado_certificacion')->default(false);
             $table->timestamps();
         });
     }

@@ -17,6 +17,110 @@ class ProyectoSeeder extends Seeder
     {
         $proyectos=[
             /************************************
+              ********* PROYECTOS 2025 **********
+              *********************************** */
+              /*************************************
+                ****** PROYECTO : SediTalks ********
+                *************************************/
+              /* - DP: Daniel Angel Sanchez Cabrera  */
+              [
+                'area' => NULL,
+                'nombre' => 'SEDITALKS',
+                'imagen_logo' => 'fotos_logos/SEDITALKS.png',
+                'fecha_inicio' => '2025-05-18',
+                'fecha_fin' => '2025-07-30',
+              ],
+              /*************************************
+                ****** PROYECTO : SediPatitas ********
+                *************************************/
+              /* - DP: Maria Celine Huaman Martinez  */
+              [
+                'area' => NULL,
+                'nombre' => 'SediPatitas',
+                'imagen_logo' => 'fotos_logos/SediPatitas.png',
+                'fecha_inicio' => '2025-05-18',
+                'fecha_fin' => '2025-08-08',
+              ],
+              /*************************************
+                ****** PROYECTO : Amigos de la Tecnología ********
+                *************************************/
+              /* - DP: Dalery Nicoll Alayo Sifuentes  */
+              [
+                'area' => NULL,
+                'nombre' => 'Amigos de la Tecnología',
+                'imagen_logo' => 'fotos_logos/Amigos de la Tecnología.png',
+                'fecha_inicio' => '2025-05-18',
+                'fecha_fin' => '2025-07-12',
+              ],
+              
+              /**************************************
+                **** PROYECTO : NAVISEDIPRO 9.0 *****
+                **************************************/
+              /* - DP: Angela Xiomara Loayza Gutierrez  */
+              [
+                  'area' => NULL,
+                  'nombre' => 'NAVISEDIPRO 9.0',
+                  'imagen_logo' => 'fotos_logos/NAVISEDIPRO 9.0.png',
+                  'fecha_inicio' => '2025-10-22',
+                  'fecha_fin' => '2026-01-12',
+              ],
+              /**************************************************
+                ****** PROYECTO : Gestión de Proyectos 360 ******
+                **************************************************/
+              /* - DP: José Daniel Avila Santillan  */
+              [
+                'area' => NULL,
+                'nombre' => 'Gestión de Proyectos 360',
+                'imagen_logo' => 'fotos_logos/Gestión de Proyectos 360.png',
+                'fecha_inicio' => '2025-10-22',
+                'fecha_fin' => '2025-12-30',
+              ],
+              /*************************************************
+                ******* PROYECTO : CHEQUEATE UNT ***************
+                *************************************************/
+              /* - DP: Nashaly Nicolle Alama Terrones  */
+              [
+                'area' => NULL,
+                'nombre' => 'CHEQUEATE UNT',
+                'imagen_logo' => 'fotos_logos/CHEQUEATE UNT.png',
+                'fecha_inicio' => '2025-10-22',
+                'fecha_fin' => NULL,
+              ],
+              /*******************************************************
+                ******** PROYECTO : Proyectando Vocaciones 3.0 *******
+                *******************************************************/
+              /* - DP: Cielo Valentina Abanto Rojas  */
+              [
+                'area' => NULL,
+                'nombre' => 'Proyectando Vocaciones 3.0',
+                'imagen_logo' => 'fotos_logos/Proyectando Vocaciones 3.0.png',
+                'fecha_inicio' => '2026-01-04',
+                'fecha_fin' => NULL,
+              ],
+              /*************************************************
+                ******** PROYECTO : Camping 6.0 ****************
+                *************************************************/
+              /* - DP: Christian Rodrigo Valverde Caspito 
+                 - DP: Kevin Gamaliel Rodriguez Alfaro */
+              [
+                'area' => NULL,
+                'nombre' => 'Camping 6.0',
+                'imagen_logo' => 'fotos_logos/Camping 6.0.png',
+                'fecha_inicio' => '2026-01-04',
+                'fecha_fin' => NULL,
+              ],
+              /*************************************************
+               ******** PROYECTO : Elecciones 2026 *************
+               **************************************************/
+              /* - DP: Luis Angel Laureano Escobedo*/
+              [
+                'area' => NULL,
+                'nombre' => 'Elecciones 2026',
+                'imagen_logo' => 'fotos_logos/Elecciones 2026.png',
+                'fecha_inicio' => '2026-01-04',
+                'fecha_fin' => NULL,
+              ],
+            /************************************
               ********* PROYECTOS 2024 **********
               ************************************/
 
@@ -145,77 +249,6 @@ class ProyectoSeeder extends Seeder
                 'imagen_logo' => 'fotos_logos/CONCURSO DE MARKETING 2024.png',
                 'fecha_inicio' => '2024-07-17',
                 'fecha_fin' => '2024-10-30',
-              ],
-
-            /************************************
-              ********* PROYECTOS 2025 **********
-              *********************************** */
-              /*************************************
-                ****** PROYECTO : SediTalks ********
-                *************************************/
-              /* - DP: Daniel Angel Sanchez Cabrera  */
-              [
-                'area' => NULL,
-                'nombre' => 'SEDITALKS',
-                'imagen_logo' => 'fotos_logos/SEDITALKS.png',
-                'fecha_inicio' => '2025-05-18',
-                'fecha_fin' => '2025-07-31',
-              ],
-              /*************************************
-                ****** PROYECTO : SediPatitas ********
-                *************************************/
-              /* - DP: Maria Celine Huaman Martinez  */
-              [
-                'area' => NULL,
-                'nombre' => 'SediPatitas',
-                'imagen_logo' => 'fotos_logos/SediPatitas.png',
-                'fecha_inicio' => '2025-05-18',
-                'fecha_fin' => '2025-08-08',
-              ],
-              /*************************************
-                ****** PROYECTO : Amigos de la Tecnología ********
-                *************************************/
-              /* - DP: Dalery Nicoll Alayo Sifuentes  */
-              [
-                'area' => NULL,
-                'nombre' => 'Amigos de la Tecnología',
-                'imagen_logo' => 'fotos_logos/Amigos de la Tecnología.png',
-                'fecha_inicio' => '2025-05-18',
-                'fecha_fin' => '2025-07-12',
-              ],
-              
-              /**************************************
-                **** PROYECTO : NAVISEDIPRO 9.0 *****
-                **************************************/
-              /* - DP: Angela Xiomara Loayza Gutierrez  */
-              [
-                  'area' => NULL,
-                  'nombre' => 'NAVISEDIPRO 9.0',
-                  'imagen_logo' => 'fotos_logos/NAVISEDIPRO 9.0.png',
-                  'fecha_inicio' => '2025-10-22',
-                  'fecha_fin' => NULL,
-              ],
-              /**************************************************
-                ****** PROYECTO : Gestión de Proyectos 360 ******
-                *************************************************/
-              /* - DP: José Daniel Avila Santillan  */
-              [
-                'area' => NULL,
-                'nombre' => 'Gestión de Proyectos 360',
-                'imagen_logo' => 'fotos_logos/Gestión de Proyectos 360.png',
-                'fecha_inicio' => '2025-10-22',
-                'fecha_fin' => NULL,
-              ],
-              /**************************************************
-                ****** PROYECTO : CHEQUEATE UNT ******
-                *************************************************/
-              /* - DP: Nashaly Nicolle Alama Terrones  */
-              [
-                'area' => NULL,
-                'nombre' => 'CHEQUEATE UNT',
-                'imagen_logo' => 'fotos_logos/CHEQUEATE UNT.png',
-                'fecha_inicio' => '2025-10-22',
-                'fecha_fin' => NULL,
               ],
         ];
 

@@ -45,6 +45,13 @@ Route::get('/grupo-certificacion', function () {
     return view('certificates.grupo-certificacion');
 }) ->name('grupo-certificacion');
 
+/* -----------------CREACIÓN DE GRUPO (NUEVO - REFACTORIZADO)--------------- */
+// Ruta temporal para el componente refactorizado
+// TODO: Reemplazar ruta legacy cuando se valide este componente
+Route::get('/grupos-certificacion/crear', \App\Livewire\GruposCertificacion\CrearGrupoCertificacion::class)
+    ->middleware(['auth'])
+    ->name('grupos.crear.nuevo');
+
 
 
 

@@ -17,7 +17,13 @@
     <x-app.header/>
 
     <main>
-        @yield('content')
+        {{-- Layout híbrido: soporta tanto Livewire ($slot) como Blade clásico (@yield) --}}
+        {{-- Prioridad: $slot (Livewire) > @yield (Blade clásico) --}}
+        @if(isset($slot) && !empty($slot))
+            {{ $slot }}
+        @else
+            @yield('content')
+        @endif
     </main>
 
     <div class="fixed bottom-8 right-8 z-50 flex items-center justify-center text-white w-fit">

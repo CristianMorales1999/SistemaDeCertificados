@@ -726,6 +726,27 @@ class UserSeeder extends Seeder
                 'status' => 'Eliminado',
                 'password' =>  Hash::make('72503127'),
             ],
+            [
+                'name' => 'Anthony Jhonatan',
+                'email' => 'ajosoriot@unitru.edu.pe',//Anthony Jhonatan Osorio Trujillo
+                'profile_picture' =>'fotos_perfiles/Anthony Jhonatan Osorio Trujillo.jpg',
+                'status' => 'Eliminado',
+                'password' =>  Hash::make('72226388'),
+            ],
+            [
+                'name' => 'Braggi Jayson',
+                'email' => 'bbamberger@unitru.edu.pe',//Braggi Jayson Bamberger Plasencia
+                'profile_picture' =>'fotos_perfiles/Braggi Jayson Bamberger Plasencia.jpg',
+                'status' => 'Eliminado',
+                'password' =>  Hash::make('77207794'),
+            ],
+            [
+                'name' => 'Jean Pierre Camilo',
+                'email' => 'jliner@unitru.edu.pe',//Jean Pierre Camilo Liñer Sagástegui
+                'profile_picture' =>'fotos_perfiles/Jean Pierre Camilo Liñer Sagástegui.jpg',
+                'status' => 'Eliminado',
+                'password' =>  Hash::make('74136358'),
+            ],
         ];
         foreach ($users as $user) {
             $user['persona_id'] = Persona::where('correo_institucional', $user['email'])->first()->id;

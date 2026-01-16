@@ -27,7 +27,8 @@ class AreaPersonaValorDestacado extends Model
         'area_persona_id',
         'valor_destacado_id',
         'anio',
-        'periodo'
+        'periodo',
+        'estado_certificacion'
     ];
 
     /**
@@ -36,6 +37,7 @@ class AreaPersonaValorDestacado extends Model
      * @var array
      */
     protected $casts = [
+        'estado_certificacion' => 'boolean',
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
     ];
