@@ -7,7 +7,8 @@
 
     <!-- Scripts -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <!-- Alpine.js se carga automáticamente con Livewire, no necesitamos cargarlo manualmente -->
+    <!-- <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script> -->
 
     <!-- Livewire Styles -->
     @livewireStyles

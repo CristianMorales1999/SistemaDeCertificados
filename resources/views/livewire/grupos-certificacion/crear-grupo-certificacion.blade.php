@@ -164,7 +164,7 @@
             </div>
 
             <!------------------------------- ENTRADAS PARA CREAR GRUPO ------------------------------->
-            <div class="w-full lg:w-1/3 mx-auto min-h-max h-auto flex flex-col justify-between content-between font-normal text-sm md:text-base text-gray-700" style="position: relative; z-index: 1;">
+            <div class="w-full lg:w-1/3 mx-auto min-h-max h-auto flex flex-col justify-between content-between font-normal text-sm md:text-base text-gray-700" style="position: relative; z-index: 1; overflow: visible;">
                 <div class="w-full space-y-8">
                     <div class="space-y-4">
                         {{-- Input nombre --}}
@@ -348,7 +348,7 @@
 
                         {{-- CONTEXTO DINÁMICO (solo si se requiere) --}}
                         @if($tipoCertificacionId && ($this->contextoRequerido['requiere_proyecto'] || $this->contextoRequerido['requiere_evento'] || $this->contextoRequerido['requiere_anio_periodo']))
-                            <div class="space-y-4 border-t border-gray-200 pt-4">
+                            <div class="space-y-4 border-t border-gray-200 pt-4" style="overflow: visible; position: relative;">
                                 <h3 class="font-semibold text-lg text-gray-800">Contexto</h3>
                                 
                                 @if($this->contextoRequerido['requiere_proyecto'])
@@ -495,11 +495,23 @@
                                             open: false,
                                             searchInput: '',
                                             visibleCount: {{ max(0, $this->eventosDisponibles->count()) }},
-                                            proyectoId: {{ $proyectoId ?? 'null' }},
                                             eventoDependeProyecto: {{ $this->contextoRequerido['evento_depende_proyecto'] ? 'true' : 'false' }},
-                                            get canOpen() {
-                                                if (!this.eventoDependeProyecto) return true;
-                                                return this.proyectoId !== null && this.proyectoId !== '';
+                                            proyectoIdActual: @js($proyectoId),
+                                            canOpen() {
+                                                if (!this.eventoDependeProyecto) {
+                                                    console.log('canOpen: eventoDependeProyecto es false, retornando true');
+                                                    return true;
+                                                }
+                                                try {
+                                                    const proyectoId = $wire.get('proyectoId');
+                                                    console.log('canOpen: proyectoId obtenido:', proyectoId);
+                                                    const isValid = proyectoId !== null && proyectoId !== '' && proyectoId !== 0;
+                                                    console.log('canOpen: isValid:', isValid);
+                                                    return isValid;
+                                                } catch (e) {
+                                                    console.error('Error en canOpen:', e);
+                                                    return false;
+                                                }
                                             },
                                             filterEventos() {
                                                 this.$nextTick(() => {
@@ -557,34 +569,52 @@
                                                         }
                                                     }, 10);
                                                 }
-                                            }
+                                            },
                                          }" 
                                          x-on:evento-seleccionado.window="open = false; clearSearch()"
                                          x-on:close-dropdown-evento="open = false; clearSearch()"
                                          x-on:proyecto-seleccionado.window="
-                                             proyectoId = {{ $proyectoId ?? 'null' }};
+                                             proyectoIdActual = $wire.get('proyectoId');
+                                             open = false;
+                                             clearSearch();
                                              $nextTick(() => {
                                                  visibleCount = {{ max(0, $this->eventosDisponibles->count()) }};
                                                  updateVisibleCount();
                                              });
                                          "
+                                         x-on:tipo-certificado-seleccionado.window="
+                                             proyectoIdActual = null;
+                                             open = false;
+                                             clearSearch();
+                                         "
                                          class="w-full relative" 
-                                         style="z-index: 50; isolation: isolate;">
+                                         style="z-index: 150; isolation: isolate; overflow: visible;">
                                         <label class="block mb-2 text-sm font-medium text-gray-700">Evento <span class="text-red-500">*</span></label>
                                         <div class="w-full flex items-center justify-between p-3 bg-white border border-gray-300 rounded-lg cursor-pointer relative"
                                             @click="
-                                                if (canOpen) {
-                                                    open = !open; 
-                                                    adjustDropdownHeight(); 
-                                                    if(open) { 
-                                                        $nextTick(() => { 
-                                                            visibleCount = {{ max(0, $this->eventosDisponibles->count()) }}; 
-                                                            updateVisibleCount(); 
-                                                        }); 
+                                                console.log('Click en botón evento - canOpen():', canOpen());
+                                                console.log('Click en botón evento - open antes:', open);
+                                                if (canOpen()) {
+                                                    open = !open;
+                                                    console.log('Click en botón evento - open después:', open);
+                                                    adjustDropdownHeight();
+                                                    if(open) {
+                                                        $nextTick(() => {
+                                                            console.log('$nextTick ejecutado - forzando display del dropdown');
+                                                            if ($refs.dropdownEvento) {
+                                                                $refs.dropdownEvento.style.display = 'block';
+                                                                $refs.dropdownEvento.style.visibility = 'visible';
+                                                                $refs.dropdownEvento.style.opacity = '1';
+                                                            }
+                                                            visibleCount = {{ max(0, $this->eventosDisponibles->count()) }};
+                                                            updateVisibleCount();
+                                                        });
                                                     }
+                                                } else {
+                                                    console.log('No se puede abrir - proyecto no seleccionado');
                                                 }
                                             "
-                                            :class="{ 'opacity-50 cursor-not-allowed': !canOpen }"
+                                            :class="{ 'opacity-50 cursor-not-allowed': !canOpen() }"
                                             style="z-index: 101;">
                                             <p class="w-full truncate">{{ $eventoId ? ($this->eventosDisponibles->firstWhere('id', $eventoId)?->nombre ?? 'Cargando...') : 'Seleccionar evento' }}</p>
                                             <svg class="w-4 h-4 text-gray-600 transition-transform" :class="{ 'rotate-180': open }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -598,10 +628,29 @@
 
                                         <div x-ref="dropdownEvento"
                                              x-show="open" 
-                                             x-cloak
                                              x-transition
-                                             @click.outside="open = false; clearSearch()"
-                                             style="position: absolute; top: 100%; left: 0; right: 0; z-index: 100000 !important; margin-top: 4px; isolation: isolate;">
+                                             @click.outside="
+                                                 console.log('Click outside - cerrando dropdown');
+                                                 open = false;
+                                                 clearSearch();
+                                             "
+                                             x-effect="
+                                                 console.log('x-effect ejecutado - open:', open);
+                                                 console.log('x-effect - canOpen():', canOpen());
+                                                 if ($refs.dropdownEvento) {
+                                                     const display = window.getComputedStyle($refs.dropdownEvento).display;
+                                                     console.log('x-effect - display del dropdown:', display);
+                                                     console.log('x-effect - visibility del dropdown:', window.getComputedStyle($refs.dropdownEvento).visibility);
+                                                     console.log('x-effect - opacity del dropdown:', window.getComputedStyle($refs.dropdownEvento).opacity);
+                                                     if (open && display === 'none') {
+                                                         console.log('PROBLEMA: open es true pero display es none - forzando display block');
+                                                         $refs.dropdownEvento.style.display = 'block';
+                                                         $refs.dropdownEvento.style.visibility = 'visible';
+                                                         $refs.dropdownEvento.style.opacity = '1';
+                                                     }
+                                                 }
+                                             "
+                                             style="position: absolute; top: 100%; left: 0; right: 0; z-index: 150000 !important; margin-top: 4px; isolation: isolate; display: none;">
                                             <div x-ref="dropdownInnerEvento" class="bg-white border border-gray-300 rounded-lg shadow-2xl" style="overflow-y: auto; overflow-x: hidden; position: relative; z-index: 100000 !important; isolation: isolate;">
                                                 <div style="position: sticky; top: 0; z-index: 10; background: white; border-bottom: 1px solid #e5e7eb;" @click.stop>
                                                     <input type="text"
@@ -617,6 +666,7 @@
                                                 @foreach ($this->eventosDisponibles as $evento)
                                                     <li x-show="matchesSearch('{{ strtolower($evento->nombre) }}')"
                                                         onclick="
+                                                            console.log('Click en evento:', {{ $evento->id }});
                                                             const component = Livewire.find('{{ $_instance->getId() }}');
                                                             if (component) {
                                                                 component.set('eventoId', {{ $evento->id }});
@@ -624,6 +674,7 @@
                                                             setTimeout(() => {
                                                                 const dropdown = document.querySelector('[x-on\\:close-dropdown-evento]');
                                                                 if (dropdown && dropdown.__x) {
+                                                                    console.log('Cerrando dropdown evento');
                                                                     dropdown.__x.$data.open = false;
                                                                     dropdown.__x.$data.searchInput = '';
                                                                 }
