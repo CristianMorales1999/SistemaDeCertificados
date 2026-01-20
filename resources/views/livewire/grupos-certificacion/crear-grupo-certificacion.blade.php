@@ -509,7 +509,7 @@
                                                     console.log('canOpen: isValid:', isValid);
                                                     return isValid;
                                                 } catch (e) {
-                                                    console.error('Error en canOpen:', e);
+                                                    console.error('canOpen: Error:', e);
                                                     return false;
                                                 }
                                             },
@@ -576,6 +576,9 @@
                                          x-on:proyecto-seleccionado.window="
                                              proyectoIdActual = $wire.get('proyectoId');
                                              open = false;
+                                             if ($refs.dropdownEvento) {
+                                                 $refs.dropdownEvento.style.display = 'none';
+                                             }
                                              clearSearch();
                                              $nextTick(() => {
                                                  visibleCount = {{ max(0, $this->eventosDisponibles->count()) }};
@@ -585,6 +588,9 @@
                                          x-on:tipo-certificado-seleccionado.window="
                                              proyectoIdActual = null;
                                              open = false;
+                                             if ($refs.dropdownEvento) {
+                                                 $refs.dropdownEvento.style.display = 'none';
+                                             }
                                              clearSearch();
                                          "
                                          class="w-full relative" 
@@ -592,26 +598,27 @@
                                         <label class="block mb-2 text-sm font-medium text-gray-700">Evento <span class="text-red-500">*</span></label>
                                         <div class="w-full flex items-center justify-between p-3 bg-white border border-gray-300 rounded-lg cursor-pointer relative"
                                             @click="
-                                                console.log('Click en botón evento - canOpen():', canOpen());
-                                                console.log('Click en botón evento - open antes:', open);
+                                                console.log('=== CLICK EN BOTÓN EVENTO ===');
+                                                console.log('canOpen():', canOpen());
+                                                console.log('open antes:', open);
+                                                console.log('proyectoId:', $wire.get('proyectoId'));
                                                 if (canOpen()) {
                                                     open = !open;
-                                                    console.log('Click en botón evento - open después:', open);
+                                                    console.log('open después:', open);
+                                                    if(open && $refs.dropdownEvento) {
+                                                        $refs.dropdownEvento.style.display = 'block';
+                                                        $refs.dropdownEvento.style.visibility = 'visible';
+                                                        $refs.dropdownEvento.style.opacity = '1';
+                                                    }
                                                     adjustDropdownHeight();
                                                     if(open) {
                                                         $nextTick(() => {
-                                                            console.log('$nextTick ejecutado - forzando display del dropdown');
-                                                            if ($refs.dropdownEvento) {
-                                                                $refs.dropdownEvento.style.display = 'block';
-                                                                $refs.dropdownEvento.style.visibility = 'visible';
-                                                                $refs.dropdownEvento.style.opacity = '1';
-                                                            }
                                                             visibleCount = {{ max(0, $this->eventosDisponibles->count()) }};
                                                             updateVisibleCount();
                                                         });
                                                     }
                                                 } else {
-                                                    console.log('No se puede abrir - proyecto no seleccionado');
+                                                    console.log('NO SE PUEDE ABRIR - canOpen() retornó false');
                                                 }
                                             "
                                             :class="{ 'opacity-50 cursor-not-allowed': !canOpen() }"
@@ -628,29 +635,27 @@
 
                                         <div x-ref="dropdownEvento"
                                              x-show="open" 
+                                             x-cloak
                                              x-transition
                                              @click.outside="
-                                                 console.log('Click outside - cerrando dropdown');
                                                  open = false;
+                                                 if ($refs.dropdownEvento) {
+                                                     $refs.dropdownEvento.style.display = 'none';
+                                                 }
                                                  clearSearch();
                                              "
                                              x-effect="
-                                                 console.log('x-effect ejecutado - open:', open);
-                                                 console.log('x-effect - canOpen():', canOpen());
                                                  if ($refs.dropdownEvento) {
-                                                     const display = window.getComputedStyle($refs.dropdownEvento).display;
-                                                     console.log('x-effect - display del dropdown:', display);
-                                                     console.log('x-effect - visibility del dropdown:', window.getComputedStyle($refs.dropdownEvento).visibility);
-                                                     console.log('x-effect - opacity del dropdown:', window.getComputedStyle($refs.dropdownEvento).opacity);
-                                                     if (open && display === 'none') {
-                                                         console.log('PROBLEMA: open es true pero display es none - forzando display block');
+                                                     if (open) {
                                                          $refs.dropdownEvento.style.display = 'block';
                                                          $refs.dropdownEvento.style.visibility = 'visible';
                                                          $refs.dropdownEvento.style.opacity = '1';
+                                                     } else {
+                                                         $refs.dropdownEvento.style.display = 'none';
                                                      }
                                                  }
                                              "
-                                             style="position: absolute; top: 100%; left: 0; right: 0; z-index: 150000 !important; margin-top: 4px; isolation: isolate; display: none;">
+                                             style="position: absolute; top: 100%; left: 0; right: 0; z-index: 150000 !important; margin-top: 4px; isolation: isolate;">
                                             <div x-ref="dropdownInnerEvento" class="bg-white border border-gray-300 rounded-lg shadow-2xl" style="overflow-y: auto; overflow-x: hidden; position: relative; z-index: 100000 !important; isolation: isolate;">
                                                 <div style="position: sticky; top: 0; z-index: 10; background: white; border-bottom: 1px solid #e5e7eb;" @click.stop>
                                                     <input type="text"
@@ -665,20 +670,16 @@
                                                 <ul style="overflow-y: visible; overflow-x: hidden;" x-ref="eventosList">
                                                 @foreach ($this->eventosDisponibles as $evento)
                                                     <li x-show="matchesSearch('{{ strtolower($evento->nombre) }}')"
-                                                        onclick="
-                                                            console.log('Click en evento:', {{ $evento->id }});
+                                                        @click="
                                                             const component = Livewire.find('{{ $_instance->getId() }}');
                                                             if (component) {
                                                                 component.set('eventoId', {{ $evento->id }});
                                                             }
-                                                            setTimeout(() => {
-                                                                const dropdown = document.querySelector('[x-on\\:close-dropdown-evento]');
-                                                                if (dropdown && dropdown.__x) {
-                                                                    console.log('Cerrando dropdown evento');
-                                                                    dropdown.__x.$data.open = false;
-                                                                    dropdown.__x.$data.searchInput = '';
-                                                                }
-                                                            }, 50);
+                                                            open = false;
+                                                            if ($refs.dropdownEvento) {
+                                                                $refs.dropdownEvento.style.display = 'none';
+                                                            }
+                                                            searchInput = '';
                                                         " 
                                                         class="p-2 cursor-pointer hover:bg-gray-200 transition-colors"
                                                         data-nombre="{{ strtolower($evento->nombre) }}">
