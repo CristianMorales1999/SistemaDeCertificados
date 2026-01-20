@@ -498,18 +498,11 @@
                                             eventoDependeProyecto: {{ $this->contextoRequerido['evento_depende_proyecto'] ? 'true' : 'false' }},
                                             proyectoIdActual: @js($proyectoId),
                                             canOpen() {
-                                                if (!this.eventoDependeProyecto) {
-                                                    console.log('canOpen: eventoDependeProyecto es false, retornando true');
-                                                    return true;
-                                                }
+                                                if (!this.eventoDependeProyecto) return true;
                                                 try {
                                                     const proyectoId = $wire.get('proyectoId');
-                                                    console.log('canOpen: proyectoId obtenido:', proyectoId);
-                                                    const isValid = proyectoId !== null && proyectoId !== '' && proyectoId !== 0;
-                                                    console.log('canOpen: isValid:', isValid);
-                                                    return isValid;
+                                                    return proyectoId !== null && proyectoId !== '' && proyectoId !== 0;
                                                 } catch (e) {
-                                                    console.error('canOpen: Error:', e);
                                                     return false;
                                                 }
                                             },
@@ -597,28 +590,23 @@
                                          style="z-index: 150; isolation: isolate; overflow: visible;">
                                         <label class="block mb-2 text-sm font-medium text-gray-700">Evento <span class="text-red-500">*</span></label>
                                         <div class="w-full flex items-center justify-between p-3 bg-white border border-gray-300 rounded-lg cursor-pointer relative"
-                                            @click="
-                                                console.log('=== CLICK EN BOTÓN EVENTO ===');
-                                                console.log('canOpen():', canOpen());
-                                                console.log('open antes:', open);
-                                                console.log('proyectoId:', $wire.get('proyectoId'));
+                                            @click.stop="
                                                 if (canOpen()) {
                                                     open = !open;
-                                                    console.log('open después:', open);
                                                     if(open && $refs.dropdownEvento) {
                                                         $refs.dropdownEvento.style.display = 'block';
                                                         $refs.dropdownEvento.style.visibility = 'visible';
                                                         $refs.dropdownEvento.style.opacity = '1';
-                                                    }
-                                                    adjustDropdownHeight();
-                                                    if(open) {
+                                                        adjustDropdownHeight();
                                                         $nextTick(() => {
                                                             visibleCount = {{ max(0, $this->eventosDisponibles->count()) }};
                                                             updateVisibleCount();
                                                         });
+                                                    } else if (!$refs.dropdownEvento) {
+                                                        adjustDropdownHeight();
+                                                    } else {
+                                                        $refs.dropdownEvento.style.display = 'none';
                                                     }
-                                                } else {
-                                                    console.log('NO SE PUEDE ABRIR - canOpen() retornó false');
                                                 }
                                             "
                                             :class="{ 'opacity-50 cursor-not-allowed': !canOpen() }"
@@ -638,15 +626,17 @@
                                              x-cloak
                                              x-transition
                                              @click.outside="
-                                                 open = false;
-                                                 if ($refs.dropdownEvento) {
-                                                     $refs.dropdownEvento.style.display = 'none';
+                                                 if (open) {
+                                                     open = false;
+                                                     if ($refs.dropdownEvento) {
+                                                         $refs.dropdownEvento.style.display = 'none';
+                                                     }
+                                                     clearSearch();
                                                  }
-                                                 clearSearch();
                                              "
                                              x-effect="
                                                  if ($refs.dropdownEvento) {
-                                                     if (open) {
+                                                     if (open && canOpen()) {
                                                          $refs.dropdownEvento.style.display = 'block';
                                                          $refs.dropdownEvento.style.visibility = 'visible';
                                                          $refs.dropdownEvento.style.opacity = '1';
@@ -675,11 +665,13 @@
                                                             if (component) {
                                                                 component.set('eventoId', {{ $evento->id }});
                                                             }
-                                                            open = false;
-                                                            if ($refs.dropdownEvento) {
-                                                                $refs.dropdownEvento.style.display = 'none';
-                                                            }
-                                                            searchInput = '';
+                                                            $nextTick(() => {
+                                                                open = false;
+                                                                if ($refs.dropdownEvento) {
+                                                                    $refs.dropdownEvento.style.display = 'none';
+                                                                }
+                                                                searchInput = '';
+                                                            });
                                                         " 
                                                         class="p-2 cursor-pointer hover:bg-gray-200 transition-colors"
                                                         data-nombre="{{ strtolower($evento->nombre) }}">
